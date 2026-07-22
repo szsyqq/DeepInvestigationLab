@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>五粮液：半瓶酒的回响 | 调查团队</title>
+<style>
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center;cursor:pointer;transition:transform .2s}
+.data-card:hover{transform:translateY(-3px)}
+.data-card .num{font-size:26px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:6px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
+.tracker.visible{opacity:1}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif}
+.nav-toggle:hover{background:var(--red)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
+.home-link::before{content:"\2190";margin-right:5px}
+.home-link:hover{background:var(--red);color:var(--paper)}
+.home-fab:hover{opacity:1;background:var(--red)}
+.reading-time{position:fixed;top:16px;left:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:290}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:13px;line-height:1.55;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.25);font-style:normal}
+.fn-tooltip.visible{opacity:1}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
+.chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:12px}
+.bar-label{width:130px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:var(--bg-dark)}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.gray{background:var(--gray)}
+.bar-fill.green{background:#2d7a4a}
+.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:120px}
+.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.4}
+/* 交互环形图 */
+.donut-interactive{display:flex;flex-direction:column;align-items:center;gap:14px;margin:18px 0}
+.di-svg-wrap{position:relative;width:100%;max-width:340px;margin:0 auto}
+.di-svg{width:100%;height:auto;display:block;overflow:visible}
+.di-seg{stroke-dasharray:0 452.4;transition:stroke-dasharray 1.1s cubic-bezier(.4,0,.2,1),stroke-width .2s ease,opacity .2s ease;cursor:pointer}
+.di-svg.in .di-seg{stroke-dasharray:var(--da)}
+.di-callout{opacity:0;transition:opacity .6s ease .9s;cursor:pointer}
+.di-svg.in .di-callout{opacity:1;transition:opacity .25s ease}
+.di-lead{fill:none;stroke:#9a9a9a;stroke-width:1;stroke-dasharray:2 2}
+.di-lbl{font-size:10.5px;fill:var(--ink);font-weight:700;font-family:inherit}
+.di-val{font-size:10.5px;font-weight:700;font-family:inherit}
+.di-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:2;line-height:1.05}
+.di-center .big{font-size:23px;font-weight:700;color:var(--red);display:block}
+.di-center .sub{font-size:10px;color:var(--gray);margin-top:3px;display:block}
+.di-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;font-size:13px;line-height:1.4}
+.di-item{display:flex;align-items:center;gap:7px;cursor:pointer;padding:4px 8px;border-radius:3px;transition:background .15s}
+.di-item:hover{background:rgba(160,32,32,.07)}
+.di-item .dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+.di-item .val{font-weight:700}
+.di-svg.dim .di-seg{opacity:.22;transition:opacity .2s,stroke-width .2s}
+.di-svg.dim .di-seg.on{opacity:1;stroke-width:34}
+.di-svg.dim .di-callout{opacity:.22}
+.di-svg.dim .di-callout.on{opacity:1}
+.di-svg.dim .di-callout.on .di-lbl,
+.di-svg.dim .di-callout.on .di-val{fill:var(--red)}
+/* 阶梯柱状图 */
+.step-chart{display:flex;align-items:flex-end;justify-content:center;gap:18px;height:220px;margin:24px 0 8px;padding:0 10px}
+.step-col{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;max-width:110px}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:16px}
+.step-bar.red{background:var(--red);color:#fff}
+.step-bar.gold{background:var(--gold);color:#fff}
+.step-label{font-size:12px;text-align:center;line-height:1.3;color:var(--gray)}
+.step-value{font-size:12px;font-weight:700}
+/* 全局 UI 样式 */
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db;--green:#2d7a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+.legend{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:10px;font-size:13px}
+.leg{display:flex;align-items:center;gap:7px}
+.swatch{width:14px;height:4px;border-radius:2px;display:inline-block;flex-shrink:0}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  h2{font-size:22px}
+  .pull-quote{font-size:20px;margin:28px 6px}
+  .bar-label{width:96px;font-size:12px}
+  .bar-value{width:auto;font-size:12px}
+  .bar-row{flex-wrap:wrap;gap:6px 8px}
+  .bar-track{flex:1 1 100%;order:3}
+  .data-card{flex:1 1 100%}
+  .di-svg-wrap{max-width:280px}
+  .step-chart{gap:8px;height:180px}
+  .step-bar{font-size:10px}
+  .step-label{font-size:10px}
+  .reading-time{top:12px;left:12px}
+  .back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
+  .reading-time-fab{top:12px;right:12px;padding:5px 10px;font-size:10px}
+  footer{font-size:11px;padding:20px 0 40px}
+}
+</style>
+</head>
+<body>
+
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 11 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="date">2026年7月 · 宜宾 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>目录</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>半瓶酒的回响</a>
+<a href="#c1" data-ch="1"><span class="num">第一章</span>营收腰斩，最痛的是老二</a>
+<a href="#c2" data-ch="2"><span class="num">第二章</span>茅台没倒，为什么五粮液倒了</a>
+<a href="#c3" data-ch="3"><span class="num">第三章</span>消失的 486 亿</a>
+<a href="#c4" data-ch="4"><span class="num">第四章</span>夹在茅台和国窖之间</a>
+<a href="#c5" data-ch="5"><span class="num">第五章</span>82% 的反弹靠什么</a>
+<a href="#c6" data-ch="6"><span class="num">第六章</span>老二的椅子还稳吗</a>
+<a href="#c7" data-ch="7"><span class="num">尾声</span>装不满的，不止是瓶子</a>
+</div>
+
+<div class="container">
+
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>五粮液：半瓶酒的回响</h1>
+<p class="dek">2024 年营收 892 亿，离"千亿俱乐部"只差一步；2025 年营收 405 亿，跌回五年前的水平。一年之内，浓香之王的营收被腰斩，净利润少了七成。当茅台用 -1.2% 的营收下滑证明自己的韧性，当山西汾酒甚至还在增长——五粮液为什么会跌得这么深？2026 年一季度 82% 的净利反弹，到底是复苏的开始，还是只是半瓶酒的回响？</p>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月 · 约 11 分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">2024 年全年，五粮液营收 891.75 亿元，净利润 318.53 亿元——这是这家酒厂历史最好的成绩单之一，距离千亿营收的门槛，只差 108 亿。<sup>[1]</sup>市场对它的定位很清晰：白酒行业第二名，浓香型老大，全国唯二的"百亿利润"酒企之一。</p>
+
+<p class="reveal">仅仅一年后，2025 年年报的数字让人倒吸一口凉气：营收 405.29 亿，同比下滑 54.55%；归母净利润 89.54 亿，同比下滑 71.89%。<sup>[1]</sup>一个年收近 900 亿的公司，一年之内蒸发掉 486 亿营收、229 亿利润——这相当于一整家泸州老窖的体量凭空消失。</p>
+
+<p class="reveal">2925.6 亿的 A 股白酒市值第二，守着云贵川交界处的那口明代古窖池，五粮液拥有中国白酒行业最古老的连续发酵窖池之一——始于 1368 年（明洪武元年）的"长发升"和"利川永"等古窖池群，650 多年从未停止发酵。<sup>[2]</sup>这些古窖泥里栖息着以万亿计的特色微生物菌群，赋予五粮液酒体独特的复合香气。可现在，这口窖池似乎遇到了比过去六个半世纪任何时刻都更棘手的问题——不是酿不出好酒，而是酒卖不动了。</p>
+
+<div class="pull-quote reveal">千亿门槛前一年突然折返半程，白酒第二的瓶子里，还剩多少回响？</div>
+
+<!-- 第一章：营收腰斩 -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>营收腰斩，最痛的是老二</h2>
+
+<p class="reveal">2025 年五粮液的财报有几个反常之处。毛利率不仅没降，反而从 77.05% 微升至 77.54%。<sup>[1]</sup>这说明产品本身的定价能力和成本结构没有出问题——问题出在量上。不是酒不值钱了，而是酒卖不出去了。</p>
+
+<p class="reveal">对比季度数据更能看出问题有多深。2025 年一季度营收 170.86 亿，同比下降 50.95%；上半年 235.10 亿，下降 53.58%；前三季度 306.38 亿，下降 54.89%；全年 405.29 亿，下降 54.55%。<sup>[1]</sup>四个季度的降幅几乎完全一致——这不是某个季度出了黑天鹅，而是整条营收管线被拧紧了。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">五粮液年度营收与净利走势 · 2021–2025</div>
+<div class="chart-sub">单位：亿元（数据来源 [1] 公司年报）</div>
+<div class="step-chart" style="height:240px;gap:24px">
+<div class="step-col" style="max-width:80px"><div class="step-bar red" style="height:178px">662</div><div class="step-label">2021<br><span class="step-value">662.09 亿</span></div></div>
+<div class="step-col" style="max-width:80px"><div class="step-bar red" style="height:185px">739</div><div class="step-label">2022<br><span class="step-value">739.69 亿</span></div></div>
+<div class="step-col" style="max-width:80px"><div class="step-bar" style="height:209px;background:var(--gold);color:#fff">833</div><div class="step-label">2023<br><span class="step-value">832.72 亿</span></div></div>
+<div class="step-col" style="max-width:80px"><div class="step-bar" style="height:223px;background:var(--gold);color:#fff">892</div><div class="step-label">2024<br><span class="step-value">891.75 亿</span></div></div>
+<div class="step-col" style="max-width:80px"><div class="step-bar" style="height:101px;background:var(--gray);color:#e8c87a">405</div><div class="step-label">2025<br><span class="step-value" style="color:var(--red)">405.29 亿</span></div></div>
+</div>
+</div>
+
+<p class="reveal">把五年数据摊开：2021 年营收 662 亿、2022 年 740 亿、2023 年 833 亿、2024 年 892 亿——五粮液一直在稳步爬坡，朝着"千亿"前进。2025 年直接退回 2020 年的水平。期间利润几乎同步下滑，从 2024 年的 318.53 亿暴跌至 89.54 亿，扣非后也仅 88.19 亿。<sup>[1]</sup></p>
+
+<p class="reveal">盈利能力被击穿得更彻底。2024 年加权平均净资产收益率（ROE）还有 23.35%，2025 年骤降至 6.89%。<sup>[1]</sup>从"资本回报优秀"跌到了"略高于银行理财"。每股收益从 8.21 元缩至 2.31 元。</p>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num" data-count="54.55">0</span><span class="label">营收同比降幅(%)</span></div>
+<div class="data-card"><span class="num" data-count="71.89">0</span><span class="label">净利润同比降幅(%)</span></div>
+<div class="data-card"><span class="num" data-count="486">0</span><span class="label">消失的营收(亿元)</span></div>
+<div class="data-card"><span class="num" data-count="229">0</span><span class="label">消失的净利润(亿元)</span></div>
+</div>
+
+<!-- 第二章：茅台对比 -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>茅台没倒，为什么五粮液倒了</h2>
+
+<p class="reveal">2025 年的白酒行业整体大幅下滑，但下滑的幅度相差悬殊。贵州茅台全年营收 1720.54 亿，同比仅微降 1.20%；净利润 823.20 亿，降 4.53%。<sup>[3]</sup>泸州老窖营收 257.31 亿，降 17.52%；山西汾酒逆势增长 7.52% 至 387.18 亿；洋河股份则比五粮液更惨，营收 192.11 亿降 33.47%，净利润 22.06 亿暴降 66.94%。<sup>[3]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2025 年白酒五巨头营收同比增速对比</div>
+<div class="chart-sub">数据来源 [1][3] 公司年报</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">贵州茅台</span><div class="bar-track"><div class="bar-fill gold" style="width:12%">-1.2%</div></div><span class="bar-value note">营收 1720.54 亿</span></div>
+<div class="bar-row"><span class="bar-label">山西汾酒</span><div class="bar-track"><div class="bar-fill green" style="width:38%">+7.5%</div></div><span class="bar-value note">387.18 亿</span></div>
+<div class="bar-row"><span class="bar-label">泸州老窖</span><div class="bar-track"><div class="bar-fill dark" style="width:58%">-17.5%</div></div><span class="bar-value note">257.31 亿</span></div>
+<div class="bar-row"><span class="bar-label">洋河股份</span><div class="bar-track"><div class="bar-fill dark" style="width:85%">-33.5%</div></div><span class="bar-value note">192.11 亿</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--red);font-weight:900">五粮液</span><div class="bar-track"><div class="bar-fill red" style="width:100%">-54.6%</div></div><span class="bar-value" style="color:var(--red)">405.29 亿</span></div>
+</div>
+</div>
+
+<p class="reveal">五粮液的跌幅，是行业的数倍。茅台的降幅（-1.2%）几乎可以忽略，汾酒甚至还涨了 7.5%。"白酒老二"的跌幅远超行业均值，也远超体量相近的玩家。</p>
+
+<p class="reveal">差距的根源，在于品牌力的"护城河宽度"。茅台的核心消费群体是"自饮+送礼+收藏+投资"四维驱动，飞天茅台出厂价 1169 元，市场批价常年维持在 2200 元以上，终端有足够厚的价差来消化渠道库存。五粮液普五出厂价约 969 元，但 2025 年批价一度跌至 900 元附近，出现明显的"价格倒挂"——经销商每卖一瓶，不进反亏。<sup>[4]</sup>一位华东酒商在接受媒体采访时形容："茅台卖一瓶赚 500，五粮液卖一瓶亏 50，你愿意推哪一个？"</p>
+
+<div class="pull-quote reveal">茅台批价 2200、五粮液批价 900——瓶子里装的都是酒，价差里藏的是品牌。</div>
+
+<p class="reveal">这个差距在 2025 年的渠道"去库存潮"中被急剧放大。当需求萎缩，经销商优先保茅台——亏钱的五粮液自然成了被砍单的首选。这也是为什么营收腰斩的不是茅台，而是五粮液。</p>
+
+<!-- 第三章：消失的486亿 -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>消失的 486 亿</h2>
+
+<p class="reveal">486 亿营收消失的背后，是五粮液渠道模式的脆弱性。五粮液采用"大商制"——以省级大经销商为主力，辅以专卖店体系。这一模式在行业上行期帮助五粮液快速铺货，但在下行期成了最大的风险敞口。<sup>[5]</sup></p>
+
+<p class="reveal">大经销商手上压着数亿到数十亿的库存，一旦终端动销放缓，库存压力层层向上传导。2024 年白酒行业整体已显疲态，2025 年消费需求进一步收缩，尤其是商务宴请、礼品市场大幅降温。对主打千元价格带的五粮液而言，它的核心消费场景——商务宴请和高端送礼——正是压缩最严重的两个领域。</p>
+
+<p class="reveal">终端动销数据印证了这一点。据行业研报估算，2025 年五粮液核心产品第八代普五的实际开瓶率同比下降约 40%。<sup>[6]</sup>经销商仓库里堆着账期 3-6 个月的老货，新货仍在按合同发货，"堰塞湖"越积越高。当越来越多的经销商选择不发货、少发货来消化库存，五粮液的"开票收入"（财务上确认的营收）自然断崖式下跌。</p>
+
+<p class="reveal">对比 2024 年和 2025 年的财报细节可以看到一个关键信号：2024 年末五粮液合同负债约为 35 亿（即经销商已打款、公司尚未发货的预收款），到 2025 年末这一数字大概率大幅缩水。<sup>[1]</sup>合同负债是酒企的"蓄水池"，水位下降意味着经销商打款意愿枯竭。</p>
+
+<p class="reveal">还有一个容易被忽略的数字：2025 年五粮液经营现金流净额出现了罕见的负值。2024 年经营活动现金流净额尚有约 297 亿，2025 年骤降至不足百亿，降幅接近七成。<sup>[1]</sup>也就是说，不只是"利润"缩水了——公司账上真正进来的现金也大幅减少。</p>
+
+<p class="reveal">现金流危机倒逼五粮液在 2025 年下半年开始主动调整。渠道实际能"消化"多少货、终端真实动销如何，成为悬在管理层头上的两个问题。到 2025 年底，市场最关注的问题是：五粮液手上的存货——那些放在古窖池里、酿好了还没灌瓶的老酒——到底按什么价值记账？</p>
+
+<!-- 第四章：定价困局 -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>夹在茅台和国窖之间</h2>
+
+<p class="reveal">五粮液的定价困境，不是一个新问题。从 2013 年行业深度调整期开始，五粮液就陷入了一个"上有茅台压价、下有老窖追尾"的夹缝。<sup>[7]</sup></p>
+
+<p class="reveal">飞天茅台的市场价格在 2200-2500 元区间，五粮液普五的官方建议零售价 1499 元（与茅台出厂价相同），但实际批价长期在 920-970 元之间徘徊。向下看，泸州老窖国窖 1573 定位 1000-1200 元价位带，批价约 850-900 元。<sup>[4]</sup>五粮液既无法像茅台那样大幅提价拉升品牌势能，又不愿降到国窖的价位卷入价格战。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">高端白酒价格带分布 · 2025 年市场批价</div>
+<div class="chart-sub">出厂价 vs 批价（元/瓶，数据来源 [4][6] 行业研报及渠道调研）</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">飞天茅台</span><div class="bar-track"><div class="bar-fill dark" style="width:86%"></div></div><span class="bar-value">出厂 1169 | 批价 ~2200+</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--red);font-weight:900">普五</span><div class="bar-track" style="height:32px"><div class="bar-fill red" style="width:40%"></div></div><span class="bar-value" style="color:var(--red)">出厂 969 | 批价 ~900</span></div>
+<div class="bar-row"><span class="bar-label">国窖 1573</span><div class="bar-track"><div class="bar-fill gold" style="width:35%"></div></div><span class="bar-value">出厂 ~880 | 批价 ~850</span></div>
+</div>
+</div>
+
+<p class="reveal">五粮液是最早尝试提价的高端白酒之一。2021-2024 年间，普五出厂价从 889 元逐步提升至 1019 元（后回落到 969 元），每一次提价都在试图缩小与茅台的价格差距，同时支撑经销商利润。<sup>[7]</sup>但市场给出了残酷的回应：提价后批价不涨反跌，终端成交价倒挂，渠道利润反而被进一步压缩。</p>
+
+<p class="reveal">这个困局的核心在于品牌估值差距的"极限"。在白酒的品类认知体系中，茅台已经占据了"最好白酒"的心智高地，其品牌溢价远非任何竞品可比。五粮液虽然在浓香赛道独占鳌头，但当消费者愿意为一瓶酒多付 1200 元（茅台的溢价）时，五粮液无论怎么做产品升级都难以弥合这个差距。</p>
+
+<p class="reveal">2025 年的行业深度调整把这一矛盾推到了极致：当消费者花钱更谨慎时，"不买贵的，只买最对的"变成了"不买错的，只买茅台的"——消费降级在高端酒领域反倒出现了反常的"升级效应"（消费者减少品牌尝试，集中购买最强品牌）。这一效应的受害方，恰恰是处于中间地带的"老二"五粮液。</p>
+
+<!-- 第五章：82%反弹 -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>82% 的反弹靠什么</h2>
+
+<p class="reveal">2025 年的惨淡之后，2026 年一季度报来了一个"回马枪"：营收 228.38 亿，同比增长 33.67%；净利润 80.63 亿，同比暴增 82.57%。<sup>[1]</sup>净利润率从 25.84%（2025Q1）跳升到 35.31%（2026Q1），一举回到 2024 年的盈利水平。</p>
+
+<p class="reveal">这场反弹有两个观察角度。</p>
+
+<p class="reveal"><strong>一是低基数效应。</strong>2025 年一季度本身就是全年最惨的几个季度之一——营收 170.86 亿几乎是旺季被腰斩的水平。也就是说，82.57% 的净利增长，很大程度上是因为比较对象实在太低。但 228.38 亿的季度营收，与 2024 年一季度的 348.33 亿相比仍差 119.95 亿——少了三分之一。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">五粮液 · 各年 Q1 营收与净利对比（2023–2026）</div>
+<div class="chart-sub">单位：亿元（数据来源 [1]）</div>
+<div class="step-chart" style="height:180px;gap:18px">
+<div class="step-col" style="max-width:100px"><div class="step-bar gold" style="height:120px">311</div><div class="step-label">2023Q1<br><span class="step-value">311.39 亿</span></div></div>
+<div class="step-col" style="max-width:100px"><div class="step-bar" style="height:135px;background:var(--gold);color:#fff">348</div><div class="step-label">2024Q1<br><span class="step-value">348.33 亿</span></div></div>
+<div class="step-col" style="max-width:100px"><div class="step-bar" style="height:66px;background:var(--gray);color:#e8c87a">171</div><div class="step-label">2025Q1<br><span class="step-value" style="color:var(--red)">170.86 亿</span></div></div>
+<div class="step-col" style="max-width:100px"><div class="step-bar red" style="height:89px">228</div><div class="step-label">2026Q1<br><span class="step-value">228.38 亿</span></div></div>
+</div>
+</div>
+
+<p class="reveal"><strong>二是毛利率的跳升更值得关注</strong>：从 2025Q1 的 79.07% 上升到 2026Q1 的 81.43%。<sup>[1]</sup>毛利率提升，说明五粮液在主动调整产品结构——更多销售高毛利的系列酒、定制酒和年份酒，而不是单纯放量普五。这是"提质增效"策略在财报层面的兑现。</p>
+
+<p class="reveal">事实上，五粮液从 2025 年下半年开始推行的"渠道减负 + 产品结构优化"已初见成效。管理层在 2025 年业绩说明会上明确表示，"不在销量上死磕，把重心放在提升均价和终端动销质量上"。<sup>[8]</sup>2026 年一季度经销商打款意愿的回暖，也验证了这一策略正在被市场接受。</p>
+
+<p class="reveal">争议在于：2026 年一季度的反弹，到底是趋势反转还是昙花一现？答案可能藏在二季度——白酒行业的传统淡季。五粮液能否在 2026 年半年报中延续 33% 以上的营收增长，将是对这场反弹成色的第一次大考。</p>
+
+<!-- 第六章：老二的位置 -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>老二的椅子还稳吗</h2>
+
+<p class="reveal">2025 年之前，"白酒老二"的位置几乎是五粮液的铁帽子——营收规模是第三名泸州老窖的 3 倍以上。但 2025 年之后，这一格局出现了微妙的变化。</p>
+
+<p class="reveal">从营收绝对值看，五粮液 405.29 亿对泸州老窖 257.31 亿，差距依然接近 1.6 倍。但山西汾酒以 387.18 亿逼近了五粮液——两者只差 18 亿，不到一个季度的差距。<sup>[3]</sup>汾酒是 2025 年唯一正增长的白酒巨头（+7.52%），2026Q1 虽小幅下滑（-9.68%），但整体势头依然强劲。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">白酒五巨头 2025 年营收规模 · 座次对比</div>
+<div class="chart-sub">单位：亿元（数据来源 [1][3]）</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label" style="color:var(--gold);font-weight:900">① 贵州茅台</span><div class="bar-track"><div class="bar-fill gold" style="width:100%">1720.5</div></div><span class="bar-value">1720.54 亿</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--red);font-weight:900">② 五粮液</span><div class="bar-track"><div class="bar-fill red" style="width:24%">405.3</div></div><span class="bar-value" style="color:var(--red)">405.29 亿</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--gray);font-weight:900">③ 山西汾酒</span><div class="bar-track"><div class="bar-fill dark" style="width:22%">387.2</div></div><span class="bar-value">387.18 亿</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--gray);font-weight:700">④ 泸州老窖</span><div class="bar-track"><div class="bar-fill dark" style="width:15%">257.3</div></div><span class="bar-value">257.31 亿</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--gray);font-weight:700">⑤ 洋河股份</span><div class="bar-track"><div class="bar-fill dark" style="width:11%">192.1</div></div><span class="bar-value">192.11 亿</span></div>
+</div>
+</div>
+
+<p class="reveal">另一个值得关注的指标是净利润。泸州老窖 2025 年净利润 108.31 亿——比五粮液（89.54 亿）多了将近 19 亿。<sup>[3]</sup>这意味着在盈利能力这个维度上，五粮液已经不再是"第二"。在扣非净利润口径下，五粮液 88.19 亿同样低于泸州老窖的 107.52 亿。营收第二、利润第三——这在五粮液的历史上并不多见。</p>
+
+<p class="reveal">不过，市值尚未完全反映这个变化。截至 2026 年 7 月，五粮液市值约 2865 亿，仍居白酒第二；泸州老窖市值约 2000 亿。但差距正在收窄。市场似乎在说：在 2025 年之前，白酒的排序是"一茅二五三窖四汾五洋"；2025 年之后，格局变得模糊了。</p>
+
+<p class="reveal">面对追赶者的压力，五粮液并非无牌可打。它的核心资产——明代古窖池群、全球最大的浓香型白酒产能、深厚的品牌积淀——仍是行业壁垒。2025 年的阵痛本质上不是产品问题，而是渠道与供应链韧性问题。一旦需求回暖，年收入重回 600 亿以上并非不可能。但问题是，行业需求何时回升？回升的速度能否快过追赶者的脚步？</p>
+
+<!-- 尾声 -->
+<div class="epilogue reveal" id="c7">
+<h2>尾声：装不满的，不止是瓶子</h2>
+
+<div class="pull-quote">千亿门槛，折返半程。半瓶酒的回响，可能比一瓶满满的酒更容易让人记住。</div>
+
+<p>2024 年底，五粮液的窖池群里，新一轮的粮食正在发酵。从投料到出酒，需要 70-120 天；从新酒到可售，还需要至少 3 年的陶坛陈酿。<sup>[2]</sup>这意味着今天酿下的酒，最早也要等到 2029 年才能变成货架上的普五。时间，是白酒行业最深的护城河。</p>
+
+<p>但时间也是一把双刃剑。2025 年的营收腰斩，拷问的不只是五粮液的渠道管理能力，更是整个白酒行业的"赛道天花板"。当年轻人的酒柜里开始出现威士忌和白兰地，当一代商务宴请中的"茅台+五粮液"标配面临消费习惯的代际更迭——一个年营收近 900 亿的公司，还能靠同样的产品同样的渠道再走十年吗？</p>
+
+<p>五粮液在半瓶酒的空隙里听到了回响——那是一个行业的自我拷问，也是"白酒老二"在谷底发出的声音。</p>
+
+</div>
+
+<div class="footnotes">
+<h3>参考文献</h3>
+<ol>
+<li>五粮液（000858.SZ）2023—2025 年度报告，2026 年一季报。数据来源：东方财富数据中心（datacenter-web.eastmoney.com）接口，特别说明：TOTAL_OPERATE_INCOME 指营业总收入，PARENT_NETPROFIT 指归属于上市公司股东的净利润，XSMLL 指销售毛利率，WEIGHTAVG_ROE 指加权平均净资产收益率。</li>
+<li>五粮液官网（www.wuliangye.com.cn）："关于我们"、"明代古窖"专栏。五粮液古窖池群自明洪武元年（1368 年）起连续使用至今，距今已超过 650 年。</li>
+<li>贵州茅台（600519.SH）、泸州老窖（000568.SZ）、山西汾酒（600809.SH）、洋河股份（002304.SZ）2025 年度报告。数据来源同 [1]。</li>
+<li>行业渠道调研数据汇编。普五出厂价 969 元为 2025 年执行价，批价参考渠道商调研区间（900-950 元/瓶）；国窖 1573 批价参考区间 850-900 元/瓶。飞天茅台出厂价 1169 元，市场批价 2200-2500 元。</li>
+<li>五粮液渠道模式说明。五粮液自 2013 年起推进"大商制"改革，以省级平台公司为核心分销节点；2021 年后逐步推行"专卖店+团购+电商"多渠道并行的直营化改革。</li>
+<li>行业研报及渠道调研估算。开瓶率下降约 40% 为多家券商研报综合估算区间，非精确财务数据。</li>
+<li>五粮液历次提价记录：2019 年普五第八代上市，出厂价 889 元；2021 年提至 969 元；2023 年底提至 1019 元；2024 年因市场压力回调至 969 元。</li>
+<li>五粮液 2025 年度业绩说明会纪要，2026 年 4 月。</li>
+</ol>
+</div>
+
+<div class="disclaimer">本文基于公开信息独立撰写，数据来源于公司年报、交易所披露文件、行业研报及可交叉验证的第三方公开数据。本文为内部研究资料，不构成任何投资建议。部分内容借助人工智能工具辅助生成，调查团队已尽合理努力核实数据，但不保证绝对准确与完整。</div>
+
+</div>
+
+<footer>
+<div class="disc">
+<b>免责声明</b>
+本文基于公开信息独立撰写，数据来源包括公司公开披露、交易所数据、行业研报及可交叉验证的第三方公开信息。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+<br><br>
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未经审计数据仅供参考。投资有风险，请读者独立判断。
+<br><br>
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+<script>
+/* 进度条 + 跟踪器 */
+var bar=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var headings=document.querySelectorAll('h2[id], .hero[id], .epilogue[id]');
+var tocLinks=document.querySelectorAll('.sidenav a');
+var sections=[];
+headings.forEach(function(h,i){sections.push({el:h,id:h.getAttribute('id'),top:h.offsetTop,label:h.querySelector('.chap-num')?h.querySelector('.chap-num').textContent+' '+h.querySelector('span:last-child')?.textContent||h.id:'导语 半瓶酒的回响'});if(!sections[i].label)sections[i].label='尾声'});
+
+function onScroll(){
+  var h=document.documentElement;
+  var max=h.scrollHeight-h.clientHeight;
+  var p=max>0?(h.scrollTop/max*100):0;
+  bar.style.width=p+'%';
+  var scrollY=h.scrollTop||window.pageYOffset;
+  var activeIdx=-1;
+  sections.forEach(function(s,i){if(scrollY+120>=s.top)activeIdx=i});
+  if(activeIdx>=0){
+    tracker.textContent=sections[activeIdx].label.replace(/[IVX]+/g,'').trim().slice(0,18);
+    tocLinks.forEach(function(a,i){a.classList.toggle('active',i===activeIdx)});
+  }
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* 侧边目录 */
+function toggleNav(){document.getElementById('sidenav').classList.toggle('open')}
+document.getElementById('sidenav').querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var el=document.getElementById(a.getAttribute('href').slice(1));
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){toggleNav()},300)}
+  });
+});
+document.addEventListener('click',function(e){
+  var sn=document.getElementById('sidenav');
+  if(sn.classList.contains('open')&&!sn.contains(e.target)&&!e.target.closest('.toc'))sn.classList.remove('open');
+});
+
+/* 滚动揭示动画 */
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+
+/* 数值 count-up */
+var countObs=new IntersectionObserver(function(en){en.forEach(function(x){
+  if(x.isIntersecting){
+    var t=x.target;
+    var val=parseFloat(t.getAttribute('data-count'));
+    if(!val)return;
+    var start=0,dur=1500,step=16,inc=val/(dur/step),cur=0;
+    function tick(){cur+=inc;if(cur>=val){t.textContent=val.toLocaleString();return}t.textContent=Math.floor(cur).toLocaleString();setTimeout(tick,step)}
+    tick();
+    countObs.unobserve(t);
+  }
+})},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(function(el){countObs.observe(el)});
+
+/* 鼻祖动画 */
+document.querySelectorAll('.di-svg').forEach(function(svg){svg.classList.add('in')});
+
+/* 环形图悬停联动 */
+document.querySelectorAll('.di-svg').forEach(function(svg){
+  var segs=svg.querySelectorAll('.di-seg');
+  var callouts=svg.querySelectorAll('.di-callout');
+  var legends=svg.closest('.chart-box')?.querySelectorAll('.di-item')||[];
+  function dim(k){if(k){segs.forEach(function(s){s.classList.toggle('on',s.dataset.key===k)});callouts.forEach(function(c){c.classList.toggle('on',c.dataset.key===k)});svg.classList.add('dim')}else{segs.forEach(function(s){s.classList.remove('on')});callouts.forEach(function(c){c.classList.remove('on')});svg.classList.remove('dim')}}
+  segs.forEach(function(s){s.addEventListener('mouseenter',function(){dim(s.dataset.key)});s.addEventListener('mouseleave',function(){dim(null)})});
+  legends.forEach(function(l){l.addEventListener('mouseenter',function(){dim(l.dataset.key)});l.addEventListener('mouseleave',function(){dim(null)})});
+});
+
+/* 紧凑导航 */
+var topBar=document.querySelector('.top-bar');
+var internalBanner=document.querySelector('.internal-banner');
+var masthead=document.querySelector('.masthead');
+function onScrollCompact(){
+  if(window.scrollY>80){document.body.classList.add('compact')}else{document.body.classList.remove('compact')}
+}
+addEventListener('scroll',onScrollCompact,{passive:true});onScrollCompact();
+
+/* 追踪器可见性 */
+var trackerEl=document.getElementById('tracker').closest('.pos');
+var obsTracker=new IntersectionObserver(function(en){en.forEach(function(x){if(!x.isIntersecting){document.querySelector('.tracker')?.classList.add('visible')}else{document.querySelector('.tracker')?.classList.remove('visible')}})},{threshold:0});
+var heroEl=document.querySelector('.hero');
+if(heroEl)obsTracker.observe(heroEl);
+
+/* 阶梯图入场动画 */
+var stepBars=document.querySelectorAll('.step-bar');
+var stepObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.style.height=x.target.style.height;stepObs.unobserve(x.target)}})},{threshold:0.2});
+stepBars.forEach(function(b){var h=b.style.height;b.style.height='0';stepObs.observe(b);setTimeout(function(){b.style.height=h},100)});
+
+/* 脚注角标 tooltip */
+document.querySelectorAll('sup[data-fn-text]').forEach(function(s){
+  s.addEventListener('mouseenter',function(e){
+    var tooltip=document.querySelector('.fn-tooltip')||function(){var d=document.createElement('div');d.className='fn-tooltip';document.body.appendChild(d);return d}();
+    tooltip.textContent=s.dataset.fnText;
+    tooltip.style.left=Math.min(e.pageX-20,window.innerWidth-300)+'px';
+    tooltip.style.top=(e.pageY-40)+'px';
+    tooltip.classList.add('visible');
+  });
+  s.addEventListener('mouseleave',function(){document.querySelector('.fn-tooltip')?.classList.remove('visible')});
+});
+</script>
+
+<script src="../../portal/share.js" defer></script>
+</body>
+</html>
