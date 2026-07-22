@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>长鑫科技：在存储涨价周期顶端，一家国产DRAM厂的账本与代差 | 调查团队</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand b{color:var(--red);font-weight:700}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+.timeline{margin:28px 0;padding-left:20px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:20px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:8px;width:10px;height:10px;background:var(--red);border-radius:50%}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px}
+.timeline-content{margin-top:4px}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.glossary{margin:30px 0;padding:22px 24px;background:var(--quote-bg);border:1px solid var(--line);border-radius:2px}
+.glossary h3{margin:0 0 14px;font-size:15px;letter-spacing:1px;color:var(--bg-dark);border:none;padding:0;text-transform:none}
+.glossary .g-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.glossary .g-item{font-size:13.5px;line-height:1.62}
+.glossary .g-term{font-weight:700;color:var(--red)}
+.glossary .g-def{color:#3a3a3a}
+.focus-box{margin:18px 0 24px;padding:14px 18px;border-left:4px solid var(--red);background:rgba(160,32,32,.05);font-size:15.5px;line-height:1.66}
+.focus-box .focus-label{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:2px 9px;border-radius:2px;margin-right:10px;vertical-align:1px}
+.focus-box b{color:var(--red)}
+.landing-box{margin:24px 0;padding:14px 20px;border:1px solid var(--bg-dark);border-left:4px solid var(--gold);background:rgba(184,134,11,.06);font-size:15px;line-height:1.66}
+.landing-box .landing-label{display:inline-block;background:var(--bg-dark);color:#e8c87a;font-size:11px;font-weight:700;letter-spacing:1px;padding:2px 9px;border-radius:2px;margin-right:10px;vertical-align:1px}
+.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:16px;color:var(--bg-dark);text-align:center}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:10px}
+.bar-label{width:96px;font-size:13px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--quote-bg);height:30px;position:relative;overflow:hidden}
+.bar-fill{height:100%;background:var(--bg-dark);display:flex;align-items:center;padding-left:10px;color:var(--paper);font-size:12px;font-weight:700;white-space:nowrap;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:#4a4036}
+.bar-fill.gray{background:#8a8073}
+.bar-value{width:110px;font-size:11px;color:var(--gray);flex-shrink:0;line-height:1.3}
+.step-chart{display:flex;align-items:flex-end;justify-content:space-around;height:170px;gap:8px;padding:0 4px;border-bottom:2px solid var(--bg-dark)}
+.step-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:90px}
+.step-value{font-size:11px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:0}
+.step-bar.red{background:var(--red)}
+.step-label{font-size:10px;margin-top:6px;text-align:center;color:var(--ink);line-height:1.3}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap}
+.donut{width:200px;height:200px;border-radius:50%;position:relative;transform:scale(0);transition:transform 1s cubic-bezier(.4,0,.2,1)}
+.donut::after{content:'';position:absolute;width:110px;height:110px;background:var(--paper);border-radius:50%;top:45px;left:45px}
+.donut-center{position:absolute;width:100%;text-align:center;top:78px;z-index:2}
+.donut-center .big{font-size:22px;font-weight:700;color:var(--red)}
+.donut-center .small{font-size:11px;color:var(--gray)}
+.donut-legend{font-size:13px;line-height:2}
+.donut-legend .dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:middle}
+.line-chart{padding:14px 8px}
+.line-chart-svg{width:100%;height:200px;display:block}
+.dist-bar{display:flex;height:34px;margin:10px 0;border:1px solid var(--line)}
+.dist-seg{display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--paper);font-weight:700;transition:width 1s}
+.reveal-pct{display:inline-block;background:var(--bg-dark);color:#e8c87a;padding:2px 8px;border-radius:2px;font-weight:700;cursor:pointer;font-size:.92em}
+.pct-detail{display:none;background:var(--quote-bg);border-left:3px solid var(--red);padding:12px 16px;margin:10px 0;font-size:14px;color:#3a3a3a}
+.pct-detail.open{display:block}
+.toolbar{position:fixed;top:14px;left:16px;z-index:300;display:flex;gap:8px}
+.nav-toggle{position:fixed;top:14px;right:16px;z-index:300;background:rgba(42,37,32,.92);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer}
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){
+.hero h1{font-size:28px}.hero .dek{font-size:15px}body{font-size:16px}.container{padding:24px 16px 60px}
+.pull-quote{font-size:19px}.data-card{min-width:120px}.epilogue{margin:30px -16px 0}.masthead{padding:10px 16px}
+.donut{width:160px;height:160px}.donut::after{width:88px;height:88px;top:36px;left:36px}.donut-center{top:62px}
+.dist-seg{font-size:9px}.line-chart-svg{height:170px}
+.reveal-pct{font-size:.95em}
+.glossary .g-grid{grid-template-columns:1fr}.focus-box{font-size:14px}.landing-box{font-size:13.5px}
+}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+
+footer{margin-top:80px;padding:30px 0 50px;border-top:1px solid var(--ink)}
+.disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:768px){
+}
+/* =========================================================
+   调查团队档案室 · 全局 UI 样式
+   所有报道页共用，禁止在各页面重复定义。
+   引入方式：<link rel="stylesheet" href="../global.css">
+   ========================================================= */
+
+/* —— 基础重置 —— */
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+/* 防止 masthead 和 top-bar 文本在窄屏错行 */
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+
+/* —— 内部资料横幅（顶部红色条） —— */
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+
+/* —— 置顶导航行（内部资料横幅下方） —— */
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+
+/* —— 阅读进度条 —— */
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+
+/* —— 页面滚动后紧凑模式：四元素合并为一行 —— */
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+/* 横幅文字绝对居中，不参与 flex 布局 */
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+/* 隐藏独立目录按钮，导语框代替点击 */
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .top-bar .toc:hover{background:rgba(255,255,255,.4)}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+
+/* —— 避免第一章上方重复横线（byline 已有底线） —— */
+.hero + h2{border-top:none !important;padding-top:0 !important}
+
+/* —— 法律合规弹窗 —— */
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  /* 移动端导航栏：隐藏次要元素、缩小间距 */
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+
+/* —— 页脚 —— */
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+
+/* —— 侧边目录 —— */
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+
+/* —— 返回顶部 —— */
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+
+/* —— 阅读时间徽章（右上角，导航栏下方） —— */
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+}
+</style>
+
+<link rel="stylesheet" href="../global.css">
+<script>window.__REPORT_CONFIG__ = {"readingTime": "约 22 分钟阅读", "reportTitle": "长鑫科技：在存储涨价周期顶端，一家国产DRAM厂的账本与代差"};</script>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 21 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+</div>
+</div>
+
+<div class="toolbar">
+
+</div>
+
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
+<div class="date">2026年7月 · 合肥 / 北京 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>开篇</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>148天：预先审阅的速度</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>追问收入：谁在买这些内存</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>追问利润：330亿是怎么赚到的</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>追问技术：17nm与10nm之间</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>追问壁垒：研发33%的绕路</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>追问资本：295亿与耐心钱</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>追问风险：三道关</a>
+<a href="#c8" data-ch="8"><span class="num">第8章</span>招股书之外</a>
+<a href="#c9" data-ch="9"><span class="num">尾声</span>周期退潮，才是真的开始</a>
+</div>
+<div class="container">
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>长鑫科技：在存储涨价周期顶端，<br>一家国产DRAM厂的账本与代差</h1>
+<div class="dek">长鑫科技295亿IPO：十年亏掉366亿元，一个季度净赚330亿元。当一家靠"耐心资本"熬过十年亏损的芯片厂，恰好踩中四十年一遇的存储涨价周期来到资本市场，散户买到的，究竟是"中国版SK海力士"，还是周期顶端的一张船票？</div>
+<div class="byline">
+<span>调查团队 | 2026年7月</span>
+<span class="meta">约21分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">合肥新桥机场工业园区，一座晶圆厂的洁净车间里，硅片在光刻、刻蚀、薄膜沉积之间往返。这里生产的不是逻辑芯片，而是另一种更古老、也更基础的 memory——<span class="term" data-tip="DRAM（动态随机存取存储器）：手机、电脑、服务器里的'运行内存'，断电即丢数据，与长期存储的闪存（NAND）不同。长鑫的主营品类。">DRAM</span>，动态随机存取存储器，你手机、电脑、服务器里那颗"记忆芯片"。十年前，中国大陆的DRAM自给率接近于零；今天，这座园区和它在北京的兄弟工厂，让中国坐上了全球第四把交椅。</p>
+
+<p class="reveal">2026年6月12日晚，中国证监会一纸批复，同意长鑫科技集团股份有限公司首次公开发行股票并在科创板上市。从2025年12月30日获受理，到注册生效，长鑫走了168天；<sup>[1][2]</sup>而从受理到过会，只用了148天——这是科创板"预先审阅机制"落地后的首单。</p>
+
+<p class="reveal">它计划募资<span class="reveal-pct" onclick="togglePct(this)" data-detail="295亿元拟募资额，为2026年以来A股最大IPO，科创板史上仅次于中芯国际（实际募资532.3亿元）的第二大IPO。发行股份不超过106.22亿股，保荐机构为中金公司。">295亿元</span>，有望成为A股年内最大IPO。<sup>[1]</sup>按部分机构测算，若以2026年预计净利润乘以20倍市盈率，它的市值可能冲向2万亿至3万亿元区间。</p>
+
+<p class="reveal">这是一组相隔悬殊的数字：一边是创办至今累计未弥补亏损<span class="reveal-pct" onclick="togglePct(this)" data-detail="截至2025年12月31日，长鑫科技累计未弥补亏损为366.50亿元。主要源于重资产模式下的高额折旧与持续研发投入，尚未被规模效应与盈利增长完全覆盖。">366.50亿元</span>；另一边是<sup>[4]</sup>2026年第一季度单季净利润<span class="reveal-pct" onclick="togglePct(this)" data-detail="2026年一季度，长鑫科技营收508亿元（同比+719.13%），净利润330.12亿元（同比+1268.45%），归母净利润247.62亿元。相当于日均盈利约3.7亿元。">330.12亿元</span>。十年亏损，一个季度近乎填平。<sup>[3]</sup>但这个"填平"需要谨慎解读：366亿的累计亏损，并非简单的"欠债"可以还清，而是包含了重资产模式下十年折旧与研发投入的沉没成本，需要持续的盈利来覆盖这些历史负担。</p>
+
+<p class="reveal">这篇报道试图回答三个问题：这家公司值不值得上市？它的技术成色有多少水分？它踩中的，究竟是自己的实力，还是一轮周期的顶峰？</p>
+
+<!-- 第一章 -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>148天：预先审阅的速度</h2>
+
+<p class="reveal">要理解长鑫的上市速度，需要一个坐标系。在科创板，一家普通IPO从受理到过会，平均需要约240天。长鑫只用了148天——但它是"预先审阅机制"改革后的第一单，监管在受理前就已完成问询闭环，速度本身不意外。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">受理→过会 时长对比（天）</div>
+<div class="step-chart">
+<div class="step-col"><div class="step-value">240</div><div class="step-bar" data-h="162">普通</div><div class="step-label">科创板平均</div></div>
+<div class="step-col"><div class="step-value">148</div><div class="step-bar red" data-h="100">长鑫</div><div class="step-label">预先审阅首单</div></div>
+<div class="step-col"><div class="step-value">88</div><div class="step-bar" data-h="60">摩尔线程</div><div class="step-label">闪电过会</div></div>
+<div class="step-col"><div class="step-value">73</div><div class="step-bar" data-h="50">宇树</div><div class="step-label">2026最快</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">长鑫是预先审阅首单，速度在制度框架之内；真正值得追问的，不是快慢，而是它选择上市的时点。</p>
+</div>
+
+<p class="reveal">有人问：为什么是现在？一个直观的答案是业绩。2025年，长鑫营收617.99亿元，同比增长155.62%，首次实现扭亏为盈；2026年一季度，营收508亿元，净利润330.12亿元。<sup>[3]</sup>这样的数字，放在任何时点都是"史上最佳"。</p>
+
+<p class="reveal">但时点的另一面，是估值。一家公司的发行估值，取决于它最近一期利润的成色。当最近一期利润恰好处于一轮史诗级涨价周期的顶点，估值便天然锚定在景气最旺的位置。这并非长鑫独有的精明——任何一家周期型企业，都希望在镜子最亮时拍照。只是存储行业的镜子，向来明暗交替得格外剧烈。真正该追问的，不是148天快不快，而是这家公司为什么选择在周期的顶端，按下上市快门。</p>
+
+<!-- 第二章 -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>追问收入：谁在买这些内存？</h2>
+
+<p class="reveal">长鑫2025年的617.99亿元，来自哪里？<sup>[3]</sup>招股书披露，公司的终端客户已包括阿里云、字节跳动、腾讯、联想、小米、传音、荣耀、OPPO、vivo等。<sup>[6]</sup>从应用看，它的产品分两条线：LPDDR系列主要供给手机、平板等移动设备；DDR系列主要供给服务器、个人电脑。真正该问的不是"卖了谁"，而是"这些内存最终用在哪里，又由谁付钱"——长鑫的市占率，究竟是它从三巨头手里抢来的，还是对手腾挪产能时让出来的？</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2025年产品收入结构</div>
+<div class="donut-wrap">
+<div class="donut" id="donutMix" style="background:conic-gradient(var(--red) 0 65.86%, #4a4036 65.86% 97.46%, var(--gold) 97.46% 100%)">
+<div class="donut-center"><div class="big">65.86%</div><div class="small">LPDDR系列</div></div>
+</div>
+<div class="donut-legend">
+<span class="dot" style="background:var(--red)"></span>LPDDR系列　407.04亿（65.86%）<br>
+<span class="dot" style="background:#4a4036"></span>DDR系列　195.31亿（31.60%）<br>
+<span class="dot" style="background:var(--gold)"></span>其他及服务　10.41亿（2.54%）
+</div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">近七成收入来自移动设备用的LPDDR；服务器与PC用的DDR占三成。HBM（高带宽内存）对营收的贡献，招股书显示仍极小。</p><sup>[5]</sup>
+</div>
+
+<p class="reveal">这里出现一个值得注意的细节。招股书披露，2025年长鑫<span class="reveal-pct" onclick="togglePct(this)" data-detail="据招股书主营地区构成，2025年长鑫科技境外收入350.54亿元（占比56.72%），境内收入262.22亿元（占比42.43%）。其列名的终端客户多为阿里云、字节、腾讯、小米等中国企业——境外收入占比过半，与"客户多为国内厂商"的直观印象形成反差，可能源于模组厂出口、晶圆销售口径或供应链层级差异，值得投资者留意。">境外收入占比约56.7%</span>。而其公开列名<sup>[5]</sup>的终端客户，几乎全是阿里、字节、腾讯、小米、联想这类中国公司。一个客户主要在中国、却有过半收入来自境外的结构，在存储器行业并不罕见——长鑫的颗粒经由模组厂、再经品牌厂流向全球，但这一口径差异本身，提示投资者：招股书里的"客户"，和真正付钱的那一方，中间隔着不止一层。</p>
+
+<p class="reveal">有人进一步追问：这些内存，最终用在了哪里？招股书显示，LPDDR4X已切入小米、OPPO、vivo、传音、联想的供应链；<sup>[6]</sup>DDR5与LPDDR5X正向服务器与个人电脑渗透。而据媒体报道，在三大原厂将产能向HBM与高端企业级DRAM腾挪的空窗里，长鑫凭借17nm DDR5的性价比，进入了戴尔、惠普等国际品牌的供应体系。</p>
+
+<div class="pull-quote reveal">它吃下的，是三巨头"战略性转移"留下的通用市场，<br>而非在同一战场正面取胜。</div>
+
+<p class="reveal">这句话需要数据来检验。按Omdia统计，2025年二季度长鑫全球DRAM份额为3.97%，到四季度升至7.67%——半年近乎翻倍。<sup>[7]</sup>但三巨头（三星、SK海力士、美光）合计仍超过90%。长鑫的份额跃升，与同期通用DRAM供给出现10至14个月空窗高度同步。也就是说，它的增长，相当一部分是"对手让出来的"，而非"自己抢过来的"——它吃下的是三巨头战略性转移留下的通用市场，而非在同一战场正面取胜。</p>
+
+<!-- 第三章 -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>追问利润：330亿是怎么赚到的？</h2>
+
+<p class="reveal">2026年一季度，长鑫净利润330.12亿元，同比大增1268%。<sup>[3]</sup>市场将其归因于"量价齐升"。但拆开看，"量"与"价"的贡献极不对称——这一季的暴利，究竟是抢到了更多份额（量），还是仅仅赶上了涨价（价）？答案决定了长鑫的盈利是结构性的，还是周期性的。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2026年一季度：位元出货量 vs 平均售价（环比）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">位元出货量</div><div class="bar-track"><div class="bar-fill" data-w="22">+11%</div></div><div class="bar-value">环比仅增11%</div></div>
+<div class="bar-row"><div class="bar-label">平均售价</div><div class="bar-track"><div class="bar-fill red" data-w="100">+57%</div></div><div class="bar-value">环比暴涨57%</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">据SemiAnalysis模型测算，2026年一季度长鑫位元出货量环比仅+11%，而ASP环比+57%。利润井喷的主驱动是价格，不是份额。</p><sup>[8]</sup>
+</div>
+
+<p class="reveal">独立半导体分析机构SemiAnalysis的测算指向同一结论：2026年一季度，长鑫<span class="term" data-tip="位元（bit）：衡量'卖了多少颗内存'的物理单位。位元出货量×平均售价（ASP）=营收。看'量'是看份额，看'价'是看周期。">位元出货量</span>环比仅增长约11%，而<span class="term" data-tip="ASP（Average Selling Price，平均售价）：每Gb内存的平均卖价。DRAM强周期，ASP可在短时间内涨数倍，是利润波动的主因。">平均售价（ASP）</span>环比上涨了约57%。<sup>[8]</sup>换句话说，真正推高利润的，是DRAM合约价的史诗级暴涨，而非公司在全球终端市场抢到了显著更多的份额。</p>
+
+<p class="reveal">毛利率的曲线，把这种"周期属性"画得更清楚。2022年，长鑫综合毛利率为-3.13%；2023年-1.93%；2024年5.58%；2025年跃升至41.02%；2026年一季度，营业利润率约70%。</p><sup>[8]</sup>
+
+<div class="chart-box reveal">
+<div class="chart-title">长鑫科技综合毛利率走势（%）</div>
+<div class="line-chart">
+<svg class="line-chart-svg" viewBox="0 0 680 220" preserveAspectRatio="none">
+<line x1="40" y1="190" x2="660" y2="190" stroke="#c9c2b3" stroke-width="1"/>
+<line x1="40" y1="20" x2="40" y2="190" stroke="#c9c2b3" stroke-width="1"/>
+<text x="14" y="194" font-size="11" fill="#6b6b6b">0%</text>
+<text x="6" y="100" font-size="11" fill="#6b6b6b">20%</text>
+<text x="6" y="24" font-size="11" fill="#6b6b6b">40%</text>
+<text x="20" y="210" font-size="11" fill="#6b6b6b">2022</text>
+<text x="200" y="210" font-size="11" fill="#6b6b6b">2023</text>
+<text x="380" y="210" font-size="11" fill="#6b6b6b">2024</text>
+<text x="540" y="210" font-size="11" fill="#6b6b6b">2025</text>
+<text x="640" y="210" font-size="11" fill="#6b6b6b">26Q1</text>
+<path id="marginPath" d="M40,196 L200,194 L380,168 L540,52 L660,18" fill="none" stroke="#a02020" stroke-width="3" stroke-linecap="round"/>
+<circle cx="40" cy="196" r="4" fill="#a02020"/><circle cx="200" cy="194" r="4" fill="#a02020"/><circle cx="380" cy="168" r="4" fill="#a02020"/><circle cx="540" cy="52" r="4" fill="#a02020"/><circle cx="660" cy="18" r="4" fill="#a02020"/>
+<text x="44" y="190" font-size="11" fill="#a02020">-3.13</text>
+<text x="300" y="160" font-size="11" fill="#a02020">5.58</text>
+<text x="500" y="44" font-size="11" fill="#a02020">41.02</text>
+</svg>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">毛利率从负值到41%，几乎完全由2025年下半年起的DRAM涨价驱动；2026年一季度营业利润率约70%，已接近三巨头水平。</p>
+</div>
+
+<p class="reveal">市场有不同解读。看多者认为，这是"国产替代+AI算力"双击下的结构性拐点，毛利率站上40%意味着长鑫已跨过盈亏平衡的门槛，护城河开始显形。看淡者则指出，2023年DRAM价格也曾暴跌40%以上，长鑫当年毛利率跌至-3%；<sup>[9][20]</sup>今天的暴利，是三巨头产能错配、通用DRAM供给短缺共振的结果，而非长鑫自身议价权的体现。</p>
+
+<p class="reveal">两种解读，都能在招股书里找到依据。而招股书自己写得克制：公司提示，若行业进入下行周期、下游需求疲软或供给远大于需求，产品售价与经营业绩将面临不利影响并出现波动。这句话，公司亲笔写下。SemiAnalysis的测算给看淡者添了一笔注脚——位元环比仅+11%、ASP环比+57%，利润井喷的主驱动是价格不是份额；<sup>[8]</sup>毛利率从负到41%，几乎全由2025下半年起的涨价驱动。</p>
+
+<!-- 第四章 -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>追问技术：17nm与10nm之间</h2>
+
+<p class="reveal">长鑫的技术故事，始于一个破产的德国公司。2019年，长鑫通过专利变现公司Polaris，从英飞凌手中获得约7000项奇梦达（Qimonda）遗留DRAM专利的许可，并接手了约2.8TB的技术文档。<sup>[12]</sup>奇梦达的一项关键架构BWL（埋藏字线），成为长鑫切入DRAM主流技术路线的支点。但技术成色的真正试金石，不在通用的DDR5，而在HBM——那道分水岭上，长鑫到底站了多少分。</p>
+
+<p class="reveal">有人质疑：靠继承的专利，能撑起一家全球第四吗？长鑫的回应是"跳代研发"——不做低端落后制程，2019年直接推出自主设计的8Gb DDR4，实现中国大陆DRAM"从0到1"；2024、2025年DDR5、LPDDR5X相继量产。从公开参数看，其DDR5最高速率8000Mbps、LPDDR5X最高10667Mbps，已能覆盖除顶级AI服务器以外的主流需求。<sup>[10]</sup></p>
+
+<p class="reveal">但制程的代差，是绕不开的硬约束。多方行业人士指出，长鑫当前量产产品停留在<span class="term" data-tip="制程节点（nm）：数字越小越先进。长鑫量产等效17nm（G3），三巨头12–13nm，差1–2代。等效制程指性能对标，并非物理线宽。">等效17nm级别（G3）</span>，更先进的G4等效16nm正在爬坡，G5等效15nm待量产；而三巨头主力量产已达12-13nm，并测试11-12nm，全程采用EUV光刻。因受出口管制，长鑫无法合法获得EUV，只能用DUV多重曝光迂回，整体落后1至2代。<sup>[10]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">量产制程节点对比（等效 nm，越小越先进）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">三星/SK/美光</div><div class="bar-track"><div class="bar-fill dark" data-w="30">12-13nm</div></div><div class="bar-value">主力量产<br>11-12nm测试中</div></div>
+<div class="bar-row"><div class="bar-label" style="color:var(--red)">长鑫科技</div><div class="bar-track"><div class="bar-fill red" data-w="78">17nm(G3)</div></div><div class="bar-value">16nm爬坡<br>15nm待量</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">注：条形长度仅表示"更大数字=更成熟制程"的直观对照；长鑫无EUV，靠DUV多重曝光实现等效17nm。</p>
+</div>
+
+<p class="reveal">真正的分水岭在<span class="term" data-tip="HBM（高带宽内存）：AI服务器的刚需，涉及3D堆叠、TSV硅通孔等尖端封装，是AI算力的'入场券'。长鑫落后2–3年。">HBM</span>。高带宽内存是AI服务器的"刚需燃料"，涉及3D堆叠、TSV硅通孔等尖端封装，是三巨头用专利与英伟达联合开发堆出的高墙。长鑫当前仅能量产低端HBM2，HBM3处于小批量/样品交付阶段、<span class="term" data-tip="良率（yield）：合格芯片占投片的比例。长鑫HBM良率约60%，三巨头>90%，直接决定成本与利润。">良率</span>约60%；而三巨头已量产HBM3E/HBM4，良率超90%。代差约2至3年。<sup>[11]</sup>这意味着，即便长鑫在通用DRAM市场取得成功，若无法突破HBM技术壁垒，其长期竞争地位仍将受制于三巨头——因为AI算力市场才是未来增长的核心战场。</p>
+
+<div class="pull-quote reveal">通用DDR5是"现在的饭碗"，<br>HBM是"未来的入场券"。<br>长鑫握住了饭碗，却还没拿到入场券。</div>
+
+<p class="reveal">企业回复：公司正积极布局更新代际产品，并计划投入前瞻技术研发。但招股书亦坦言，产能距离前三家国际头部厂商仍有差距，且产能规模远低于国内庞大需求。技术来源的争议也未止息——2025年12月，首尔检方以涉嫌违反产业技术保护法，对5名三星前员工及长鑫研发团队5人提起诉讼，指控核心技术遭系统性泄露。<sup>[23]</sup>长鑫方面迄今未公开回应该项指控的具体指控内容。</p>
+
+<p class="reveal">通用DDR5已是"现在的饭碗"，HBM才是"未来的入场券"。长鑫握住了饭碗——量产等效17nm、DDR5速率覆盖主流——却还没拿到入场券：HBM仅能量产HBM2、HBM3良率约60%，而三巨头已量产HBM3E/HBM4、良率超90%，代差约2至3年。但这"2至3年"的估算，忽略了一个关键变量：三巨头不会在原地等长鑫追赶。当长鑫HBM3良率勉强达标时，三巨头已经量产HBM4甚至更高端——这意味着追赶永远在追赶，差距不会自然消失。更残酷的是，HBM的良率爬坡本身就意味着巨额烧钱——每一片良率未达标的硅片，都是直接报废的成本。对于一家累计亏损366亿的公司来说，这笔账，它还能烧多久？</p><sup>[4]</sup>
+
+<!-- 第五章 -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>追问壁垒：研发33%背后的"绕路"</h2>
+
+<p class="reveal">长鑫常被称道的一点，是研发投入强度极高。招股书显示，截至2025年6月，公司累计研发投入188.67亿元，占累计营业收入的33.11%；2022、2023年研发占比甚至超过50%。<sup>[13]</sup>但研发强度高，是否等于壁垒深？这笔钱有多少真正花在了前沿突破上，又有多少只是用来"绕过买不到的设备"？答案，藏在支出的结构里。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">研发费用率对比（%）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label" style="color:var(--red)">长鑫科技</div><div class="bar-track"><div class="bar-fill red" data-w="100">33.11%</div></div><div class="bar-value">2024年<br>累计33%</div></div>
+<div class="bar-row"><div class="bar-label">三星</div><div class="bar-track"><div class="bar-fill gray" data-w="35">11.74%</div></div><div class="bar-value">2024年</div></div>
+<div class="bar-row"><div class="bar-label">SK海力士</div><div class="bar-track"><div class="bar-fill gray" data-w="22">7.39%</div></div><div class="bar-value">2024年</div></div>
+<div class="bar-row"><div class="bar-label">美光</div><div class="bar-track"><div class="bar-fill gray" data-w="32">10.66%</div></div><div class="bar-value">2024年</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">长鑫研发强度是三巨头的3倍左右——但高强度部分用于"绕过设备限制"的工艺创新，而非纯前沿探索。</p><sup>[13]</sup>
+</div>
+
+<p class="reveal">有人问：研发强度高，是否等于壁垒深？答案没那么直接。长鑫累计申请专利超5500项（境内3116项、境外2473项），<sup>[14]</sup>数量可观。但专利的质量分布不均——在HBM与先进制程上的布局密度，仍显著少于三巨头数以万计、且相互交叉的核心专利池。三巨头靠专利组合形成严密的诉讼威慑；长鑫的专利墙，还在修筑中。</p>
+
+<p class="reveal">更现实的约束在设备端。长鑫产线设备国产化率已提升至约40%，北方华创、拓荆科技、华海清科等国产厂商导入了刻蚀、薄膜沉积等环节；但核心光刻机仍依赖海外供应链，且在美国出口管制下获取受限。<sup>[15]</sup>这意味着，长鑫的研发投入中，有一部分必须用于"绕开设备限制"的工艺创新（如DUV多重曝光），而非纯粹的技术前沿探索。</p>
+
+<p class="reveal">研发强度高，是事实；研发转化为高端产品的效率，受供应链硬约束——这也是事实。两者不矛盾，但投资者的账，要分开算。长鑫累计申请专利超5500项，数量可观，但在HBM与先进制程上的布局密度，仍显著少于三巨头数以万计、相互交叉的核心专利池；三巨头靠专利组合形成严密的诉讼威慑，长鑫的专利墙还在修筑中。33%的研发强度，有一部分必须用于DUV多重曝光这类"绕路"式的工艺创新，而非纯粹的前沿探索——强度高，不等于壁垒已深。</p>
+
+<!-- 第六章 -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>追问资本：295亿，以及它背后的"耐心钱"</h2>
+
+<p class="reveal">295亿元募资，将投向三大方向：DRAM存储器技术升级130亿元、存储器晶圆制造量产线升级改造75亿元、动态随机存取存储器前瞻技术研发90亿元。<sup>[1]</sup>这是一笔创纪录的融资，但放在半导体版图里，需要参照系。更值得看的是这笔钱的承接结构——十年亏损由谁扛，周期顶端的利润与估值又由谁接。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">近期A股大额IPO募资对比（亿元）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">中芯国际</div><div class="bar-track"><div class="bar-fill dark" data-w="100">532.3</div></div><div class="bar-value">实际募资<br>拟募200</div></div>
+<div class="bar-row"><div class="bar-label" style="color:var(--red)">长鑫科技</div><div class="bar-track"><div class="bar-fill red" data-w="55">295.0</div></div><div class="bar-value">2026拟募<br>年内最大</div></div>
+<div class="bar-row"><div class="bar-label">粤芯半导体</div><div class="bar-track"><div class="bar-fill gray" data-w="14">75.0</div></div><div class="bar-value">晶圆代工</div></div>
+<div class="bar-row"><div class="bar-label">燧原科技</div><div class="bar-track"><div class="bar-fill gray" data-w="11">60.0</div></div><div class="bar-value">AI芯片</div></div>
+<div class="bar-row"><div class="bar-label">盛合晶微</div><div class="bar-track"><div class="bar-fill gray" data-w="9">50.28</div></div><div class="bar-value">先进封测</div></div>
+<div class="bar-row"><div class="bar-label">宇树科技</div><div class="bar-track"><div class="bar-fill gray" data-w="8">42.02</div></div><div class="bar-value">人形机器人</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">长鑫295亿为2026年A股最大IPO；比它募资多的，仅中芯国际一家（且为多年前项目）。</p><sup>[1]</sup>
+</div>
+
+<p class="reveal">这笔钱的背后，是"耐心资本"的十年下注。长鑫无控股股东、无实际控制人；第一大股东清辉集电（合肥国资）持股21.67%，长鑫集成11.71%、安徽省投7.91%，国有资本合计持股超过30%。五大行旗下的金融资产投资公司（AIC）亦在列。2016年启动的"506"项目首期180亿元中，合肥国资承担了约80%。</p><sup>[16][17]</sup>
+
+<p class="reveal">有人评价：合肥的打法，是把晶圆厂当作"十年为期的战略押注"，而非短期基金回报工具。即便在长鑫近十年尚未盈利的阶段，国资也持续注资、从未折价退出。这种耐心，是长鑫能熬过366亿亏损、等到周期到来的前提。</p>
+
+<p class="reveal">另一笔关键钱，来自上市前最后一轮。2025年6月，阿里云出资61亿元认购3.85%股权，将长鑫上市前估值推向1500亿元以上。按部分机构"2026年净利润超1500亿×20倍PE"的测算，长鑫市值有望冲击2万亿至3万亿元——<sup>[18]</sup>这意味着，最后入场的产业资本，已在周期顶端锁定了可观的账面浮盈。</p>
+
+<div class="pull-quote reveal">十年亏损由国资与早期股东承担，<br>周期顶点的利润与估值，由二级市场承接。</div>
+
+<p class="reveal">国资合计持股超过30%、长鑫十年未盈利仍持续注资未曾折价退出；而阿里云61亿入局推高估值至1500亿以上，机构按20倍PE估出2至3万亿市值——早期资本在顶端锁定的浮盈，最终要由敲下申购键的人来定价。</p>
+
+<!-- 第七章 -->
+<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>追问风险：三道关</h2>
+
+<p class="reveal">招股书用大量篇幅提示风险。其中最硬的，是三道关：亏损、折旧、周期。它们像三笔长期存在的"固定税"，在暴利当头的此刻容易被忽略，却会在周期退潮时重新显形。</p>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num">366.50亿</span><span class="label">累计未弥补亏损<br>（2025年末）</span></div>
+<div class="data-card"><span class="num">1830亿</span><span class="label">固定资产账面价值<br>占总资产54.34%</span></div>
+<div class="data-card"><span class="num">246.80亿</span><span class="label">2025年折旧额<br>三年翻倍</span></div>
+</div>
+
+<p class="reveal">第一道关是历史亏损。截至2025年末，长鑫累计未弥补亏损366.50亿元。<sup>[4][19]</sup>重资产模式下，固定资产高达1830亿元，占总资产54.34%；2023至2025年<span class="term" data-tip="折旧：晶圆厂设备按年分摊的成本。长鑫年折旧246亿，是长期存在的'固定税'，即便盈利也持续吞噬利润。">折旧</span>从105.55亿元增至246.80亿元，三年翻倍，持续吞噬利润。即便盈利，折旧仍是长期存在的"固定税"。</p>
+
+<p class="reveal">第二道关是周期。DRAM是典型的强周期品：涨价时利润井喷，跌价时毛利转负。三星前半导体业务总裁曾预警，随着2027-2028年全球新建产能集中释放，内存价格可能显著回落。<sup>[20]</sup>长鑫在招股书中也提示，若行业进入下行周期，经营业绩将出现波动。历史上，2023年DRAM价格曾暴跌40%以上——那一年长鑫毛利率为-1.93%。</p><sup>[9]</sup>
+
+<p class="reveal">第三道关在门外。美国《MATCH法案》将长鑫等五家中国芯片制造企业列为"受管制设施"，拟全面禁止设备出口并切断维修服务；美国商务部"实体清单"对核心设备与技术的限制仍未松动。2025年1月，长鑫曾被列入美国国防部1260H涉军清单（后与长江存储一同被移出），但实体清单的风险始终悬顶。<sup>[21]</sup>企业回复：公司通过国产供应链协同降低依赖；但"绕路"能走多远，取决于设备管制的实际边界。</p>
+
+<p class="reveal">三道关叠加起来是这样一组数字：固定资产1830亿、占总资产54%，年折旧246亿三年翻倍、长期吞噬利润；2023年DRAM价格曾暴跌40%、长鑫当年毛利转负；实体清单与MATCH法案悬顶。暴利之下，这些"固定税"和周期风险并没有消失，只是暂时被涨价盖住了。</p>
+
+<p class="reveal">一个关键问题被暴利掩盖了：366亿累计亏损，到底要多久才能真正"弥补"？答案取决于我们用什么口径算。若乐观地假设长鑫能维持2026年一季度的330亿利润水平（年化1320亿），扣除246亿折旧后，每年净填补约1074亿——<sup>[19]</sup>一年即可清零。但这个假设本身就是陷阱：330亿利润中有227亿来自ASP环比+57%的涨价红利，这不是公司能复制的经营成果。若将利润拉回到不含涨价的常态水平（参照2025年全年71.44亿归母净利润），<sup>[4]</sup>扣除246亿折旧，长鑫实际上每年仍是现金净亏损约175亿。换句话说，即便不遭遇价格暴跌，仅靠自身经营产生的利润，长鑫根本无法覆盖折旧——366亿亏损不仅不会缩小，反而会继续扩大。</p>
+
+<p class="reveal">这就是"没那么快"的真实含义：295亿IPO募资，按招股书规划投入130亿技术升级、75亿产线改造、90亿前瞻研发。即使全部花完，折旧基数将进一步提高，长鑫需要更高的营收才能维持盈利。它不是已经盈利了所以来融资，而是因为还没盈利所以才来融资——295亿，<sup>[1]</sup>是它能否继续活到盈利的那个临界点。</p>
+
+<!-- 第八章 -->
+<h2 class="reveal" id="c8"><span class="chap-num">第八章</span>招股书之外</h2>
+
+<p class="reveal">招股书之外，长鑫面对的是一套更复杂的算术。它既是"国产替代"的标杆，也是地缘博弈的棋子。一个耐人寻味的反差，把这种复杂摆到了台面上：2025年，苹果公司曾游说美国政府，希望获准从长鑫采购内存芯片。分量<sup>[22]</sup>，并不等于安全。</p>
+
+<p class="reveal">一个耐人寻味的反差：2025年，苹果公司曾游说美国政府，希望获准从长鑫采购内存芯片。直接动因<sup>[22]</sup>是DRAM价格暴涨三倍，苹果急需打破三巨头的供给垄断。法律上，苹果作为私企不受1260H清单约束；但业界真正忌惮的，是实体清单——一旦长鑫被列入，苹果新建的供应链将被立即卡死。一家美国科技巨头为一家中国存储厂游说，本身说明了长鑫在全球供给中的分量。</p>
+
+<p class="reveal">但分量，不等于安全。全球DRAM市场三十年里，台湾瑞晶、德国奇梦达、日本尔必达都曾短暂挤入前列，最终无一例外出局。长鑫与它们的区别，在于它背后有一座城市的"耐心"，以及一轮AI算力带来的超预期需求。这两点能否转化为结构性地位，取决于2026-2027年这个窗口：它能否在巨头HBM新产能释放、通用DRAM供给回补之前，完成14nm制程与HBM3的量产卡位。</p>
+
+<p class="reveal">技术来源的追问也未停息。长鑫从奇梦达遗产起步，又从美光、三星、SK海力士及中国台湾大量招募人才；2025年底韩国检方的起诉，<sup>[23]</sup>把"人才流动是否越界"的问题摆上了台面。长鑫从一家破产德国公司获得关键技术，<sup>[12]</sup>再用十年把它变成全球第四——这个故事里，既有自主创新的硬功夫，也有全球产业链遗产的馈赠。两者都是事实。</p>
+
+<p class="reveal">苹果游说，说明长鑫在全球供给中确有分量。但分量能否转化为可持续的盈利能力，仍是疑问。分量能否转化为安全，要看2026-2027这个窗口：它能否在巨头HBM新产能释放、通用DRAM供给回补之前，完成14nm制程与HBM3的量产卡位。历史上挤入DRAM前列的尔必达、奇梦达、瑞晶，无一善终；长鑫与它们的区别，在于它背后有一座城市的"耐心"，以及一轮AI算力带来的超预期需求。这两点能撑多久，决定它是窗口期赢家，还是周期过客。更重要的是，即便在窗口期内取得成功，长鑫仍需证明其盈利模式不依赖于DRAM周期波动——因为当周期退潮时，能否依然站着，才是真正的考验。</p>
+
+<p class="reveal">一个更具体的算术把"没那么快"摆在了台面上。从HBM2量产到HBM3E，三星用了约4年；SK海力士约3年。长鑫从HBM2量产到HBM3，如果一切顺利，也需要3至5年——<sup>[11]</sup>而在这段烧钱爬坡期，它需要持续的高额营收来支撑。2025年617亿营收是涨价的红利，不是常态；若价格回落，营收将同步下滑。当营收下滑与研发烧钱同时发生时，长鑫能撑几个季度？这个问题，招股书没有回答。市场给出的答案，却是2万亿至3万亿的估值。</p>
+
+<!-- 尾声 -->
+<div class="epilogue reveal" id="c9">
+<h2 id="c9">尾声：周期退潮，才是真的开始</h2>
+<p>朱一明，长鑫科技的董事长，清华物理系出身，在硅谷做过芯片，2005年创办兆易创新，2016年又押上全部身家做DRAM。他曾在量产爬坡期立下军令状：项目盈利之前，不领一分薪酬或奖金。十年后，长鑫从一个破产德国公司的专利文档里，长出了全球第四的DRAM厂。</p>
+<p>但全球第四，不等于第一梯队。这道坎，不是一个季度的330亿利润就能翻过去的<sup>[3]</sup>——因为那330亿，本质上是DRAM合约价暴涨57%带来的<sup>[8]</sup>"纸面富贵"，而非公司自己赚出来的。当合约价回归常态时，它会先消失。</p>
+<p>"周期退潮时能否站着"，不是抽象的问题，而是具体的算术。2023年DRAM价格曾暴跌40%以上，那一年长鑫毛利率为-1.93%——它重新回到了亏损的老路。<sup>[20][9]</sup>如果下一次价格回落40%，今天的330亿季度利润会跌到约198亿；减去每年246亿的折旧，<sup>[19]</sup>净利润只剩下52亿左右。而366亿的累计亏损，一年只能填平1/7，而不是"一个季度就填平"。</p>
+<p>更难的在后面。即便价格不跌，当三星、SK海力士从HBM产能腾出手来重新涌入通用DRAM市场——这预计在2027-2028年——长鑫凭17nm（而对手已是12-13nm）、无EUV、HBM良率仅60%，还能守住7.67%的份额吗？<sup>[10][11][7]</sup>历史上，尔必达2011年曾是DRAM全球第二，却在2012年被美光收购清算；奇梦达2006年还是全球第三，2008年申请破产。它们的共同命运，不是技术不够好，而是没有熬过周期下行的那段最难受的日子。</p>
+<div class="pull-quote">长鑫真正需要证明的，<br>不是它能在一个季度赚330亿，<br>而是当DRAM价格跌回2023年水平时，<br>它依然能活着。</div>
+<p style="font-size:13px;color:#a89e8e;margin-top:16px">读没读这份招股书，是每个打新者自己的事。本文所引数据均来自长鑫科技招股书、问询回复、公司公告及公开报道，详见文末注释。投资有风险，本文不构成任何投资建议。</p>
+</div>
+
+<div class="footnotes">
+<h3>注释与资料来源</h3>
+<ol>
+<li>上交所官网、证券时报IPO专题：长鑫科技2025-12-30获受理，2026-05-27过会，2026-06-12注册生效；拟募资295亿元，为2026年以来A股最大IPO，科创板史上仅次于中芯国际（实际募资532.3亿元）。</li>
+<li>科创板"1+6"改革方案试点IPO预先审阅机制，长鑫科技为首单受理项目；预先审阅可将问询前置至受理前，减少敏感信息过早披露。</li>
+<li>招股书（申报稿/上会稿/注册稿）：2025年营收617.99亿元（+155.62%），归母净利润18.75亿元，扣非净利润53.16亿元，毛利率41.02%；2026年一季度营收508亿元（+719.13%），净利润330.12亿元（+1268.45%），归母净利润247.62亿元；预计2026上半年营收1100-1200亿元、净利润660-750亿元。</li>
+<li>2023-2025年净利润分别为-192.25亿、-90.51亿、71.44亿元；截至2025-12-31累计未弥补亏损366.50亿元。新财富据Wind整理：2022-2024年分别亏损约92亿、192亿、91亿元。</li>
+<li>招股书主营构成：2025年LPDDR系列407.04亿元（65.86%）、DDR系列195.31亿元（31.60%）、其他10.41亿元；境外收入350.54亿元（56.72%），境内262.22亿元（42.43%）。</li>
+<li>终端客户据招股书：阿里云、字节跳动、腾讯、联想、小米、传音、荣耀、OPPO、vivo；LPDDR4X进入小米/OPPO/vivo/传音/联想供应链（财联社2026-07-15）。</li>
+<li>Omdia数据：按产能/出货量/销售额，长鑫中国第一、全球第四；2025Q2份额3.97%，Q4升至7.67%；三巨头（三星、SK海力士、美光）合计超90%。</li>
+<li>SemiAnalysis（2026-06-25万字报告）：2026Q1长鑫位元出货量环比+11%、ASP环比+57%；2025年毛利率37.8%（三星39.4%、美光39.8%、SK海力士60.4%因HBM）；2026Q1营业利润率约70%（SK海力士73%、三星81%、美光84%）。</li>
+<li>毛利率历史：2022年-3.13%、2023年-1.93%、2024年5.58%、2025年41.02%（凤凰网、证券时报）。</li>
+<li>技术路线：2019年推8Gb DDR4（从0到1）；DDR5最高8000Mbps/24Gb，LPDDR5X最高10667Mbps/16Gb；量产G3等效17nm，G4等效16nm爬坡，G5等效15nm待量产；三巨头主力量产12-13nm、测试11-12nm、全程EUV。</li>
+<li>HBM：长鑫HBM2量产、HBM3小批量/样品（良率约60%）；三巨头HBM3E/HBM4量产（良率>90%），代差2-3年（搜狐、今日头条多方整理）。</li>
+<li>技术来源：2019年通过Polaris从英飞凌获约7000项奇梦达专利许可，接手2.8TB技术文档，关键架构BWL；21世纪经济报道引SemiAnalysis（2026-06-25）。</li>
+<li>研发：累计研发投入188.67亿元（占累计营收33.11%），2022/2023研发占比超50%；2024研发强度33.11% vs 三星11.74%、SK海力士7.39%、美光10.66%（新财富、证券时报）。</li>
+<li>专利：截至2025-06-30，境内3116项+境外2473项；累计申请超5500项（多源）。</li>
+<li>设备：国产化率约40%，北方华创/拓荆科技/华海清科等导入刻蚀、薄膜沉积；核心光刻机受限（凤凰网、财联社）。</li>
+<li>股权：清辉集电21.67%（第一大，合肥国资）、长鑫集成11.71%、大基金二期8.73%、合肥集鑫8.37%、安徽省投7.91%；无控股股东、无实际控制人；五大行AIC（农银0.95%等）在列。</li>
+<li>合肥"耐心资本"：2016年"506"项目首期180亿元，合肥国资承担约80%；长鑫十年未盈利期间持续注资未退出（21世纪经济报道引SemiAnalysis）。</li>
+<li>上市前最后一轮（2025-06）：阿里云61亿元认购3.85%，估值超1500亿元（中国新闻周刊）。机构测算市值或达2-3万亿元（按2026净利×20倍PE）。</li>
+<li>固定资产1830.24亿元（占总资产54.34%），折旧2023年105.55亿→2025年246.80亿（凤凰网）；存货2023/2024/2025为141.80/212.15/293.90亿元。</li>
+<li>周期风险：三星前半导体总裁预警2027-2028新产能释放后价格回落；2023年DRAM价格曾暴跌40%以上；长鑫招股书提示行业周期与下行风险。</li>
+<li>地缘：2025-01长鑫被列入美国防部1260H清单，后与长存一同被移出；美《MATCH法案》拟将长鑫等5家列为"受管制设施"全面禁售设备并切断维修；实体清单风险仍存（网易、搜狐）。</li>
+<li>苹果游说：英媒披露苹果2025年游说美政府，希望获准从长鑫采购以缓解DRAM涨价压力（环球网）。</li>
+<li>韩国检方2025-12-23以涉嫌违反《产业技术保护法》等，对5名三星前员工及长鑫研发团队5人提起诉讼，指控核心技术泄露（凤凰网）。</li>
+<li>产能：合肥、北京3座12英寸晶圆厂；2025年底月产能约28万片（国金证券），产能利用率95.7%、产销率90.7%；三星约64万片/月、SK海力士约51万片/月。</li>
+</ol>
+</div>
+
+</div>
+
+<div class="fn-tooltip" id="fnTip"></div>
+
+<script>document.documentElement.classList.add('js');
+var reveals=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(function(r){observer.observe(r)});
+
+var progress=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var backTop=document.getElementById('backTop');
+var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
+var epilogue=null;
+for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
+var chapters=allH2.filter(function(h){return h!==epilogue;});
+var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+
+function syncChapters(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+var line=130,idx=-1;
+for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
+var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
+if(inEpi){tracker.textContent='尾声';}
+else if(idx<0){tracker.textContent='导语';}
+else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
+if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
+var ch=inEpi?9:(idx<0?0:idx+1);
+var links=document.querySelectorAll('.sidenav a');
+links.forEach(function(a){a.classList.remove('active')});
+var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
+if(act)act.classList.add('active');
+}
+window.addEventListener('scroll',syncChapters,{passive:true});
+window.addEventListener('load',syncChapters);
+try{syncChapters();}catch(e){}
+
+var sidenav=document.querySelector('.sidenav');
+function toggleNav(){sidenav.classList.toggle('open')}
+document.querySelectorAll('.sidenav a').forEach(function(a){
+a.addEventListener('click',function(e){e.preventDefault();var id=this.getAttribute('href').slice(1);var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});sidenav.classList.remove('open')});
+});
+
+
+
+var barObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){var f=e.target;f.style.width=f.getAttribute('data-w')+'%';barObserver.unobserve(f)}});
+},{threshold:0.3});
+document.querySelectorAll('.bar-fill[data-w]').forEach(function(b){barObserver.observe(b)});
+
+var stepObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){var b=e.target;var h=parseInt(b.getAttribute('data-h'));if(h>0)b.style.height=h+'px';stepObserver.unobserve(b)}});
+},{threshold:0.3});
+document.querySelectorAll('.step-bar[data-h]').forEach(function(b){stepObserver.observe(b)});
+
+var donut=document.getElementById('donutMix');
+var donutObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){donut.style.transform='scale(1) rotate(360deg)';donutObserver.unobserve(donut)}});
+},{threshold:0.3});
+if(donut)donutObserver.observe(donut);
+
+var marginPath=document.getElementById('marginPath');
+if(marginPath){var len=marginPath.getTotalLength();marginPath.style.strokeDasharray=len;marginPath.style.strokeDashoffset=len;
+var lineObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){marginPath.style.transition='stroke-dashoffset 1.6s ease';marginPath.style.strokeDashoffset=0;lineObs.unobserve(marginPath)}})},{threshold:0.3});
+lineObs.observe(marginPath);}
+
+function togglePct(el){var d=el.nextElementSibling;if(d&&d.classList.contains('pct-detail')){d.classList.toggle('open')}else{var detail=el.getAttribute('data-detail');var p=document.createElement('div');p.className='pct-detail open';p.textContent=detail;el.parentNode.insertBefore(p,el.nextSibling)}}
+
+var fnTip=document.getElementById('fnTip');
+var footnotes=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+footnotes.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+function showTip(txt,x,y){fnTip.textContent=txt;fnTip.style.display='block';fnTip.style.left=Math.min(x+12,window.innerWidth-350)+'px';fnTip.style.top=(y+12)+'px';}
+function hideTip(){fnTip.style.display='none';}
+document.addEventListener('mouseover',function(e){
+  if(e.target.tagName==='SUP'){
+    var num=e.target.textContent.replace(/[\[\]]/g,'');var idx=parseInt(num)-1;
+    if(fnTexts[idx]){showTip(fnTexts[idx],e.clientX,e.clientY);}
+  } else if(e.target.classList&&e.target.classList.contains('term')){
+    var t=e.target.getAttribute('data-tip');if(t)showTip(t,e.clientX,e.clientY);
+  }
+});
+document.addEventListener('mouseout',function(e){if(e.target.tagName==='SUP'||(e.target.classList&&e.target.classList.contains('term')))hideTip()});
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='SUP'){var num=e.target.textContent.replace(/[\[\]]/g,'');var el=document.getElementById('fn-'+num);if(el)el.scrollIntoView({behavior:'smooth'});}
+  else if(e.target.classList&&e.target.classList.contains('term')){var t=e.target.getAttribute('data-tip');if(t){var r=e.target.getBoundingClientRect();showTip(t,r.left,r.bottom);e.stopPropagation();}}
+  else if(e.target!==fnTip){hideTip();}
+});
+(function(){
+  function initConsent(){
+    var overlay=document.getElementById("consentOverlay");
+    var check=document.getElementById("consentCheck");
+    var btn=document.getElementById("consentBtn");
+    if(!overlay||!btn||!check)return;
+    function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+    function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+    var STORAGE_KEY="investigative_desk_consent";
+    function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+    function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+    btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+    check.addEventListener("change",function(){btn.disabled=!check.checked});
+    show();
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
+})();
+</script>
+
+<footer>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+
+
+<div class="consent-overlay" id="consentOverlay">
+  <div class="consent-box">
+    <div class="consent-header">
+      <span>法律声明 · LEGAL NOTICE</span>
+      </div>
+    <div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+    <div class="consent-footer">
+      <label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+      <button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+    </div>
+  </div>
+</div>
+
+<script src="../global.js" defer></script>
+
+<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+
+<script src="../../share.js" defer></script>
+</body>
+</html>

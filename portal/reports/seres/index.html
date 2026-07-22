@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赛力斯：把灵魂交给华为的车厂，与它算不清的那笔"华为账" | 调查团队</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px}
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:26px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:6px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif}
+.nav-toggle:hover{background:var(--red)}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:13px;line-height:1.55;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.25);font-style:normal}
+.fn-tooltip.visible{opacity:1}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
+.chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:12px}
+.bar-label{width:110px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:var(--bg-dark)}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.gray{background:var(--gray)}
+.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:96px}
+.dilute-row{display:flex;align-items:center;gap:10px;margin:11px 0}
+.dilute-year{width:40px;font-size:12px;font-weight:700;color:var(--gray);flex-shrink:0}
+.dilute-track{flex:1;height:26px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden}
+.dilute-seres{height:100%;background:var(--red);border-radius:2px}
+.dilute-val{width:62px;font-size:13px;font-weight:700;color:var(--red);flex-shrink:0;text-align:right}
+.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.4}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0}
+.donut{width:170px;height:170px;border-radius:50%;position:relative;transition:transform .8s}
+.donut::after{content:'';position:absolute;top:26%;left:26%;width:48%;height:48%;background:var(--paper);border-radius:50%}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;font-size:13px}
+.donut-center .big{font-size:30px;font-weight:700;color:var(--red);display:block}
+.donut-legend{font-size:13px;line-height:2}
+.donut-legend .dot{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.step-chart{display:flex;align-items:flex-end;justify-content:center;gap:18px;height:220px;margin:24px 0 8px;padding:0 10px}
+.step-col{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;max-width:110px}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:16px}
+.step-bar.red{background:var(--red);color:#fff}
+.step-label{font-size:12px;text-align:center;line-height:1.3;color:var(--gray)}
+.step-value{font-size:12px;font-weight:700}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:24px 0}
+.metric-box{background:#fbf8f0;border:1px solid var(--line);padding:16px 14px;border-radius:3px;text-align:center}
+.metric-box .metric-val{font-size:26px;font-weight:700;color:var(--red);display:block;line-height:1.1}
+.metric-box .metric-label{font-size:12px;font-weight:700;margin-top:6px}
+.metric-box .metric-sub{font-size:11px;color:var(--gray);margin-top:4px;line-height:1.4}
+.timeline{margin:28px 0;padding-left:22px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:20px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-29px;top:7px;width:11px;height:11px;background:var(--red);border-radius:50%;border:2px solid var(--paper)}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:.5px}
+.timeline-content{margin-top:3px;font-size:15px}
+.focus-box{background:var(--quote-bg);border-left:4px solid var(--red);padding:16px 20px;margin:26px 0;font-size:16px;line-height:1.7}
+.focus-box .tag{display:inline-block;background:var(--red);color:#fff;font-size:11px;letter-spacing:1px;padding:2px 8px;border-radius:2px;margin-bottom:8px;font-style:normal}
+@media(max-width:600px){
+.masthead{padding:10px 16px}
+.masthead .date{font-size:10px}
+.container{padding:40px 18px 70px}
+.hero h1{font-size:30px}
+.hero .dek{font-size:16px}
+h2{font-size:22px}
+.pull-quote{font-size:20px;margin:28px 6px}
+.bar-label{width:82px;font-size:12px}
+.bar-value{width:auto;font-size:12px}
+.bar-row{flex-wrap:wrap;gap:6px 8px}
+.bar-track{flex:1 1 100%;order:3}
+.metric-grid{grid-template-columns:1fr 1fr;gap:10px}
+.metric-box .metric-val{font-size:22px}
+.donut-wrap{flex-direction:column;gap:18px}
+.step-chart{gap:8px;height:190px}
+.step-bar{font-size:10px}
+.step-label{font-size:10px}
+.data-card{flex:1 1 100%}
+.nav-toggle{top:12px;right:12px;padding:7px 11px;font-size:11px}
+}
+
+footer{margin-top:80px;padding:30px 0 50px;border-top:1px solid var(--ink)}
+.disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:768px){
+}
+/* =========================================================
+   调查团队档案室 · 全局 UI 样式
+   所有报道页共用，禁止在各页面重复定义。
+   引入方式：<link rel="stylesheet" href="../global.css">
+   ========================================================= */
+
+/* —— 基础重置 —— */
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+/* 防止 masthead 和 top-bar 文本在窄屏错行 */
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+
+/* —— 内部资料横幅（顶部红色条） —— */
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+
+/* —— 置顶导航行（内部资料横幅下方） —— */
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+
+/* —— 阅读进度条 —— */
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+
+/* —— 页面滚动后紧凑模式：四元素合并为一行 —— */
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+/* 横幅文字绝对居中，不参与 flex 布局 */
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+/* 隐藏独立目录按钮，导语框代替点击 */
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .top-bar .toc:hover{background:rgba(255,255,255,.4)}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+
+/* —— 避免第一章上方重复横线（byline 已有底线） —— */
+.hero + h2{border-top:none !important;padding-top:0 !important}
+
+/* —— 法律合规弹窗 —— */
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  /* 移动端导航栏：隐藏次要元素、缩小间距 */
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+
+/* —— 页脚 —— */
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+
+/* —— 侧边目录 —— */
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+
+/* —— 返回顶部 —— */
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+
+/* —— 阅读时间徽章（右上角，导航栏下方） —— */
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+}
+</style>
+
+<link rel="stylesheet" href="../global.css">
+<script>window.__REPORT_CONFIG__ = {"readingTime": "约 19 分钟阅读", "reportTitle": "赛力斯：把灵魂交给华为的车厂，与它算不清的那笔\"华为账\""};</script>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 13 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+</div>
+</div>
+
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="date">2026年7月 · 重庆 / 深圳 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>开篇</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>面包车厂的翻身</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>华为这台印钞机</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>一笔流向华为的账</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>赎回灵魂的三笔钱</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>五界分流，含华量被稀释</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>增长的悬崖</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>赎回自我的赌注</a>
+<a href="#c8" data-ch="8"><span class="num">尾声</span>灵魂的去向</a>
+</div>
+<div class="container">
+
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>赛力斯：把灵魂交给华为的车厂，<br>与它算不清的那笔"华为账"</h1>
+<p class="dek">一家靠面包车起家的重庆小厂，四年里改了名字、翻了身——营收从 143 亿涨到 1650 亿，亏损 22 亿变成盈利 59 亿。转折只有一个词：华为。但当华为把同一套"灵魂"分发给五个"界"，当 2026 上半年销量还在涨、利润却预亏 15 到 18 亿，这笔账，赛力斯算得清吗？</p>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月 · 约 13 分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">2026 年 7 月 12 日，赛力斯披露半年度业绩预告：预计归母净利润亏损 15 亿至 18 亿元。<sup>[10]</sup>就在同一份预告里，另一个数字却朝上——上半年累计交付 17.87 万辆，其中问界同比还涨了 10.2%。<sup>[10]</sup>卖得更多，却亏得更多。一家刚刚在去年 11 月登陆港交所、成为首家"A+H"两地上市豪华新能源车企的公司，在翻身四年之后，第一次把"利润"这四个字，写成了负号。<sup>[3]</sup></p>
+
+<p class="reveal">把时间拨回五年前，这家公司叫小康股份，主业的代表产品是东风小康——一种贴着"实惠"标签的微型面包车。2020 年，它营收 143 亿元，净亏 22 亿元，在新能源的浪潮里几乎是个边缘角色。<sup>[12]</sup>2021 年夏天，它与华为签下一纸合作，随后把名字改成了"赛力斯"。此后四年，营收冲到 1650 亿，净利润站稳 59 亿，问界一年交付 42 万辆，成了中国销量最高的豪华车品牌。<sup>[2][4]</sup></p>
+
+<p class="reveal">同一家公司，两种命运，中间只隔着一个华为。但华为不是免费的。从 2022 年到 2025 年上半年，赛力斯累计向华为支付的各类采购与费用，超过 750 亿元——大约是它四年净利润总和的四倍。<sup>[4]</sup>它用真金白银，买到了华为的智驾、座舱、渠道和品牌光环；也正因为此，它在业内始终甩不掉一个标签：华为的"代工厂"。</p>
+
+<div class="pull-quote reveal">它把灵魂交给了华为，换来了四年翻身。</div>
+
+<!-- 第一章 -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>面包车厂的翻身</h2>
+
+<p class="reveal">要理解赛力斯今天的处境，得先看清它的来路。1986 年，张兴海在重庆巴南区的一间小厂里起家——靠一根弹簧、摩托车配件，后来做成了东风小康微面，一度是"国民面包车"的代名词。<sup>[12]</sup>那是一门典型的"躯体"生意：买来技术、组装出厂、比谁便宜。直到 2020 年，它还是一家营收 143 亿、净亏 22 亿、在新能源赛道里被蔚小理甩开几条街的传统车企。<sup>[12]</sup></p>
+
+<p class="reveal">转折发生在 2021 年。那一年，赛力斯（当时还叫小康股份）与华为牵手，把华为的<span class="term" data-tip="鸿蒙智行（原'智选车'模式）：华为深度参与产品定义、智能座舱、智能驾驶与销售渠道的汽车合作模式。华为不造车，但把'含华量'最高的整车方案打包给合作车企，并在华为门店直接销售。">鸿蒙智行</span>方案塞进了一款叫 SF5 的车里。市场起初并不买账——"含华量"不够的 SF5 反响平平，早期的问界 M5、M7 也不温不火，2023 年 6 月问界 M7 月销量一度跌到 432 辆的历史冰点。<sup>[4]</sup>真正的拐点，是华为决定"all in"：据公开报道，华为派出百人工程师团队进驻赛力斯工厂，深度参与产品定义，合力投入 5 亿元升级品控，把鸿蒙座舱、乾崑智驾 ADS 和途灵底盘揉进问界的骨子里。<sup>[4]</sup></p>
+
+<p class="reveal">翻身的速度，写在利润表上。2023 年赛力斯还亏着 24.5 亿，2024 年营收同比暴增 305% 到 1451.76 亿，归母净利润 59.46 亿，第一次转正；2025 年营收再涨 13.7% 到 1650.5 亿，净利润 59.6 亿，连续两年盈利。<sup>[1][2]</sup>一家靠微面起家的厂，摇身成了 A 股市值最靠前的几支新能源股之一——2021 年上半年，沾上"华为概念"的小康股份股价一度暴涨 287.84%。<sup>[12]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">赛力斯营收与利润 · 2020 → 2025</div>
+<div class="chart-sub">四年翻身后，利润在 2025 年几乎零增长<sup>[15]</sup></div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">2020 营收</div><div class="bar-track"><div class="bar-fill gray" data-w="9"></div></div><div class="bar-value">143 亿</div></div>
+<div class="bar-row"><div class="bar-label">2021 营收</div><div class="bar-track"><div class="bar-fill gray" data-w="10"></div></div><div class="bar-value">167 亿</div></div>
+<div class="bar-row"><div class="bar-label">2022 营收</div><div class="bar-track"><div class="bar-fill gray" data-w="21"></div></div><div class="bar-value">341 亿</div></div>
+<div class="bar-row"><div class="bar-label">2023 营收</div><div class="bar-track"><div class="bar-fill dark" data-w="22"></div></div><div class="bar-value">358 亿</div></div>
+<div class="bar-row"><div class="bar-label">2024 营收</div><div class="bar-track"><div class="bar-fill dark" data-w="88"></div></div><div class="bar-value">1452 亿</div></div>
+<div class="bar-row"><div class="bar-label">2025 营收</div><div class="bar-track"><div class="bar-fill red" data-w="100"></div></div><div class="bar-value">1650 亿</div></div>
+</div>
+<div class="data-callout" style="margin-top:20px">
+<div class="data-card"><span class="num">-22 亿</span><div class="label">2020 净利润</div></div>
+<div class="data-card"><span class="num">-18.2 亿</span><div class="label">2021 净利润</div></div>
+<div class="data-card"><span class="num">-38.3 亿</span><div class="label">2022 净利润</div></div>
+<div class="data-card"><span class="num">-24.5 亿</span><div class="label">2023 净利润</div></div>
+<div class="data-card"><span class="num">+59.46 亿</span><div class="label">2024 净利润（首盈）</div></div>
+<div class="data-card"><span class="num">+59.6 亿</span><div class="label">2025 净利润（持平）</div></div>
+</div>
+</div>
+
+<p class="reveal">有意思的是，赛力斯并不是唯一一个面对华为选项的车企，也曾有一个著名的"反面"。2021 年 7 月，上汽董事长陈虹在股东大会上被问到是否与华为合作自动驾驶时，撂下一句后来被反复引用的大白话："这就好比一家公司为我们提供整体解决方案，如此一来，它就成了<span class="term" data-tip="灵魂论：上汽董事长陈虹 2021 年提出的比喻——若由第三方提供整车智能解决方案，'它就成了灵魂，上汽就成了躯体'。他主张'要把灵魂掌握在自己手中'。赛力斯恰恰反其道而行：把灵魂交给华为，换来了翻身。">灵魂</span>，而上汽就成了躯体。对于这样的结果，上汽是不能接受的。"<sup>[7]</sup>当时，这话被不少人当作一种气节——灵魂要攥在自己手里。可戏剧性的是四年之后：2025 年，连上汽自己也转身与华为牵手，推出"尚界"，把当年那句"不卖灵魂"亲手收回。<sup>[8]</sup>把两家放进同一条时间线，反差更明显——2021 年陈虹说出"不"的时候，赛力斯早已把灵魂交了出去。一个当场拒绝，一个提前交付；四年后，连拒绝者都跨过了那条线。卖不卖灵魂，从来不是道德题，是生存题。</p>
+
+<!-- 第二章 -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>华为这台印钞机</h2>
+
+<p class="reveal">华为究竟给赛力斯带来了什么？拆开问界这辆车，答案清晰得近乎直白：鸿蒙智能座舱、乾崑智驾 ADS、激光雷达与域控制器等核心零部件，是华为提供的；约 700 家华为门店的客流与销售，是华为给的；"华为inside"这四个字带来的信任与溢价，也是华为给的。<sup>[4]</sup>在鸿蒙智行的几种合作模式里，赛力斯是绑定最深、也最成功的一个样本——它的"含华量"，全阵营最高。</p>
+
+<p class="reveal">果实是真甜。2024 年，问界 M9 交付超 15 万辆，拿下 50 万元级豪华车型销量冠军；问界新 M7 全年交付近 20 万辆。<sup>[1][4]</sup>2025 年，问界系列整体交付超 42 万辆，是中国市场销量最高的中国豪华车品牌：M9 全年超 11 万辆、连续两年稳居 50 万级销冠，M8 超 15 万辆、稳居 40 万级第一，M7 超 11 万辆。<sup>[2]</sup>靠这一口气，赛力斯的新能源汽车毛利率从 2023 年的 7.2% 一路抬到 2025 年的 28.8%，比特斯拉（约 18%）、理想（约 20%）、蔚来（约 14.7%）都高。<sup>[2][4]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">问界三车 · 2025 年交付（万辆）</div>
+<div class="chart-sub">一款车撑起一个豪华品牌，M8 是销量担当</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">问界 M9</div><div class="bar-track"><div class="bar-fill red" data-w="73"></div></div><div class="bar-value">超 11 万</div></div>
+<div class="bar-row"><div class="bar-label">问界 M8</div><div class="bar-track"><div class="bar-fill dark" data-w="100"></div></div><div class="bar-value">超 15 万</div></div>
+<div class="bar-row"><div class="bar-label">问界 M7</div><div class="bar-track"><div class="bar-fill red" data-w="73"></div></div><div class="bar-value">超 11 万</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">2025 问界合计交付超 42 万辆，为国内销量最高的中国豪华品牌</div>
+</div>
+
+<div class="chart-box reveal">
+<div class="chart-title">新能源汽车毛利率 · 2025 同业对比</div>
+<div class="chart-sub">赛力斯 28.8%（较 2024 年 26.2% 续升），远超特斯拉 / 理想 / 蔚来（来源 [1][2][4]）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">赛力斯</div><div class="bar-track"><div class="bar-fill red" data-w="100"></div></div><div class="bar-value">28.8%</div></div>
+<div class="bar-row"><div class="bar-label">理想</div><div class="bar-track"><div class="bar-fill dark" data-w="69"></div></div><div class="bar-value">约 20%</div></div>
+<div class="bar-row"><div class="bar-label">特斯拉</div><div class="bar-track"><div class="bar-fill dark" data-w="62"></div></div><div class="bar-value">约 18%</div></div>
+<div class="bar-row"><div class="bar-label">蔚来</div><div class="bar-track"><div class="bar-fill gray" data-w="51"></div></div><div class="bar-value">约 14.7%</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">注：赛力斯为新能源汽车毛利率；同业为汽车业务毛利率，口径略有差异，仅供参考</div>
+</div>
+
+<p class="reveal">但"含华量"越高，越意味着一件事：赛力斯今天的全部荣光，几乎都挂在华为这一个名字上。它在招股书与公告里，把这个风险写得明白——与华为的合作存在"集中及交易对手风险"，若双方业务关系出现任何重大中断，"业务、财务状况及经营业绩或会受到重大不利影响"。<sup>[4]</sup>一家把利润引擎完全押在单一合作伙伴身上的车企，它的"躯壳"再强壮，方向盘却不在自己手里。</p>
+
+<!-- 第三章 -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>一笔流向华为的账</h2>
+
+<p class="reveal">华为的加持不是免费的。根据赛力斯披露的数据，2022 年至 2025 年上半年，公司累计向华为支付的采购及相关费用，超过 750 亿元；仅 2025 年上半年就支付了约 200 亿元，占同期总收入近三分之一。<sup>[4]</sup>按同期约 14.7 万辆问界销量折算，相当于每卖出一辆车，就有约 13.6 万元流向华为体系。</p>
+
+<p class="reveal">这笔钱分两块。一块是"买华为的东西"——鸿蒙座舱、乾崑智驾、激光雷达、域控制器等核心零部件，约占采购费的三分之二；另一块是"买华为的服务"——技术授权加约 700 家门店的渠道与营销开销，约占三分之一。<sup>[4]</sup>据鸿蒙智行合作协议，华为还按整车售价约 8% 收取渠道与营销综合服务费（含约 2% 的品牌营销与技术赋能费）。以 2025 年问界约 39.1 万元的成交均价算，每辆车约 3.13 万元是渠道费；再叠加约 5.24 万元的技术采购成本，赛力斯每卖一辆问界，合计要向华为体系支付约 8.37 万元，约占单车成交价的 21.4%。<sup>[4]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">每辆问界，华为拿走多少？</div>
+<div class="chart-sub">按 2025 年成交均价 39.1 万元测算，华为合计拿走约 21.4%</div>
+<div class="donut-wrap">
+<div class="donut" id="donut1" style="background:conic-gradient(var(--red) 0% 21.4%,var(--gold) 21.4% 100%)">
+<div class="donut-center"><span class="big">21.4%</span>流向华为</div>
+</div>
+<div class="donut-legend">
+<div><span class="dot" style="background:var(--red)"></span>渠道与营销费 · 约 3.13 万/车 · 8%</div>
+<div><span class="dot" style="background:var(--gold)"></span>华为技术采购 · 约 5.24 万/车</div>
+<div style="margin-top:8px;font-size:12px;color:var(--gray)">合计约 8.37 万/车；赛力斯留存约 78.6%</div>
+</div>
+</div>
+</div>
+
+<p class="reveal">单看这个数，华为像是"拿走大头"的那一方。但反过来看，正是华为的品牌与智驾溢价，把问界的成交均价和毛利率一起托了起来——赛力斯综合毛利率因此冲到近 30%，反而成了行业里毛利最高的玩家之一。<sup>[4]</sup>这是个拧巴的悖论：华为抽走了单车价值的五分之一，却帮赛力斯把剩下的五分之四，卖出了远超同行的价钱。750 亿采购费，约等于赛力斯四年净利润总和的四倍；可如果没有这 750 亿，也就没有那 59 亿的年利润。<sup>[4]</sup>账算得清，道理却说不清。</p>
+
+<!-- 第四章 -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>赎回灵魂的三笔钱</h2>
+
+<p class="reveal">赛力斯不是没想过把方向盘拿回一点。它用两笔真金白银的买卖，试图把"灵魂"的某些部分，从华为手里赎回来。</p>
+
+<p class="reveal">第一笔，是品牌。2024 年 7 月，赛力斯斥资 25 亿元，从华为手中买下"问界"系列的全部 919 项商标及 44 项相关专利，让这个最核心的品牌资产，彻底从华为名下转到自己名下。<sup>[5]</sup>第二笔，是技术股权。2024 年 8 月，赛力斯全资子公司拿出 115 亿元现金，买下华为旗下<span class="term" data-tip="引望（深圳引望）：华为将车 BU（智能汽车解决方案部门）整体剥离后成立的独立技术公司，是华为智驾、座舱等全栈技术的唯一载体。股权结构为华为 80%、赛力斯 10%、阿维塔 10%；董事会 7 席中华为提名 6 席，仍由华为主导。">引望</span> 10% 的股权——引望是华为车 BU 独立后的主体，也是华为智驾技术的唯一载体。交易后，引望由华为持股 80%、赛力斯与阿维塔各持 10%，华为在 7 个董事席位里提名 6 个，依然主导管理与技术方向。<sup>[6]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">赛力斯"赎回灵魂"的三笔钱</div>
+<div class="chart-sub">累计向华为押注近千亿，但引望仍由华为主导</div>
+<div class="data-callout">
+<div class="data-card"><span class="num">25 亿</span><div class="label">买下"问界"商标+专利</div></div>
+<div class="data-card"><span class="num">115 亿</span><div class="label">入股引望 10%</div></div>
+<div class="data-card"><span class="num">750 亿+</span><div class="label">2022–2025H1 累计采购费</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">两笔"赎回"合计 140 亿，加上采购费，赛力斯在华为身上押注近千亿</div>
+</div>
+
+<p class="reveal">这两步，本质是同一件事：把此前完全外放的"品牌话语权"和"技术股东身份"，逐步收回自己的版图。买商标，让问界在法律上真正属于赛力斯；入股价，让赛力斯从单纯的采购方，变成华为技术公司的少数股东。但"赎回"是局部的——商标虽然到手，车的智驾、座舱、渠道却仍握在华为手里；引望虽有了 10% 的股权，董事会却仍是华为的 6 席对其他人各 1 席，技术路线依旧华为说了算。<sup>[6]</sup>你可以付钱买下一张股东证，却买不回一套已经长在别人体系里的技术灵魂。</p>
+
+<!-- 第五章 -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>五界分流，含华量被稀释</h2>
+
+<p class="reveal">赛力斯赎回灵魂的同时，华为正把同一套灵魂，分发给越来越多的人。鸿蒙智行早已不是问界一家独大，而是铺成了"五界"：问界（赛力斯）、智界（奇瑞）、享界（北汽）、尊界（江淮）、尚界（上汽）。<sup>[4][8]</sup>2025 年，鸿蒙智行累计交付 58.9 万辆，其中问界 42.6 万辆，占比 71.8%——仍是绝对主力，但华为的资源与光环，已不再是赛力斯独享。<sup>[4]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">鸿蒙智行"五界" · 2025 年交付占比</div>
+<div class="chart-sub">问界仍是主力（71.8%），但华为光环已被五家分摊</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">问界</div><div class="bar-track"><div class="bar-fill red" data-w="100"></div></div><div class="bar-value">42.6 万</div></div>
+<div class="bar-row"><div class="bar-label">其他四界</div><div class="bar-track"><div class="bar-fill gray" data-w="38"></div></div><div class="bar-value">合计 16.3 万</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">智界/享界/尊界/尚界 四界合计约占 28.2%；华为"仅能承担四家"的窗口已被突破</div>
+</div>
+
+<div class="chart-box reveal" style="margin-top:28px">
+<div class="chart-title">问界在鸿蒙智行的"含华量" · 2021 → 2025</div>
+<div class="chart-sub">每多一个"界"，华为的门店、研发与品牌光环就被多分走一块</div>
+<div class="dilute-row"><div class="dilute-year">2021</div><div class="dilute-track"><div class="dilute-seres" style="width:100%"></div></div><div class="dilute-val">100%</div></div>
+<div class="dilute-row"><div class="dilute-year">2022</div><div class="dilute-track"><div class="dilute-seres" style="width:100%"></div></div><div class="dilute-val">100%</div></div>
+<div class="dilute-row"><div class="dilute-year">2023</div><div class="dilute-track"><div class="dilute-seres" style="width:98%"></div></div><div class="dilute-val">≈98%</div></div>
+<div class="dilute-row"><div class="dilute-year">2024</div><div class="dilute-track"><div class="dilute-seres" style="width:87%"></div></div><div class="dilute-val">≈87%</div></div>
+<div class="dilute-row"><div class="dilute-year">2025</div><div class="dilute-track"><div class="dilute-seres" style="width:71.8%"></div></div><div class="dilute-val">71.8%</div></div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">红：问界占鸿蒙智行交付比　灰：其余"界"合计　|　2021–22 独家；2023 智界入局、2024 享界/尊界入局、2025 尚界入局，五界齐发（综合公开销量与鸿蒙智行历年披露推算 [16]）</div>
+</div>
+
+<p class="reveal">稀释不是 2025 年才发生的，而是一条逐年展开的时间线。2021 年问界诞生时，鸿蒙智行（那时还叫"智选车"）几乎就是问界一个人；2022 年仍是独家。转折从 2023 年开始——奇瑞的智界年底入局，华为同一套渠道、同一批销售顾问，第一次要分给两个品牌；到 2024 年，北汽的享界、江淮的尊界接连落地，"界"字辈扩到四个；2025 年上汽的尚界补上第五块，华为的门店、研发优先级与那块"华为造车"的金字招牌，被五张嘴同时啃食。<sup>[16]</sup>对赛力斯而言，这意味着：早年的问界，几乎等价于"华为系造车"的全部想象；而今天走进一家华为门店，顾客面前摆着五款车，问界只是其中之一——独占性，正是被这样一年年磨掉的。</p>
+
+<p class="reveal">稀释的不只是资源，还有差异化。当多款车型共享鸿蒙座舱与乾崑智驾，"车均华为等于没有华为"的质疑开始浮现——若多数车企用相似的华为方案，竞争终将滑向价格战，问界赖以立足的"技术领先感"会被摊薄。<sup>[4]</sup>更要命的是，赛力斯自己还把篮子里的另一个鸡蛋也拿走了。2026 年 2 月，它将面向 10–16 万元主流市场的子品牌"蓝电"剥离：沙坪坝国资接手成为 33.5% 的第一大股东，赛力斯持股降至 32%、丧失控制权、不再并表。<sup>[9]</sup>剥离的理由是"聚焦高端新能源主业"，代价却是——问界成了赛力斯在乘用车领域唯一的业绩引擎。<sup>[9]</sup>一边是华为的光环被五家分食，一边是自己的品牌矩阵收窄到只剩一个，两头一挤，单品牌依赖的风险被放大到了极致。</p>
+
+<!-- 第六章 -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>增长的悬崖</h2>
+
+<p class="reveal">真正让市场心头一紧的，是增长曲线的陡然变平。2024 年，赛力斯营收暴涨 305%、扭亏为盈，像坐了火箭；到了 2025 年，营收只增 13.7%，而归母净利润 59.6 亿，几乎钉在了前一年的 59.46 亿上——增长，停了。<sup>[1][2]</sup>更刺眼的是 2026 年上半年的预告：在交付量同比上涨、问界同比增长 10.2% 的前提下，公司反而预亏 15 亿到 18 亿。<sup>[10]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">营收增速 vs 利润轨迹 · 2023 → 2026H1</div>
+<div class="chart-sub">营收还在涨，利润却从"首盈"滑向"预亏"</div>
+<div class="data-callout">
+<div class="data-card"><span class="num">+305%</span><div class="label">2024 营收增速</div></div>
+<div class="data-card"><span class="num">+13.7%</span><div class="label">2025 营收增速</div></div>
+<div class="data-card"><span class="num">≈ 0%</span><div class="label">2025 净利润增速</div></div>
+<div class="data-card"><span class="num">-15~18 亿</span><div class="label">2026H1 预亏</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">卖得越多、亏得越多的背离，是阶段性投入，还是模式拐点，市场仍在争论</div>
+</div>
+
+<p class="reveal">对于这份预亏，公司在预告里给了解释：近七成压力来自两大外部变量——一是碳酸锂半年内涨幅超 125%，叠加高阶智驾车型标配多激光雷达、高算力芯片，单车电子元器件成本直接抬升 1.5 万至 2 万元；二是技术迭代下的存量资产审慎计提，把适配性不足的旧产线、老模具一次性清零。<sup>[10]</sup>换句话说，这是主动"挤水分"、为新技术车型铺路的阶段性投入，而非经营塌方；公告也强调现金储备充裕、资产负债结构稳健。<sup>[10]</sup>但另一层潜台词绕不开：华为的刚性支出（渠道费、技术采购）是跟着销量走的结构性成本，车卖得越多，这笔账付得越狠。当增速见顶、成本抬头，曾经托起利润的那只手，也可能成为压住利润的那块石。</p>
+
+<!-- 第七章 -->
+<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>赎回自我的赌注</h2>
+
+<p class="reveal">赛力斯清楚，不能完全躺在华为身上。它押下了两个不在华为体系内的赌注，试图赎回"自我"。</p>
+
+<h3 class="reveal">赌注一：AIVA，一条跳开华为的技术路线</h3>
+
+<p class="reveal">第一个赌注叫 AIVA——一个由国资、赛力斯、宁德时代联合持股，并与火山引擎深度共创的新品牌。它完全独立运营，走"AI 定义汽车"的路线，直接跳开了原有的华为智驾路径依赖。<sup>[13]</sup>赛力斯输出成熟的整车制造与质量管控，宁德时代兜底动力电池，火山引擎提供大模型与智能座舱——这是一条"多方协同、不绑死某一家技术供应商"的新造车模式，等于给技术路线上了双保险：问界稳住基本盘，AIVA 探未来。<sup>[13]</sup></p>
+
+<h3 class="reveal">赌注二：出海，一个几乎空白的增量</h3>
+
+<p class="reveal">第二个赌注是全球化。从数据看，赛力斯今天几乎还是一家"内销公司"：2025 年国外收入仅 23.79 亿元，占总营收的 1.44%，国内收入占了 95.27%。<sup>[2]</sup>一个每年卖 47 万辆车、自称"世界级新豪华"的品牌，海外几乎还是白纸。这正是它想讲的下半场故事——把国内近 20 万用户验证过的产品力，直接搬去海外高端市场，用更大的销量基数，摊薄那笔固定的华为采购成本。<sup>[13]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">赛力斯收入地域结构 · 2025 年</div>
+<div class="chart-sub">海外仅 1.44%，全球化这张牌几乎还没打</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">国内收入</div><div class="bar-track"><div class="bar-fill red" data-w="100"></div></div><div class="bar-value">1572 亿 · 95.3%</div></div>
+<div class="bar-row"><div class="bar-label">国外收入</div><div class="bar-track"><div class="bar-fill gold" data-w="2"></div></div><div class="bar-value">23.8 亿 · 1.4%</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">出海若能跑通，是消化刚性成本、打开第二曲线的关键增量</div>
+</div>
+
+<p class="reveal">张兴海给的节奏很猛：问界从 0 到 100 万辆用了 5 年，第二个 100 万辆"争取用两年完成"；他曾提出三年内新能源汽车实现百万量级。<sup>[14]</sup>但从 2026 上半年的预亏看，这条路远比"百万辆"的口号陡峭。AIVA 能否跑通、海外能否打开、问界能否熬过车型周期而不被其他"界"分流，决定了赛力斯手里最终剩多少是自己的。</p>
+
+<!-- 尾声 -->
+<div class="epilogue reveal">
+<h2 id="c8"><span class="chap-num" style="color:#e8c87a">尾声</span>灵魂的去向</h2>
+
+<p>回到 2021 年那个夏天。上汽的陈虹说，不能把灵魂交给华为，否则"它成了灵魂，我成了躯体"。彼时赛力斯已经交了；四年后，连上汽自己也交了——2025 年它牵手华为，推出"尚界"，把当年那句"不卖灵魂"轻轻收了回去。<sup>[7][8]</sup>灵魂这东西，在智能汽车的牌桌上，从来不是什么气节，而是一道生存算术题。</p>
+
+<p>赛力斯用四年，把这道算术题做成了一份漂亮答卷：营收从 143 亿到 1650 亿，亏损 22 亿到盈利 59 亿，问界一年交付 42 万辆，成了中国豪华车销冠。<sup>[1][2][12]</sup>它证明了一件事——交出灵魂，确实能换一身行头、一座城、一笔账。可它现在要回答的，是另一道题：当华为把同一套灵魂，分发给五个"界"；当问界从"唯一"变成"之一"；当 2026 上半年销量还在涨、利润却预亏 15 到 18 亿——赛力斯手里，究竟还剩多少是自己的？<sup>[4][10]</sup></p>
+
+<p>它已经试着往回拿：25 亿买回"问界"的牌子，115 亿换来引望 10% 的股东证，再孵一个不挂华为标的 AIVA，把车开向海外几乎空白的市场。<sup>[5][6][13]</sup>但这些动作，更像是在华为画好的圆里，悄悄描一道自己的边。那笔 750 亿的账，可以用钱付；那枚交出去的灵魂，能不能真正赎回，要等 AIVA 跑通、海外打开、问界熬过车型周期，才见分晓。</p>
+
+<div class="pull-quote">四年前，华为是赛力斯唯一的答案；四年后，华为成了所有车企共享的考题。</div>
+
+<p>赛力斯的故事，本质上是一次关于"让渡"的漫长实验。它用灵魂换来了四年，换来了城、换来了账、换来了中国豪华车的销冠；可当 2026 上半年车卖得更多、钱却预亏 15 到 18 亿，当初那笔看似划算的交换，正在被时间重新定价。<sup>[4][10]</sup>25 亿买回的"问界"牌、115 亿换来的引望股、不挂华为标的 AIVA、以及几乎空白的海外市场，都是它在华为画好的圆里，试图描下的一道自己的边。<sup>[5][6][13]</sup>这道边能不能连成闭环，不取决于某一份季报好看与否，而取决于一件事：当某一天，消费者是因为"赛力斯"、而不是因为"华为"才买单时，这家公司才算真正把灵魂，从账本里赎回。</p>
+</div>
+
+<div class="footnotes">
+<h3>注释与来源</h3>
+<ol>
+<li>赛力斯 2024 年报（2025-03-31 披露，中新经纬/新浪转述）：营收 1451.76 亿（同比 +305.04%）、归母净利润 59.46 亿（2023 为 -24.50 亿）、新能源销量 42.69 万辆（+182.84%）、新能源毛利率 26.21%、每股派现 0.97 元合计 20.84 亿、同步筹划发行 H 股。</li>
+<li>赛力斯 2025 年报（2026-03-30 公司公告 / seres.cn）：营收 1650.5 亿（+13.7%）、归母净利润 59.6 亿、连续两年盈利、新能源毛利率 28.8%、研发投入 125.1 亿（+77.4%）、问界交付超 42 万辆（M9 超 11 万 / M8 超 15 万 / M7 超 11 万）、经营现金流 289.1 亿、每股派现 0.8 元合计 19 亿、新能源销量 472,269 辆（+10.6%）、国内收入 1572.4 亿（95.27%）/ 国外收入 23.79 亿（1.44%）。</li>
+<li>赛力斯 H 股上市：2025-11-05 于港交所主板挂牌（9927.HK），为首家"A+H"两地上市的豪华新能源车企。</li>
+<li>新浪财经《赛力斯与鸿蒙智行：四年从亏 22 亿到赚 59 亿》（2026-07-19）：2022–2025H1 累计向华为支付采购费超 750 亿、2025H1 约 200 亿（占收入近 1/3）、每车约 13.6 万流向华为；华为按整车约 8% 收渠道营销费（约 3.13 万/车 @ 均价 39.1 万）、技术采购约 5.24 万/车、合计约 8.37 万/车（≈21.4%）；综合毛利率近 30% 超特斯拉 18%/理想 20%/蔚来 14.7%；鸿蒙智行 2025 交付 58.9 万、问界 42.6 万（占 71.8%）；引望赛力斯 115 亿持 10%；招股书提示与华为"集中及交易对手风险"。</li>
+<li>赛力斯公告（2024-07）收购"问界"系列商标及专利：交易对价 25 亿元，含 919 项商标及 44 项相关专利，由华为转让至赛力斯（综合多家媒体报道）。</li>
+<li>赛力斯公告（2024-08）入股引望：全资子公司以 115 亿元现金购华为持有的深圳引望 10% 股权；引望为华为车 BU 独立主体，股权结构华为 80% / 赛力斯 10% / 阿维塔 10%，董事会华为提名 6 席、其余各 1 席，较长时期由华为主导管理（财联社 / 证券时报 / 今日传媒）。</li>
+<li>上汽董事长陈虹"灵魂论"（2021-07-01 股东大会，cls.cn / 腾讯新闻 / 经济日报）："与华为这样的第三方公司合作自动驾驶，上汽是不能接受的…它就成了灵魂，而上汽就成了躯体…要把灵魂掌握在自己手中。"</li>
+<li>上汽 × 华为"尚界"（2025-02，中国经济网）：上汽采用智选车模式推"尚界"（17–25 万元级）；余承东曾称华为"仅能承担四家"。上汽为曾公开拒绝整体解决方案的车企中规模最大者。</li>
+<li>赛力斯剥离蓝电（2026-02-08 公告，多家媒体报道）：沙坪坝国资相关方持股约 33.5% 成第一股东，赛力斯降至约 32% 并丧失控制权、蓝电不再并表；公司称旨在"聚焦高端新能源主业"，问界成乘用车领域唯一业绩引擎。</li>
+<li>赛力斯 2026 半年度业绩预告（2026-07-12 披露）：预计归母净利润亏损 15–18 亿元；同期累计交付 17.87 万辆、问界同比 +10.2%；亏损主因碳酸锂半年涨超 125%、智驾硬件单车成本 +1.5–2 万、旧产线/模具审慎计提；公告称现金储备充裕、资产负债结构稳健。</li>
+<li>鸿蒙智行"五界"交付（2025）：问界（赛力斯）/ 智界（奇瑞）/ 享界（北汽）/ 尊界（江淮）/ 尚界（上汽）合计约 58.9 万辆，问界约 42.6 万辆占 71.8%（综合来源 [4] 及公开销量快报）。</li>
+<li>小康股份 / 赛力斯沿革：1986 年张兴海创业，主产品东风小康微面；2020 年营收 143 亿、净亏 22 亿；2021 与华为合作并改名赛力斯；2021 上半年"华为概念"下小康股份股价一度暴涨 287.84%（cls.cn / 腾讯新闻）。</li>
+<li>AIVA 新品牌（综合报道）：国资 + 赛力斯 + 宁德时代联合持股，与火山引擎深度共创，独立运营、走"AI 定义汽车"路线，跳开原有华为智驾路径依赖；被视为赛力斯降低华为依赖、布局多元技术路线的试探。</li>
+<li>张兴海量产目标：问界 0–100 万辆用时 5 年，第二个 100 万辆"争取两年完成"；曾提出三年内新能源汽车实现百万量级（公司公告 / 媒体报道）。</li>
+<li>赛力斯 2021 年报（公司公告）：营收 167.18 亿元、归母净利润 -18.24 亿元；2022 年报：营收 341.05 亿元、归母净利润 -38.32 亿元（2021 为与华为合作首年、2022 为问界 M5/M7 上市初期，仍处于战略投入亏损期）。</li>
+<li>问界占鸿蒙智行交付比（2021–2025，综合公开销量与鸿蒙智行历年披露推算）：2021–2022 鸿蒙智行（问界）独家，问界占比≈100%；2023 智界（奇瑞）年底入局、量尚小，问界占比仍近 100%（约 98%）；2024 享界（北汽）/ 尊界（江淮）落地，问界占比约 87%；2025 尚界（上汽）入局、五界齐发，问界占比 71.8%（见 [4][10]）。华为"仅能承担四家"的窗口被突破（见 [8]）。</li>
+</ol>
+</div>
+
+</div>
+
+<script>document.documentElement.classList.add('js');
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+
+var progress=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var backTop=document.getElementById('backTop');
+var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
+var epilogue=null;
+for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
+var chapters=allH2.filter(function(h){return h!==epilogue;});
+var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+var sidenav=document.querySelector('.sidenav');
+var navLinks=document.querySelectorAll('.sidenav a');
+
+var tip=document.createElement('div');
+tip.className='fn-tooltip';
+document.body.appendChild(tip);
+function showTip(text,e){tip.textContent=text;tip.classList.add('visible');moveTip(e)}
+function moveTip(e){var x=(e.clientX||0)+14,y=(e.clientY||0)+14;if(x>window.innerWidth-300)x=window.innerWidth-300;tip.style.left=x+'px';tip.style.top=y+'px'}
+function hideTip(){tip.classList.remove('visible')}
+
+var fnItems=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+fnItems.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+document.querySelectorAll('sup').forEach(function(sup){
+sup.addEventListener('mouseenter',function(e){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));if(fnTexts[n-1])showTip(fnTexts[n-1].substring(0,180)+(fnTexts[n-1].length>180?'…':''),e)});
+sup.addEventListener('mousemove',moveTip);
+sup.addEventListener('mouseleave',hideTip);
+sup.addEventListener('click',function(){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));var t=document.getElementById('fn-'+n);if(t)t.scrollIntoView({behavior:'smooth'})});
+});
+
+document.querySelectorAll('.term').forEach(function(t){
+var tipText=t.getAttribute('data-tip');
+t.addEventListener('mouseenter',function(e){showTip(tipText,e)});
+t.addEventListener('mousemove',moveTip);
+t.addEventListener('mouseleave',hideTip);
+t.addEventListener('click',function(e){e.stopPropagation();showTip(tipText,e);setTimeout(hideTip,4000)});
+});
+document.addEventListener('click',function(e){if(!e.target.classList.contains('term'))hideTip()});
+
+function syncChapters(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+var line=130,idx=-1;
+for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
+var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
+if(inEpi){tracker.textContent='尾声';}
+else if(idx<0){tracker.textContent='导语';}
+else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
+if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
+var ch=inEpi?8:(idx<0?0:idx+1);
+var links=document.querySelectorAll('.sidenav a');
+links.forEach(function(a){a.classList.remove('active')});
+var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
+if(act)act.classList.add('active');
+}
+window.addEventListener('scroll',syncChapters,{passive:true});
+window.addEventListener('load',syncChapters);
+try{syncChapters();}catch(e){}
+
+function scrollTop(){window.scrollTo({top:0,behavior:'smooth'})}
+function toggleNav(){sidenav.classList.toggle('open')}
+
+navLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();sidenav.classList.remove('open');
+var ch=parseInt(a.getAttribute('data-ch'));
+if(ch===0){window.scrollTo({top:0,behavior:'smooth'})}
+else if(ch===8){if(epilogue)epilogue.scrollIntoView({behavior:'smooth'})}
+else{if(chapters[ch-1])chapters[ch-1].scrollIntoView({behavior:'smooth'})}
+});
+});
+document.addEventListener('click',function(e){if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle'))sidenav.classList.remove('open')});
+
+
+
+var barObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
+x.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){var w=b.getAttribute('data-w');setTimeout(function(){b.style.width=w+'%'},100)});
+x.target.querySelectorAll('.step-bar[data-h]').forEach(function(b){var hh=b.getAttribute('data-h');setTimeout(function(){b.style.height=hh+'px'},100)});
+barObs.unobserve(x.target)}})},{threshold:0.3});
+document.querySelectorAll('.chart-box').forEach(function(c){barObs.observe(c)});
+
+var dObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.style.transform='rotate(360deg)';x.target.style.transition='transform 1s ease';setTimeout(function(){x.target.style.transform='none';x.target.style.transition='none'},1000);dObs.unobserve(x.target)}})},{threshold:0.4});
+document.querySelectorAll('.donut').forEach(function(d){dObs.observe(d)});
+(function(){
+  function initConsent(){
+    var overlay=document.getElementById("consentOverlay");
+    var check=document.getElementById("consentCheck");
+    var btn=document.getElementById("consentBtn");
+    if(!overlay||!btn||!check)return;
+    function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+    function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+    var STORAGE_KEY="investigative_desk_consent";
+    function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+    function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+    btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+    check.addEventListener("change",function(){btn.disabled=!check.checked});
+    show();
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
+})();
+</script>
+
+<footer>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+
+
+<div class="consent-overlay" id="consentOverlay">
+  <div class="consent-box">
+    <div class="consent-header">
+      <span>法律声明 · LEGAL NOTICE</span>
+      </div>
+    <div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+    <div class="consent-footer">
+      <label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+      <button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+    </div>
+  </div>
+</div>
+
+<script src="../global.js" defer></script>
+
+<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+
+<script src="../../share.js" defer></script>
+</body>
+</html>

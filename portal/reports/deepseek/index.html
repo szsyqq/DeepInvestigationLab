@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepSeek：把模型开源，把账本捂紧 | 调查团队</title>
+<style>:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s}
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:26px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:6px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
+.tracker.visible{opacity:1}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:70px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif}
+.nav-toggle:hover{background:var(--red)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
+.home-link::before{content:"←";margin-right:5px}
+.home-link:hover{background:var(--red);color:var(--paper)}
+.home-fab{position:fixed;bottom:20px;right:74px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--bg-dark);color:var(--paper);border:none;font-size:12px;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;opacity:.85;transition:opacity .3s,background .2s;font-family:Georgia,serif;letter-spacing:1px}
+.home-fab:hover{opacity:1;background:var(--red)}
+.reading-time{position:fixed;top:16px;left:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:290}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:13px;line-height:1.55;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.25);font-style:normal}
+.fn-tooltip.visible{opacity:1}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
+.chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:12px}
+.bar-label{width:130px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:var(--bg-dark)}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.gray{background:var(--gray)}
+.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:120px}
+.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.4}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0}
+.donut{width:170px;height:170px;border-radius:50%;position:relative;transition:transform .8s}
+.donut::after{content:'';position:absolute;top:26%;left:26%;width:48%;height:48%;background:var(--paper);border-radius:50%}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;font-size:13px}
+.donut-center .big{font-size:26px;font-weight:700;color:var(--red);display:block}
+.donut-legend{font-size:13px;line-height:2}
+.donut-legend .dot{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.timeline{margin:28px 0;padding-left:22px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:18px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-29px;top:7px;width:11px;height:11px;background:var(--red);border-radius:50%;border:2px solid var(--paper)}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:.5px}
+.timeline-content{margin-top:3px;font-size:15px}
+.focus-box{background:var(--quote-bg);border-left:4px solid var(--red);padding:16px 20px;margin:26px 0;font-size:16px;line-height:1.7}
+.focus-box .tag{display:inline-block;background:var(--red);color:#fff;font-size:11px;letter-spacing:1px;padding:2px 8px;border-radius:2px;margin-bottom:8px;font-style:normal}
+@media(max-width:600px){
+.masthead{padding:10px 16px}
+.masthead .date{font-size:10px}
+.container{padding:40px 18px 70px}
+.hero h1{font-size:30px}
+.hero .dek{font-size:16px}
+h2{font-size:22px}
+.pull-quote{font-size:20px;margin:28px 6px}
+.bar-label{width:96px;font-size:12px}
+.bar-value{width:auto;font-size:12px}
+.bar-row{flex-wrap:wrap;gap:6px 8px}
+.bar-track{flex:1 1 100%;order:3}
+.data-card{flex:1 1 100%}
+.donut-wrap{flex-direction:column;gap:18px}
+.reading-time{top:12px;left:12px}
+.nav-toggle{top:12px;right:12px;padding:7px 11px;font-size:11px}
+.back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
+.home-fab{width:38px;height:38px;font-size:11px;bottom:14px;right:60px}
+.tracker{bottom:14px;left:14px;font-size:11px;padding:6px 11px}
+}
+/* =========================================================
+   调查团队档案室 · 全局 UI 样式
+   所有报道页共用，禁止在各页面重复定义。
+   引入方式：<link rel="stylesheet" href="../global.css">
+   ========================================================= */
+
+/* —— 基础重置 —— */
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+/* 防止 masthead 和 top-bar 文本在窄屏错行 */
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+
+/* —— 内部资料横幅（顶部红色条） —— */
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+
+/* —— 置顶导航行（内部资料横幅下方） —— */
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+
+/* —— 阅读进度条 —— */
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+
+/* —— 页面滚动后紧凑模式：四元素合并为一行 —— */
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+/* 横幅文字绝对居中，不参与 flex 布局 */
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+/* 隐藏独立目录按钮，导语框代替点击 */
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .top-bar .toc:hover{background:rgba(255,255,255,.4)}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+
+/* —— 避免第一章上方重复横线（byline 已有底线） —— */
+.hero + h2{border-top:none !important;padding-top:0 !important}
+
+/* —— 法律合规弹窗 —— */
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  /* 移动端导航栏：隐藏次要元素、缩小间距 */
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+
+/* —— 页脚 —— */
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+
+/* —— 侧边目录 —— */
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+
+/* —— 返回顶部 —— */
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+
+/* —— 阅读时间徽章（右上角，导航栏下方） —— */
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+}
+</style>
+
+<link rel="stylesheet" href="../global.css">
+<script>window.__REPORT_CONFIG__ = {"readingTime": "约 21 分钟阅读", "reportTitle": "DeepSeek：把模型开源，把账本捂紧"};</script>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 14 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+
+</div>
+</div>
+
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="date">2026年7月 · 杭州 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>开篇</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>从 558 万到 R3</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>算力的真相</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>不透明的财务</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>开源的账单</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>被芯片卡住的下一程</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>全球封禁的墙</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>私募孵化出的国运符号</a>
+<a href="#c8" data-ch="8"><span class="num">尾声</span>开源给世界，捂紧给自己</a>
+</div>
+<div class="container">
+
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>DeepSeek：把模型开源，<br>把账本捂紧</h1>
+<p class="dek">用 558 万美元，训练出比肩 GPT-4o 的模型，让英伟达一天蒸发近 6000 亿美元。可当市场给它贴上 3500 亿元估值标签时，这家公司却从不公布一分钱营收、一分钱利润——它把模型开源给全世界，却把账本捂紧留给自己。这是同一家公司最锋利的悖论：技术彻底打开，财务彻底关上。</p>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月 · 约 14 分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">2025 年 1 月 27 日，周一。纳斯达克开盘后，英伟达的股价在几个小时内掉了 17%，一天之内市值蒸发近 6000 亿美元——这是美国公司史上单日最大的跌幅。<sup>[3]</sup>暴跌的引线，是一周前一家中国公司发布的一个开源模型：DeepSeek-R1。这家公司说，它训练出这个能跟 OpenAI 旗舰掰手腕的模型，只花了 558 万美元。<sup>[1][2]</sup></p>
+
+<p class="reveal">DeepSeek 说训练 R1 只花了 558 万美元；而就在它发布后不到两周，英伟达一天跌去近 6000 亿美元。这两个数并不在同一个账本上——一个是这家公司的训练成本，一个是全球最贵芯片公司的市值震荡——但并排摆着，恰好戳破了一个旧信条：AI 的边界，是用钱和显卡堆出来的。<sup>[3]</sup>可一年多过去，当市场把 3500 亿元（约 500 亿美元）的估值贴到这家公司身上，另一道题却始终算不清：它自己，到底赚不赚钱？<sup>[6]</sup></p>
+
+<p class="reveal">DeepSeek 不上市，早期几乎不接受外部投资，也从不发布年报。关于它的营收，坊间流传着从 65 亿到 200 亿不等的版本；关于它的利润，有人信它已经盈利，也有人认定它仍在烧钱。<sup>[7]</sup>一家能撼动全球资本市场的公司，财务却几乎不对外披露。这本身不算罕见——许多未上市的明星企业同样没有公开财报；但像 DeepSeek 这样体量、却对全球市场有如此牵动力的公司，财务近乎全盲，仍然少见。</p>
+
+<div class="pull-quote reveal">开源给世界，账本留给自己——这是同一家公司最锋利的两面。</div>
+
+<!-- 第一章 -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>从 558 万到 R3</h2>
+
+<p class="reveal">要理解 DeepSeek 为什么震动了世界，得从那个被反复引用的数字说起。2024 年 12 月 26 日，它悄然发布 <span class="term" data-tip="DeepSeek-V3：6710 亿参数（671B）的混合专家模型（MoE），2024 年底发布，在多项中文与英文基准上追平甚至超过同期开源及部分闭源模型，训练成本约 558 万美元。">DeepSeek-V3</span>；一个多月后，2025 年 1 月 20 日，又放出专门做复杂推理的 R1，性能直接对标 OpenAI 当时最先进的 o1。<sup>[1][2]</sup>真正让行业倒吸凉气的，是成本——官方技术报告写明，V3 的训练耗了 278.8 万 H800 GPU 小时，按市价折算约 558 万美元，相当于在 2048 块 H800 显卡上跑约两个月。<sup>[1]</sup></p>
+
+<p class="reveal">558 万美元训练出一个顶级大模型，是什么概念？同期美国巨头训练同级模型的投入，普遍被估在数亿到数十亿美元量级。DeepSeek 把这个差距压缩到了约"美国同行的 1/23"——这一数字经多家媒体转述，成了"算力堆砌范式"被击穿的象征。<sup>[3]</sup>更刺眼的是，它把模型权重以 MIT 许可全量开源，任何人都能免费下载、商用、修改；API 价格压到每百万 token 输入 1 元、输出 3 元，缓存命中更只要 1 毛。<sup>[12]</sup>便宜到这个程度，连同行都坐不住。</p>
+
+<p class="reveal">此后，DeepSeek 的迭代速度并未放缓。2025 年 3 月，它放出 R1-Zero——R1 的"原始"版本，未做人类偏好对齐，展现出更强的自发推理能力；5 月，Distill 系列陆续问世，将 R1 的推理能力蒸馏到 1.5B、7B、14B、32B 甚至 70B 量级的轻量模型中，让个人开发者也能低成本调用；7 月，R3 正式开源，参数达 671B，在多项国际基准上首次全面超越 GPT-4.1 和 Claude 4 等闭源旗舰——而 R3 的训练成本仍未公开。<sup>[15]</sup></p>
+
+<div class="model-cards reveal">
+<div class="model-card highlight">
+<div class="name">R3</div>
+<div class="date">2025 年 7 月 · 671B</div>
+<div class="feat">首个全面超越 GPT-4.1 的开源模型；推理能力比肩 Claude 4</div>
+</div>
+<div class="model-card">
+<div class="name">R1-Zero</div>
+<div class="date">2025 年 3 月</div>
+<div class="feat">未做 RLHF 对齐的原始推理版，展现自发推理涌现</div>
+</div>
+<div class="model-card">
+<div class="name">Distill 系列</div>
+<div class="date">2025 年 5 月起</div>
+<div class="feat">1.5B–70B 多级蒸馏，推理能力下沉到轻量模型</div>
+</div>
+<div class="model-card">
+<div class="name">V3</div>
+<div class="date">2024 年 12 月 · 671B</div>
+<div class="feat">558 万美元训练成本，开启"低成本神话"</div>
+</div>
+</div>
+
+<p class="reveal">冲击波在 2025 年 1 月底集中释放。1 月 27 日，英伟达单日跌约 17%，市值蒸发近 6000 亿美元，纳斯达克指数下滑 3.1%，连带着全球 AI 概念股一起回调；同一周，DeepSeek 的 App 登顶中国区和美国区 App Store 免费榜，把一众老牌应用挤了下去。<sup>[3][4]</sup>一家此前连名字都少有人听过的公司，用一份 558 万美元的账单，撬动了万亿美元级别的市值波动。账，是字面意义上的"算"赢了。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">训练一个顶级模型 · 成本量级对照</div>
+<div class="chart-sub">DeepSeek-V3 约 558 万美元 vs 美国同行传闻数亿~数十亿美元（量级示意，非精确审计）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">DeepSeek-V3</div><div class="bar-track"><div class="bar-fill red" data-w="2"></div></div><div class="bar-value">约 558 万$</div></div>
+<div class="bar-row"><div class="bar-label">美国同行(估)</div><div class="bar-track"><div class="bar-fill gray" data-w="100"></div></div><div class="bar-value">数亿~数十亿$</div></div>
+</div>
+<div class="data-callout" style="margin-top:18px">
+<div class="data-card"><span class="num">558 万$</span><div class="label">V3 训练账面成本</div></div>
+<div class="data-card"><span class="num">≈ 1/23</span><div class="label">相对美国同行成本</div></div>
+<div class="data-card"><span class="num">近 6000 亿$</span><div class="label">英伟达单日蒸发</div></div>
+<div class="data-card"><span class="num">登顶</span><div class="label">中美 App Store 免费榜</div></div>
+</div>
+</div>
+
+<!-- 第二章 -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>算力的真相</h2>
+
+<p class="reveal">558 万为什么可能？答案分成明暗两层。明面上，是工程上的极致压榨：<span class="term" data-tip="MoE（混合专家）：一种大模型架构，推理时只激活部分"专家"子网络，而非全部参数，大幅降低单次计算量。MLA（多头潜在注意力）：DeepSeek 自研的注意力压缩技术，减少显存占用。二者是其低成本的关键工程基础。">MoE</span> 稀疏激活让每次推理只调动部分参数，自研的 MLA 注意力机制把显存占用压到极低，再叠加 FP8 混合精度训练与精细的并行策略，把每一张显卡的"有效算力"榨到了极限。<sup>[1]</sup>这一层，是货真价实的技术硬功夫。</p>
+
+<p class="reveal">但还有一层不那么容易被写进技术报告的：它用上了禁令前囤下的"便宜卡"。DeepSeek 背靠<span class="term" data-tip="幻方量化（High-Flyer）：中国头部量化私募，创始人梁文锋。早年（2021–2022）大量囤积 A100/H800 等高端显卡（传超万张），这批算力与资金成为 DeepSeek 起步的关键底座。">幻方量化</span>，后者早在出口管制收紧前就已囤积上万张 A100/H800。这批"祖父级"芯片，是它绕开后来对华禁令、把训练成本压到极低的前提条件。<sup>[13]</sup>省，部分是因为曾经"囤"到了便宜的入场券——这是一张别人再也买不到的入场券。</p>
+
+<p class="reveal">真正让"558 万神话"露出裂缝的，是成本的口径。多家机构（如 SemiAnalysis、中信等）指出，这 558 万只是最后一次成功训练 run 的花费，没算前期无数次失败的试错、海量数据清洗、顶尖人才的工资，以及那批显卡本身的折旧与持有成本。<sup>[5]</sup>若把这些都摊进账里，真实投入要高得多。更关键的隐忧在后面：当 2025 年美国把 H20 也纳入禁令、增量芯片彻底断供，那个"用最省算力"的故事，开始暴露它的前提——省，是因为禁令前一次性囤到了便宜的卡；而那批卡是买断的存量，禁令之后再也补不进来。当一代代更大的模型持续占用这张固定的"便宜算力额度"，"最省"的前提就悄悄失效。<sup>[9][10]</sup></p>
+
+<p class="reveal">顺带一提，R3 的训练成本也从未披露——这与 DeepSeek 整体不公开任何财务数字的一贯风格一致。正因如此，"低成本神话"是否延续到了 V3 之后的世代，外界同样无从验证。<sup>[15]</sup></p>
+
+<!-- 第三章 -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>不透明的财务</h2>
+
+<p class="reveal">与轰轰烈烈的技术叙事相比，DeepSeek 的财务像被刻意藏进了抽屉。它成立于 2023 年 7 月，由幻方量化孵化，发展初期资金完全依靠幻方，没做过外部股权融资；至今不上市、不发布年报。<sup>[8]</sup>外界对它的判断，只能靠媒体拼图与零散公告——不公开财报的未上市巨头并不少见，但 DeepSeek 的规模与全球牵动力，让这份"全盲"格外醒目。</p>
+
+<p class="reveal">关于营收，版本之多令人咋舌：有说 2025 全年约 65 亿元，有说冲到 200 亿，也有说仅 10 亿出头；日收入能力有说 400 多万元；年化收入被估约 34 亿元（约 5 亿美元）。利润更模糊，有报道称已实现扭亏为盈，官方从未确认。<sup>[7]</sup>同一家公司，外界能给出相差数倍的营收估计——这种"不在场"，本身就是最大的事实。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">营收传闻 vs 估值 · 一道倒挂的算式</div>
+<div class="chart-sub">哪怕取最高营收传闻，相对 3500 亿估值也仅约 5.7%（均为媒体/公告间接披露，非经审计）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">营收(低)</div><div class="bar-track"><div class="bar-fill gray" data-w="2"></div></div><div class="bar-value">约 65 亿</div></div>
+<div class="bar-row"><div class="bar-label">营收(高)</div><div class="bar-track"><div class="bar-fill dark" data-w="6"></div></div><div class="bar-value">约 200 亿</div></div>
+<div class="bar-row"><div class="bar-label">估值</div><div class="bar-track"><div class="bar-fill red" data-w="100"></div></div><div class="bar-value">约 3500 亿</div></div>
+</div>
+<div style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center">营收/估值比极低——市场为其"未来"而非"现在"定价</div>
+</div>
+
+<p class="reveal">而估值却是另一番滚烫的景象。2026 年 5 月起，多家媒体称其首轮（本轮）融资约 510 亿元：创始人梁文锋个人出资约 200 亿（占四成），腾讯约 100 亿、宁德时代体系约 50 亿，京东、IDG、国家人工智能产业投资基金等入局；融资后估值约 3500 亿元（约 500 亿美元），6 月一家上市公司（开润股份）的公告还意外印证了约 3510 亿的数字。<sup>[6]</sup>一家年营收可能不到 200 亿、且从不披露利润的公司，被赋予了 3500 亿的身价。营收与估值之间的这道裂缝，才是这家"不透明公司"最刺眼的一页：它值多少钱，市场替它写了；它赚了多少钱，只有它自己知道。</p>
+
+<!-- 第四章 -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>开源的账单</h2>
+
+<p class="reveal">把技术彻底打开，把财务彻底关上——这是 DeepSeek 最锋利的对照。上一章写了它如何不披露财务；这一章要看它如何把模型打开。它开源出去的，和它捂紧的，恰是同一枚硬币的两面。</p>
+
+<p class="reveal">DeepSeek 把所有模型的权重，以 <span class="term" data-tip="MIT 许可：一种极宽松的开源许可证，允许任何人免费下载、使用、修改、商用，甚至闭源再发布，只需保留版权声明。DeepSeek 以此把全部模型权重开源。">MIT 许可</span> 全量开源。这在商业上是个 paradox：它把最核心的资产免费摊开，竞争对手可以白嫖，开发者可以随意修改，自己却几乎不设防。<sup>[12]</sup>普惠的另一面，是一个绕不开的商业问号——靠什么把钱赚回来？</p>
+
+<p class="reveal">它的变现路径其实很"轻"：C 端 App 免费，API 价格低到被调侃"白菜价"，开源又让技术本身无法收费。对比之下，OpenAI、Google 走的是闭源高溢价路线，靠 API 调用和企业授权赚得盆满钵满。<sup>[12]</sup>DeepSeek 把技术无偿铺开，赌的是生态规模、人才吸引与"国运级"的话语权——但开源究竟能否自身造血，至今没有公开答案。技术彻底打开，财务彻底关上——这才是它最锋利的对照。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">API 定价 · 每百万 token 输入（量级示意）</div>
+<div class="chart-sub">DeepSeek 以"白菜价"换规模，闭源巨头走高溢价路线</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">DeepSeek</div><div class="bar-track"><div class="bar-fill red" data-w="3"></div></div><div class="bar-value">约 1 元</div></div>
+<div class="bar-row"><div class="bar-label">闭源巨头(估)</div><div class="bar-track"><div class="bar-fill gray" data-w="100"></div></div><div class="bar-value">数十元起</div></div>
+</div>
+<table style="margin-top:18px">
+<thead><tr><th>路线</th><th>代表</th><th>商业逻辑</th></tr></thead>
+<tbody>
+<tr><td><strong>开源免费</strong></td><td>DeepSeek</td><td>权重全量开源，API 低价，靠生态与规模</td></tr>
+<tr><td>闭源高溢价</td><td>OpenAI / Google</td><td>技术不公开，靠 API 与企业授权收费</td></tr>
+</tbody>
+</table>
+</div>
+
+<p class="reveal">DeepSeek 把技术彻底推开后，一个意想不到的后果发生了：它的开源模型成了无数企业的"基础设施"——而 DeepSeek 自己收不到一分钱。<sup>[12]</sup></p>
+
+<p class="reveal">在 DeepSeek 以 MIT 许可全量开源 V3、R1、R3 之后，中国市场迅速出现了一波"集成潮"。百度将 DeepSeek 模型接入文心平台供企业调用；字节跳动在抖音内部工具链中部署 DeepSeek 系列；腾讯将 R1 接入腾讯会议与文档产品；小米在 HyperMind 系统级 AI 中引入 DeepSeek 推理能力；科大讯飞星火平台支持 DeepSeek 模型推理；滴滴将 DeepSeek 用于自动驾驶与客服场景；美团在其内部 AI 助手平台中接入；小鹏汽车将 DeepSeek 用于智能座舱对话系统。大量中小 AI 创业公司直接基于 DeepSeek 的开源权重微调，推出面向垂直行业的问答、客服、写作产品。<sup>[16]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">开源模型的采用时间轴</div>
+<div class="chart-sub">基于 MIT 许可的模型权重，中国企业自 V3 / R1 开源后迅速集成（综合公开报道 [16]）</div>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-date">2024-12</div><div class="timeline-content"><strong>V3 开源</strong>：权重可免费下载、商用、微调，集成潮的起点</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-01</div><div class="timeline-content"><strong>R1 开源</strong>：复杂推理能力开放，企业开始评估接入</div></div>
+<div class="timeline-item timeline-hl"><div class="timeline-date">2025-02</div><div class="timeline-content"><strong>中国大厂"集成潮"</strong>：百度（文心）、字节（抖音工具链）、腾讯（会议/文档）、小米（HyperMind）、科大讯飞（星火）、滴滴（自动驾驶/客服）、美团（内部 AI 助手）、小鹏（智能座舱）相继接入</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-07</div><div class="timeline-content"><strong>R3 开源</strong>：能力升级，企业陆续将接入模型升级至 R3</div></div>
+</div>
+</div>
+
+<p class="reveal">这些集成者并非"白嫖"——他们在自研产品的框架、数据、行业 Know-how 上做了一层覆盖，再向自己的客户收费。百度把 DeepSeek 接入文心平台后，向企业按调用量收费；科大讯飞在星火平台上将 DeepSeek 推理作为多模型选项之一，继续向政企客户卖服务；创业公司基于 DeepSeek 权重微调后，推出垂直行业的 SaaS 产品并订阅收费。换句话说，DeepSeek 提供了"发动机"，而真正在"车上收费"的，是那些把发动机装进自己产品的公司。<sup>[16]</sup></p>
+
+<div class="focus-box reveal">
+<span class="tag">核心矛盾</span>
+DeepSeek 的 MIT 许可把技术彻底推开——谁都可以拿去用、拿去改、拿去卖。问题不在"有没有人用"，而在于：用了 DeepSeek 的人，赚到的钱，DeepSeek 自己分不到一分。
+</div>
+
+<p class="reveal">这笔"开源的账单"至今没有平衡表。支持者说，开源是长期主义的胜利，生态起来后价值自现——用 DeepSeek 训练出来的下游产品越多，它作为"基础设施"的价值就越大；质疑者说，当竞争对手用你的开源模型造出自己的产品，你反而成了别人的铺路石。无论如何，一个问题悬而未决：用免费换来的世界开发者，能不能换成实打实的利润？<sup>[12]</sup>这道题，DeepSeek 还没把答案写进任何一份公开文件。</p>
+
+<!-- 第五章 -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>被芯片卡住的下一程</h2>
+
+<p class="reveal">低成本的故事，撞上的第一堵墙是芯片。美国对华 AI 芯片出口管制一步步收紧，DeepSeek 的算力来源被越勒越紧。时间线清晰得近乎冷酷：2022 年 10 月限 A100/H100，2023 年 10 月封堵 H800/A800 等"特供"合规版，2025 年 1 月特朗普政府考虑把 H20 也纳入限制，4 月 20 日 H20 禁令正式落地，直到 7 月 19 日英伟达才宣布恢复对华 H20 销售——但仅是库存，更新的 Blackwell 架构仍被挡在门外；7 月 31 日，国家网信办就 H20 的漏洞后门风险约谈英伟达。<sup>[10]</sup></p>
+
+<div class="timeline reveal">
+<div class="timeline-item"><div class="timeline-date">2022-10</div><div class="timeline-content">美限制 A100 / H100 对华出口</div></div>
+<div class="timeline-item"><div class="timeline-date">2023-10</div><div class="timeline-content">封堵 H800 / A800 等"特供"合规版，幻方早年囤货成关键存量</div></div>
+<div class="timeline-item"><div class="timeline-date">2024-12</div><div class="timeline-content">V3 用囤积的 H800 训练完成——"低成本"靠的是禁令前的窗口红利</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-01</div><div class="timeline-content">特朗普政府考虑将 H20 也纳入限制</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-04-20</div><div class="timeline-content">H20 禁令落地，对华禁售，增量算力断供</div></div>
+<div class="timeline-item timeline-hl"><div class="timeline-date">2025 全年</div><div class="timeline-content">R2 多次推迟，业内将"算力短缺"列为首要原因——芯片卡住了下一程</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-07-19</div><div class="timeline-content">英伟达宣布恢复对华 H20 销售（仅库存），Blackwell 仍禁</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-07-31</div><div class="timeline-content">国家网信办就 H20 漏洞后门风险约谈英伟达</div></div>
+</div>
+
+<p class="reveal">这道墙，直接撞上了 DeepSeek 的下一款旗舰。R2 的开发进度一再推迟；业内普遍把"算力短缺"列为首要原因——H20 被禁断了增量，而用国产芯片训练又卡在生态与性能鸿沟上。据《The Information》等报道，推迟既因为梁文锋对性能尚不满意，也因华为芯片训练存在技术难题。<sup>[9]</sup>国产算力并非没有进展：华为昇腾 910 系列 2025 年出货预计突破 70 万颗、份额冲至约 30%，正在补位；但"用最省算力"的前提若从 H800 切换到国产卡，省下来的，还是不是同一个量级的成本，要打一个问号。<sup>[14]</sup></p>
+
+<!-- 第六章 -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>全球封禁的墙</h2>
+
+<p class="reveal">同一份开源代码，在政府监管者眼中的境遇却异常一致：以数据安全为由，把它关在门外。2025 年 2 月起，意大利数据保护机构下令屏蔽，澳大利亚以国家安全为由屏蔽，印度、日本跟进；美国国会、五角大楼、NASA、海军禁用政府设备，得州全面封禁，两党更提出《2025 美国人工智能能力与中国脱钩法案》，拟将下载使用 DeepSeek 定为犯罪；韩国同月也屏蔽了它。<sup>[11]</sup>中方回应：政府重视并依法保护数据隐私安全，从未也不会要求企业以违法形式采集或存储数据。<sup>[11]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">全球封禁一览</div>
+<div class="chart-sub">点击国别查看具体政策（2025 年 2 月起）</div>
+<div class="ban-list">
+<div class="ban-item" onclick="toggleBanDetail('italy')">
+<div class="ban-header">
+<div class="ban-flag">🇮🇹</div>
+<div class="ban-name">意大利</div>
+<div class="ban-reason">数据安全与隐私合规</div>
+<div class="ban-toggle">▼</div>
+</div>
+<div class="ban-detail" id="ban-italy">
+<div class="ban-detail-content">
+<p><strong>政策名称：</strong>Garante 下令屏蔽（意大利数据保护机构）</p>
+<p><strong>具体措施：</strong>要求在意大利境内屏蔽 DeepSeek 的访问，暂停新用户注册，限期整改数据收集与处理流程以符合 GDPR 要求。</p>
+<p><strong>官方理由：</strong>涉嫌违反欧盟《通用数据保护条例》（GDPR），用户数据可能被传输至中国境内且未经充分同意。</p>
+<p><strong>时间：</strong>2025 年 2 月</p>
+</div>
+</div>
+</div>
+<div class="ban-item" onclick="toggleBanDetail('australia')">
+<div class="ban-header">
+<div class="ban-flag">🇦🇺</div>
+<div class="ban-name">澳大利亚</div>
+<div class="ban-reason">国家安全风险评估</div>
+<div class="ban-toggle">▼</div>
+</div>
+<div class="ban-detail" id="ban-australia">
+<div class="ban-detail-content">
+<p><strong>政策名称：</strong>澳大利亚政府禁令</p>
+<p><strong>具体措施：</strong>禁止政府机构及关键基础设施企业使用 DeepSeek，要求已部署的系统限期迁移。</p>
+<p><strong>官方理由：</strong>经国家安全评估，DeepSeek 可能构成"不可接受的数据安全风险"，敏感信息可能被中国当局访问。</p>
+<p><strong>时间：</strong>2025 年 2 月</p>
+</div>
+</div>
+</div>
+<div class="ban-item" onclick="toggleBanDetail('india')">
+<div class="ban-header">
+<div class="ban-flag">🇮🇳</div>
+<div class="ban-name">印度</div>
+<div class="ban-reason">数据主权考量</div>
+<div class="ban-toggle">▼</div>
+</div>
+<div class="ban-detail" id="ban-india">
+<div class="ban-detail-content">
+<p><strong>政策名称：</strong>印度信息技术部（MeitY）限制令</p>
+<p><strong>具体措施：</strong>要求印度公司及政府机构停止使用 DeepSeek，推荐使用本土或"可信盟友"的 AI 模型。</p>
+<p><strong>官方理由：</strong>数据主权与国家安全考量，避免关键数据流向中国，同时扶持本国 AI 产业。</p>
+<p><strong>时间：</strong>2025 年 2 月</p>
+</div>
+</div>
+</div>
+<div class="ban-item" onclick="toggleBanDetail('japan')">
+<div class="ban-header">
+<div class="ban-flag">🇯🇵</div>
+<div class="ban-name">日本</div>
+<div class="ban-reason">敏感数据外流风险</div>
+<div class="ban-toggle">▼</div>
+</div>
+<div class="ban-detail" id="ban-japan">
+<div class="ban-detail-content">
+<p><strong>政策名称：</strong>日本政府限制令</p>
+<p><strong>具体措施：</strong>限制中央政府及地方政府部门在涉密场景使用 DeepSeek，要求民间企业自行评估风险。</p>
+<p><strong>官方理由：</strong>敏感政府数据可能外流至中国，违反《个人信息保护法》及国家安全准则。</p>
+<p><strong>时间：</strong>2025 年 2 月</p>
+</div>
+</div>
+</div>
+<div class="ban-item" onclick="toggleBanDetail('usa')">
+<div class="ban-header">
+<div class="ban-flag">🇺🇸</div>
+<div class="ban-name">美国</div>
+<div class="ban-reason">全面技术脱钩</div>
+<div class="ban-toggle">▼</div>
+</div>
+<div class="ban-detail" id="ban-usa">
+<div class="ban-detail-content">
+<p><strong>政策名称：</strong>《2025 美国人工智能能力与中国脱钩法案》+ 多部门禁令</p>
+<p><strong>具体措施：</strong></p>
+<ul>
+<li>美国国会、五角大楼、NASA、海军全面禁止在政府设备上使用 DeepSeek</li>
+<li>得克萨斯州全州封禁，要求公立机构限期移除</li>
+<li>两党提出《脱钩法案》，拟将下载、部署或使用 DeepSeek 定为联邦犯罪，最高可判 10 年监禁</li>
+<li>限制美国云服务提供商为 DeepSeek 提供算力支持</li>
+</ul>
+<p><strong>官方理由：</strong>全面技术脱钩，防止中国 AI 技术通过开源渠道渗透美国关键基础设施与国家安全系统。</p>
+<p><strong>时间：</strong>2025 年 2 月起，多轮升级</p>
+</div>
+</div>
+</div>
+<div class="ban-item" onclick="toggleBanDetail('korea')">
+<div class="ban-header">
+<div class="ban-flag">🇰🇷</div>
+<div class="ban-name">韩国</div>
+<div class="ban-reason">数据与地缘安全</div>
+<div class="ban-toggle">▼</div>
+</div>
+<div class="ban-detail" id="ban-korea">
+<div class="ban-detail-content">
+<p><strong>政策名称：</strong>韩国个人信息保护委员会（PIPC）限制令</p>
+<p><strong>具体措施：</strong>要求企业停止将韩国公民数据传输至 DeepSeek，政府机构禁止使用，建议已部署者迁移至"安全"替代方案。</p>
+<p><strong>官方理由：</strong>地缘政治风险与数据安全双重考量，避免个人与商业数据流向中国，同时配合美国技术脱钩战略。</p>
+<p><strong>时间：</strong>2025 年 2 月</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p class="reveal">这构成 DeepSeek 最锋利的悖论：它把技术开源到全世界，却因为"来自中国"被多国政府拒之门外。监管者防它，合规画地为牢。当一份模型同时是"开源公共品"和"地缘风险点"，它面临的已不仅是商业与技术的考题。<sup>[11]</sup></p>
+
+<!-- 第七章 -->
+<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>私募孵化出的"国运符号"</h2>
+
+<p class="reveal">走到 3500 亿估值这座山巅，DeepSeek 的母体却是一家<span class="term" data-tip="量化私募：用数学模型与算法代替人工进行证券交易的私募基金。幻方量化即此类，靠交易积累的资金与算力，反向孵化出 AI 公司 DeepSeek。">量化私募</span>。它的实际控制人梁文锋，1985 年生于广东湛江，浙大硕士，既是幻方量化的掌门，也是 DeepSeek 的创始人与控股者——通过个人持股掌握这家公司。<sup>[8][13]</sup>一个私募老板个人控股的 AI 公司，却背着"科技自立"的旗帜，这是它最微妙的身份张力。</p>
+
+<p class="reveal">2026 年的那轮 510 亿融资，把这种张力摆到了台前：梁文锋一人掏约 200 亿，占四成，个人色彩极重；腾讯、宁德时代等产业巨头入局，国家人工智能产业投资基金现身，让它既是纯粹的商业公司，又被赋予了准国家队的意味。<sup>[6]</sup>市场替它标价 3500 亿，舆论把它推上"国运级"符号——可它不上市、不披露，财务数据依然只有梁文锋团队能看见。当国家叙事与商业实体重叠，这家公司究竟代表谁，又为谁负责？</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">510 亿融资 · 钱从哪来</div>
+<div class="chart-sub">梁文锋个人出资约四成，产业资本与国家级基金入局（综合媒体披露 [6]）</div>
+
+<div class="donut-wrap">
+<div class="donut-wrap" style="gap:20px">
+<div class="donut-wrap" style="gap:0;position:relative">
+<svg class="donut" viewBox="0 0 200 200" style="width:180px;height:180px">
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a3a3a" stroke-width="32" opacity="0.08"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#a02020" stroke-width="32" stroke-dasharray="180.96 270.18" stroke-dashoffset="0" transform="rotate(-90 100 100)" class="donut-seg" data-name="梁文锋" data-val="约 200 亿 (40%)"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#2a2520" stroke-width="32" stroke-dasharray="90.48 360.66" stroke-dashoffset="-180.96" transform="rotate(-90 100 100)" class="donut-seg" data-name="腾讯" data-val="约 100 亿 (20%)"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#b8860b" stroke-width="32" stroke-dasharray="45.24 405.9" stroke-dashoffset="-271.44" transform="rotate(-90 100 100)" class="donut-seg" data-name="宁德时代" data-val="约 50 亿 (10%)"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6b6b6b" stroke-width="32" stroke-dasharray="113.10 338.04" stroke-dashoffset="-316.68" transform="rotate(-90 100 100)" class="donut-seg" data-name="其他" data-val="约 160 亿 (约 30%)"/>
+</svg>
+<div class="donut-center"><span class="big">510 亿</span><span class="sub">本轮融资</span></div>
+</div>
+<div class="donut-legend">
+<div class="item"><span class="dot" style="background:#a02020"></span><span class="name">梁文锋</span><span class="val">约 200 亿 · 40%</span></div>
+<div class="item"><span class="dot" style="background:#2a2520"></span><span class="name">腾讯</span><span class="val">约 100 亿 · 20%</span></div>
+<div class="item"><span class="dot" style="background:#b8860b"></span><span class="name">宁德时代</span><span class="val">约 50 亿 · 10%</span></div>
+<div class="item"><span class="dot" style="background:#6b6b6b"></span><span class="name">其他</span><span class="val">约 160 亿 · 京东/IDG/国基金</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="data-callout" style="margin-top:18px">
+<div class="data-card"><span class="num">3500 亿</span><div class="label">融资后估值(约)</div></div>
+<div class="data-card"><span class="num">510 亿</span><div class="label">本轮融资(约)</div></div>
+<div class="data-card"><span class="num">200 亿</span><div class="label">梁文锋个人出资</div></div>
+</div>
+
+<p class="reveal">它像一面被同时照亮两面的镜子：一面是极客式的工程胜利——用 558 万证明了算力不是唯一答案；另一面是资本与国运交织的符号——私募孵化、个人控股、巨头排队送钱、市场写下 3500 亿。把两面合起来看，DeepSeek 的故事早已不是"一家 AI 公司"那么简单；它是这个时代关于技术、资本与国家叙事怎么拧在一起的，最浓缩的样本。</p>
+
+<!-- 尾声 -->
+<div class="epilogue reveal">
+<h2 id="c8"><span class="chap-num" style="color:#e8c87a">尾声</span>开源给世界，捂紧给自己</h2>
+
+<p>回到 2025 年 1 月那个周一。英伟达一天没了近 6000 亿，而 DeepSeek 的账单上，训练费只有 558 万。<sup>[1][3]</sup>一年多后，市场替它写了个价：3500 亿。可真正赚没赚钱，只有梁文锋和他的团队知道。<sup>[6][7]</sup></p>
+
+<p>它把模型开源给全世界，却从不披露财务数据。从 V3 到 R3，技术迭代从未停步；从全球开发者到多国封禁，它同时赢得了欢呼与封锁。558 万炼出了神话，3500 亿标出了身价，可外界依然不知道这家公司到底赚不赚钱。<sup>[8][11]</sup></p>
+
+<div class="pull-quote">开源给世界，账本留给自己——这是同一家公司最锋利的两面。</div>
+
+<p>当有一天 DeepSeek 自己公开那本账——无论盈亏——外界关于它"值不值 3500 亿"的争论，才会有真正的答案。在那之前，558 万与 3500 亿之间，隔着的不是神话，也不是估值，而是一份从来没人见过的财务报表。而那本账上写的可能不是"利润"，而是一个更难的问号：当一家公司以"普惠"之名把技术交给世界，世界又该用什么，来为它定价？</p>
+</div>
+
+<div class="footnotes">
+<h3>注释与来源</h3>
+<ol>
+<li>DeepSeek-V3 技术报告（2024-12-26）：671B MoE 模型；训练耗 278.8 万 H800 GPU 小时，按市价折算约 558 万美元，相当于 2048 块 H800 约两个月；多项基准追平/超过同期开源与部分闭源模型。</li>
+<li>DeepSeek-R1 发布（2025-01-20）：专注复杂推理，性能对标 OpenAI o1；权重以 MIT 许可全量开源；API 价格每百万 token 输入 1 元、输出 3 元、缓存命中 0.1 元。</li>
+<li>腾讯云 / 新浪财经等报道（2025-01-27）：英伟达单日跌约 17%，市值蒸发近 6000 亿美元（约 5890 亿），创美国公司单日最大跌幅；纳斯达克跌 3.1%；收盘价 118.58 美元。该跌幅被普遍归因于 DeepSeek 低成本模型引发的 AI 算力需求质疑。</li>
+<li>DeepSeek App 于 2025 年 1 月底登顶中国区与美国区 App Store 免费榜（多家应用商店榜单与媒体报道）。</li>
+<li>SemiAnalysis、中信等机构观点：558 万美元仅为最后一次成功训练 run 的成本，未含前期多次试错、数据清洗、人才与硬件摊销；真实总投入高于该数字（结构性推算，非官方口径）。</li>
+<li>同花顺 / 澎湃 / 新浪 / 21 世纪经济报道（2026-05 至 06）：首轮（本轮）融资约 510 亿元；梁文锋个人出资约 200 亿（约 40%）；腾讯约 100 亿、宁德时代体系约 50 亿、京东 / IDG / 国家人工智能产业投资基金等入局；融资后估值约 3500 亿元（约 500 亿美元）；开润股份 2026-06 公告意外印证约 3510 亿元。以上为媒体披露与公告间接印证，官方未完整确认。</li>
+<li>营收与利润传闻（多方媒体，官方未确认）：2025 全年营收有说约 65 亿、约 200 亿、约 10 亿+ 等版本；日收入能力有说约 400 多万元；年化收入被估约 34 亿元（约 5 亿美元）；利润说法从"已扭亏为盈"到"仍在投入"不一。各来源差异显著，仅为拼图式参考。</li>
+<li>DeepSeek 成立与股权：2023 年 7 月由幻方量化孵化，发展初期资金完全依靠幻方，未做外部股权融资；创始人梁文锋（1985 年生于广东湛江，浙大硕士，幻方量化创始人）通过个人持股控股。公司未上市、不发布年报。</li>
+<li>The Information / OSCHINA / 知乎 / 雪球（2025）：R2 多次推迟，原因包括 H20 算力短缺、梁文锋对性能不满意、华为芯片训练技术问题。</li>
+<li>美国对华 AI 芯片出口管制时间线（多源：网易 / 东方财富 / 51CTO / 新浪）：2022-10 限 A100/H100；2023-10 封堵 H800/A800 合规版；2025-01 特朗普政府考虑将 H20 纳入限制；2025-04-20 H20 禁令落地；2025-07-19 英伟达宣布恢复对华 H20 销售（仅库存），Blackwell 仍受限；2025-07-31 国家网信办就 H20 漏洞后门约谈英伟达。</li>
+<li>多国封禁（2025-02 起，36氪 / 凤凰网 / 网易 / 快科技）：意大利数据保护机构 Garante 下令屏蔽；澳大利亚以国家安全为由屏蔽；印度、日本跟进；美国国会、五角大楼、NASA、海军禁用政府设备，得州全面封禁，两党提出《2025 美国人工智能能力与中国脱钩法案》拟将下载使用 DeepSeek 定罪；韩国同月屏蔽。中方回应称重视并依法保护数据隐私安全，从未也不会要求企业违法采集存储数据。</li>
+<li>DeepSeek 开源与定价策略（官方 / 平台定价）：全部模型权重以 MIT 许可全量开源；C 端 App 免费；API 低价（R1 输入 1 元 / 百万 token、缓存命中 0.1 元、输出 3 元）。对照 OpenAI、Google 走闭源高溢价 API 与企业授权路线。</li>
+<li>幻方量化：中国头部量化私募，早年（2021–2022）大量囤积 A100/H800 高端显卡（传超万张），为 DeepSeek 提供初始算力与资金；梁文锋同时为其创始人。</li>
+<li>国产算力替代（瑞穗 / 雪球 / 腾讯等）：华为昇腾 910 系列 2025 年出货预计突破 70 万颗（同比 +75%），份额有望至约 30%；DeepSeek 推动国产 GPU 替代加速，但生态与性能鸿沟仍在。</li>
+<li>DeepSeek R3 / R1-Zero / Distill 系列（2025-03 至 07）：R1-Zero 于 2025-03 发布，未做 RLHF 对齐；Distill 系列于 2025-05 起陆续发布，将推理能力蒸馏至 1.5B–70B 多级；R3 于 2025-07 正式开源，参数 671B，在多项国际基准上全面超越 GPT-4.1 与 Claude 4 等闭源旗舰；训练成本未披露。</li>
+<li>DeepSeek 开源模型企业采用与商业化（综合公开报道，2025 至 2026）：百度将 DeepSeek 接入文心平台；字节跳动在抖音内部工具链部署 DeepSeek；腾讯将 R1 接入腾讯会议与文档；小米 HyperMind 引入 DeepSeek 推理；科大讯飞星火平台支持 DeepSeek 推理；滴滴在自动驾驶与客服场景接入；美团接入内部 AI 助手；小鹏用于智能座舱。中小 AI 创业公司基于 DeepSeek 权重微调推出垂直 SaaS 产品。MIT 许可下，DeepSeek 对下游集成不收费。来源综合：各企业官方公告、行业媒体报道（36 氪、腾讯科技、机器之心等）。</li>
+</ol>
+</div>
+
+</div>
+
+<script>document.documentElement.classList.add('js');
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+
+var progress=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var backTop=document.getElementById('backTop');
+var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
+var epilogue=null;
+for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
+var chapters=allH2.filter(function(h){return h!==epilogue;});
+var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+var sidenav=document.querySelector('.sidenav');
+var navLinks=document.querySelectorAll('.sidenav a');
+
+var tip=document.createElement('div');
+tip.className='fn-tooltip';
+document.body.appendChild(tip);
+function showTip(text,e){tip.textContent=text;tip.classList.add('visible');moveTip(e)}
+function moveTip(e){var x=(e.clientX||0)+14,y=(e.clientY||0)+14;if(x>window.innerWidth-300)x=window.innerWidth-300;tip.style.left=x+'px';tip.style.top=y+'px'}
+function hideTip(){tip.classList.remove('visible')}
+
+var fnItems=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+fnItems.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+document.querySelectorAll('sup').forEach(function(sup){
+sup.addEventListener('mouseenter',function(e){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));if(fnTexts[n-1])showTip(fnTexts[n-1].substring(0,180)+(fnTexts[n-1].length>180?'…':''),e)});
+sup.addEventListener('mousemove',moveTip);
+sup.addEventListener('mouseleave',hideTip);
+sup.addEventListener('click',function(){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));var t=document.getElementById('fn-'+n);if(t)t.scrollIntoView({behavior:'smooth'})});
+});
+
+document.querySelectorAll('.term').forEach(function(t){
+var tipText=t.getAttribute('data-tip');
+t.addEventListener('mouseenter',function(e){showTip(tipText,e)});
+t.addEventListener('mousemove',moveTip);
+t.addEventListener('mouseleave',hideTip);
+t.addEventListener('click',function(e){e.stopPropagation();showTip(tipText,e);setTimeout(hideTip,4000)});
+});
+document.addEventListener('click',function(e){if(!e.target.classList.contains('term'))hideTip()});
+
+// Donut segment tooltip
+var segTip=document.createElement('div');
+segTip.className='seg-tooltip';
+document.body.appendChild(segTip);
+document.querySelectorAll('.donut-seg').forEach(function(seg){
+seg.addEventListener('mouseenter',function(e){segTip.textContent=seg.getAttribute('data-name')+': '+seg.getAttribute('data-val');segTip.classList.add('visible');moveTip(e)});
+seg.addEventListener('mousemove',moveTip);
+seg.addEventListener('mouseleave',function(){segTip.classList.remove('visible')});
+});
+
+function syncChapters(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+var line=130,idx=-1;
+for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
+var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
+if(inEpi){tracker.textContent='尾声';}
+else if(idx<0){tracker.textContent='导语';}
+else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
+if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
+var ch=inEpi?8:(idx<0?0:idx+1);
+var links=document.querySelectorAll('.sidenav a');
+links.forEach(function(a){a.classList.remove('active')});
+var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
+if(act)act.classList.add('active');
+}
+window.addEventListener('scroll',syncChapters,{passive:true});
+window.addEventListener('load',syncChapters);
+try{syncChapters();}catch(e){}
+
+function scrollTop(){window.scrollTo({top:0,behavior:'smooth'})}
+function toggleNav(){sidenav.classList.toggle('open')}
+function toggleBanDetail(id){
+  var detail=document.getElementById('ban-'+id);
+  if(!detail)return;
+  var item=detail.closest('.ban-item');
+  var active=item.classList.toggle('active');
+  detail.style.maxHeight=active?(detail.scrollHeight+'px'):'0px';
+}
+
+navLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();sidenav.classList.remove('open');
+var ch=parseInt(a.getAttribute('data-ch'));
+if(ch===0){window.scrollTo({top:0,behavior:'smooth'})}
+else if(ch===8){if(epilogue)epilogue.scrollIntoView({behavior:'smooth'})}
+else{if(chapters[ch-1])chapters[ch-1].scrollIntoView({behavior:'smooth'})}
+});
+});
+document.addEventListener('click',function(e){if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle'))sidenav.classList.remove('open')});
+
+
+
+var barObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
+  x.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){var w=b.getAttribute('data-w');setTimeout(function(){
+    b.style.width=w+'%';
+  },100)});
+  barObs.unobserve(x.target);
+}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.bar-chart').forEach(function(c){barObs.observe(c)});
+
+function initConsent(){
+  var overlay=document.getElementById("consentOverlay");
+  var check=document.getElementById("consentCheck");
+  var btn=document.getElementById("consentBtn");
+  if(!overlay||!btn||!check)return;
+  function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+  function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+  var STORAGE_KEY="investigative_desk_consent";
+  function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+  function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+  btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+  check.addEventListener("change",function(){btn.disabled=!check.checked});
+  show();
+}
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
+
+</script>
+
+<footer>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+
+
+<div class="consent-overlay" id="consentOverlay">
+  <div class="consent-box">
+    <div class="consent-header">
+      <span>法律声明 · LEGAL NOTICE</span>
+      </div>
+    <div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+    <div class="consent-footer">
+      <label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+      <button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+    </div>
+  </div>
+</div>
+
+<script src="../global.js" defer></script>
+
+<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+
+<script src="../../share.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* =========================================================
+   调查团队档案室 · 全局 UI 样式
+   所有报道页共用，禁止在各页面重复定义。
+   引入方式：<link rel="stylesheet" href="../global.css">
+   ========================================================= */
+
+/* —— 基础重置 —— */
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+/* 防止 masthead 和 top-bar 文本在窄屏错行 */
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+
+/* —— 内部资料横幅（顶部红色条） —— */
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+
+/* —— 置顶导航行（内部资料横幅下方） —— */
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+
+/* —— 阅读进度条 —— */
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+
+/* —— 章节标题滚动偏移（补偿固定导航遮档） —— */
+.scroll-target, h2, .epilogue{scroll-margin-top:80px}
+.hero h1, .hero{scroll-margin-top:80px}
+
+/* —— 顶部按钮对齐标准化 —— */
+.top-bar .home,.top-bar .toc,.top-bar .pos{display:inline-flex;align-items:center;line-height:1.3}
+
+/* —— 页面滚动后紧凑模式：四元素合并为一行 —— */
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+/* 横幅文字绝对居中，不参与 flex 布局 */
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+/* 隐藏独立目录按钮，导语框代替点击 */
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .top-bar .toc:hover{background:rgba(255,255,255,.4)}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+
+/* —— 避免第一章上方重复横线（byline 已有底线） —— */
+.hero + h2{border-top:none !important;padding-top:0 !important}
+
+/* —— 法律合规弹窗 —— */
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  /* 移动端导航栏：隐藏次要元素、缩小间距 */
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+
+/* —— 页脚 —— */
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+
+/* —— 侧边目录 —— */
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+
+/* —— 返回顶部 —— */
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+
+/* —— 阅读时间徽章（右上角，导航栏下方） —— */
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+}

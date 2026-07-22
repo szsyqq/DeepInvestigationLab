@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深度调查档案室 · The Investigative Desk</title>
+<script src="https://beacon.cdn.qq.com/sdk/4.5.9/beacon_web.min.js" async></script>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.8;font-size:17px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;width:0;transition:width .1s}
+
+/* body 被锁定滚动时（弹窗打开） */
+body.locked{overflow:hidden}
+
+/* 内部资料横幅 */
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+
+/* 统一置顶导航行（位于「内部资料」横幅下方） */
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink)}
+.top-bar-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 24px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:16px}
+.top-bar .brand{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.top-bar .brand .accent{color:var(--red);display:block;font-size:10px;letter-spacing:2px}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+
+/* 法律合规弹窗 */
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body p{margin-bottom:10px}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.hero{padding:50px 0 26px;border-bottom:3px double var(--ink);margin-bottom:8px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:18px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:44px;line-height:1.15;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.7;max-width:780px}
+.about{margin:24px 0 6px;font-size:14px;color:var(--gray);background:var(--quote-bg);border-left:4px solid var(--red);padding:16px 20px;line-height:1.7}
+.about b{color:var(--ink)}
+
+
+.index-head{display:flex;align-items:baseline;justify-content:space-between;margin:42px 0 18px;padding-top:18px;border-top:2px solid var(--ink)}
+.index-head h2{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700}
+.index-head .count{font-size:12px;color:var(--gray);letter-spacing:1px}
+
+.card{display:block;text-decoration:none;color:inherit;background:#fbf8f0;border:1px solid var(--line);margin-bottom:22px;padding:26px 28px;transition:transform .18s,box-shadow .18s,border-color .18s;scroll-margin-top:90px}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.09);border-color:var(--red)}
+.card .row{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.card .date{font-size:12px;color:#fff;background:var(--bg-dark);padding:3px 10px;letter-spacing:1px;font-weight:700}
+.card .tag{font-size:11px;color:var(--red);border:1px solid var(--red);padding:2px 9px;letter-spacing:1px}
+.card .tag.new{background:var(--red);color:#fff}
+.card .co{font-size:13px;color:var(--gray);font-weight:700;letter-spacing:1px}
+.card h3{font-size:23px;font-weight:700;line-height:1.3;margin-bottom:10px}
+.card .desc{font-size:15px;color:#444;line-height:1.7;margin-bottom:14px}
+.card .foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--gray);letter-spacing:.5px}
+.card .more{color:var(--red);font-weight:700}
+.card .more::after{content:" →"}
+
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:90px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+
+@media(max-width:760px){
+.hero h1{font-size:32px}
+.card{padding:20px 18px}
+.card h3{font-size:20px}
+.top-bar .pos{display:none}
+}
+@media(max-width:600px){
+.top-bar .time{display:none}
+}
+</style>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="progress-bar" id="bar"></div>
+
+<!-- 法律合规声明弹窗 -->
+<div class="consent-overlay" id="consentOverlay">
+<div class="consent-box">
+<div class="consent-header"><span>法律声明 · LEGAL NOTICE</span></div>
+<div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+<div class="consent-footer">
+<label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+<button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+</div>
+</div>
+</div>
+
+<div class="top-bar">
+<div class="top-bar-inner">
+<div class="top-bar-left">
+<span class="brand">深度调查 · <span class="accent">THE INVESTIGATIVE DESK</span></span>
+<span class="sep"></span>
+<span class="time">更新于 2026-07-21</span>
+</div>
+<div class="top-bar-right">
+<span class="pos">当前位置：<b>档案室首页</b></span>
+<span class="sep"></span>
+<button class="toc" id="tocBtn">≡ 目录</button>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<div class="hero reveal">
+<div class="kicker">档案室 · The Archive</div>
+<h1>深度调查档案室</h1>
+<p class="dek">这里汇集每一篇基于公开信息、独立完成的深度公司研究。每一篇都遵循同一套方法：从一组关键数字出发，把一家公司的业务、财务、技术与行业位置，用公开数据摊开来读，让事实自己说话。</p>
+</div>
+
+<div class="about reveal">
+<b>关于本档案室</b>：本档案室基于公开信息独立完成深度公司研究。全部内容基于招股书、年报、问询回复、监管文件与可交叉验证的第三方公开数据，立场中立、不预设结论。部分内容借助人工智能工具辅助生成。署名统一为「调查团队」，不使用任何媒体自称。如需引用，请注明来源与日期。
+</div>
+
+
+<div class="index-head reveal">
+<h2>全部报道 · All Reports</h2>
+<span class="count">共 10 篇</span>
+</div>
+
+<!-- 卡片 · 宝马（新增） -->
+<a class="card reveal" id="r-bmw" href="reports/bmw/index.html">
+<div class="row">
+<span class="date">2026-07-21</span>
+<span class="tag new">最新</span>
+<span class="co">宝马</span>
+<span class="tag">汽车</span><span class="tag">电动化</span><span class="tag">德国</span>
+</div>
+<h3>宝马：百年驾驶乐趣，与它踩不稳的电门</h3>
+<p class="desc">一家造了百年汽车的公司，2025 年营收超过 1,400 亿欧元——却在中国被本土品牌蚕食份额、电动车毛利率为负、新世代平台千亿投入未见回报、一道制动系统召回就让全年利润预警。当"驾驶乐趣"撞上电动化与软件化，它踩电门的那只脚还不太稳。</p>
+<div class="foot"><span>约 12 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 智谱（新增） -->
+<a class="card reveal" id="r-zhipu" href="reports/zhipu/index.html">
+<div class="row">
+<span class="date">2026-07-21</span>
+<span class="co">智谱</span>
+<span class="tag">AI</span><span class="tag">大模型</span><span class="tag">港股</span>
+</div>
+<h3>智谱：学霸下海，与一门它还在学的生意</h3>
+<p class="desc">一家从清华实验室跑出来的 AI 公司，2025 年营收 7.24 亿元、却亏掉 47.18 亿元；当它带着“全球大模型第一股”的标签登陆港股，学者与商人两种身份，第一次被放在同一份财报里称量。</p>
+<div class="foot"><span>约 20 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 小红书（新增） -->
+<a class="card reveal" id="r-xiaohongshu" href="reports/xiaohongshu/index.html">
+<div class="row">
+<span class="date">2026-07-21</span>
+<span class="co">小红书</span>
+<span class="tag">内容社区</span><span class="tag">IPO</span><span class="tag">种草</span>
+</div>
+<h3>小红书：种草的帝国，信任的裂缝</h3>
+<p class="desc">每天 8 亿次搜索、4 亿月活，全中国最强的"种草"机器——小红书用十三年建起一座以真实分享为地基的"种草的帝国"。现在它以约 310 亿美元估值站在港交所门口，可广告占了收入的七成六，假测评渗进最真实的笔记，IPO 面前还摆着 VIE、劳资与对赌三道关。</p>
+<div class="foot"><span>约 14 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 赛力斯 -->
+<a class="card reveal" id="r-seres" href="reports/seres/index.html">
+<div class="row">
+<span class="date">2026-07-20</span>
+<span class="co">赛力斯</span>
+<span class="tag">华为</span><span class="tag">新能源</span><span class="tag">智选车</span>
+</div>
+<h3>赛力斯：把灵魂交给华为的车厂，与它算不清的那笔"华为账"</h3>
+<p class="desc">一家靠面包车起家的重庆小厂，四年里营收从 143 亿涨到 1650 亿、亏损 22 亿变成盈利 59 亿。转折只有一个词：华为。但当华为把同一套"灵魂"分发给五个"界"，当 2026 上半年销量还在涨、利润却预亏 15 到 18 亿，这笔账，算得清吗？</p>
+<div class="foot"><span>约 13 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 深度求索 -->
+<a class="card reveal" id="r-deepseek" href="reports/deepseek/index.html">
+<div class="row">
+<span class="date">2026-07-20</span>
+<span class="co">深度求索</span>
+<span class="tag">AI大模型</span><span class="tag">开源</span><span class="tag">算力</span>
+</div>
+<h3>DeepSeek：把模型开源，把账本捂紧</h3>
+<p class="desc">用 558 万美元训练出比肩 GPT-4o 的模型，让英伟达一天蒸发近 6000 亿美元。可当市场给它贴上 3500 亿元估值时，这家公司却从不公布一分钱营收、一分钱利润。DeepSeek 把模型开源给全世界，却从不披露财务数据——它用最开放的技术，写成了最封闭的财务。</p>
+<div class="foot"><span>约 14 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 周生生 -->
+<a class="card reveal" id="r-chowsangsang" href="reports/chowsangsang/index.html">
+<div class="row">
+<span class="date">2026-07-20</span>
+<span class="co">周生生</span>
+<span class="tag">黄金</span><span class="tag">珠宝</span><span class="tag">港股</span><span class="tag">家族企业</span>
+</div>
+<h3>周生生：金价跌了 25%，它反而暖了</h3>
+<p class="desc">一家卖了 90 年金子的家族金铺，名字叫"生生不息"。2024 年国际金价涨超 20%，它的营收却掉了 15%、关了 74 家店——金价的牛市成了它的熊市。转折在后面：2025 年它靠"少计重、多定价"把毛利顶到 32.6%、净利创纪录；2026 年金价半年暴跌 25%，同店反而涨了 17%。从一克黄金的产业链利润分配，到季度"适应曲线"，这篇把周生生怎么和金价"脱钩"讲清楚了。</p>
+<div class="foot"><span>约 24 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 燧原科技 -->
+<a class="card reveal" id="r-suiyuan" href="reports/suiyuan/index.html">
+<div class="row">
+<span class="date">2026-07-20</span>
+<span class="co">燧原科技</span>
+<span class="tag">AI芯片</span><span class="tag">GPU</span><span class="tag">IPO</span>
+</div>
+<h3>燧原科技：一家AI芯片独角兽，和它越写越大的"腾讯账单"</h3>
+<p class="desc">四小龙里成立最早、上市最晚。三年营收从9010万涨到近10亿，累计却亏掉51.79亿；而撑起增长的腾讯，既是持股超两成的第一大股东，又是它的最大客户——对腾讯的销售占比，从8.53%一路升到83.79%。这张越写越大的"腾讯账单"，是护城河，还是天花板？</p>
+<div class="foot"><span>约 18 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 建滔系 -->
+<a class="card reveal" id="r-jiantao" href="reports/jiantao/index.html">
+<div class="row">
+<span class="date">2026-07-18</span>
+<span class="co">建滔系</span>
+<span class="tag">覆铜板</span><span class="tag">CCL</span><span class="tag">港股</span>
+</div>
+<h3>建滔系：一纸涨价函背后的铜箔帝国，与AI叙事的边界</h3>
+<p class="desc">全球覆铜板 20 年第一，却在 AI 高速板材上落后于台系与内资对手；家族年内套现 145 亿港元。母子公司架构下，真实的盈利发动机，是一张涨价函，还是一门手艺？</p>
+<div class="foot"><span>约 13 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 长鑫科技 -->
+<a class="card reveal" id="r-changxin" href="reports/changxin/index.html">
+<div class="row">
+<span class="date">2026-07-18</span>
+<span class="co">长鑫科技</span>
+<span class="tag">半导体</span><span class="tag">DRAM</span><span class="tag">IPO</span>
+</div>
+<h3>长鑫科技：在存储涨价周期顶端，一家国产DRAM厂的账本与代差</h3>
+<p class="desc">累计亏损 366 亿、单季净利却达 330 亿；17nm 与 12–13nm 的代差、HBM 的入场券、合肥国资的耐心钱——一份把国产 DRAM 龙头摊开来讲的账本。</p>
+<div class="foot"><span>约 21 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<!-- 卡片 · 宇树科技 -->
+<a class="card reveal" id="r-yushu" href="reports/yushu/index.html">
+<div class="row">
+<span class="date">2026-07-17</span>
+<span class="co">宇树科技</span>
+<span class="tag">机器人</span><span class="tag">人形机器人</span><span class="tag">IPO</span>
+</div>
+<h3>会翻跟头的机器人，和它翻不过去的那道坎</h3>
+<p class="desc">819 页招股书的三轮公开回复交叉验证——这些会翻跟头的机器人到底卖给了谁？研发成色几何？420 亿估值是否透支了赛道高点？</p>
+<div class="foot"><span>约 54 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
+<footer>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+</div>
+
+<!-- 侧边导航（目录） -->
+<div class="sidenav" id="sidenav">
+<button class="close" id="navClose">×</button>
+<h4>报道导航 · Reports</h4>
+<a href="#r-xiaohongshu"><span class="num">01</span>小红书：种草的帝国</a>
+<a href="#r-seres"><span class="num">02</span>赛力斯：华为账</a>
+<a href="#r-deepseek"><span class="num">03</span>DeepSeek：账本捂紧</a>
+<a href="#r-chowsangsang"><span class="num">04</span>周生生：金价跌了它反而暖了</a>
+<a href="#r-suiyuan"><span class="num">05</span>燧原：腾讯账单</a>
+<a href="#r-jiantao"><span class="num">06</span>建滔系：铜箔帝国</a>
+<a href="#r-changxin"><span class="num">07</span>长鑫：DRAM 账本</a>
+<a href="#r-yushu"><span class="num">08</span>宇树：翻跟头的机器人</a>
+</div>
+
+<button class="back-top" id="backTop" title="回到顶部">↑</button>
+
+<script>
+/* 进度条 + 返回顶部 */
+var bar=document.getElementById('bar');
+var backTop=document.getElementById('backTop');
+function onScroll(){
+  var h=document.documentElement;
+  var max=h.scrollHeight-h.clientHeight;
+  var p=max>0?(h.scrollTop/max*100):0;
+  bar.style.width=p+'%';
+  if(h.scrollTop>400)backTop.classList.add('visible');else backTop.classList.remove('visible');
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* 侧边目录 */
+var sidenav=document.getElementById('sidenav');
+var tocBtn=document.getElementById('tocBtn');
+function toggleNav(){sidenav.classList.toggle('open')}
+if(tocBtn)tocBtn.addEventListener('click',toggleNav);
+var navClose=document.getElementById('navClose');
+if(navClose)navClose.addEventListener('click',function(){sidenav.classList.remove('open')});
+var navLinks=document.querySelectorAll('.sidenav a');
+navLinks.forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var id=a.getAttribute('href').slice(1);
+    var el=document.getElementById(id);
+    if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+    sidenav.classList.remove('open');
+  });
+});
+document.addEventListener('click',function(e){
+  if(sidenav.classList.contains('open') && !sidenav.contains(e.target) && e.target!==tocBtn && !tocBtn.contains(e.target)){
+    sidenav.classList.remove('open');
+  }
+});
+
+/* 滚动定位高亮 */
+var cards=document.querySelectorAll('.card[id]');
+function spy(){
+  var line=140, idx=-1;
+  cards.forEach(function(c,i){ if(c.getBoundingClientRect().top-line<=0) idx=i; });
+  navLinks.forEach(function(a){a.classList.remove('active')});
+  if(idx>=0){var act=document.querySelector('.sidenav a[href="#'+cards[idx].id+'"]'); if(act)act.classList.add('active');}
+}
+addEventListener('scroll',spy,{passive:true});spy();
+
+/* 进入动画 */
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+
+/* 返回顶部 */
+if(backTop)backTop.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+
+/* 法律合规弹窗 */
+(function(){
+  var overlay=document.getElementById("consentOverlay");
+  var check=document.getElementById("consentCheck");
+  var btn=document.getElementById("consentBtn");
+  var close=document.getElementById("consentClose");
+  if(!overlay||!btn||!check)return;
+  function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+  function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+  var KEY="investigative_desk_consent";
+  function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+  function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+  btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+  check.addEventListener("change",function(){btn.disabled=!check.checked});
+  if(close)close.addEventListener("click",function(){_sc();hide()});
+  show();
+})();</script>
+
+<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Ignore everything except portal/ and CI config
+/*
+!/portal/
+!/.github/
+!.gitignore
+
+# OS files
+.DS_Store
