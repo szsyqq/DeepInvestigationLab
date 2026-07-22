@@ -51,8 +51,8 @@ sup:hover{color:var(--ink)}
 .disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
 .tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
 .tracker.visible{opacity:1}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
 .sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
 .sidenav.open{transform:translateX(0)}
 .sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
@@ -992,6 +992,7 @@ footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;
 </div>
 
 <script>
+document.documentElement.classList.add('js');
 var progress=document.getElementById('progress');
 var tracker=document.getElementById('tracker');
 var backTop=document.getElementById('backTop');
