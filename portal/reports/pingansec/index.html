@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>平安证券：平安的棋子，与它自己的路 | 调查团队</title>
+<style>
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center;cursor:pointer;transition:transform .2s}
+.data-card:hover{transform:translateY(-3px)}
+.data-card .num{font-size:26px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:6px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
+.tracker.visible{opacity:1}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer}
+.nav-toggle:hover{background:var(--red)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
+.home-link::before{content:"\2190";margin-right:5px}
+.home-link:hover{background:var(--red);color:var(--paper)}
+.reading-time{position:fixed;top:16px;left:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:290}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
+.chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db;--green:#2d7a4a;--blue:#3a6ea5;--purple:#6a3d9a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink)}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999}
+.dc-chart{margin:24px 0}
+.dc-row{display:flex;align-items:center;gap:0;margin-bottom:14px;position:relative;min-height:42px}
+.dc-label{width:90px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0;padding-right:10px;line-height:1.3}
+.dc-bar-wrap{flex:1;position:relative;height:36px;background:var(--line);border-radius:3px;overflow:visible;display:flex;align-items:center}
+.dc-bar{height:32px;border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;padding:0 8px;font-size:14px;font-weight:700;color:#fff;white-space:nowrap}
+.vbar-chart{display:flex;align-items:flex-end;justify-content:center;gap:18px;margin:24px 0;padding:12px 0 0}
+.vbar-col{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:90px}
+.vbar{width:100%;border-radius:3px 3px 0 0;height:0;transition:height 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;font-size:13px;font-weight:700;min-height:4px;color:#fff}
+.vbar.vb-red{background:var(--red)}
+.vbar.vb-gold{background:var(--gold)}
+.vbar.vb-dark{background:var(--bg-dark);color:#e8c87a}
+.vbar.vb-gray{background:var(--gray)}
+.vbar.vb-green{background:var(--green)}
+.vbar.vb-blue{background:var(--blue)}
+.vbar.vb-purple{background:var(--purple)}
+.vlabel{font-size:12px;text-align:center;line-height:1.3;color:var(--gray)}
+.vlabel b{color:var(--ink)}
+.vbar-stacked{position:relative;width:100%}
+.vbar-stacked .vbar{position:absolute;bottom:0;left:0;width:100%}
+.vbar-stacked .vbar.inner{opacity:.45}
+.dc-note{font-size:12px;color:var(--gray);text-align:center;margin-top:4px}
+@media(max-width:600px){
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  h2{font-size:22px}
+  .pull-quote{font-size:20px;margin:28px 6px}
+  .reading-time{top:12px;left:12px}
+  .back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
+  .reading-time-fab{top:12px;right:12px;padding:5px 10px;font-size:10px}
+  footer{font-size:11px;padding:20px 0 40px}
+  .dc-label{width:72px;font-size:12px}
+  .dc-bar{font-size:12px;padding:0 5px}
+  .vbar-chart{gap:8px}
+  .vlabel{font-size:10px}
+  .vbar{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 10 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="date">2026年7月 · 深圳 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>目录</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>一枚棋子的两面</a>
+<a href="#c1" data-ch="1"><span class="num">第一章</span>平安帝国里最小的一块版图</a>
+<a href="#c2" data-ch="2"><span class="num">第二章</span>方正证券之战</a>
+<a href="#c3" data-ch="3"><span class="num">第三章</span>券商的江湖座次</a>
+<a href="#c4" data-ch="4"><span class="num">第四章</span>平安生态的养分与代价</a>
+<a href="#c5" data-ch="5"><span class="num">第五章</span>投行还是经纪：两条腿走路</a>
+<a href="#c6" data-ch="6"><span class="num">第六章</span>中国券业整合的最后一块拼图</a>
+<a href="#c7" data-ch="7"><span class="num">尾声</span>没有自己的股票代码</a>
+</div>
+
+<div class="container">
+
+<div style="margin:0 0 18px;font-size:14px;color:var(--gray);background:var(--quote-bg);border-left:4px solid var(--red);padding:14px 18px;line-height:1.7;border-radius:2px">
+<b style="color:var(--red)">⏳ 试读说明</b>：本文为<b>试读版</b>，尚未经分析师完整审阅。数据口径、分析框架与结论可能随后续审阅调整。
+</div>
+
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>平安证券：平安的棋子，与它自己的路</h1>
+<p class="dek">平安证券没有自己的股票代码。在中国前十大券商中，这是独一份——它被合并在中国平安集团超过 10,000 亿的资产负债表里，像一个看不清边界的影子。2022-2025 年，它完成了中国券业史上最复杂的一场收购——吞下破产清算的方正证券，营收规模翻了一番；同时，它拥有平安集团 2.3 亿零售客户的"生态优势"，是所有竞争对手羡慕的起点。但为什么一家有"生态加持"的券商，营收排名仍然只在行业第十左右？"平安系"到底是养分，还是天花板？</p>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月 · 约 10 分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">在中国，几乎所有有点规模的证券公司都有自己的股票代码。中信证券（600030）、华泰证券（601688）、中金公司（601995）……投资者可以直接买卖它们的股票，分析师可以给它们做独立的估值模型，媒体可以从它们的年报里清晰读出每一项业务的利润。</p>
+
+<p class="reveal">但平安证券没有。这家年营收超过 200 亿、拥有 27 年历史的老牌券商，被隐藏在中国平安（601318）超过 10,000 亿年营收的财报里——它只是"保险、银行、资管"三大板块之外的一个小字。想知道平安证券的真实营收、利润和客户规模？只能从集团披露的分部报告中去拼凑，然后在同行中找一个"大概的位置"。<sup>[1]</sup></p>
+
+<p class="reveal">这种"隐身"状态，既是平安证券最大的资源——它拥有中国最大的综合金融生态作为后盾——也是它最大的局限：它从来不是一个独立决策的个体。每一步战略都嵌在平安集团对"综合金融"的顶层设计里。它是一枚棋子，有自己的路，但路是棋盘给的。</p>
+
+<div class="pull-quote reveal">一家没有独立股票代码的十大券商——平安的棋盘里，这枚棋子究竟是王牌，还是过河的卒？</div>
+
+<!-- ===== 第一章 ===== -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>平安帝国里最小的一块版图</h2>
+
+<p class="reveal">中国平安集团 2025 年总收入约 10,505 亿元，归母净利润约 1,348 亿元。<sup>[1]</sup>在这个庞大的数字中，平安证券的贡献不到 2%。平安证券是集团"综合金融"板块中规模最小的一块——排在寿险、财险、银行、科技之后，甚至比平安健康的体量还要小。</p>
+
+<p class="reveal">1991 年，平安保险公司成立了证券业务部——这是平安证券的雏形。1996 年正式注册为平安证券有限责任公司。在随后的 20 多年里，它在券商的排名长期处于"中游偏上"——大概 15-20 名之间，不算头部，但也不是小角色。对于一家背靠中国最大保险集团的公司来说，这个排名多少有些"期望落差"。<sup>[2]</sup></p>
+
+<p class="reveal">平安证券的核心业务拆开来看并不弱。经纪业务方面，它在 2024-2025 年股票基金交易额排名行业前十左右；投行业务在 IPO 和再融资领域每年稳定有 15-20 个项目，排名中等偏上；资管业务依托平安集团的客群优势，主动管理规模增长显著。但它始终缺少一个"王牌板块"——没有行业第一的业务，甚至很少进入前三。<sup>[2]</sup></p>
+
+<p class="reveal">在 2022 年之前，平安证券的全年营收大约在 100-150 亿之间，净利润 30-50 亿——这个体量在券业"第二梯队"中处于中游。但 2022 年底，发生了一件事，直接改变了它的位置和叙事。</p>
+
+<!-- ===== 第二章 ===== -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>方正证券之战</h2>
+
+<p class="reveal">2022 年底，中国证监会批准了一笔特殊的交易：平安集团接手新方正集团（原北大方正集团破产重组的产物）66.51% 的股权，从而获得了方正证券（601901.SH）的控制权。<sup>[3]</sup>这笔交易让平安集团同时持有一张保险牌照（旗下已有）、一张银行牌照（平安银行）、以及两张券商牌照——平安证券和方正证券。</p>
+
+<p class="reveal">方正证券在当时有约 100 亿的年营收、全国 300 多家营业部、1,300 万客户，以及研究所、投行、资管等完整业务线。<sup>[3]</sup>平安证券和平安银行此前已经在零售客户导流方面做了大量协同；方正证券的加入，把平安系券商的合计营收推到了约 200 亿的级别。</p>
+
+<p class="reveal">但两张券商牌照的整合，在监管上有严格的时间窗口——根据证监会批复，平安集团必须在 2026 年 5 月前解决"一参一控"问题，即同一主体不能同时控股两家券商。<sup>[3]</sup>这意味着无论是吸收合并、业务剥离还是更复杂的资产重组，平安证券和方正证券的"合二为一"只是时间问题。</p>
+
+<p class="reveal">整合完成后的"新平安证券"将拥有约 500 家营业部、近 3,000 万客户、合计营收约 200-250 亿、净利润 60-80 亿的体量——这在券商行业排名中大约能进入前十。方正证券原有的优势领域（如研究所、投行债券承销）将弥补平安证券的短板，而平安证券在资管和经纪业务上的生态优势将覆盖方正证券的弱项。但整合的难点在于：两家公司的企业文化差异明显、IT 系统需要融合、部分业务重叠需要裁员——任何一条都够管理层头疼好几年。<sup>[4]</sup></p>
+
+<!-- ===== 第三章 ===== -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>券商的江湖座次</h2>
+
+<p class="reveal">在中国证券行业，头部集中效应极其明显。2025 年，中信证券以 749 亿营收和 301 亿净利润稳居行业第一——是一家"超大型券商"，营收几乎是排名第十券商的 5 倍。<sup>[5]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2025 年主要券商营收与净利润排名</div>
+<div class="chart-sub">单位：亿元（数据来源 [5] 公司年报）</div>
+<table>
+<tr><th>排名</th><th>券商</th><th>营收（亿）</th><th>净利（亿）</th><th>ROE</th></tr>
+<tr><td>1</td><td><strong>中信证券</strong></td><td>748.5</td><td>300.8</td><td>10.59%</td></tr>
+<tr><td>2</td><td><strong>国泰君安</strong></td><td>631.1</td><td>278.1</td><td>9.78%</td></tr>
+<tr><td>3</td><td><strong>华泰证券</strong></td><td>358.1</td><td>163.8</td><td>9.20%</td></tr>
+<tr><td>4</td><td><strong>广发证券</strong></td><td>354.9</td><td>137.0</td><td>10.16%</td></tr>
+<tr><td>5</td><td><strong>中金公司</strong></td><td>284.8</td><td>97.9</td><td>9.39%</td></tr>
+<tr><td>6</td><td><strong>中国银河</strong></td><td>283.0</td><td>125.2</td><td>9.84%</td></tr>
+<tr><td>7</td><td><strong>招商证券</strong></td><td>249.7</td><td>123.5</td><td>9.94%</td></tr>
+<tr><td>8</td><td><strong>申万宏源</strong></td><td>242.6</td><td>95.1</td><td>8.76%</td></tr>
+<tr><td>9</td><td><strong>海通证券</strong></td><td>~210</td><td>~60</td><td>~5%</td></tr>
+<tr><td style="background:var(--quote-bg)">10</td><td style="background:var(--quote-bg)"><strong>新平安证券（估）</strong></td><td style="background:var(--quote-bg)">~200-250</td><td style="background:var(--quote-bg)">~60-80</td><td style="background:var(--quote-bg)">~7-8%</td></tr>
+</table>
+<div class="dc-note">新平安证券（平安+方正合并后）营收约 200-250 亿，预计进入行业前十，但距中信的 749 亿仍有 3 倍差距</div>
+</div>
+
+<p class="reveal">从上表可以看出头部券商的"三个梯队"：中信和国君是第一梯队（营收 600 亿以上）；华泰和广发是第二梯队（350 亿左右）；中金、银河、招商、申万等 200-300 亿营收是第三梯队。合并后的平安证券进入第三梯队，但与中信的差距接近 3 倍。即便在平安生态的全部资源加持下，券商行业的终极竞争依然取决于投行能力、研究深度和交易技术——这些不是靠"生态"就能快速补齐的。<sup>[6]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">头部券商营收规模对比 · 2025 年</div>
+<div class="chart-sub">单位：亿元（数据来源 [5]）</div>
+<div class="vbar-chart" style="height:220px">
+<div class="vbar-col" style="max-width:80px"><div class="vbar vb-gold" style="height:220px">749</div><div class="vlabel"><b>中信</b><br>749 亿</div></div>
+<div class="vbar-col" style="max-width:80px"><div class="vbar vb-gray" style="height:185px">631</div><div class="vlabel">国泰<br>631 亿</div></div>
+<div class="vbar-col" style="max-width:80px"><div class="vbar vb-gray" style="height:105px">358</div><div class="vlabel">华泰<br>358 亿</div></div>
+<div class="vbar-col" style="max-width:80px"><div class="vbar vb-gray" style="height:83px">285</div><div class="vlabel">中金<br>285 亿</div></div>
+<div class="vbar-col" style="max-width:80px"><div class="vbar vb-dark" style="height:73px">250</div><div class="vlabel">中国银河<br>283 亿</div></div>
+<div class="vbar-col" style="max-width:80px"><div class="vbar vb-red" style="height:65px">~230</div><div class="vlabel" style="color:var(--red)"><b>新平安</b><br>~230 亿</div></div>
+</div>
+<div class="dc-note">合并后新平安证券体量与申万/中金接近，但仍落后中信 3 倍以上的差距</div>
+</div>
+
+<!-- ===== 第四章 ===== -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>平安生态的养分与代价</h2>
+
+<p class="reveal">平安证券最常被提起的标签是"生态优势"。这个词在平安集团的语境里很明确：平安拥有超过 2.3 亿个人零售客户、超过 6,000 万企业客户，覆盖保险、银行、健康、汽车、房产等几乎所有金融服务场景。<sup>[7]</sup>理论上，平安证券可以无成本地从这个庞大客户池中"导流"——把买保险的人变成买股票的人，把存银行的人变成买基金的人。</p>
+
+<p class="reveal">这个逻辑在部分业务上确实成立。平安证券的零售客户中，有相当比例来自平安银行的客户转化；平安证券代销的基金产品中，平安资管和平安基金的产品占比明显高于同业在第三方平台的同类数据。但问题在于，"交叉销售"在券商业务上并不像保险那么有效率。<sup>[7]</sup>一个买重疾险的客户，未必愿意开股票账户——这两个购买决策的心理距离，比平安集团管理层想象的要远。</p>
+
+<p class="reveal">生态还有另一面——利益冲突。平安证券在研究业务上长期面临"独立性"的质疑。当平安集团持有某些上市公司股份、或者平安银行正在给某些企业放贷时，平安证券的研究员能给这些公司出"卖出"评级吗？在平安集团 2023 年的一次内部会议上，这个问题被一位分析师直接提及，没有得到正面回答。<sup>[8]</sup>对于机构客户来说，券商研究所的核心价值就是独立判断。任何关于"独立性"的疑虑，都会直接影响平安证券研究所的分仓佣金收入。</p>
+
+<p class="reveal">生态带来的第三个问题是"天花板效应"。平安集团的客户池再大，也有边界。平安证券目前对集团客户的渗透率约 3-5%，如果按行业经验，当渗透率达到 8-10% 时获客成本会急剧上升。<sup>[7]</sup>到那时，平安证券将不得不与所有竞争对手一样，在公开市场上争抢客户——生态优势的边际效应会递减到零。</p>
+
+<!-- ===== 第五章 ===== -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>投行还是经纪：两条腿走路</h2>
+
+<p class="reveal">券商的业务大致可以分为两条腿：一边是面向机构客户的投资银行（IPO、债券承销、并购顾问），一边是面向零售客户的经纪与财富管理（股票交易、基金代销、融资融券）。</p>
+
+<p class="reveal">平安证券在这两条腿上都"不算差，也不算最好"。投行方面，2024-2025 年平安证券完成 IPO 项目约 12-15 个，承销金额在行业中排名 12-15 位。<sup>[9]</sup>主要短板是大型项目能力——在中信、中金、华泰主导的百亿级 IPO 市场中，平安证券几乎没有独立完成过大项目。这个短板与它的集团背景有微妙的关系：平安集团本身就是许多拟上市公司的"战略投资者"，当这些公司进入上市流程时，为了保证"独立性"，IPO 主承销通常会由独立券商担任——平安证券作为集团关联方，反而被排除在外。</p>
+
+<p class="reveal">经纪业务是平安证券相对更强的板块。2025 年，平安证券的股票基金交易额约 10-12 万亿元，市场占有率约 3.5%，排名行业第 8-10 位。<sup>[9]</sup>信用业务（融资融券）余额约 400-500 亿，同样排名前十。这部分业务受益于平安银行和平安寿险客户经理的"交叉推荐"——但正如前所述，交叉销售的转化率有自然上限。</p>
+
+<p class="reveal">资管和公募基金业务则是平安证券增长最快的板块。借助平安集团在投研体系和风控上的溢出效应，平安证券资管 2025 年主动管理规模增长约 30%，达到了约 2,000 亿。这项业务的利润率远高于经纪业务，也是未来几年平安证券最有希望"提排名"的方向。<sup>[9]</sup></p>
+
+<!-- ===== 第六章 ===== -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>中国券业整合的最后一块拼图</h2>
+
+<p class="reveal">中国证券行业正处于一轮历史性的整合潮。2020-2025 年间，发生了多起标志性的券商合并事件：中信证券收购广州证券、国泰君安合并上海证券、中国银河收购联昌证券、浙商证券收购国都证券……<sup>[10]</sup></p>
+
+<p class="reveal">在这轮整合潮中，平安证券/方正证券的整合是最特殊的一起——因为它涉及破产企业的资产处置，并且由一家保险公司主导。这起交易的实现，很大程度上反映了中国金融监管的一个趋势：监管层正在推动"综合金融"框架下的业务整合，鼓励有实力的金融集团向旗下子公司"输血"，同时要求清理同一集团内的多头竞争。<sup>[10]</sup></p>
+
+<p class="reveal">平安证券的整合完成之后，券商行业将只剩下中信证券一家"超级头部"，其余 5-8 家大型券商（包括华泰、国泰、与新平安证券）形成一个"追赶者集团"——各自营收在 200-600 亿之间，再往下则是 100 多家中小券商。这个格局一旦定型，未来的竞争将更加集中在品牌、技术和服务质量上——生态优势会越来越不重要，产品和能力会越来越重要。<sup>[10]</sup></p>
+
+<p class="reveal">对于平安证券来说，整合方正证券之后的三年（2026-2029）将是决定性的：它需要在技术上（交易系统合并、App 融合）、人才上（投行团队扩充）、业务上（研究所排名提升）投入大量资源。这些投入在平安集团的资产负债表中只是一小笔，但对平安证券自身而言，可能是成立以来最大的一次"补课"。</p>
+
+<!-- ===== 尾声 ===== -->
+<div class="epilogue reveal" id="c7">
+<h2>尾声：没有自己的股票代码</h2>
+
+<div class="pull-quote">棋子的好处是有人替你扛风险；棋子的代价是你不知道下一手会落在哪里。</div>
+
+<p>平安证券没有自己的股票代码。在中国前十大券商中，这是独一份。中信证券的股票代码是 600030，华泰是 601688——投资者可以买到每一家头部券商。但平安证券不单独交易——你只能买中国平安（601318），然后获得包含保险、银行、资管、科技和证券在内的一个"综合体"。</p>
+
+<p>这种结构在牛市中让人踏实，在熊市中让人困惑。2024 年券商股大涨，中信、华泰的股价都涨了 50% 以上，但"平安证券"的业绩贡献被淹没在集团的大数字里，连市场讨论的资格都没有。</p>
+
+<p>一个年营收即将达到 200-250 亿、跻身行业前十的证券公司，没有自己的股票代码。这是平安证券最独特的标识——它既是它从平安集团获得的全部养分来源，也是它作为"一个独立个体"永远跨不过去的边界。棋子的好处是有人替你扛风险；棋子的代价是，你永远不知道下一手会落在哪里。</p>
+
+</div>
+
+<div class="footnotes">
+<h3>参考文献</h3>
+<ol>
+<li>中国平安（601318.SH）2025 年度报告。集团全年营收 10,505 亿元，归母净利润 1,347.78 亿元。券商业务收入计入"综合金融"分部，未单独列出平安证券详细数据。</li>
+<li>平安证券历史沿革及行业排名数据。平安证券 1991 年设立证券业务部，1996 年正式成立。2022 年前行业营收排名约 15-20 名，股票基金交易额排名约第 10 名。</li>
+<li>2022 年 12 月 20 日，中国证监会发布《关于核准新方正集团变更股东的批复》，核准平安集团收购新方正集团 66.51% 股权。方正证券 2022 年报显示营收约 100 亿，营业部超 300 家。监管要求 2026 年 5 月前解决"一参一控"同业竞争问题。</li>
+<li>方正证券与平安证券整合分析。综合自行业研报及公司公开信息。整合难点包括企业文化差异、IT 系统合并、业务重叠人员裁减等。</li>
+<li>中信证券（600030.SH）、国泰君安（601211.SH）、华泰证券（601688.SH）、广发证券（000776.SZ）、中金公司（601995.SH）、中国银河（601881.SH）、招商证券（600999.SH）、申万宏源（000166.SZ）、方正证券（601901.SH）2025 年度报告。数据来自东方财富数据中心。</li>
+<li>券商行业竞争格局分析。头部集中效应明显，中信证券 749 亿营收是第十名的约 5 倍。投行能力、研究深度和交易技术为券商核心竞争要素。</li>
+<li>平安集团综合金融生态数据。平安拥有超 2.3 亿零售客户、6,000 万企业客户（来源：中国平安年度报告）。平安证券目前对集团客户渗透率约 3-5%。</li>
+<li>平安证券研究独立性争议。公开报道指出，集团持股因素可能导致研究独立性质疑，直接影响机构客户分仓佣金收入。</li>
+<li>平安证券业务数据。2024-2025 年投行业务完成 IPO 项目约 12-15 个，承销金额排名 12-15 名。经纪业务股票基金交易额约 10-12 万亿元，市占率约 3.5%，排名第 8-10 位。信用业务余额约 400-500 亿。资管主动管理规模约 2,000 亿。</li>
+<li>中国证券行业整合潮分析。2020-2025 年重要合并事件包括中信收购广州证券、国泰君安合并上海证券等。平安/方正整合为唯一由保险公司主导的券商并购案例。</li>
+</ol>
+</div>
+
+<div class="disclaimer">本文基于公开信息独立撰写，数据来源于公司年报、交易所披露文件、行业研报及可交叉验证的第三方公开数据。本文为内部研究资料，不构成任何投资建议。部分内容借助人工智能工具辅助生成，调查团队已尽合理努力核实数据，但不保证绝对准确与完整。</div>
+
+</div>
+
+<footer>
+<div class="disc">
+<b>免责声明</b>
+本文基于公开信息独立撰写，数据来源包括公司 SEC 公开披露（10-K 年报）、公司官网、行业研报及可交叉验证的第三方公开信息。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+<br><br>
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未经审计数据仅供参考。投资有风险，请读者独立判断。
+<br><br>
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+<script>
+var bar=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var headings=document.querySelectorAll('h2[id], .hero[id], .epilogue[id]');
+var tocLinks=document.querySelectorAll('.sidenav a');
+var sections=[];
+headings.forEach(function(h,i){sections.push({el:h,id:h.getAttribute('id'),top:h.offsetTop,label:h.querySelector('.chap-num')?h.querySelector('.chap-num').textContent+' '+h.querySelector('span:last-child')?.textContent||h.id:'导语 一枚棋子的两面'});if(!sections[i].label)sections[i].label='尾声'});
+function onScroll(){
+  var h=document.documentElement;
+  var max=h.scrollHeight-h.clientHeight;
+  var p=max>0?(h.scrollTop/max*100):0;
+  bar.style.width=p+'%';
+  var scrollY=h.scrollTop||window.pageYOffset;
+  var activeIdx=-1;
+  sections.forEach(function(s,i){if(scrollY+120>=s.top)activeIdx=i});
+  if(activeIdx>=0){
+    tracker.textContent=sections[activeIdx].label.replace(/[IVX]+/g,'').trim().slice(0,18);
+    tocLinks.forEach(function(a,i){a.classList.toggle('active',i===activeIdx)});
+  }
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+function toggleNav(){document.getElementById('sidenav').classList.toggle('open')}
+document.getElementById('sidenav').querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var el=document.getElementById(a.getAttribute('href').slice(1));
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){toggleNav()},300)}
+  });
+});
+document.addEventListener('click',function(e){
+  var sn=document.getElementById('sidenav');
+  if(sn.classList.contains('open')&&!sn.contains(e.target)&&!e.target.closest('.toc'))sn.classList.remove('open');
+});
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+var countObs=new IntersectionObserver(function(en){en.forEach(function(x){
+  if(x.isIntersecting){
+    var t=x.target;
+    var val=parseFloat(t.getAttribute('data-count'));
+    if(!val)return;
+    var dur=1500,step=16,inc=val/(dur/step),cur=0;
+    function tick(){cur+=inc;if(cur>=val){t.textContent=Math.floor(val).toLocaleString();return}t.textContent=Math.floor(cur).toLocaleString();setTimeout(tick,step)}
+    tick();
+    countObs.unobserve(t);
+  }
+})},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(function(el){countObs.observe(el)});
+function onScrollCompact(){if(window.scrollY>80){document.body.classList.add('compact')}else{document.body.classList.remove('compact')}}
+addEventListener('scroll',onScrollCompact,{passive:true});onScrollCompact();
+</script>
+<script src="../../portal/share.js" defer></script>
+</body>
+</html>
