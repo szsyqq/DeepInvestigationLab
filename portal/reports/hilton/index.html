@@ -104,27 +104,25 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 .dc-label{width:110px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0;padding-right:10px;line-height:1.3}
 .dc-bar-wrap{flex:1;position:relative;height:36px;background:var(--line);border-radius:3px;display:flex;align-items:center}
 .dc-bar{height:32px;border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;padding:0 8px;font-size:14px;font-weight:700;color:#fff;white-space:nowrap}
-.vbar-chart{display:flex;align-items:flex-end;justify-content:center;gap:18px;margin:24px 0;padding:12px 0 0}
-.vbar-col{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:90px}
-.vbar{width:100%;border-radius:3px 3px 0 0;height:0;transition:height 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;font-size:13px;font-weight:700;min-height:4px;color:#fff}
-.vbar.vb-red{background:var(--red)}
-.vbar.vb-gold{background:var(--gold)}
-.vbar.vb-dark{background:var(--bg-dark);color:#e8c87a}
-.vbar.vb-gray{background:var(--gray)}
-.vbar.vb-green{background:var(--green)}
-.vbar.vb-blue{background:var(--blue)}
-.vbar.vb-purple{background:var(--purple)}
-.vlabel{font-size:12px;text-align:center;line-height:1.3;color:var(--gray)}
-.vlabel b{color:var(--ink)}
-.vb-group{display:flex;gap:4px;width:100%}
-.vb-group .vbar{width:50%}
-.vbar-stacked{position:relative;width:100%}
-.vbar-stacked .vbar{position:absolute;bottom:0;left:0;width:100%}
-.vbar-stacked .vbar.inner{opacity:.45}
 .dc-note{font-size:12px;color:var(--gray);text-align:center;margin-top:4px}
 .legend-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:10px;font-size:12px}
 .leg-item{display:flex;align-items:center;gap:6px}
 .leg-dot{width:10px;height:10px;border-radius:2px;display:inline-block;flex-shrink:0}
+.donut-wrap{display:flex;align-items:flex-start;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0}
+.donut{width:170px;height:170px;border-radius:50%;position:relative;transition:transform .8s}
+.donut::after{content:'';position:absolute;top:26%;left:26%;width:48%;height:48%;background:var(--paper);border-radius:50%;pointer-events:none}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;font-size:13px;pointer-events:none}
+.donut-center .big{font-size:26px;font-weight:700;color:var(--red);display:block}
+.donut-center .sub{font-size:11px;color:var(--gray);display:block;margin-top:2px}
+.donut-legend{font-size:13px;line-height:2.1}
+.donut-legend .item{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.donut-legend .dot{display:inline-block;width:12px;height:12px;border-radius:2px;flex-shrink:0}
+.donut-legend .name{margin-right:4px}
+.donut-legend .val{color:var(--gray);font-size:12px}
+.donut-seg{cursor:pointer;transition:stroke-opacity .3s,transform .3s}
+.donut-seg:hover{stroke-opacity:.75}
+.donut-tip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:6px 12px;border-radius:3px;font-size:12px;pointer-events:none;z-index:100;opacity:0;transition:opacity .2s;white-space:nowrap}
+.donut-tip.show{opacity:1}
 @media(max-width:600px){
   .top-bar-inner{padding:8px 12px}
   .top-bar .sep{display:none}
@@ -145,9 +143,11 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
   .reading-time-fab{top:12px;right:12px;padding:5px 10px;font-size:10px}
   .dc-label{width:82px;font-size:12px}
   .dc-bar{font-size:12px;padding:0 5px}
-  .vbar-chart{gap:8px}
   .vlabel{font-size:10px}
-  .vbar{font-size:11px}
+  .donut-wrap{flex-direction:column;gap:18px;align-items:center}
+  .donut{width:140px;height:140px}
+  .donut-center .big{font-size:20px}
+  .donut-legend{font-size:12px;line-height:1.9}
 }
 </style>
 </head>
@@ -228,15 +228,31 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 <p class="reveal">Hampton by Hilton 是希尔顿最大的品牌——342,737 间客房，占全系统 27%。这是希尔顿的核心印钞机：每间 Hampton 的平均房价约 120 美元、入住率 75%、年客房收入约 3.2 万美元/间。<sup>[3]</sup>希尔顿从中抽取约 6% 的特许经营费，再加上预订系统使用费、品牌营销费、忠诚度计划费——合计从一间 Hampton 每年抽取约 7,000-8,000 美元。34 万间客房，就是 25 亿美元的年化"钥匙收入"——几乎是纯利润。</p>
 
 <div class="chart-box reveal">
-<div class="chart-title">希尔顿十大品牌 · 客房数</div>
+<div class="chart-title" style="margin-bottom:6px">希尔顿十大品牌 · 客房分布</div>
 <div class="chart-sub">数据来源 [2] Hilton 2024 10-K 年报</div>
-<div class="dc-chart">
-<div class="dc-row"><div class="dc-label">Hampton</div><div class="dc-bar-wrap"><div class="dc-bar vb-red" style="width:100%">342,737 间 (27.0%)</div></div></div>
-<div class="dc-row"><div class="dc-label">Hilton</div><div class="dc-bar-wrap"><div class="dc-bar vb-dark" style="width:66%">227,467 间</div></div></div>
-<div class="dc-row"><div class="dc-label">DoubleTree</div><div class="dc-bar-wrap"><div class="dc-bar vb-gray" style="width:46%">156,943 间</div></div></div>
-<div class="dc-row"><div class="dc-label">Hilton Garden Inn</div><div class="dc-bar-wrap"><div class="dc-bar vb-gray" style="width:46%">156,471 间</div></div></div>
-<div class="dc-row"><div class="dc-label">Home2 Suites</div><div class="dc-bar-wrap"><div class="dc-bar vb-blue" style="width:24%">82,515 间</div></div></div>
-<div class="dc-row"><div class="dc-label">Embassy Suites</div><div class="dc-bar-wrap"><div class="dc-bar vb-purple" style="width:18%">63,082 间</div></div></div>
+<div class="donut-wrap" style="position:relative">
+<div style="position:relative;display:inline-block">
+<svg class="donut" viewBox="0 0 200 200" style="width:180px;height:180px">
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a3a3a" stroke-width="32" opacity="0.06"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#a02020" stroke-width="32" stroke-dasharray="122.15 330.24" stroke-dashoffset="0" transform="rotate(-90 100 100)" class="donut-seg" data-name="Hampton" data-val="342,737 间 (27.0%)"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#2a2520" stroke-width="32" stroke-dasharray="80.98 371.41" stroke-dashoffset="-122.15" transform="rotate(-90 100 100)" class="donut-seg" data-name="Hilton" data-val="227,467 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6b6b6b" stroke-width="32" stroke-dasharray="56.10 396.29" stroke-dashoffset="-203.13" transform="rotate(-90 100 100)" class="donut-seg" data-name="DoubleTree" data-val="156,943 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a6ea5" stroke-width="32" stroke-dasharray="55.64 396.75" stroke-dashoffset="-259.23" transform="rotate(-90 100 100)" class="donut-seg" data-name="Hilton Garden Inn" data-val="156,471 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#b8860b" stroke-width="32" stroke-dasharray="29.41 422.98" stroke-dashoffset="-314.87" transform="rotate(-90 100 100)" class="donut-seg" data-name="Home2 Suites" data-val="82,515 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6a3d9a" stroke-width="32" stroke-dasharray="22.62 429.77" stroke-dashoffset="-344.28" transform="rotate(-90 100 100)" class="donut-seg" data-name="Embassy Suites" data-val="63,082 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#c9c2b3" stroke-width="32" stroke-dasharray="85.50 366.89" stroke-dashoffset="-366.90" transform="rotate(-90 100 100)" class="donut-seg" data-name="其他" data-val="约 239,000 间"/>
+</svg>
+<div class="donut-center"><span class="big">1,268,206</span><span class="sub">总客房数</span></div>
+</div>
+<div class="donut-legend">
+<div class="item"><span class="dot" style="background:#a02020"></span><span class="name">Hampton</span><span class="val">342,737 · 27.0%</span></div>
+<div class="item"><span class="dot" style="background:#2a2520"></span><span class="name">Hilton</span><span class="val">227,467</span></div>
+<div class="item"><span class="dot" style="background:#6b6b6b"></span><span class="name">DoubleTree</span><span class="val">156,943</span></div>
+<div class="item"><span class="dot" style="background:#3a6ea5"></span><span class="name">Hilton Garden Inn</span><span class="val">156,471</span></div>
+<div class="item"><span class="dot" style="background:#b8860b"></span><span class="name">Home2 Suites</span><span class="val">82,515</span></div>
+<div class="item"><span class="dot" style="background:#6a3d9a"></span><span class="name">Embassy Suites</span><span class="val">63,082</span></div>
+<div class="item"><span class="dot" style="background:#c9c2b3"></span><span class="name">其他 6 品牌</span><span class="val">约 239,000 · 18.9%</span></div>
+</div>
 </div>
 <div class="dc-note">前五大品牌占总客房的 76%——经济型和中端品牌是希尔顿真正的利润来源</div>
 </div>
@@ -351,12 +367,23 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 <div class="chart-box reveal">
 <div class="chart-title">希尔顿 · 开发管道结构（2024 年末）</div>
 <div class="chart-sub">3,578 家酒店 / 498,600 间客房按品牌层级分布 [2]</div>
-<div class="dc-chart">
-<div class="dc-row"><div class="dc-label">奢华/高端</div><div class="dc-bar-wrap"><div class="dc-bar vb-purple" style="width:8%">8%</div></div><span style="width:50px;font-size:12px;padding-left:6px;color:var(--gray)">~40,000 间</span></div>
-<div class="dc-row"><div class="dc-label">高端全服务</div><div class="dc-bar-wrap"><div class="dc-bar vb-dark" style="width:32%">32%</div></div><span style="width:50px;font-size:12px;padding-left:6px;color:var(--gray)">~160,000 间</span></div>
-<div class="dc-row"><div class="dc-label">中端精选</div><div class="dc-bar-wrap"><div class="dc-bar vb-red" style="width:60%">60%</div></div><span style="width:50px;font-size:12px;padding-left:6px;color:var(--gray)">~300,000 间</span></div>
+<div class="donut-wrap" style="position:relative">
+<div style="position:relative;display:inline-block">
+<svg class="donut" viewBox="0 0 200 200" style="width:170px;height:170px">
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a3a3a" stroke-width="32" opacity="0.06"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#a02020" stroke-width="32" stroke-dasharray="271.43 180.96" stroke-dashoffset="0" transform="rotate(-90 100 100)" class="donut-seg" data-name="中端精选" data-val="60%"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#2a2520" stroke-width="32" stroke-dasharray="144.76 307.63" stroke-dashoffset="-271.43" transform="rotate(-90 100 100)" class="donut-seg" data-name="高端全服务" data-val="32%"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6a3d9a" stroke-width="32" stroke-dasharray="36.19 416.20" stroke-dashoffset="-416.19" transform="rotate(-90 100 100)" class="donut-seg" data-name="奢华/高端" data-val="8%"/>
+</svg>
+<div class="donut-center"><span class="big">498,600</span><span class="sub">管道在建客房</span></div>
 </div>
-<div class="dc-note">中端品牌占管道 60%，每间客房收入贡献远低于高端——需要更多"量"维持增速</div>
+<div class="donut-legend">
+<div class="item"><span class="dot" style="background:#a02020"></span><span class="name">中端精选</span><span class="val">60% · ~300,000 间</span></div>
+<div class="item"><span class="dot" style="background:#2a2520"></span><span class="name">高端全服务</span><span class="val">32% · ~160,000 间</span></div>
+<div class="item"><span class="dot" style="background:#6a3d9a"></span><span class="name">奢华/高端</span><span class="val">8% · ~40,000 间</span></div>
+</div>
+</div>
+<div class="dc-note">中端品牌占管道 60%，每间客房收入贡献远低于高端——需要更多"量"来维持增速</div>
 </div>
 
 <p class="reveal">还有一个被称为"影子风险"的因素：独立酒店的软品牌联盟正在崛起。全球范围内，一批精品独立酒店不再选择加入万豪或希尔顿体系，而是通过 Design Hotels、Preferred Hotels & Resorts 等软品牌联盟维持独立身份——这对希尔顿最有利可图的开发区域（美国本土、中端精选服务）威胁最大。<sup>[11]</sup>当越来越多的业主问出"为什么我非要挂希尔顿的牌子"这个问题时，卖钥匙的生意就会面临结构性天花板。</p>
@@ -411,6 +438,6 @@ document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el)});
 function oc(){if(scrollY>80)document.body.classList.add('compact');else document.body.classList.remove('compact')}
 addEventListener('scroll',oc,{passive:true});oc();
 </script>
-<script src="../../portal/share.js" defer></script>
+<script src="../../share.js" defer></script>
 </body>
 </html>
