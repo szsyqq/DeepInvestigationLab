@@ -64,8 +64,8 @@ sup:hover{color:var(--ink)}
 .sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
 .sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
 .sidenav a.active .num{color:rgba(255,255,255,.75)}
-.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif}
-.nav-toggle:hover{background:var(--red)}
+
+
 .back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
 .back-top.visible{opacity:.85}
 .back-top:hover{opacity:1;background:var(--red)}
@@ -121,7 +121,7 @@ h2{font-size:22px}
 .data-card{flex:1 1 100%}
 .donut-wrap{flex-direction:column;gap:18px}
 .reading-time{top:12px;left:12px}
-.nav-toggle{top:12px;right:12px;padding:7px 11px;font-size:11px}
+
 .back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
 .home-fab{width:38px;height:38px;font-size:11px;bottom:14px;right:60px}
 .tracker{bottom:14px;left:14px;font-size:11px;padding:6px 11px}
@@ -821,7 +821,7 @@ if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded"
 
 <script src="../global.js" defer></script>
 
-<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+
 
 <script src="../../share.js" defer></script>
 </body>

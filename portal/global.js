@@ -196,6 +196,27 @@
     })();
   }
 
+  // —— 滚动时 compact 模式：红条折叠 + 顶部导航变红变紧凑 ——
+  function setupCompact() {
+    function compactToggle(){document.body.classList.toggle('compact',window.scrollY>80)}
+    window.addEventListener('scroll',compactToggle,{passive:true});
+    window.addEventListener('load',compactToggle);
+    compactToggle();
+  }
+
+  // —— 位置追踪 (#tracker) 点击打开侧边目录 ——
+  function setupTrackerNav() {
+    var tr = document.getElementById('tracker');
+    if (!tr) return;
+    tr.classList.add('nav-toggle');
+    tr.style.cursor = 'pointer';
+    tr.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var n = document.querySelector('.sidenav');
+      if (n) n.classList.toggle('open');
+    });
+  }
+
   // —— 执行注入 ——
   function init() {
     injectGlobals();
@@ -206,11 +227,8 @@
     injectBackTop();
     injectConsent();
     injectFooter();
-    // 滚动监听：页面滚动时 compact 模式
-    function compactToggle(){document.body.classList.toggle('compact',window.scrollY>80)}
-    window.addEventListener('scroll',compactToggle,{passive:true});
-    window.addEventListener('load',compactToggle);
-    compactToggle();
+    setupCompact();
+    setupTrackerNav();
   }
 
   if (document.readyState === "loading") {

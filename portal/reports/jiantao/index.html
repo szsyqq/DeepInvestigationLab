@@ -104,7 +104,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 .pct-detail{display:none;background:var(--quote-bg);border-left:3px solid var(--red);padding:12px 16px;margin:10px 0;font-size:14px;color:#3a3a3a}
 .pct-detail.open{display:block}
 .toolbar{position:fixed;top:14px;left:16px;z-index:300;display:flex;gap:8px}
-.nav-toggle{position:fixed;top:14px;right:16px;z-index:300;background:rgba(42,37,32,.92);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer}
+
 .fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
 .reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
 .js .reveal.visible{opacity:1;transform:translateY(0)}
@@ -652,7 +652,7 @@ function togglePct(el){var d=el.nextElementSibling;if(d&&d.classList.contains('p
 
 <script src="../global.js" defer></script>
 
-<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+
 
 <script src="../../share.js" defer></script>
 </body>

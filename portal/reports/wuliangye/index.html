@@ -78,53 +78,23 @@ sup:hover{color:var(--ink)}
 .chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
 .chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
 .chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
-.bar-chart{display:flex;flex-direction:column;gap:14px}
-.bar-row{display:flex;align-items:center;gap:12px}
-.bar-label{width:130px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
-.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
-.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
-.bar-fill.red{background:var(--red)}
-.bar-fill.dark{background:var(--bg-dark)}
-.bar-fill.gold{background:var(--gold)}
-.bar-fill.gray{background:var(--gray)}
-.bar-fill.green{background:#2d7a4a}
-.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:120px}
-.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.4}
-/* 交互环形图 */
-.donut-interactive{display:flex;flex-direction:column;align-items:center;gap:14px;margin:18px 0}
-.di-svg-wrap{position:relative;width:100%;max-width:340px;margin:0 auto}
-.di-svg{width:100%;height:auto;display:block;overflow:visible}
-.di-seg{stroke-dasharray:0 452.4;transition:stroke-dasharray 1.1s cubic-bezier(.4,0,.2,1),stroke-width .2s ease,opacity .2s ease;cursor:pointer}
-.di-svg.in .di-seg{stroke-dasharray:var(--da)}
-.di-callout{opacity:0;transition:opacity .6s ease .9s;cursor:pointer}
-.di-svg.in .di-callout{opacity:1;transition:opacity .25s ease}
-.di-lead{fill:none;stroke:#9a9a9a;stroke-width:1;stroke-dasharray:2 2}
-.di-lbl{font-size:10.5px;fill:var(--ink);font-weight:700;font-family:inherit}
-.di-val{font-size:10.5px;font-weight:700;font-family:inherit}
-.di-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:2;line-height:1.05}
-.di-center .big{font-size:23px;font-weight:700;color:var(--red);display:block}
-.di-center .sub{font-size:10px;color:var(--gray);margin-top:3px;display:block}
-.di-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;font-size:13px;line-height:1.4}
-.di-item{display:flex;align-items:center;gap:7px;cursor:pointer;padding:4px 8px;border-radius:3px;transition:background .15s}
-.di-item:hover{background:rgba(160,32,32,.07)}
-.di-item .dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
-.di-item .val{font-weight:700}
-.di-svg.dim .di-seg{opacity:.22;transition:opacity .2s,stroke-width .2s}
-.di-svg.dim .di-seg.on{opacity:1;stroke-width:34}
-.di-svg.dim .di-callout{opacity:.22}
-.di-svg.dim .di-callout.on{opacity:1}
-.di-svg.dim .di-callout.on .di-lbl,
-.di-svg.dim .di-callout.on .di-val{fill:var(--red)}
-/* 阶梯柱状图 */
-.step-chart{display:flex;align-items:flex-end;justify-content:center;gap:18px;height:220px;margin:24px 0 8px;padding:0 10px}
-.step-col{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;max-width:110px}
-.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:16px}
-.step-bar.red{background:var(--red);color:#fff}
-.step-bar.gold{background:var(--gold);color:#fff}
-.step-label{font-size:12px;text-align:center;line-height:1.3;color:var(--gray)}
-.step-value{font-size:12px;font-weight:700}
+
+/* SVG chart common */
+.chart-svg{width:100%;max-width:560px;margin:0 auto;display:block;overflow:visible}
+.chart-svg .grid-line{stroke:var(--line);stroke-width:.5;stroke-dasharray:3,3}
+.chart-svg .axis-line{stroke:var(--ink);stroke-width:.8}
+.chart-svg .axis-label{font-size:10px;fill:var(--gray);font-family:inherit}
+.chart-svg .axis-label-bold{font-size:10px;font-weight:700;fill:var(--gray);font-family:inherit}
+.chart-svg .bar-label{font-size:10px;font-weight:700;font-family:inherit}
+.chart-svg .bar-value{font-size:9.5px;font-weight:700;font-family:inherit}
+.chart-svg .legend-text{font-size:9.5px;fill:var(--gray);font-family:inherit}
+.chart-svg .legend-swatch{stroke:var(--line);stroke-width:.5}
+.legend-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:10px;font-size:12px}
+.leg-item{display:flex;align-items:center;gap:6px}
+.leg-dot{width:10px;height:10px;border-radius:2px;display:inline-block;flex-shrink:0}
+
 /* 全局 UI 样式 */
-:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db;--green:#2d7a4a}
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db;--green:#2d7a4a;--blue:#3a6ea5}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
 .masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
@@ -145,9 +115,6 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 .top-bar .toc:hover{background:var(--red)}
 .progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
 .hero + h2{border-top:none !important;padding-top:0 !important}
-.legend{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:10px;font-size:13px}
-.leg{display:flex;align-items:center;gap:7px}
-.swatch{width:14px;height:4px;border-radius:2px;display:inline-block;flex-shrink:0}
 footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
 footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
 .reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
@@ -168,15 +135,6 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
   .hero .dek{font-size:16px}
   h2{font-size:22px}
   .pull-quote{font-size:20px;margin:28px 6px}
-  .bar-label{width:96px;font-size:12px}
-  .bar-value{width:auto;font-size:12px}
-  .bar-row{flex-wrap:wrap;gap:6px 8px}
-  .bar-track{flex:1 1 100%;order:3}
-  .data-card{flex:1 1 100%}
-  .di-svg-wrap{max-width:280px}
-  .step-chart{gap:8px;height:180px}
-  .step-bar{font-size:10px}
-  .step-label{font-size:10px}
   .reading-time{top:12px;left:12px}
   .back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
   .reading-time-fab{top:12px;right:12px;padding:5px 10px;font-size:10px}
@@ -192,7 +150,7 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
     <div class="top-bar-left">
       <a class="home" href="../../index.html">返回首页</a>
       <span class="sep"></span>
-      <span class="time" id="readTime">约 11 分钟阅读</span>
+      <span class="time" id="readTime">约 12 分钟阅读</span>
     </div>
     <div class="top-bar-right">
       <span class="pos" id="tracker">导语</span>
@@ -230,7 +188,7 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 <p class="dek">2024 年营收 892 亿，离"千亿俱乐部"只差一步；2025 年营收 405 亿，跌回五年前的水平。一年之内，浓香之王的营收被腰斩，净利润少了七成。当茅台用 -1.2% 的营收下滑证明自己的韧性，当山西汾酒甚至还在增长——五粮液为什么会跌得这么深？2026 年一季度 82% 的净利反弹，到底是复苏的开始，还是只是半瓶酒的回响？</p>
 <div class="byline">
 <span class="author">调查团队</span>
-<span class="meta">2026年7月 · 约 11 分钟阅读</span>
+<span class="meta">2026年7月 · 约 12 分钟阅读</span>
 </div>
 </div>
 
@@ -242,7 +200,7 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <div class="pull-quote reveal">千亿门槛前一年突然折返半程，白酒第二的瓶子里，还剩多少回响？</div>
 
-<!-- 第一章：营收腰斩 -->
+<!-- ===== 第一章：营收腰斩 ===== -->
 <h2 class="reveal" id="c1"><span class="chap-num">第一章</span>营收腰斩，最痛的是老二</h2>
 
 <p class="reveal">2025 年五粮液的财报有几个反常之处。毛利率不仅没降，反而从 77.05% 微升至 77.54%。<sup>[1]</sup>这说明产品本身的定价能力和成本结构没有出问题——问题出在量上。不是酒不值钱了，而是酒卖不出去了。</p>
@@ -250,18 +208,62 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 <p class="reveal">对比季度数据更能看出问题有多深。2025 年一季度营收 170.86 亿，同比下降 50.95%；上半年 235.10 亿，下降 53.58%；前三季度 306.38 亿，下降 54.89%；全年 405.29 亿，下降 54.55%。<sup>[1]</sup>四个季度的降幅几乎完全一致——这不是某个季度出了黑天鹅，而是整条营收管线被拧紧了。</p>
 
 <div class="chart-box reveal">
-<div class="chart-title">五粮液年度营收与净利走势 · 2021–2025</div>
-<div class="chart-sub">单位：亿元（数据来源 [1] 公司年报）</div>
-<div class="step-chart" style="height:240px;gap:24px">
-<div class="step-col" style="max-width:80px"><div class="step-bar red" style="height:178px">662</div><div class="step-label">2021<br><span class="step-value">662.09 亿</span></div></div>
-<div class="step-col" style="max-width:80px"><div class="step-bar red" style="height:185px">739</div><div class="step-label">2022<br><span class="step-value">739.69 亿</span></div></div>
-<div class="step-col" style="max-width:80px"><div class="step-bar" style="height:209px;background:var(--gold);color:#fff">833</div><div class="step-label">2023<br><span class="step-value">832.72 亿</span></div></div>
-<div class="step-col" style="max-width:80px"><div class="step-bar" style="height:223px;background:var(--gold);color:#fff">892</div><div class="step-label">2024<br><span class="step-value">891.75 亿</span></div></div>
-<div class="step-col" style="max-width:80px"><div class="step-bar" style="height:101px;background:var(--gray);color:#e8c87a">405</div><div class="step-label">2025<br><span class="step-value" style="color:var(--red)">405.29 亿</span></div></div>
+<div class="chart-title">五粮液五年营收与净利走势 · 2021–2025</div>
+<div class="chart-sub">单位：亿元（数据来源 [1] 公司年报）· 右轴为净利</div>
+<svg class="chart-svg" viewBox="0 0 540 260" font-family="inherit">
+  <!-- 背景网格 -->
+  <line x1="70" y1="30" x2="70" y2="210" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="70" y1="210" x2="510" y2="210" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="70" y1="165" x2="510" y2="165" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="70" y1="120" x2="510" y2="120" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="70" y1="75" x2="510" y2="75" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="70" y1="30" x2="510" y2="30" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <!-- 左轴标签（营收） -->
+  <text x="64" y="214" fill="var(--gray)" font-size="9" text-anchor="end">0</text>
+  <text x="64" y="169" fill="var(--gray)" font-size="9" text-anchor="end">250</text>
+  <text x="64" y="124" fill="var(--gray)" font-size="9" text-anchor="end">500</text>
+  <text x="64" y="79" fill="var(--gray)" font-size="9" text-anchor="end">750</text>
+  <text x="64" y="34" fill="var(--gray)" font-size="9" text-anchor="end">1000</text>
+  <text x="64" y="18" fill="var(--red)" font-size="9" text-anchor="end" font-weight="700">营收(亿)</text>
+  <!-- 右轴标签（净利） -->
+  <text x="516" y="214" fill="var(--gray)" font-size="9" text-anchor="start">0</text>
+  <text x="516" y="140" fill="var(--gray)" font-size="9" text-anchor="start">100</text>
+  <text x="516" y="66" fill="var(--gray)" font-size="9" text-anchor="start">200</text>
+  <text x="516" y="18" fill="var(--gold)" font-size="9" text-anchor="start" font-weight="700">净利(亿)</text>
+  <!-- X轴标签 -->
+  <text x="158" y="234" fill="var(--gray)" font-size="10" text-anchor="middle">2021</text>
+  <text x="246" y="234" fill="var(--gray)" font-size="10" text-anchor="middle">2022</text>
+  <text x="334" y="234" fill="var(--gray)" font-size="10" text-anchor="middle">2023</text>
+  <text x="422" y="234" fill="var(--gray)" font-size="10" text-anchor="middle">2024</text>
+  <text x="490" y="234" fill="var(--gray)" font-size="10" text-anchor="middle">2025</text>
+  <!-- 营收折线（Red） -->
+  <polyline points="158,128 246,116 334,62 422,47 490,169" fill="none" stroke="var(--red)" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="158" cy="128" r="4" fill="var(--red)"/><circle cx="246" cy="116" r="4" fill="var(--red)"/>
+  <circle cx="334" cy="62" r="4" fill="var(--red)"/><circle cx="422" cy="47" r="4" fill="var(--red)"/>
+  <circle cx="490" cy="169" r="5" fill="var(--red)" stroke="var(--paper)" stroke-width="2"/>
+  <!-- 营收标签 -->
+  <text x="158" y="121" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">662</text>
+  <text x="334" y="55" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">833</text>
+  <text x="422" y="40" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">892</text>
+  <text x="490" y="182" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="900">405 ↓</text>
+  <!-- 净利折线（金色虚线） -->
+  <polyline points="158,188 246,180 334,152 422,148 490,200" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="5,3" stroke-linejoin="round"/>
+  <circle cx="158" cy="188" r="3.5" fill="var(--gold)"/><circle cx="246" cy="180" r="3.5" fill="var(--gold)"/>
+  <circle cx="334" cy="152" r="3.5" fill="var(--gold)"/><circle cx="422" cy="148" r="3.5" fill="var(--gold)"/>
+  <circle cx="490" cy="200" r="4" fill="var(--gold)"/>
+  <text x="422" y="141" fill="var(--gold)" font-size="8" text-anchor="middle">319</text>
+  <text x="490" y="213" fill="var(--gold)" font-size="10" text-anchor="middle">↓ 90</text>
+  <!-- 2025 下跌标注 -->
+  <line x1="422" y1="47" x2="490" y2="169" stroke="var(--red)" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+  <text x="456" y="95" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">-54.6%</text>
+</svg>
+<div class="legend-row">
+  <span class="leg-item"><span class="leg-dot" style="background:var(--red)"></span>营收</span>
+  <span class="leg-item"><span class="leg-dot" style="background:var(--gold)"></span>净利润</span>
 </div>
 </div>
 
-<p class="reveal">把五年数据摊开：2021 年营收 662 亿、2022 年 740 亿、2023 年 833 亿、2024 年 892 亿——五粮液一直在稳步爬坡，朝着"千亿"前进。2025 年直接退回 2020 年的水平。期间利润几乎同步下滑，从 2024 年的 318.53 亿暴跌至 89.54 亿，扣非后也仅 88.19 亿。<sup>[1]</sup></p>
+<p class="reveal">把五年数据摊开：2021 年营收 662 亿、2022 年 740 亿、2023 年 833 亿、2024 年 892 亿——五粮液一直在稳步爬坡，朝着"千亿"前进。2025 年直接退回五年前的水平。期间利润几乎同步下滑，从 2024 年的 318.53 亿暴跌至 89.54 亿，扣非后也仅 88.19 亿。<sup>[1]</sup></p>
 
 <p class="reveal">盈利能力被击穿得更彻底。2024 年加权平均净资产收益率（ROE）还有 23.35%，2025 年骤降至 6.89%。<sup>[1]</sup>从"资本回报优秀"跌到了"略高于银行理财"。每股收益从 8.21 元缩至 2.31 元。</p>
 
@@ -272,20 +274,56 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 <div class="data-card"><span class="num" data-count="229">0</span><span class="label">消失的净利润(亿元)</span></div>
 </div>
 
-<!-- 第二章：茅台对比 -->
+<!-- ===== 第二章：茅台没倒 ===== -->
 <h2 class="reveal" id="c2"><span class="chap-num">第二章</span>茅台没倒，为什么五粮液倒了</h2>
 
 <p class="reveal">2025 年的白酒行业整体大幅下滑，但下滑的幅度相差悬殊。贵州茅台全年营收 1720.54 亿，同比仅微降 1.20%；净利润 823.20 亿，降 4.53%。<sup>[3]</sup>泸州老窖营收 257.31 亿，降 17.52%；山西汾酒逆势增长 7.52% 至 387.18 亿；洋河股份则比五粮液更惨，营收 192.11 亿降 33.47%，净利润 22.06 亿暴降 66.94%。<sup>[3]</sup></p>
 
+<!-- 纵向发散柱状图：绿色向上，红色向下 -->
 <div class="chart-box reveal">
-<div class="chart-title">2025 年白酒五巨头营收同比增速对比</div>
-<div class="chart-sub">数据来源 [1][3] 公司年报</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label">贵州茅台</span><div class="bar-track"><div class="bar-fill gold" style="width:12%">-1.2%</div></div><span class="bar-value note">营收 1720.54 亿</span></div>
-<div class="bar-row"><span class="bar-label">山西汾酒</span><div class="bar-track"><div class="bar-fill green" style="width:38%">+7.5%</div></div><span class="bar-value note">387.18 亿</span></div>
-<div class="bar-row"><span class="bar-label">泸州老窖</span><div class="bar-track"><div class="bar-fill dark" style="width:58%">-17.5%</div></div><span class="bar-value note">257.31 亿</span></div>
-<div class="bar-row"><span class="bar-label">洋河股份</span><div class="bar-track"><div class="bar-fill dark" style="width:85%">-33.5%</div></div><span class="bar-value note">192.11 亿</span></div>
-<div class="bar-row"><span class="bar-label" style="color:var(--red);font-weight:900">五粮液</span><div class="bar-track"><div class="bar-fill red" style="width:100%">-54.6%</div></div><span class="bar-value" style="color:var(--red)">405.29 亿</span></div>
+<div class="chart-title">2025 年白酒五巨头 · 营收同比增速对比</div>
+<div class="chart-sub">正值为增长（绿），负值为下降（红）。数据来源 [1][3]</div>
+<svg class="chart-svg" viewBox="0 0 540 280" font-family="inherit">
+  <!-- 0% 基准线 -->
+  <line x1="50" y1="148" x2="520" y2="148" stroke="var(--ink)" stroke-width="1.2"/>
+  <text x="46" y="145" fill="var(--gray)" font-size="9" text-anchor="end">0%</text>
+  <!-- 网格线 -->
+  <line x1="50" y1="220" x2="520" y2="220" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="50" y1="76" x2="520" y2="76" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <text x="46" y="224" fill="var(--gray)" font-size="8" text-anchor="end">-60%</text>
+  <text x="46" y="80" fill="var(--gray)" font-size="8" text-anchor="end">+60%</text>
+  <!-- 汾酒 +7.5% 绿色柱（向上） -->
+  <rect x="145" y="128" width="55" height="20" fill="var(--green)" rx="2"/>
+  <text x="172" y="122" fill="var(--green)" font-size="10" text-anchor="middle" font-weight="700">+7.5%</text>
+  <!-- 茅台 -1.2% 红色小柱（向下） -->
+  <rect x="295" y="148" width="55" height="4" fill="var(--red)" rx="1"/>
+  <text x="322" y="162" fill="var(--red)" font-size="9" text-anchor="middle">-1.2%</text>
+  <!-- 老窖 -17.5% 红柱 -->
+  <rect x="295" y="176" width="55" height="28" fill="var(--gray)" rx="2"/>
+  <text x="322" y="214" fill="var(--gray)" font-size="10" text-anchor="middle" font-weight="700">-17.5%</text>
+  <!-- 洋河 -33.5% 红柱 -->
+  <rect x="375" y="204" width="55" height="52" fill="var(--gray)" rx="2"/>
+  <text x="402" y="266" fill="var(--gray)" font-size="10" text-anchor="middle" font-weight="700">-33.5%</text>
+  <!-- 五粮液 -54.6% 红色最深柱 -->
+  <rect x="375" y="148" width="55" height="86" fill="var(--red)" rx="2"/>
+  <text x="402" y="244" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="900">-54.6%</text>
+  <!-- 公司名称 -->
+  <text x="172" y="260" fill="var(--green)" font-size="11" text-anchor="middle" font-weight="700">山西汾酒</text>
+  <text x="322" y="250" fill="var(--gray)" font-size="11" text-anchor="middle">贵州茅台</text>
+  <text x="172" y="275" fill="var(--gray)" font-size="10" text-anchor="middle">营收 387 亿</text>
+  <text x="322" y="263" fill="var(--gray)" font-size="10" text-anchor="middle">营收 1720 亿</text>
+  <!-- 左列标签 -->
+  <text x="402" y="275" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="900">五粮液</text>
+  <text x="322" y="275" fill="var(--gray)" font-size="10" text-anchor="middle">泸州老窖</text>
+  <text x="402" y="288" fill="var(--red)" font-size="10" text-anchor="middle">营收 405 亿</text>
+  <text x="322" y="288" fill="var(--gray)" font-size="10" text-anchor="middle">营收 257 亿</text>
+  <!-- 五粮液柱右侧标注 -->
+  <line x1="430" y1="191" x2="470" y2="191" stroke="var(--red)" stroke-width=".8" stroke-dasharray="2,2"/>
+  <text x="475" y="188" fill="var(--red)" font-size="8">行业最大降幅</text>
+</svg>
+<div class="legend-row">
+  <span class="leg-item"><span class="leg-dot" style="background:var(--green)"></span>正增长</span>
+  <span class="leg-item"><span class="leg-dot" style="background:var(--red)"></span>负增长</span>
 </div>
 </div>
 
@@ -297,7 +335,52 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <p class="reveal">这个差距在 2025 年的渠道"去库存潮"中被急剧放大。当需求萎缩，经销商优先保茅台——亏钱的五粮液自然成了被砍单的首选。这也是为什么营收腰斩的不是茅台，而是五粮液。</p>
 
-<!-- 第三章：消失的486亿 -->
+<!-- 新增图表：2025年五大酒企净利对比 -->
+<div class="chart-box reveal">
+<div class="chart-title">2025 年白酒五巨头 · 净利润对比</div>
+<div class="chart-sub">单位：亿元（数据来源 [1][3]）</div>
+<svg class="chart-svg" viewBox="0 0 540 240" font-family="inherit">
+  <!-- 背景 -->
+  <line x1="60" y1="20" x2="60" y2="190" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="190" x2="520" y2="190" stroke="var(--line)" stroke-width=".6"/>
+  <!-- 网格 -->
+  <line x1="60" y1="144" x2="520" y2="144" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="98" x2="520" y2="98" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="52" x2="520" y2="52" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <!-- 左轴 -->
+  <text x="54" y="194" fill="var(--gray)" font-size="9" text-anchor="end">0</text>
+  <text x="54" y="148" fill="var(--gray)" font-size="9" text-anchor="end">200</text>
+  <text x="54" y="102" fill="var(--gray)" font-size="9" text-anchor="end">400</text>
+  <text x="54" y="56" fill="var(--gray)" font-size="9" text-anchor="end">600</text>
+  <text x="54" y="24" fill="var(--gray)" font-size="9" text-anchor="end">800</text>
+  <text x="54" y="14" fill="var(--gray)" font-size="9" text-anchor="end" font-weight="700">亿</text>
+  <!-- 茅台柱 -->
+  <rect x="92" y="21" width="50" height="169" fill="var(--gold)" rx="2"/>
+  <text x="117" y="90" fill="#fff" font-size="10" text-anchor="middle" font-weight="700">823</text>
+  <text x="117" y="215" fill="var(--gold)" font-size="11" text-anchor="middle" font-weight="700">茅台</text>
+  <!-- 五粮液柱 -->
+  <rect x="167" y="167" width="50" height="23" fill="var(--red)" rx="2"/>
+  <text x="192" y="158" fill="var(--red)" font-size="10" text-anchor="middle" font-weight="700">90</text>
+  <text x="192" y="215" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="700">五粮液</text>
+  <!-- 汾酒柱 -->
+  <rect x="242" y="159" width="50" height="31" fill="var(--green)" rx="2"/>
+  <text x="267" y="150" fill="var(--green)" font-size="10" text-anchor="middle" font-weight="700">122</text>
+  <text x="267" y="215" fill="var(--green)" font-size="11" text-anchor="middle" font-weight="700">汾酒</text>
+  <!-- 老窖柱 -->
+  <rect x="317" y="163" width="50" height="27" fill="var(--blue)" rx="2"/>
+  <text x="342" y="154" fill="var(--blue)" font-size="10" text-anchor="middle" font-weight="700">108</text>
+  <text x="342" y="215" fill="var(--blue)" font-size="11" text-anchor="middle" font-weight="700">老窖</text>
+  <!-- 洋河柱 -->
+  <rect x="392" y="183" width="50" height="7" fill="var(--gray)" rx="1"/>
+  <text x="417" y="210" fill="var(--gray)" font-size="10" text-anchor="middle" font-weight="700">22</text>
+  <text x="417" y="228" fill="var(--gray)" font-size="11" text-anchor="middle" font-weight="700">洋河</text>
+</svg>
+<div class="legend-row">
+  <span class="leg-item"><span class="leg-dot" style="background:var(--red)"></span>五粮液净利被老窖反超</span>
+</div>
+</div>
+
+<!-- ===== 第三章：消失的486亿 ===== -->
 <h2 class="reveal" id="c3"><span class="chap-num">第三章</span>消失的 486 亿</h2>
 
 <p class="reveal">486 亿营收消失的背后，是五粮液渠道模式的脆弱性。五粮液采用"大商制"——以省级大经销商为主力，辅以专卖店体系。这一模式在行业上行期帮助五粮液快速铺货，但在下行期成了最大的风险敞口。<sup>[5]</sup></p>
@@ -312,21 +395,75 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <p class="reveal">现金流危机倒逼五粮液在 2025 年下半年开始主动调整。渠道实际能"消化"多少货、终端真实动销如何，成为悬在管理层头上的两个问题。到 2025 年底，市场最关注的问题是：五粮液手上的存货——那些放在古窖池里、酿好了还没灌瓶的老酒——到底按什么价值记账？</p>
 
-<!-- 第四章：定价困局 -->
+<!-- ===== 第四章：定价困局 ===== -->
 <h2 class="reveal" id="c4"><span class="chap-num">第四章</span>夹在茅台和国窖之间</h2>
 
 <p class="reveal">五粮液的定价困境，不是一个新问题。从 2013 年行业深度调整期开始，五粮液就陷入了一个"上有茅台压价、下有老窖追尾"的夹缝。<sup>[7]</sup></p>
 
 <p class="reveal">飞天茅台的市场价格在 2200-2500 元区间，五粮液普五的官方建议零售价 1499 元（与茅台出厂价相同），但实际批价长期在 920-970 元之间徘徊。向下看，泸州老窖国窖 1573 定位 1000-1200 元价位带，批价约 850-900 元。<sup>[4]</sup>五粮液既无法像茅台那样大幅提价拉升品牌势能，又不愿降到国窖的价位卷入价格战。</p>
 
+<!-- 纵向分组柱状图：出厂价 vs 批价 -->
 <div class="chart-box reveal">
-<div class="chart-title">高端白酒价格带分布 · 2025 年市场批价</div>
-<div class="chart-sub">出厂价 vs 批价（元/瓶，数据来源 [4][6] 行业研报及渠道调研）</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label">飞天茅台</span><div class="bar-track"><div class="bar-fill dark" style="width:86%"></div></div><span class="bar-value">出厂 1169 | 批价 ~2200+</span></div>
-<div class="bar-row"><span class="bar-label" style="color:var(--red);font-weight:900">普五</span><div class="bar-track" style="height:32px"><div class="bar-fill red" style="width:40%"></div></div><span class="bar-value" style="color:var(--red)">出厂 969 | 批价 ~900</span></div>
-<div class="bar-row"><span class="bar-label">国窖 1573</span><div class="bar-track"><div class="bar-fill gold" style="width:35%"></div></div><span class="bar-value">出厂 ~880 | 批价 ~850</span></div>
-</div>
+<div class="chart-title">高端白酒价格带 · 出厂价 vs 批价</div>
+<div class="chart-sub">元/瓶（数据来源 [4][6]）· 批价倒挂 = 红色标注</div>
+<svg class="chart-svg" viewBox="0 0 540 260" font-family="inherit">
+  <!-- 坐标轴 -->
+  <line x1="60" y1="30" x2="60" y2="210" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="210" x2="520" y2="210" stroke="var(--line)" stroke-width=".6"/>
+  <!-- 网格 -->
+  <line x1="60" y1="170" x2="520" y2="170" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="130" x2="520" y2="130" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="90" x2="520" y2="90" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="50" x2="520" y2="50" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <!-- 左轴 -->
+  <text x="54" y="214" fill="var(--gray)" font-size="9" text-anchor="end">0</text>
+  <text x="54" y="174" fill="var(--gray)" font-size="9" text-anchor="end">500</text>
+  <text x="54" y="134" fill="var(--gray)" font-size="9" text-anchor="end">1000</text>
+  <text x="54" y="94" fill="var(--gray)" font-size="9" text-anchor="end">1500</text>
+  <text x="54" y="54" fill="var(--gray)" font-size="9" text-anchor="end">2000</text>
+  <text x="54" y="20" fill="var(--gray)" font-size="9" text-anchor="end" font-weight="700">元/瓶</text>
+
+  <!-- 茅台组 -->
+  <text x="137" y="230" fill="var(--gold)" font-size="11" text-anchor="middle" font-weight="700">贵州茅台</text>
+  <!-- 出厂价1169 -->
+  <rect x="97" y="123" width="40" height="87" fill="var(--gold)" rx="2" opacity=".85"/>
+  <text x="117" y="115" fill="var(--gold)" font-size="9" text-anchor="middle" font-weight="700">1169</text>
+  <!-- 批价2200 -->
+  <rect x="147" y="36" width="40" height="174" fill="var(--gold)" rx="2" opacity=".4"/>
+  <text x="167" y="28" fill="var(--gold)" font-size="9" text-anchor="middle" font-weight="700">~2200</text>
+  <!-- 差价标注 -->
+  <line x1="137" y1="123" x2="137" y2="36" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="105" y="80" fill="var(--gold)" font-size="8" text-anchor="middle">+1031 溢</text>
+
+  <!-- 五粮液组 -->
+  <text x="275" y="230" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="700">五粮液</text>
+  <!-- 出厂价969 -->
+  <rect x="240" y="133" width="40" height="77" fill="var(--red)" rx="2" opacity=".85"/>
+  <text x="260" y="125" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">969</text>
+  <!-- 批价900 -->
+  <rect x="290" y="140" width="40" height="70" fill="var(--red)" rx="2" opacity=".4"/>
+  <text x="310" y="132" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">~900</text>
+  <!-- 倒挂标注 -->
+  <line x1="275" y1="133" x2="275" y2="140" stroke="var(--red)" stroke-width="1.5"/>
+  <text x="275" y="218" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">倒挂 -69</text>
+
+  <!-- 国窖组 -->
+  <text x="413" y="230" fill="var(--blue)" font-size="11" text-anchor="middle" font-weight="700">国窖 1573</text>
+  <!-- 出厂价880 -->
+  <rect x="373" y="138" width="40" height="72" fill="var(--blue)" rx="2" opacity=".85"/>
+  <text x="393" y="130" fill="var(--blue)" font-size="9" text-anchor="middle" font-weight="700">~880</text>
+  <!-- 批价850 -->
+  <rect x="423" y="140" width="40" height="70" fill="var(--blue)" rx="2" opacity=".4"/>
+  <text x="443" y="132" fill="var(--blue)" font-size="9" text-anchor="middle" font-weight="700">~850</text>
+  <!-- 平或微倒挂 -->
+  <text x="413" y="218" fill="var(--blue)" font-size="9" text-anchor="middle">-30</text>
+
+  <!-- 图例 -->
+  <rect x="170" y="240" width="12" height="12" fill="var(--gold)" rx="1" opacity=".85"/>
+  <text x="186" y="251" fill="var(--gray)" font-size="9">出厂价</text>
+  <rect x="260" y="240" width="12" height="12" fill="var(--gold)" rx="1" opacity=".4"/>
+  <text x="276" y="251" fill="var(--gray)" font-size="9">批价</text>
+</svg>
 </div>
 
 <p class="reveal">五粮液是最早尝试提价的高端白酒之一。2021-2024 年间，普五出厂价从 889 元逐步提升至 1019 元（后回落到 969 元），每一次提价都在试图缩小与茅台的价格差距，同时支撑经销商利润。<sup>[7]</sup>但市场给出了残酷的回应：提价后批价不涨反跌，终端成交价倒挂，渠道利润反而被进一步压缩。</p>
@@ -335,7 +472,7 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <p class="reveal">2025 年的行业深度调整把这一矛盾推到了极致：当消费者花钱更谨慎时，"不买贵的，只买最对的"变成了"不买错的，只买茅台的"——消费降级在高端酒领域反倒出现了反常的"升级效应"（消费者减少品牌尝试，集中购买最强品牌）。这一效应的受害方，恰恰是处于中间地带的"老二"五粮液。</p>
 
-<!-- 第五章：82%反弹 -->
+<!-- ===== 第五章：82%反弹 ===== -->
 <h2 class="reveal" id="c5"><span class="chap-num">第五章</span>82% 的反弹靠什么</h2>
 
 <p class="reveal">2025 年的惨淡之后，2026 年一季度报来了一个"回马枪"：营收 228.38 亿，同比增长 33.67%；净利润 80.63 亿，同比暴增 82.57%。<sup>[1]</sup>净利润率从 25.84%（2025Q1）跳升到 35.31%（2026Q1），一举回到 2024 年的盈利水平。</p>
@@ -344,14 +481,59 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <p class="reveal"><strong>一是低基数效应。</strong>2025 年一季度本身就是全年最惨的几个季度之一——营收 170.86 亿几乎是旺季被腰斩的水平。也就是说，82.57% 的净利增长，很大程度上是因为比较对象实在太低。但 228.38 亿的季度营收，与 2024 年一季度的 348.33 亿相比仍差 119.95 亿——少了三分之一。</p>
 
+<!-- 纵向柱状图：各年Q1 营收+净利 -->
 <div class="chart-box reveal">
-<div class="chart-title">五粮液 · 各年 Q1 营收与净利对比（2023–2026）</div>
-<div class="chart-sub">单位：亿元（数据来源 [1]）</div>
-<div class="step-chart" style="height:180px;gap:18px">
-<div class="step-col" style="max-width:100px"><div class="step-bar gold" style="height:120px">311</div><div class="step-label">2023Q1<br><span class="step-value">311.39 亿</span></div></div>
-<div class="step-col" style="max-width:100px"><div class="step-bar" style="height:135px;background:var(--gold);color:#fff">348</div><div class="step-label">2024Q1<br><span class="step-value">348.33 亿</span></div></div>
-<div class="step-col" style="max-width:100px"><div class="step-bar" style="height:66px;background:var(--gray);color:#e8c87a">171</div><div class="step-label">2025Q1<br><span class="step-value" style="color:var(--red)">170.86 亿</span></div></div>
-<div class="step-col" style="max-width:100px"><div class="step-bar red" style="height:89px">228</div><div class="step-label">2026Q1<br><span class="step-value">228.38 亿</span></div></div>
+<div class="chart-title">五粮液 · 各年 Q1 营收与净利（2023–2026）</div>
+<div class="chart-sub">单位：亿元（数据来源 [1]）· 浅色=净利</div>
+<svg class="chart-svg" viewBox="0 0 540 240" font-family="inherit">
+  <line x1="60" y1="20" x2="60" y2="185" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="185" x2="520" y2="185" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="140" x2="520" y2="140" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="95" x2="520" y2="95" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="50" x2="520" y2="50" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <text x="54" y="189" fill="var(--gray)" font-size="9" text-anchor="end">0</text>
+  <text x="54" y="144" fill="var(--gray)" font-size="9" text-anchor="end">100</text>
+  <text x="54" y="99" fill="var(--gray)" font-size="9" text-anchor="end">200</text>
+  <text x="54" y="54" fill="var(--gray)" font-size="9" text-anchor="end">300</text>
+  <text x="54" y="14" fill="var(--gray)" font-size="9" text-anchor="end" font-weight="700">亿元</text>
+
+  <!-- 2023Q1 -->
+  <text x="130" y="210" fill="var(--gray)" font-size="10" text-anchor="middle">2023Q1</text>
+  <rect x="100" y="55" width="60" height="130" fill="var(--gold)" rx="2" opacity=".85"/>
+  <rect x="100" y="55" width="60" height="86" fill="var(--gold)" rx="2"/>
+  <text x="130" y="47" fill="var(--gold)" font-size="10" text-anchor="middle" font-weight="700">311 亿</text>
+  <text x="130" y="190" fill="var(--gray)" font-size="8" text-anchor="middle">净利 128</text>
+
+  <!-- 2024Q1 -->
+  <text x="260" y="210" fill="var(--gray)" font-size="10" text-anchor="middle">2024Q1</text>
+  <rect x="230" y="42" width="60" height="143" fill="var(--gold)" rx="2" opacity=".6"/>
+  <rect x="230" y="42" width="60" height="96" fill="var(--gold)" rx="2"/>
+  <text x="260" y="34" fill="var(--gold)" font-size="10" text-anchor="middle" font-weight="700">348 亿</text>
+  <text x="260" y="183" fill="var(--gray)" font-size="8" text-anchor="middle">净利 140</text>
+
+  <!-- 2025Q1 -->
+  <text x="390" y="210" fill="var(--gray)" font-size="10" text-anchor="middle">2025Q1</text>
+  <rect x="360" y="86" width="60" height="99" fill="var(--gray)" rx="2" opacity=".5"/>
+  <rect x="360" y="86" width="60" height="57" fill="var(--gray)" rx="2"/>
+  <text x="390" y="195" fill="var(--gray)" font-size="10" text-anchor="middle" font-weight="700">171 亿</text>
+  <text x="390" y="79" fill="var(--gray)" font-size="9" text-anchor="middle">净利 44</text>
+
+  <!-- 2026Q1（当前年用红色） -->
+  <text x="490" y="210" fill="var(--red)" font-size="10" text-anchor="middle" font-weight="700">2026Q1</text>
+  <rect x="470" y="88" width="60" height="97" fill="var(--red)" rx="2" opacity=".5"/>
+  <rect x="470" y="88" width="60" height="52" fill="var(--red)" rx="2"/>
+  <text x="500" y="195" fill="var(--red)" font-size="10" text-anchor="middle" font-weight="700">228 亿</text>
+  <text x="500" y="81" fill="var(--red)" font-size="9" text-anchor="middle">净利 81</text>
+
+  <!-- 标注反弹 -->
+  <line x1="390" y1="86" x2="500" y2="88" stroke="var(--red)" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="445" y="72" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">+33.7%</text>
+  <text x="445" y="61" fill="var(--red)" font-size="9" text-anchor="middle" font-weight="700">净利 +82.6%</text>
+</svg>
+<div class="legend-row">
+  <span class="leg-item"><span class="leg-dot" style="background:var(--gold)"></span>营收</span>
+  <span class="leg-item"><span class="leg-dot" style="background:var(--gold);opacity:.4"></span>其中净利占比</span>
+  <span class="leg-item"><span class="leg-dot" style="background:var(--red)"></span>2026Q1反弹</span>
 </div>
 </div>
 
@@ -359,24 +541,124 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <p class="reveal">事实上，五粮液从 2025 年下半年开始推行的"渠道减负 + 产品结构优化"已初见成效。管理层在 2025 年业绩说明会上明确表示，"不在销量上死磕，把重心放在提升均价和终端动销质量上"。<sup>[8]</sup>2026 年一季度经销商打款意愿的回暖，也验证了这一策略正在被市场接受。</p>
 
+<!-- 新增图表：2026Q1 全行业反弹对比 -->
+<div class="chart-box reveal">
+<div class="chart-title">2026 年一季度 · 五巨头营收增速对比</div>
+<div class="chart-sub">数据来源 [1][3]</div>
+<svg class="chart-svg" viewBox="0 0 540 240" font-family="inherit">
+  <line x1="60" y1="125" x2="520" y2="125" stroke="var(--ink)" stroke-width="1"/>
+  <line x1="60" y1="30" x2="60" y2="220" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="200" x2="520" y2="200" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="50" x2="520" y2="50" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <text x="54" y="129" fill="var(--gray)" font-size="9" text-anchor="end">0%</text>
+  <text x="54" y="204" fill="var(--gray)" font-size="8" text-anchor="end">-40%</text>
+  <text x="54" y="54" fill="var(--gray)" font-size="8" text-anchor="end">+40%</text>
+
+  <!-- 茅台 +6.3% -->
+  <text x="112" y="237" fill="var(--gray)" font-size="10" text-anchor="middle">茅台</text>
+  <rect x="87" y="113" width="50" height="12" fill="var(--gold)" rx="2"/>
+  <text x="112" y="107" fill="var(--gold)" font-size="9" text-anchor="middle" font-weight="700">+6.3%</text>
+
+  <!-- 五粮液 +33.7%（最大向上） -->
+  <text x="217" y="237" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="700">五粮液</text>
+  <rect x="192" y="74" width="50" height="51" fill="var(--red)" rx="3"/>
+  <text x="217" y="66" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="900">+33.7%</text>
+
+  <!-- 汾酒 -9.7% -->
+  <text x="322" y="237" fill="var(--gray)" font-size="10" text-anchor="middle">汾酒</text>
+  <rect x="297" y="125" width="50" height="18" fill="var(--gray)" rx="2"/>
+  <text x="322" y="153" fill="var(--gray)" font-size="9" text-anchor="middle">-9.7%</text>
+
+  <!-- 老窖 -14.2% -->
+  <text x="405" y="237" fill="var(--gray)" font-size="10" text-anchor="middle">老窖</text>
+  <rect x="380" y="125" width="50" height="26" fill="var(--gray)" rx="2"/>
+  <text x="405" y="161" fill="var(--gray)" font-size="9" text-anchor="middle">-14.2%</text>
+
+  <!-- 洋河 -26% -->
+  <text x="488" y="237" fill="var(--gray)" font-size="10" text-anchor="middle">洋河</text>
+  <rect x="463" y="125" width="50" height="49" fill="var(--gray)" rx="2"/>
+  <text x="488" y="184" fill="var(--gray)" font-size="9" text-anchor="middle">-26.0%</text>
+
+  <!-- 标注 -->
+  <line x1="217" y1="74" x2="217" y2="56" stroke="var(--red)" stroke-width="1"/>
+  <text x="217" y="52" fill="var(--red)" font-size="8" text-anchor="middle">行业最高</text>
+</svg>
+<div class="legend-row">
+  <span class="leg-item"><span class="leg-dot" style="background:var(--red)"></span>五粮液领先反弹</span>
+  <span class="leg-item"><span class="leg-dot" style="background:var(--gray)"></span>其他酒企仍在下滑</span>
+</div>
+</div>
+
 <p class="reveal">争议在于：2026 年一季度的反弹，到底是趋势反转还是昙花一现？答案可能藏在二季度——白酒行业的传统淡季。五粮液能否在 2026 年半年报中延续 33% 以上的营收增长，将是对这场反弹成色的第一次大考。</p>
 
-<!-- 第六章：老二的位置 -->
+<!-- ===== 第六章：老二的位置 ===== -->
 <h2 class="reveal" id="c6"><span class="chap-num">第六章</span>老二的椅子还稳吗</h2>
 
 <p class="reveal">2025 年之前，"白酒老二"的位置几乎是五粮液的铁帽子——营收规模是第三名泸州老窖的 3 倍以上。但 2025 年之后，这一格局出现了微妙的变化。</p>
 
 <p class="reveal">从营收绝对值看，五粮液 405.29 亿对泸州老窖 257.31 亿，差距依然接近 1.6 倍。但山西汾酒以 387.18 亿逼近了五粮液——两者只差 18 亿，不到一个季度的差距。<sup>[3]</sup>汾酒是 2025 年唯一正增长的白酒巨头（+7.52%），2026Q1 虽小幅下滑（-9.68%），但整体势头依然强劲。</p>
 
+<!-- 营收规模 VS 净利 纵向分组柱 -->
 <div class="chart-box reveal">
-<div class="chart-title">白酒五巨头 2025 年营收规模 · 座次对比</div>
-<div class="chart-sub">单位：亿元（数据来源 [1][3]）</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label" style="color:var(--gold);font-weight:900">① 贵州茅台</span><div class="bar-track"><div class="bar-fill gold" style="width:100%">1720.5</div></div><span class="bar-value">1720.54 亿</span></div>
-<div class="bar-row"><span class="bar-label" style="color:var(--red);font-weight:900">② 五粮液</span><div class="bar-track"><div class="bar-fill red" style="width:24%">405.3</div></div><span class="bar-value" style="color:var(--red)">405.29 亿</span></div>
-<div class="bar-row"><span class="bar-label" style="color:var(--gray);font-weight:900">③ 山西汾酒</span><div class="bar-track"><div class="bar-fill dark" style="width:22%">387.2</div></div><span class="bar-value">387.18 亿</span></div>
-<div class="bar-row"><span class="bar-label" style="color:var(--gray);font-weight:700">④ 泸州老窖</span><div class="bar-track"><div class="bar-fill dark" style="width:15%">257.3</div></div><span class="bar-value">257.31 亿</span></div>
-<div class="bar-row"><span class="bar-label" style="color:var(--gray);font-weight:700">⑤ 洋河股份</span><div class="bar-track"><div class="bar-fill dark" style="width:11%">192.1</div></div><span class="bar-value">192.11 亿</span></div>
+<div class="chart-title">白酒五巨头 · 营收 vs 利润 · 座次</div>
+<div class="chart-sub">单位：亿元（数据来源 [1][3] 2025 年报）· 深色=营收 浅色=净利</div>
+<svg class="chart-svg" viewBox="0 0 540 280" font-family="inherit">
+  <line x1="60" y1="20" x2="60" y2="240" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="240" x2="520" y2="240" stroke="var(--line)" stroke-width=".6"/>
+  <line x1="60" y1="190" x2="520" y2="190" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="140" x2="520" y2="140" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="90" x2="520" y2="90" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <line x1="60" y1="40" x2="520" y2="40" stroke="var(--line)" stroke-width=".4" stroke-dasharray="3,3"/>
+  <text x="54" y="244" fill="var(--gray)" font-size="9" text-anchor="end">0</text>
+  <text x="54" y="194" fill="var(--gray)" font-size="9" text-anchor="end">400</text>
+  <text x="54" y="144" fill="var(--gray)" font-size="9" text-anchor="end">800</text>
+  <text x="54" y="94" fill="var(--gray)" font-size="9" text-anchor="end">1200</text>
+  <text x="54" y="44" fill="var(--gray)" font-size="9" text-anchor="end">1600</text>
+  <text x="54" y="14" fill="var(--gray)" font-size="9" text-anchor="end" font-weight="700">亿</text>
+
+  <!-- 茅台 -->
+  <text x="112" y="265" fill="var(--gold)" font-size="11" text-anchor="middle" font-weight="700">茅台</text>
+  <rect x="87" y="23" width="50" height="217" fill="var(--gold)" rx="2" opacity=".85"/>
+  <rect x="87" y="23" width="50" height="104" fill="var(--gold)" rx="2"/>
+  <text x="112" y="195" fill="#fff" font-size="10" text-anchor="middle" font-weight="700">1720</text>
+  <text x="112" y="168" fill="#fff" font-size="9" text-anchor="middle">营收</text>
+  <text x="112" y="125" fill="#fff" font-size="9" text-anchor="middle">净利 823</text>
+
+  <!-- 五粮液 -->
+  <text x="217" y="265" fill="var(--red)" font-size="11" text-anchor="middle" font-weight="700">五粮液</text>
+  <rect x="192" y="189" width="50" height="51" fill="var(--red)" rx="2" opacity=".85"/>
+  <rect x="192" y="189" width="50" height="11" fill="var(--red)" rx="2"/>
+  <text x="217" y="182" fill="var(--red)" font-size="10" text-anchor="middle" font-weight="700">405</text>
+  <text x="217" y="255" fill="var(--red)" font-size="8" text-anchor="middle">净利 90</text>
+
+  <!-- 汾酒 -->
+  <text x="322" y="265" fill="var(--green)" font-size="11" text-anchor="middle" font-weight="700">汾酒</text>
+  <rect x="297" y="192" width="50" height="48" fill="var(--green)" rx="2" opacity=".85"/>
+  <rect x="297" y="192" width="50" height="15" fill="var(--green)" rx="2"/>
+  <text x="322" y="185" fill="var(--green)" font-size="10" text-anchor="middle" font-weight="700">387</text>
+  <text x="322" y="250" fill="var(--green)" font-size="8" text-anchor="middle">净利 122</text>
+
+  <!-- 老窖 -->
+  <text x="405" y="265" fill="var(--blue)" font-size="11" text-anchor="middle" font-weight="700">老窖</text>
+  <rect x="380" y="208" width="50" height="32" fill="var(--blue)" rx="2" opacity=".85"/>
+  <rect x="380" y="208" width="50" height="14" fill="var(--blue)" rx="2"/>
+  <text x="405" y="201" fill="var(--blue)" font-size="10" text-anchor="middle" font-weight="700">257</text>
+  <text x="405" y="255" fill="var(--blue)" font-size="8" text-anchor="middle">净利 108</text>
+
+  <!-- 洋河 -->
+  <text x="488" y="265" fill="var(--gray)" font-size="11" text-anchor="middle" font-weight="700">洋河</text>
+  <rect x="463" y="216" width="50" height="24" fill="var(--gray)" rx="2" opacity=".85"/>
+  <rect x="463" y="216" width="50" height="3" fill="var(--gray)" rx="1"/>
+  <text x="488" y="209" fill="var(--gray)" font-size="10" text-anchor="middle" font-weight="700">192</text>
+  <text x="488" y="255" fill="var(--gray)" font-size="8" text-anchor="middle">净利 22</text>
+
+  <!-- 标注老窖净利反超 -->
+  <line x1="217" y1="189" x2="405" y2="208" stroke="var(--red)" stroke-width=".8" stroke-dasharray="2,2"/>
+  <text x="311" y="278" fill="var(--red)" font-size="9" text-anchor="middle">△ 营收第二，但净利被老窖反超</text>
+</svg>
+<div class="legend-row">
+  <span class="leg-item"><span class="leg-dot" style="background:var(--gold);opacity:.85"></span>营收</span>
+  <span class="leg-item"><span class="leg-dot" style="background:var(--gold)"></span>其中净利</span>
 </div>
 </div>
 
@@ -386,7 +668,7 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 
 <p class="reveal">面对追赶者的压力，五粮液并非无牌可打。它的核心资产——明代古窖池群、全球最大的浓香型白酒产能、深厚的品牌积淀——仍是行业壁垒。2025 年的阵痛本质上不是产品问题，而是渠道与供应链韧性问题。一旦需求回暖，年收入重回 600 亿以上并非不可能。但问题是，行业需求何时回升？回升的速度能否快过追赶者的脚步？</p>
 
-<!-- 尾声 -->
+<!-- ===== 尾声 ===== -->
 <div class="epilogue reveal" id="c7">
 <h2>尾声：装不满的，不止是瓶子</h2>
 
@@ -403,9 +685,9 @@ footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-r
 <div class="footnotes">
 <h3>参考文献</h3>
 <ol>
-<li>五粮液（000858.SZ）2023—2025 年度报告，2026 年一季报。数据来源：东方财富数据中心（datacenter-web.eastmoney.com）接口，特别说明：TOTAL_OPERATE_INCOME 指营业总收入，PARENT_NETPROFIT 指归属于上市公司股东的净利润，XSMLL 指销售毛利率，WEIGHTAVG_ROE 指加权平均净资产收益率。</li>
-<li>五粮液官网（www.wuliangye.com.cn）："关于我们"、"明代古窖"专栏。五粮液古窖池群自明洪武元年（1368 年）起连续使用至今，距今已超过 650 年。</li>
-<li>贵州茅台（600519.SH）、泸州老窖（000568.SZ）、山西汾酒（600809.SH）、洋河股份（002304.SZ）2025 年度报告。数据来源同 [1]。</li>
+<li>五粮液（000858.SZ）2023—2025 年度报告，2026 年一季报。数据来源：东方财富数据中心（datacenter-web.eastmoney.com）接口。</li>
+<li>五粮液官网（www.wuliangye.com.cn）："关于我们"、"明代古窖"专栏。五粮液古窖池群自明洪武元年（1368 年）起连续使用至今。</li>
+<li>贵州茅台（600519.SH）、泸州老窖（000568.SZ）、山西汾酒（600809.SH）、洋河股份（002304.SZ）2025 年度报告及 2026 年一季报。数据来源同 [1]。</li>
 <li>行业渠道调研数据汇编。普五出厂价 969 元为 2025 年执行价，批价参考渠道商调研区间（900-950 元/瓶）；国窖 1573 批价参考区间 850-900 元/瓶。飞天茅台出厂价 1169 元，市场批价 2200-2500 元。</li>
 <li>五粮液渠道模式说明。五粮液自 2013 年起推进"大商制"改革，以省级平台公司为核心分销节点；2021 年后逐步推行"专卖店+团购+电商"多渠道并行的直营化改革。</li>
 <li>行业研报及渠道调研估算。开瓶率下降约 40% 为多家券商研报综合估算区间，非精确财务数据。</li>
@@ -484,50 +766,11 @@ var countObs=new IntersectionObserver(function(en){en.forEach(function(x){
 })},{threshold:0.5});
 document.querySelectorAll('[data-count]').forEach(function(el){countObs.observe(el)});
 
-/* 鼻祖动画 */
-document.querySelectorAll('.di-svg').forEach(function(svg){svg.classList.add('in')});
-
-/* 环形图悬停联动 */
-document.querySelectorAll('.di-svg').forEach(function(svg){
-  var segs=svg.querySelectorAll('.di-seg');
-  var callouts=svg.querySelectorAll('.di-callout');
-  var legends=svg.closest('.chart-box')?.querySelectorAll('.di-item')||[];
-  function dim(k){if(k){segs.forEach(function(s){s.classList.toggle('on',s.dataset.key===k)});callouts.forEach(function(c){c.classList.toggle('on',c.dataset.key===k)});svg.classList.add('dim')}else{segs.forEach(function(s){s.classList.remove('on')});callouts.forEach(function(c){c.classList.remove('on')});svg.classList.remove('dim')}}
-  segs.forEach(function(s){s.addEventListener('mouseenter',function(){dim(s.dataset.key)});s.addEventListener('mouseleave',function(){dim(null)})});
-  legends.forEach(function(l){l.addEventListener('mouseenter',function(){dim(l.dataset.key)});l.addEventListener('mouseleave',function(){dim(null)})});
-});
-
 /* 紧凑导航 */
-var topBar=document.querySelector('.top-bar');
-var internalBanner=document.querySelector('.internal-banner');
-var masthead=document.querySelector('.masthead');
 function onScrollCompact(){
   if(window.scrollY>80){document.body.classList.add('compact')}else{document.body.classList.remove('compact')}
 }
 addEventListener('scroll',onScrollCompact,{passive:true});onScrollCompact();
-
-/* 追踪器可见性 */
-var trackerEl=document.getElementById('tracker').closest('.pos');
-var obsTracker=new IntersectionObserver(function(en){en.forEach(function(x){if(!x.isIntersecting){document.querySelector('.tracker')?.classList.add('visible')}else{document.querySelector('.tracker')?.classList.remove('visible')}})},{threshold:0});
-var heroEl=document.querySelector('.hero');
-if(heroEl)obsTracker.observe(heroEl);
-
-/* 阶梯图入场动画 */
-var stepBars=document.querySelectorAll('.step-bar');
-var stepObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.style.height=x.target.style.height;stepObs.unobserve(x.target)}})},{threshold:0.2});
-stepBars.forEach(function(b){var h=b.style.height;b.style.height='0';stepObs.observe(b);setTimeout(function(){b.style.height=h},100)});
-
-/* 脚注角标 tooltip */
-document.querySelectorAll('sup[data-fn-text]').forEach(function(s){
-  s.addEventListener('mouseenter',function(e){
-    var tooltip=document.querySelector('.fn-tooltip')||function(){var d=document.createElement('div');d.className='fn-tooltip';document.body.appendChild(d);return d}();
-    tooltip.textContent=s.dataset.fnText;
-    tooltip.style.left=Math.min(e.pageX-20,window.innerWidth-300)+'px';
-    tooltip.style.top=(e.pageY-40)+'px';
-    tooltip.classList.add('visible');
-  });
-  s.addEventListener('mouseleave',function(){document.querySelector('.fn-tooltip')?.classList.remove('visible')});
-});
 </script>
 
 <script src="../../portal/share.js" defer></script>
