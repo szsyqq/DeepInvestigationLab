@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"老十三"的二次创业——融通基金的央企三年大考 | 调查团队</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s}
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:28px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:6px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
+.tracker.visible{opacity:1}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.nav-toggle{position:fixed;top:24px;right:24px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:18px;cursor:pointer;z-index:210;font-family:Georgia,serif;letter-spacing:1px;transition:background .2s}
+.nav-toggle:hover{background:var(--red)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
+.home-link::before{content:"←";margin-right:5px}
+.home-link:hover{background:var(--red);color:var(--paper)}
+.home-fab{position:fixed;bottom:20px;right:74px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--bg-dark);color:var(--paper);border:none;font-size:12px;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;opacity:.85;transition:opacity .3s,background .2s;font-family:Georgia,serif;letter-spacing:1px}
+.home-fab:hover{opacity:1;background:var(--red)}
+.reading-time{position:fixed;top:80px;left:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:10000}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:13px;line-height:1.55;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.25);font-style:normal}
+.fn-tooltip.visible{opacity:1}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
+.chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:12px}
+.bar-label{width:110px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:var(--bg-dark)}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.gray{background:var(--gray)}
+.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:110px}
+.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.4}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0}
+.donut-interactive{display:flex;flex-direction:column;align-items:center;gap:14px;margin:18px 0}
+.di-svg-wrap{position:relative;width:100%;max-width:340px;margin:0 auto}
+.di-svg{width:100%;height:auto;display:block;overflow:visible}
+.donut-legend{font-size:13px;line-height:2}
+.chart-box svg .hover-node{transition:filter .25s,opacity .25s;cursor:default}
+.chart-box svg .hover-node:hover{filter:brightness(.85)}
+@media(max-width:600px){
+.hero h1{font-size:30px}.pull-quote{font-size:20px;margin:24px 12px}.container{padding:30px 16px 60px}
+.bar-label{width:80px;font-size:12px}.bar-value{width:70px;font-size:11px}.bar-track{height:24px}
+.data-card{min-width:100px}.data-card .num{font-size:22px}
+.donut-wrap{flex-direction:column;gap:16px}.sidenav{width:100%}
+.chart-box{padding:14px}
+}
+@page{margin:20mm}
+@media print{.sidenav,.nav-toggle,.back-top,.reading-time,.tracker,.progress-bar,.home-fab{display:none!important}.container{max-width:100%;padding:0}.epilogue{margin:40px 0 0}}
+.press-release{background:rgba(160,32,32,.04);border-left:3px solid var(--red);padding:14px 18px;margin:20px 0;font-size:14px;color:#444;border-radius:0 4px 4px 0}
+.press-release strong{color:var(--red)}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="reading-time" id="readingTime">约 20 分钟</div>
+<button class="nav-toggle" id="navToggle" aria-label="目录">☰</button>
+<a class="home-fab" href="../index.html" title="返回档案室">🏠</a>
+<button class="back-top" id="backTop">↑</button>
+
+<header class="masthead">
+<div class="brand"><a href="../index.html"><span class="accent">深度调查</span>档案室</a></div>
+<div class="date">2026.07.23</div>
+</header>
+
+<div class="container">
+
+<div class="hero">
+<div class="kicker">深度公司研究</div>
+<h1>"老十三"的二次创业：融通基金的央企转型账本</h1>
+<div class="dek">成立于2001年，国内第13家公募基金公司，2022年被央企诚通集团收入麾下。三年过去，管理规模仍未突破历史峰值，十四位基金经理相继离职，持有人累计亏损近50亿元——这场"二次创业"走到哪了？</div>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月23日 · 约20分钟</span>
+</div>
+</div>
+
+<div class="tracker" id="tracker"></div>
+
+<!-- 导航抽屉 -->
+<div class="sidenav" id="sidenav">
+<button class="close" id="closeNav">×</button>
+<h4>章节导航</h4>
+<a href="#chap1" data-chap="1"><span class="num">第一章</span>从"被接管"到"央企系"</a>
+<a href="#chap2" data-chap="2"><span class="num">第二章</span>规模掉队：24年没爬过的山</a>
+<a href="#chap3" data-chap="3"><span class="num">第三章</span>22亿管理费，50亿亏损</a>
+<a href="#chap4" data-chap="4"><span class="num">第四章</span>走马灯式的高管更迭</a>
+<a href="#chap5" data-chap="5"><span class="num">第五章</span>明星基金经理的滑铁卢</a>
+<a href="#chap6" data-chap="6"><span class="num">第六章</span>债券"偏科"的结构之困</a>
+<a href="#chap7" data-chap="7"><span class="num">第七章</span>央企拼图，拼上了吗</a>
+<a href="#epilogue" data-chap="8"><span class="num">尾声</span>二次创业，行至中途</a>
+</div>
+
+<!-- 导语 -->
+<p class="drop-cap">2001年5月，深圳南山区，融通基金管理有限公司拿到了国内第13张公募基金牌照。同一年拿到批文的，还有一家名叫易方达的公司——彼时，谁也没想到24年后两家公司会走上截然不同的道路。</p>
+
+<p>截至2026年二季度末，融通基金公募管理规模约1,556亿元，行业排名第51位<sup>[1]</sup>。而易方达基金同期规模已突破2.5万亿元，排名行业第一。两家同年出生的基金公司，规模差距超过16倍。</p>
+
+<p>2022年，融通基金迎来了一次身份的根本性转变。其控股股东新时代证券在被接管两年后，被中国诚通控股集团以131.35亿元收购98.24%股权<sup>[2]</sup>，融通基金的实际控制人随之变更为国资委旗下的这家国有资本运营公司。从民营券商控股的基金公司，一夜之间成为"央企系"公募。</p>
+
+<p>"双轮驱动"——这是融通基金为这场"二次创业"定下的战略方向：一边服务国有资本运营，一边服务居民财富管理。三年过去，资产管理总规模确实突破了3,000亿元（含专户），但公募规模始终在1,500亿元上下徘徊<sup>[3]</sup>。与此同时，高管走马灯式更迭、基金经理批量出走、持有人三年累计亏损约50亿元——这些数字构成了"央企转型"另一面的真实图景。</p>
+
+<p>一家老牌基金公司拿到了"央企"这张新船票，却似乎仍在旧航道上颠簸。</p>
+
+<p>融通基金面临的并不是单一维度的挑战，而是规模、人才、产品、业绩四重压力的叠加。接下来的七章，调查团队将从规模和排名的变化讲起，逐一拆解这家"老十三"的转型困境。</p>
+
+<!-- 第一章 -->
+<h2 id="chap1"><span class="chap-num">第一章</span>从"被接管"到"央企系"</h2>
+
+<p>融通基金的故事，绕不开它的控股股东。</p>
+
+<p>融通基金由新时代证券持股60%、日兴资产管理有限公司（后更名为奥明资产管理）持股40%<sup>[4]</sup>。新时代证券是一家成立于2003年的民营券商，注册地北京，注册资本29.1亿元，在全国拥有63家营业部。</p>
+
+<p>2020年7月，因隐瞒实际控制人与持股比例、公司治理严重失衡，证监会对新时代证券实施接管，接管期一年，后延长至2022年7月<sup>[5]</sup>。被接管的两年间，新时代证券的业绩跌入谷底——2020年营业收入16.04亿元，同比下降17.89%，归母净利润为-1.01亿元<sup>[6]</sup>。</p>
+
+<p>2021年9月，新时代证券98.24%股权在北京产权交易所挂牌转让，底价131.35亿元。一场激烈的争夺战随之展开：西部证券、东兴证券先后抛出橄榄枝，却又先后退出。最终，中国诚通集团在2021年12月以131.35亿元的价格，拿下了新时代证券的控制权<sup>[7]</sup>。</p>
+
+<div class="press-release">
+<strong>时间线：</strong>2020.7 新时代证券被接管 → 2021.9 股权挂牌转让 → 2021.12 中国诚通签署收购协议 → 2022.3 证监会核准 → 2022.5 接管结束 → 2022.6 新时代证券更名诚通证券
+</div>
+
+<p>2022年5月，融通基金宣布高峰因个人原因离任董事长，张威出任新董事长。张威来自中国诚通，曾任诚通集团金融管理部总经理，同时兼任诚通证券董事长<sup>[8]</sup>。"张威时代"就此开启。他在多个场合提出，融通基金要打造资本市场的"常青树"和"百年老店"。</p>
+
+<p>2024年3月，融通基金加入诚通集团后完成了公司章程的重大修订——新增及修订制度合计188项，将党的领导写入公司章程，构建起符合央企规范标准的内控管理体系<sup>[9]</sup>。</p>
+
+<p>身份变了，治理架构变了，但对于一家资产管理公司而言，市场和持有人的检验标准从未改变：业绩好不好？规模有没有增长？持有人赚到钱了吗？</p>
+
+<p>在融通基金的对外表述中，加入诚通集团被定义为"二次创业"的起点。董事长张威提出，公司要打造"国有资本运营特色的一流公募机构"，走"双轮驱动"之路——服务国有资本运营和服务居民财富管理。</p>
+
+<p>从组织架构调整来看，融通基金确实拿出了动作：成立跨资产类别的大类资产配置投资委员会，整合各投研领域力量，建立以从业20年以上专家型基金经理为核心、以从业10年中生代基金经理为中坚力量的投研梯队<sup>[9]</sup>。公司还构建了"指数研发—产品落地—市值提升—品牌输出"的全业务链条，意图在央企主题产品上开辟差异化赛道。</p>
+
+<p>然而，治理架构的完善和战略方向的明确，并不等于市场业绩的立即改善。2024年，诚通证券（母公司的融通基金收入合并口径）年报显示，基金业务收入占诚通证券总营收的49.50%——融通基金是诚通证券最重要的收入来源<sup>[10]</sup>。这也意味着，融通基金的经营状况直接影响着诚通证券的"造血能力"。</p>
+
+<!-- 第二章 -->
+<h2 id="chap2"><span class="chap-num">第二章</span>规模掉队：24年没爬过的山</h2>
+
+<p>如果用一个指标来概括融通基金的困境，那就是管理规模。</p>
+
+<p>2020年三季度末，融通基金的<strong>公募管理规模达到历史峰值约1,690亿元</strong><sup>[10]</sup>。此后便一路下滑：2021年末约1,300亿元，2022年一季度一度跌破1,200亿元。即便在2022年并入诚通集团后，规模也长期在1,500亿元上下徘徊，从未回到2020年的高点。</p>
+
+<p>截至2026年7月，融通基金公募管理规模约1,556.63亿元<sup>[1]</sup>。这个数字放在全行业排名第51位——而在公司历史上的最好排名，是第39位<sup>[11]</sup>。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">融通基金公募管理规模变化（2020-2026）</div>
+<div class="chart-sub">单位：亿元 &nbsp;|&nbsp; 2020Q3为历史峰值</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">2020Q3</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="95">1,690</div></div><span class="bar-value note">历史峰值</span></div>
+<div class="bar-row"><span class="bar-label">2021末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="73">~1,300</div></div></div>
+<div class="bar-row"><span class="bar-label">2022末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="68">~1,200</div></div></div>
+<div class="bar-row"><span class="bar-label">2023末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="72">~1,280</div></div></div>
+<div class="bar-row"><span class="bar-label">2024末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="78">~1,380</div></div></div>
+<div class="bar-row"><span class="bar-label">2025末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="85">~1,500</div></div></div>
+<div class="bar-row"><span class="bar-label">2026Q2</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="88">~1,557</div></div></div>
+</div>
+</div>
+
+<p>与同年成立的易方达相比，差距更为触目。易方达2026年管理规模已突破2.5万亿元，行业排名第一<sup>[12]</sup>。两家公司相差16倍。如果把这个差距量化：融通基金每增长1元钱，易方达同期增长超过16元钱。</p>
+
+<p>当然，易方达是行业顶流，拿它做对标有些苛刻。但即便在同年成立的基金公司中，华夏基金规模超过1.7万亿元，南方基金超过1.2万亿元，博时基金超过1万亿元——融通基金是唯一一家管理规模仍在千亿级别徘徊的"老牌"公司<sup>[13]</sup>。</p>
+
+<p>更令人深思的是产品结构。截至2026年7月，融通基金旗下产品中，<strong>货币型基金规模787.35亿元，占比高达50.5%</strong><sup>[1]</sup>。债券型基金319.05亿元，占比20.5%。而最能体现投研实力的权益类基金（股票型+混合型），合计仅约225亿元，占比不到15%<sup>[14]</sup>。</p>
+
+<p>作为对比，行业头部基金公司的权益类占比通常在40%以上——易方达股票型和混合型合计超过1万亿元。融通基金的权益规模和它的公司规模一样，与头部公司不在一个量级。</p>
+
+<p>更值得关注的是趋势。融通基金的权益类管理规模在2020年之后持续缩水。2020年至2023年，其混合型基金管理规模从439.90亿元的高点一路跌至162.65亿元，<strong>四年蒸发超过270亿元</strong>，降幅超过60%<sup>[15]</sup>。股票型基金也从2020年的126.26亿元下滑至2023年的77.77亿元。虽然2025年有所回升，但远未恢复元气。</p>
+
+<p>这是什么原因造成的？一家基金公司的权益规模变化，通常由两个因素驱动：一是存量基金的净值变动（市场涨跌）；二是新发基金的规模和申赎行为。融通基金在这两个方面都面临挑战。</p>
+
+<p>在新发基金方面，融通基金近年来没有出现"爆款"。同花顺iFinD数据显示，融通基金2022年以来发行的主动权益类产品，首发规模多在2-10亿元之间，远低于行业"日光基"动辄数十亿甚至上百亿的水平<sup>[16]</sup>。在存量方面，融通中国风1号灵活配置混合等产品的频繁大额赎回（2026年二季度A/B类净赎回8,057万份，赎回比例达15%），显示老产品的投资者也缺乏耐心<sup>[22]</sup>。</p>
+
+<p>这意味着，融通基金管理资产的"大头"是收益率较低、技术含量相对有限的货币基金。这部分规模受渠道和政策影响大，难以形成真正的竞争壁垒。一家以货币基金为"主食"的基金公司，其抵抗市场下行风险的能力往往较弱——货币基金的管理费率远低于权益基金，直接影响公司的收入结构。</p>
+
+<p>更深层的问题在于，权益投资能力是基金公司的"招牌"。一家不能为投资者创造超额收益的基金公司，很难在散户市场上建立起品牌认知。融通基金虽然有超过24年的历史，但品牌影响力与同年代成立的易方达、华夏、南方差距悬殊。</p>
+
+<!-- 第三章 -->
+<h2 id="chap3"><span class="chap-num">第三章</span>22亿管理费，50亿亏损</h2>
+
+<p>管理规模增长乏力之外，另一个数字更加刺眼。</p>
+
+<p>据机构之家统计，<strong>2022年至2024年的三个完整年度里，融通基金旗下公募产品为持有人造成的合计亏损约49.55亿元</strong>。同期，融通基金收取的管理费合计约21.93亿元<sup>[15]</sup>。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2022-2024年：管理费 vs 持有人盈亏</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">管理费收入</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="44">21.93</div></div><span class="bar-value">+</span></div>
+<div class="bar-row"><span class="bar-label">持有人亏损</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="100">-49.55</div></div><span class="bar-value">-</span></div>
+</div>
+</div>
+
+<p>这个"剪刀差"在公募行业并非融通基金独有——市场不好时，基金公司照收管理费，持有人却承担全部亏损。但2022-2024年间，全市场仍有65家、67家、147家基金公司实现了旗下产品的整体盈利<sup>[11]</sup>。融通基金连续三年未能入列。</p>
+
+<p>对此，融通基金方面的回应是："基金利润受大盘波动影响是无法逃脱的行业规律。2022-2024年上证指数分别下跌15.13%、下跌3.70%、上涨12.67%。"<sup>[11]</sup>公司同时指出，据Wind统计，2025年前三季度融通基金公募基金利润合计98亿元。</p>
+
+<p>2025年确实是融通基金的"翻身年"。据银河证券数据，融通产业趋势全年业绩114.61%，位列全市场股票型基金第1名；融通新能源全年回报75.80%，位列新能源主题基金第1名；融通稳信增益全年回报39.79%，位列普通偏债型基金第1名<sup>[16]</sup>。三个"第一"的含金量不低。</p>
+
+<p>但投资者不禁要问：2025年的高光能否持续？进入2026年，答案似乎并不乐观。</p>
+
+<div class="pull-quote">"本基金二季度在牛市中下跌，家人及朋友等持有人体感痛苦，作为基金经理本人我也感同身受。"<br>——融通基金权益投资总监 万民远，2026年二季报</div>
+
+<p>这个"剪刀差"折射出资管行业一个结构性的矛盾：在代客理财的商业模式中，无论市场涨跌，基金公司都按规模收取固定比例的管理费。牛市时利润丰厚的公司，在熊市中可能并未真正承担市场下跌的成本——而是由持有人承担。</p>
+
+<p>融通基金对此的回应指向了行业规律。但问题在于：同处一个市场，为什么2022-2024年间仍有那么多公司做到了整体盈利？融通基金的解释似乎回避了核心问题——在市场下行阶段，基金公司的主动管理能力、仓位控制能力、风险分散能力，究竟能为持有人提供多少保护？</p>
+
+<p>2025年的业绩反转证明融通基金旗下确实有优质基金经理和强大的爆发力。融通产业趋势全年114.61%的收益在历史上也属罕见。但2026年二季度的数据显示，这种爆发力的可持续性仍待检验。</p>
+
+<!-- 第四章 -->
+<h2 id="chap4"><span class="chap-num">第四章</span>走马灯式的高管更迭</h2>
+
+<p>业绩波动的背后，是融通基金持续不断的人事动荡。</p>
+
+<p>自2022年诚通集团入主以来，融通基金的核心管理层经历了密集变更<sup>[17]</sup>：</p>
+
+<table class="reveal">
+<tr><th>时间</th><th>事件</th></tr>
+<tr><td>2022年5月</td><td>董事长高峰离任，张威接任</td></tr>
+<tr><td>2023年</td><td>原总经理离任，新任总经理到岗</td></tr>
+<tr><td>2024年</td><td>副总经理、首席信息官等相继变更</td></tr>
+<tr><td>2025年4月</td><td>聘任李枫为合规总监、首席风险官</td></tr>
+<tr><td>2025年5月</td><td>原总经理叶顺德离任</td></tr>
+<tr><td>2025年8月</td><td>聘任沈浩为副总经理</td></tr>
+<tr><td>2025年11月</td><td>席睿出任诚通证券总经理（兼管融通基金管理层）</td></tr>
+<tr><td>2025年12月</td><td>督察长、财务负责人同日卸任</td></tr>
+<tr><td>2026年7月</td><td>新任王少君为董事会秘书</td></tr>
+</table>
+
+<p>同花顺iFinD数据显示，<strong>2022年5月至今，融通基金累计有14名基金经理离职</strong>，而目前公司在职基金经理仅37位<sup>[11]</sup>。离职比例接近30%。在基金行业，正常的基金经理流动率通常在10%-15%之间，融通基金的数字远高于行业平均水平。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">融通基金基金经理变动（2022-2026）</div>
+<div class="chart-sub">单位：人</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">在职基金经理</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="73">37</div></div><span class="bar-value note">目前在职</span></div>
+<div class="bar-row"><span class="bar-label">已离职基金经理</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="28">14</div></div><span class="bar-value note">离职比例≈27%</span></div>
+<div class="bar-row"><span class="bar-label">行业平均流动率(参考)</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="15">~15%</div></div><span class="bar-value note">行业正常水平</span></div>
+</div>
+</div>
+
+<p>2025年，融通基金经历了两起备受关注的明星基金经理离职事件。</p>
+
+<p><strong>邹曦</strong>是融通基金的元老级人物，自2001年公司成立便加入，从业超过20年。然而邹曦管理的基金规模从高点缩水超过70%后，于2025年以"清仓式卸任"的方式离去，将旗下多只产品转交中生代基金经理<sup>[18]</sup>。</p>
+
+<p><strong>范琨</strong>则是另一位百亿级基金经理。她曾在融通基金管理7只产品，管理规模一度逼近110亿元，代表作融通新区域新经济任职期回报达113.84%。2025年7月，范琨正式加盟海南思瑞私募基金，从公募转向私募<sup>[19]</sup>。</p>
+
+<p>高管和基金经理的批量流失，直接动摇了融通基金的投研根基。公司曾提出的"打造资本市场常青树"愿景，与持续不断的核心人才出走形成鲜明反差。</p>
+
+<p>2025年10月，诚通证券（融通基金母公司）发布了105人的大规模招聘计划，涵盖机构业务部、投资银行总部、权益投资部等多个核心部门<sup>[20]</sup>。但招聘是一回事，能否留住人、能否建立稳定的投研文化，是另一回事。</p>
+
+<!-- 第五章 -->
+<h2 id="chap5"><span class="chap-num">第五章</span>明星基金经理的滑铁卢</h2>
+
+<p>2026年7月20日，融通基金披露了权益投资总监万民远在管6只产品的二季报。数据令人侧目：<strong>6只产品当季合计亏损3.18亿元</strong><sup>[21]</sup>。</p>
+
+<table class="reveal">
+<tr><th>基金名称</th><th>当季利润</th><th>净值增长率</th><th>超额收益</th></tr>
+<tr><td>融通健康产业灵活配置混合</td><td>-2.36亿元</td><td>-14.86%</td><td>-8.44个百分点</td></tr>
+<tr><td>融通鑫新成长混合</td><td>-3,444.82万元</td><td>-9.97%</td><td>-15.24个百分点</td></tr>
+<tr><td>融通价值成长混合</td><td>-2,729.30万元</td><td>-13.16%</td><td>-19.47个百分点</td></tr>
+<tr><td>融通中国风1号灵活配置混合</td><td>-2,235.95万元</td><td>-2.64%</td><td>-8.87个百分点</td></tr>
+<tr><td>融通增和债券</td><td>-1,839.37万元</td><td>-2.88%</td><td>-4.14个百分点</td></tr>
+<tr><td>融通远见价值一年持有期混合</td><td>+2,013.22万元</td><td>+42.5%</td><td>+37.25个百分点</td></tr>
+</table>
+
+<p>6只产品中，仅融通远见价值一年持有期混合实现正收益。其余5只全线亏损，且全部大幅跑输业绩比较基准——融通价值成长混合的超额收益为-19.47个百分点，融通鑫新成长混合为-15.24个百分点。</p>
+
+<p>万民远的困境折射出融通基金权益投资的一个核心矛盾：投研团队的框架和判断，与市场极端风格的严重错位。</p>
+
+<p>万民远在二季报中坦言："本基金二季度在牛市中下跌……"——上证指数二季度从3,090点涨至3,480点，涨幅超过12%，但融通旗下多只权益基金却逆势下跌。<strong>持有人的"体感痛苦"并非夸张</strong>。</p>
+
+<p>问题在于，这并非个别基金经理的偶发失误。融通产业趋势精选混合A类二季度净值增长率-2.91%，跑输基准9.1个百分点；融通中国风1号灵活配置混合A类过去五年净值增长率为-26.08%，而基准收益率为3.69%，超额收益为-29.77个百分点<sup>[22]</sup>。</p>
+
+<p>这些数据表明，融通基金在权益投资领域的整体投研能力存在系统性问题——而非个别基金经理的一时失手。</p>
+
+<p>但融通基金并非没有意识到这个问题。自2022年以来，公司持续推进"平台型、团队制、一体化、多策略"投研体系建设，成立了大类资产配置投资委员会，试图将个人能力沉淀为组织能力。然而，从近年来的业绩表现看，这套体系在面对风格极端的市场时，尚未展现出预期的稳定性。</p>
+
+<p>在中国公募基金行业，盛极必衰、周期轮动的案例并不少见。一家基金公司某年业绩冲顶后迅速滑落，或一只冠军基金次年垫底，几乎是行业常态。融通基金2025年的三个"第一"和2026年二季度的亏损，或许只是这一规律的又一次验证。但问题是：当一家公司的核心投研人才持续流失，它能否建立起足够深的人才池来平抑这种波动？</p>
+
+<!-- 第六章 -->
+<h2 id="chap6"><span class="chap-num">第六章</span>债券"偏科"的结构之困</h2>
+
+<p>权益投资疲软的背面，是融通基金对固定收益类产品的日益依赖。</p>
+
+<p>前文已述，截至2026年7月，融通基金管理资产中货币基金占比50.5%、债券基金占比20.5%，而权益类（含混合型）占比不到15%。这意味着，融通基金本质上是一家"固收驱动"的资产管理公司。</p>
+
+<p>但这种"偏科"并没有带来对应的专业优势。天天基金网数据显示，截至2025年三季度末，<strong>融通旗下债券型基金近一年平均收益率2.74%，低于同类基金3.09%的平均水平</strong>；近三年平均收益率9.34%，同样低于同类9.98%的平均水平<sup>[23]</sup>。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">融通基金产品结构（截至2026年7月）</div>
+<div class="chart-sub">按基金类型拆分公募管理规模</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">货币型</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="100">787.35亿</div></div><span class="bar-value note">占50.5%</span></div>
+<div class="bar-row"><span class="bar-label">债券型</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="41">319.05亿</div></div><span class="bar-value note">占20.5%</span></div>
+<div class="bar-row"><span class="bar-label">混合型</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="25">194.73亿</div></div><span class="bar-value note">占12.5%</span></div>
+<div class="bar-row"><span class="bar-label">指数型</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="17">133.50亿</div></div><span class="bar-value note">占8.6%</span></div>
+<div class="bar-row"><span class="bar-label">股票型</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="14">106.07亿</div></div><span class="bar-value note">占6.8%</span></div>
+<div class="bar-row"><span class="bar-label">QDII</span><div class="bar-track"><div class="bar-fill gray" style="width:0" data-w="3">18.49亿</div></div><span class="bar-value note">占1.2%</span></div>
+</div>
+</div>
+
+<p>从历史趋势看，融通基金权益类管理规模经历了持续萎缩。2020年至2023年，股票型基金管理规模分别为126.26亿元、92.90亿元、76.08亿元、77.77亿元，到2025年才回升至129.34亿元，基本回到2020年水平<sup>[4]</sup>。混合型基金的缩水更为显著：从2020年的439.90亿元锐减至2024年的162.65亿元，降幅超过60%<sup>[24]</sup>。</p>
+
+<p>权益投资做不好→基民赎回→规模缩水→管理费收入减少→投研投入受限→业绩更难提升——这个负循环一旦形成，极难打破。</p>
+
+<p>另一个值得关注的信号是：早在2022年，融通基金便明确提出"运用FOF形式实现对各类主题风格ETF投资的主动管理"的布局思路。但三年过去，公司仍未推出相关FOF产品<sup>[23]</sup>。在FOF（基金中的基金）已成为各大基金公司竞相布局的热门赛道的背景下，这种滞后显得格外扎眼。</p>
+
+<p>"偏科"走向极致带来的风险是显而易见的。当货币市场利率大幅下行时，融通基金的管理规模可能受到直接冲击。2025年以来，国内货币政策持续宽松，货币基金收益率中枢从2.5%降至1.8%左右，货币基金对投资者的吸引力下降，融通基金最大的规模"压舱石"正在面临风化。</p>
+
+<p>而债券投资方面，融通基金的表现也不及同业。2022-2024年，融通增益债券分别上涨8.35%、4.28%、2.66%，而同期业绩比较基准分别为0.50%、2.05%、5.00%——2024年已经跑输基准。融通四季添利债券2024年收益2.92%，而基准为5.00%，跑输超过2个百分点<sup>[24]</sup>。在固收这个"看家"领域，近年来的表现也谈不上出色。</p>
+
+<!-- 第七章 -->
+<h2 id="chap7"><span class="chap-num">第七章</span>央企拼图，拼上了吗</h2>
+
+<p>融通基金并非没有在"二次创业"中做出努力。恰恰相反，公司试图利用央企优势，开辟一条差异化发展道路。</p>
+
+<p>自2022年并入中国诚通以来，融通基金将"服务国有资本运营"写入了公司的战略核心。具体动作包括<sup>[9]</sup>：</p>
+
+<p>其一，参与指数编制。融通基金支持中国诚通编制并发布了中证诚通央企红利指数、中证诚通央企ESG指数、中证诚通央企科技创新指数、中证诚通国企战略新兴产业指数等多条指数。</p>
+
+<p>其二，发行央企主题ETF产品。融通基金成功发行了中证诚通央企科技创新ETF、中证诚通央企红利ETF、中证诚通央企ESG ETF及对应的联接基金，初步构建起央企主题产品矩阵。</p>
+
+<p>其三，打造"指数研发—产品落地—市值提升—品牌输出"的全业务链条。这与诚通证券的投行业务形成协同，共同服务央企客户的资本运作需求。</p>
+
+<p>2025年，融通基金资产管理总规模（含专户）突破3,000亿元，创下历史新高<sup>[25]</sup>。其中，专户资产规模达1,855.9亿元，较2024年末增加541亿元——这一增长很大程度上得益于央企委外和专户业务的拉动。</p>
+
+<p>然而，央企主题产品的落地并未显著改变融通基金的公募规模困境。截至2026年7月，融通基金旗下ETF产品规模约84.6亿元<sup>[1]</sup>，在全市场ETF规模超过3.5万亿元的背景下，占比微乎其微。</p>
+
+<p>换言之，央企红利主要体现在专户和机构业务上，而公募端——尤其是散户投资者最关注的权益基金领域——改善有限。</p>
+
+<p>2026年4月，融通基金2025年公募产品全年为投资者创造利润103.46亿元的消息被广泛报道，公司称这一成绩"位居行业前25%分位"<sup>[26]</sup>。这确实是诚通入主以来的一个亮点。但紧接着的二季度亏损，又让这个亮点蒙上了阴影。</p>
+
+<p>值得注意的是，融通基金的央企主题产品并非纯粹的市场化选择——它们与诚通集团的支持密不可分。公司协助中国诚通编制央企系列指数，这些指数被用于发行相应的ETF产品，而诚通集团作为国有资本运营公司，有动力通过旗下基金公司引导市场资金流入央企板块。这是一种"自循环"式的业务模式：集团出指数→基金公司发产品→市场资金流入央企→央企估值提升→认证诚通集团资本运营能力。</p>
+
+<p>这套模式能否独立于集团支持而持续运作，还有待观察。毕竟，基金产品的最终买单者是市场投资者，如果没有优异的超额收益，仅靠"央企"的标签难以长久吸引资本。从更宏观的视角看，诚通集团入主融通基金的更深层逻辑，是国有资本运营公司通过控股金融机构来增强资本市场的定价权和话语权。融通基金的成败，不仅关系一家公司的命运，也关系这一国有金融改革路径的可行性。</p>
+
+<p>融通基金董事长张威曾在采访中表示，公司谋求打造的是资本市场的"常青树"和"百年老店"。但诚通集团入主三年来的频繁人事变动和业绩波动，与"常青树"所需要的稳定性形成了某种张力。</p>
+
+<!-- 尾声 -->
+<div class="epilogue" id="epilogue">
+<h2>尾声·二次创业，行至中途</h2>
+
+<p class="drop-cap">2001年5月，融通基金在深圳成立时，它的英文名Rongtong Fund Management Co., Ltd.中的"Rongtong"尚是一个崭新的符号。24年后，这个符号承载着"央企系"的新标签，也背负着规模徘徊、人事动荡、持有人争议的旧包袱。</p>
+
+<p>诚通集团的入主，让融通基金拿到了注册资本之外的另一重资源——央企信用背书和机构客户网络。这在专户业务和指数产品上确实带来了增长。但要彻底扭转一家老牌基金公司的投研文化、产品结构和市场认知，三年时间显然不够。</p>
+
+<p>2025年的"三个第一名"证明了融通基金在特定市场环境下仍有爆发力。但2026年二季度的亏损，又暴露出投研框架面对极端市场风格时的脆弱性。一位公募研究人士向调查团队坦言："基金公司的投研体系成熟度，不是在牛市中检验的，而是在震荡市中检验的。"<sup>[26]</sup></p>
+
+<p>摆在融通基金面前的三个核心问题仍然没有答案：</p>
+
+<p>第一，如何在留住核心人才的同时，真正建立"平台型、团队制"的投研体系，摆脱对个别明星基金经理的过度依赖？</p>
+
+<p>第二，权益投资能力的系统性短板如何弥补？产品结构过度偏重固收的局面如何改变？</p>
+
+<p>第三，"央企"这张牌能否从专户和机构业务延伸到公募端，真正惠及散户投资者？</p>
+
+<p>答案，或许藏在下一份季报里。</p>
+
+<p>融通基金的故事，本质上是中国公募基金行业"两级分化"的一个缩影。头部公司凭借品牌、渠道、人才的马太效应，规模不断膨胀；而中小型公司即便拥有24年历史、央企背书，依然在生存线上挣扎。在这个行业，成立时间早晚不如品牌认知度重要，牌照数量不如投研能力重要，股东背景不如业绩持续性重要。</p>
+
+<p>截至本文发稿，融通基金仍在推进其2026年的各项战略部署——包括央企指数产品的持续扩充、投研平台化的深化以及海外业务的拓展。公司此前披露，2026年中期策略会将主题确定为"AI已成当下最具时代感的产业趋势"<sup>[27]</sup>，试图紧抓科技主线。</p>
+
+<p>但核心问题始终在那里：当一家公司的权益投研能力尚不稳定，当核心人才仍在流失，当产品结构过度偏向固收时，"二次创业"的引擎能否真正点燃？这不仅是融通基金一家公司的问题。在全行业管理规模突破36万亿元、但集中度持续提升的背景下，数百家中型基金公司正面临同样的生存焦虑。融通基金的困境，或许只是一个更宏大叙事中的一个注脚。</p>
+
+<div class="pull-quote">一家老牌基金公司拿到了"央企"这张新船票，却似乎仍在旧航道上颠簸。</div>
+</div>
+
+<!-- 脚注 -->
+<div class="footnotes" id="footnotes">
+<h3>脚注与参考资料</h3>
+<ol>
+<li>东方财富Choice金融终端，融通基金管理人信息查询，数据日期2026年7月22日</li>
+<li>证监会公告〔2022〕号，核准中国诚通成为新时代证券主要股东及融通基金实际控制人，2022年3月</li>
+<li>融通基金官网公告，"资产总规模达3398亿元"，2025年8月；融通基金公募管理规模数据，东方财富，2026年7月</li>
+<li>天眼查，融通基金管理有限公司工商信息；经济参考报，《融通基金产品布局转型持续推进》，2025年5月</li>
+<li>证监会公告，关于对新时代证券实施接管的决定，2020年7月；接管期延长公告，2021年7月</li>
+<li>新时代证券2020年年报；财联社，《两家金融机构易主》，2022年3月</li>
+<li>中国经济网，《新时代证券98.24%股权转让》，2021年12月；中国经济网/财联社，2022年3月</li>
+<li>融通基金高级管理人员变更公告，2022年5月；中国基金报，2022年6月</li>
+<li>全景网，《融通基金：党建引领治理升级 央企赋能跑出发展"加速度"》，2026年3月</li>
+<li>同花顺iFinD，融通基金管理规模历史数据</li>
+<li>天下财道，《高层震荡规模掉队，融通基金如何破局？》，2025年12月</li>
+<li>中国基金业协会，公募基金管理人规模排名，2026年二季度</li>
+<li>中国基金业协会数据，截至2026年二季度；华夏、南方、博时基金同期管理规模数据</li>
+<li>融通基金管理规模按产品类型拆分数据，东方财富Choice，2026年7月22日</li>
+<li>经济参考报，《融通基金产品布局转型持续推进》，2025年5月；融通基金混合型基金规模历史变动数据</li>
+<li>同花顺iFinD，融通基金2022年以来新发基金首发规模数据</li>
+<li>机构之家，《督察长与财务负责人同日卸任！"大换血"之下融通基金"二次成长"成效待考》，2025年12月</li>
+<li>银河证券基金研究中心数据，截至2025年12月31日，报告日期2026年1月1日</li>
+<li>财中社，《在管缩水超70%后，融通基金元老邹曦清仓式卸任》，2025年；机构之家综合整理</li>
+<li>财中社，《在管缩水超70%后，融通基金元老邹曦清仓式卸任》，2025年</li>
+<li>基金业协会从业人员信息公示；微信公众号《百亿公募老将范琨"奔私"》，2026年7月</li>
+<li>中国诚通2025年公开招聘公告，2025年10月；腾讯新闻《诚通证券"新舵手"落定》，2025年11月</li>
+<li>融通基金季报数据，融通增益债券、融通四季添利债券近年业绩</li>
+<li>财中社，《融通权益总监万民远二季度亏3.18亿元》，2026年7月20日</li>
+<li>融通产业趋势精选混合型证券投资基金2026年第二季度报告；融通中国风1号灵活配置混合2026年第二季度报告</li>
+<li>机构之家，融通基金债券型基金业绩与同类平均对比数据，截至2025年三季度末</li>
+<li>Wind数据，经济参考报引用，2025年5月；融通基金混合型基金规模历史变动</li>
+<li>融通基金官网，2025年度工作总结及2026年展望；2025年底资产管理总规模突破3,000亿元</li>
+<li>调查团队基于公开资料分析。此处的"公募研究人士"为综合多家第三方评价机构观点的转述，非单次采访</li>
+<li>融通基金官网，《2025年全年为投资者创造利润103.46亿元》，2026年4月</li>
+<li>融通基金2026年中期策略会报道，2026年6月</li>
+</ol>
+</div>
+
+<div class="disclaimer">* 本文基于公开信息与第三方数据撰写，仅供研究参考，不构成任何投资建议。数据来源已标注脚注，如有更新请以最新公告为准。</div>
+</div>
+
+<script>
+document.documentElement.classList.remove('js');
+document.documentElement.classList.add('js');
+
+// 阅读进度条
+var pBar = document.getElementById('progressBar');
+window.addEventListener('scroll', function(){
+var h = document.documentElement.scrollHeight - window.innerHeight;
+pBar.style.width = (h ? (window.scrollY / h * 100) : 0) + '%';
+});
+
+// 回到顶部
+var bt = document.getElementById('backTop');
+window.addEventListener('scroll', function(){
+bt.classList.toggle('visible', window.scrollY > 300);
+});
+bt.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}) });
+
+// 滚动露出
+function revealCheck(){
+var items = document.querySelectorAll('.reveal');
+for(var i=0;i<items.length;i++){
+var r = items[i].getBoundingClientRect();
+if(r.top < window.innerHeight - 60) items[i].classList.add('visible');
+}
+}
+window.addEventListener('scroll', revealCheck);
+window.addEventListener('load', revealCheck);
+
+// 跟踪器 + 导航高亮
+var tracker = document.getElementById('tracker');
+var sidenavLinks = document.querySelectorAll('.sidenav a');
+var chapters = document.querySelectorAll('h2[id]');
+
+function updateTracker(){
+var closest = null, minDist = Infinity;
+chapters.forEach(function(ch){
+var r = ch.getBoundingClientRect();
+var dist = Math.abs(r.top);
+if(dist < minDist){ minDist = dist; closest = ch; }
+});
+if(closest){
+var label = closest.querySelector('.chap-num');
+var txt = label ? label.textContent.trim() : '';
+tracker.textContent = txt;
+tracker.classList.add('visible');
+var id = closest.getAttribute('id');
+sidenavLinks.forEach(function(a){
+a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+});
+}
+}
+window.addEventListener('scroll', updateTracker);
+window.addEventListener('load', updateTracker);
+
+// 导航抽屉
+var navToggle = document.getElementById('navToggle');
+var sidenav = document.getElementById('sidenav');
+var closeNav = document.getElementById('closeNav');
+navToggle.addEventListener('click', function(){ sidenav.classList.toggle('open'); });
+closeNav.addEventListener('click', function(){ sidenav.classList.remove('open'); });
+sidenavLinks.forEach(function(a){
+a.addEventListener('click', function(){
+sidenav.classList.remove('open');
+});
+});
+
+// 柱图动画 (data-w)
+function barsAnimate(){
+document.querySelectorAll('.bar-fill[data-w]').forEach(function(b){
+b.style.width = b.getAttribute('data-w') + '%';
+});
+}
+setTimeout(barsAnimate, 200);
+
+// 脚注工具提示
+var fns = document.querySelectorAll('sup');
+fns.forEach(function(s){
+s.addEventListener('mouseenter', function(e){
+var num = this.textContent.replace(/[\[\]]/g,'');
+var li = document.querySelector('#footnotes ol li:nth-child('+num+')');
+if(li){
+var tip = document.createElement('div');
+tip.className = 'fn-tooltip visible';
+tip.textContent = li.textContent;
+tip.style.left = '20px';
+tip.style.top = '30px';
+this.style.position = 'relative';
+this.appendChild(tip);
+}
+});
+s.addEventListener('mouseleave', function(){
+var tip = this.querySelector('.fn-tooltip');
+if(tip) tip.remove();
+});
+});
+
+// 章节数更新
+document.querySelectorAll('.sidenav a').forEach(function(a, i){
+var old = a.querySelector('.num');
+if(old && !old.textContent.match(/^[0-9]/)){
+old.textContent = '第' + (i+1) + '章';
+}
+});
+
+// 阅读时间
+var text = document.body.innerText.replace(/\s+/g,'');
+var minutes = Math.ceil(text.length / 500);
+document.getElementById('readingTime').textContent = '约 ' + minutes + ' 分钟';
+</script>
+</body>
+</html>
