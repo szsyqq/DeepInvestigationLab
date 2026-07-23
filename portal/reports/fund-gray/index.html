@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>接盘的逻辑：从建滔配售看公募基金的利益链 | 调查团队</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand b{color:var(--red);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+.timeline{margin:28px 0;padding-left:20px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:20px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:8px;width:10px;height:10px;background:var(--red);border-radius:50%}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px}
+.timeline-content{margin-top:4px}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:16px;color:var(--bg-dark);text-align:center}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:10px}
+.bar-label{width:96px;font-size:13px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--quote-bg);height:30px;position:relative;overflow:hidden}
+.bar-fill{height:100%;display:flex;align-items:center;padding-left:10px;color:var(--paper);font-size:12px;font-weight:700;white-space:nowrap;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:#4a4036}
+.bar-fill.gray{background:#8a8073}
+.bar-fill.gold{background:var(--gold)}
+.bar-value{width:110px;font-size:11px;color:var(--gray);flex-shrink:0;line-height:1.3}
+.step-chart{display:flex;align-items:flex-end;justify-content:space-around;height:170px;gap:8px;padding:0 4px;border-bottom:2px solid var(--bg-dark)}
+.step-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:90px}
+.step-value{font-size:11px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:0}
+.step-bar.red{background:var(--red)}
+.step-label{font-size:10px;margin-top:6px;text-align:center;color:var(--ink);line-height:1.3}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap}
+.donut{width:200px;height:200px;border-radius:50%;position:relative;transform:scale(0);transition:transform 1s cubic-bezier(.4,0,.2,1)}
+.donut::after{content:'';position:absolute;width:110px;height:110px;background:var(--paper);border-radius:50%;top:45px;left:45px}
+.donut-center{position:absolute;width:100%;text-align:center;top:78px;z-index:2}
+.donut-center .big{font-size:22px;font-weight:700;color:var(--red)}
+.donut-center .small{font-size:11px;color:var(--gray)}
+.donut-legend{font-size:13px;line-height:2}
+.donut-legend .dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:middle}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}}
+.timeline-table td:first-child{font-weight:700;color:var(--red);white-space:nowrap;width:80px}
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:15px}
+  body{font-size:16px}
+  .container{padding:24px 16px 60px}
+  .pull-quote{font-size:19px}
+  .data-card{min-width:120px}
+  .epilogue{margin:30px -16px 0}
+  .sidenav .close{top:12px;right:12px}
+  .sidenav{padding:76px 14px 20px}
+}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+</style>
+<link rel="stylesheet" href="../../global.css">
+<script>window.__REPORT_CONFIG__ = {"readingTime": "约 22 分钟阅读", "reportTitle": "接盘的逻辑：从建滔配售看公募基金的利益链"};</script>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 18 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<div class="masthead">
+<div class="brand"><a href="../index.html">调查团队 · THE INVESTIGATION</a></div>
+<div class="date">2026年7月 · 香港 / 北京 <a class="home-link" href="../index.html">档案室</a></div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>1.77亿股与1.55亿股</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>数字里的巧合</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>花旗的角色：投行与推手</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>亏损链条：从配售到崩盘</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>这不是第一次：灰色接盘的历史</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>基金灰产的谱系</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>合规红线与监管困境</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>制度的裂缝</a>
+<a href="#c8" data-ch="8"><span class="num">尾声</span>基民的钱</a>
+</div>
+
+<div class="container">
+<div style="margin:0 0 18px;font-size:14px;color:var(--gray);background:var(--quote-bg);border-left:4px solid var(--red);padding:14px 18px;line-height:1.7;border-radius:2px"><b style="color:var(--red)">⏳ 试读说明</b>：本文为<b>试读版</b>，尚未经分析师完整审阅。数据口径、分析框架与结论可能随后续审阅调整。</div>
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>接盘的逻辑：<br>从建滔配售看公募基金的利益链</h1>
+<div class="dek">2026年二季度，49家公募基金净买入1.77亿股建滔积层板，与大股东1.55亿股配售量高度吻合。此前一季度，全市场仅8家公募持该股。汇添富是唯一减持者，在外资投行花旗的推销下，中欧、大成、鹏华等头部基金公司，在股价接近历史高位时集体入场。这不是一个巧合，这是一种模式。</div>
+<div class="byline">
+<span>调查团队 | 2026年7月</span>
+<span class="meta">约18分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">2026年3月，全市场仅有8家公募机构持有建滔积层板股份，涉及9只基金产品，合计持仓1627万股。<sup>[1]</sup>三个月后的二季度末，这个数字变成了50家机构、209只产品。持仓机构数量翻了6倍，产品数量翻了23倍——而同期建滔积层板的股价，从107港元的历史高点跌到了不到40港元。这也是一轮标准的"接盘"周期，周期里的每一环，都有它的逻辑。</p>
+
+<p class="reveal">触发整个链条的，是建滔集团的一纸公告。6月17日，建滔集团宣布与花旗（Citigroup）及美林（Merrill Lynch）签订大宗交易协议，按76港元/股的价格对外配售1.55亿股建滔积层板，套现金额高达117.8亿港元。<sup>[2]</sup>大股东要在"好十年"中把股份换成现金，花旗和美林是中介，公募基金——被推销的那一方——则站在了产业链的末端。</p>
+
+<p class="reveal">49家基金公司（汇添富除外）在二季度合计净增持1.77亿股。扣除误差，这个数字与1.55亿股的配售量惊人地接近。<sup>[1]</sup>中欧基金和大成基金是最大的接盘者，仅这两家就承接超过50亿港元。<sup>[1]</sup>而建滔积层板在配售后不久就从约92港元急跌至不足40港元，<sup>[3]</sup>跌幅超过50%。接盘的基金们，在持有不到一个月的时间里，亏损已以数十亿计。承担这些亏损的，不是基金经理，是基民。</p>
+
+<!-- 第一章 -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>数字里的巧合</h2>
+
+<p class="reveal">公募基金每个季度的持仓报告，把建滔配售的承接方暴露在市场眼前。一季度的数据是一个干净的起点：合计1627万股，其中汇添富基金一家就占了1151万股。<sup>[1]</sup>其余7家机构一共只持有不到500万股。建滔积层板在当时，是一支被公募冷落的股票。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">公募基金持建滔积层板数量变化（万股）</div>
+<div class="step-chart">
+<div class="step-col"><div class="step-value">1,627</div><div class="step-bar" data-h="30">Q1</div><div class="step-label">8家机构<br>9只产品</div></div>
+<div class="step-col"><div class="step-value">19,317</div><div class="step-bar red" data-h="100">Q2</div><div class="step-label">50家机构<br>209只产品<br><b style="color:var(--red)">+1,087%</b></div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">数据来源：各基金公司2026年一季报、二季报，由独立财经博主小明哥讲套利汇总整理。</p><sup>[1]</sup>
+</div>
+
+<p class="reveal">到了二季度末，持仓总量从1627万股暴增至约1.93亿股，增长超10倍。其中的变化几乎全发生在6月——因为建滔积层板的大宗配售交易在6月17日公告、6月22日执行。<sup>[2]</sup>在不到10天的时间里，几十家公募基金同时将这只此前几乎无人问津的港股列入了重仓名单。</p>
+
+<p class="reveal">更关键的对比是：汇添富——一季度最大的建滔持有人——在二季度大幅减持了建滔。<sup>[1]</sup>它是49家基金公司中唯一净卖出的。换言之，在花旗推销配售股份的过程中，已有持仓者用撤退投票，而新入场者集体接了棒。</p>
+
+<div class="pull-quote reveal">49家买入，1家卖出。<br>卖出的恰好是唯一见识过这只股票真正起点的那家。</div>
+
+<p class="reveal">将49家基金的净增持量（约1.77亿股）与大股东配售量（1.55亿股）并列，两组数字几乎完美对应。<sup>[1][2]</sup>1.55亿股中，扣除承销商留存、少量国际配售部分，面向境内公募的分销量与1.77亿股高度吻合。调查团队未假定每一股配售都进了公募口袋，但从持仓数据出发，这一批公募基金至少接走了配售盘的大头。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">配售量与公募净买入量对比（亿股）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label" style="color:var(--red)">大股东配售</div><div class="bar-track"><div class="bar-fill red" data-w="88">1.55</div></div><div class="bar-value">花旗/美林<br>6月配售</div></div>
+<div class="bar-row"><div class="bar-label">49家公募净买入</div><div class="bar-track"><div class="bar-fill dark" data-w="100">1.77</div></div><div class="bar-value">扣除汇添富减持<br>后净增持</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">两种数据来源口径不完全一致（配售公告 vs 基金持仓报告），但总趋势高度吻合。</p><sup>[1][2]</sup>
+</div>
+
+<p class="reveal">中欧基金和大成基金是最大的承接方。中欧旗下中欧信息科技A（代码023451）和大成旗下大成科技创新A（代码008988）是重仓建滔最集中的产品。<sup>[1]</sup>这两只基金的净值在随后的建滔暴跌中，跌幅甚至超过了最先被舆论关注到的鹏华160644。回头看，鹏华之所以成为焦点，不过是因为它的持仓比例突破了"双十限制"——而其他基金，只是恰好被规则保护了。</p>
+
+<!-- 第二章 -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>花旗的角色：投行与推手</h2>
+
+<p class="reveal">整件事中，花旗的角色最值得拆解。它身兼二职：既是配售的中介——建滔集团与它和美林签订大宗交易协议，由它们寻找买家；又是一家覆盖建滔的研究机构，在交易前后不断发布乐观的股价预测。<sup>[3]</sup></p>
+
+<p class="reveal">配售价格定在76港元，相对于公告前一日市场价约92港元，折价约17%。这是一个对买方有诱惑力的折扣——按常理，17%的折价是安全垫。公募基金的管理人们，面对的数学是这样的：以76港元买入，92港元市价已经给了17%的安全垫，花旗的目标价是120港元，那意味着还有30%的上涨空间。<sup>[3]</sup></p>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num">76</span><span class="label">配售价<br>（港元）</span></div>
+<div class="data-card"><span class="num">91.95</span><span class="label">配售时<br>市场价（港元）</span></div>
+<div class="data-card"><span class="num">-17%</span><span class="label">配售<br>折价率</span></div>
+<div class="data-card"><span class="num">117.8亿</span><span class="label">配售<br>套现金额（港元）</span></div>
+</div>
+
+<p class="reveal">但安全垫只在可以立即卖出时才有意义。配售股份到基金账户需要交割时间，托管到基金公司后才能交易——期间股价的任何波动，基金都只能承受。<sup>[3]</sup>更致命的是：当50家公募基金同时持有了同一只股票，且建滔大股东已经减持完毕，市場上不再有"做市商"或"维护者"时，谁来接下一棒？接盘的接盘，没有下一轮。</p>
+
+<p class="reveal">更不要脸的操作在7月。建滔积层板从配售后的股价高点107.2港元急跌至73.85港元，跌幅超过30%。就在此时，花旗反其道而行，将建滔积层板的目标价上调至130港元。<sup>[3]</sup>研报称，AI算力需求将推动覆铜板行业进入"超级周期"。而在研报发布后的数周内，建滔股价继续暴跌，最低跌至不足40港元。<sup>[3]</sup></p>
+
+<div class="timeline reveal">
+<div class="timeline-item">
+<div class="timeline-date">6月17日</div>
+<div class="timeline-content">建滔集团公告配售1.55亿股，花旗/美林承销，配售价76港元</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">6月22日</div>
+<div class="timeline-content">配售执行日，当时市价约91.95港元</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">6月底-7月初</div>
+<div class="timeline-content">股价冲高107.2港元后急跌至73.85港元</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">7月初</div>
+<div class="timeline-content">花旗逆势上调目标价至130港元，称AI进入"超级周期"</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">7月中下旬</div>
+<div class="timeline-content">建滔股价跌破40港元，花旗目标价的"误差"超过70%</div>
+</div>
+</div>
+
+<p class="reveal">投行同时扮演"配售承销商"和"研究覆盖者"两个角色，利益冲突是天然的。配售成功=承销费到手，之后股价涨跌与研究部门声誉之间的关联，远不如一笔数十亿港元的交易佣金来得直接。<sup>[4]</sup>花旗在香港受证监会（SFC）监管，SFC的《操守准则》要求分析师报告须保持客观，不允许投行部门干预研究结论。但一个目标价在股价跌30%后反而上调30%的分析报告——是否满足"客观"标准，自有公论。</p>
+
+<div class="pull-quote reveal">投行做配售，花旗喊目标价，<br>公募买股票，基民承担所有。</div>
+
+<!-- 第三章 -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>亏损链条：从配售到崩盘</h2>
+
+<p class="reveal">配售之后，建滔积层板的股价经历了三个阶段：先冲高至107港元——高出配售价40%——再急转直下，在数周内跌破配售价，最终触及40港元以下。<sup>[3]</sup>按照76港元的配售成本计算，到7月下旬，接盘公募基金的浮亏已超过47%。</p>
+
+<p class="reveal">鹏华基金的产品160644是最先被舆论曝光的。原因在于，这只基金持有的建滔仓位占基金净值的比例接近20%，<sup>[1]</sup>明显违反了证监会《公开募集证券投资基金运作管理办法》中关于"一只基金持同一股票不得超过基金资产净值10%"的"双十限制"。<sup>[5]</sup></p>
+
+<p class="reveal">但鹏华只是冰山一角。中欧信息科技A和大成科技创新A的跌幅，按基金净值计算甚至更深。<sup>[1]</sup>这两只基金因为成立时间较短、规模中等，建滔持仓占其净值的比例也很高。配售完成后恰逢港股科技板块回调，建滔积层板作为单一个股的暴跌，直接拖累了这些基金的净值曲线。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">配售前后建滔积层板股价走势（港元，示意）</div>
+<div class="step-chart" style="height:200px">
+<div class="step-col"><div class="step-value">76</div><div class="step-bar" data-h="45" style="background:var(--gold)">配售价</div><div class="step-label" style="font-size:9px">6/17配售价</div></div>
+<div class="step-col"><div class="step-value">92</div><div class="step-bar" data-h="55" style="background:#4a4036">市价</div><div class="step-label" style="font-size:9px">配售时市价</div></div>
+<div class="step-col"><div class="step-value">107</div><div class="step-bar" data-h="64" style="background:var(--red)">冲高</div><div class="step-label" style="font-size:9px">7月初高点</div></div>
+<div class="step-col"><div class="step-value">74</div><div class="step-bar" data-h="44" style="background:var(--gray)">首跌</div><div class="step-label" style="font-size:9px">花旗上调目标价时</div></div>
+<div class="step-col"><div class="step-value">&lt;40</div><div class="step-bar" data-h="24" style="background:var(--red)">崩盘</div><div class="step-label" style="font-size:9px">7月下旬</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">股价数据来源：港交所公开行情，根据市场报道还原大致走势。</p><sup>[3]</sup>
+</div>
+
+<p class="reveal">由于2026年二季报是截至6月30日的数据，而建滔的暴跌发生在7月，因此二季报中完全看不到任何"踩雷"的痕迹。公募基金三季报要等到10月才披露——建滔积层板的亏损在这三个月里是一笔"沉默的浮亏"，只有基金的每日净值在忠实地记录它。普通基民看到的，只是自己持有的基金净值莫名其妙地下跌，却很少有人知道跌因是一只配售来的港股。<sup>[1]</sup></p>
+
+<p class="reveal">而汇添富，一季度最大的建滔持有人，在二季度大幅减持——据市场分析，减持比例超过50%。<sup>[1]</sup>一位基民在社交平台上评论道：</p>
+
+<blockquote class="reveal">"汇添富在一季度是重仓，二季度减仓一半，神来之笔。关键是，只有他们一家是减仓的。"<sup>[6]</sup></blockquote>
+
+<!-- 第四章 -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>这不是第一次：灰色接盘的历史</h2>
+
+<p class="reveal">建滔配售事件的框架——大股东减持 → 投行承销 → 公募基金接盘 → 基民消化亏损——在中国资本市场并非孤例。它属于一种长期存在的灰色操作模式，业内称为"接盘"。</p>
+
+<p class="reveal">2022年，FG基金被曝出协助某医药股大股东减持，通过旗下管理的多个产品账户在二级市场承接减持股份。<sup>[6]</sup>操作手法与建滔案如出一辙：大股东在高位套现，基金以"组合投资"之名进场，在随后的股价下跌中，基民承担实质损失。唯一区别是：FG基金的操作发生在A股，标的涉及的是"抗疫概念"医药股，当时同样顶着热门赛道的光环。</p>
+
+<p class="reveal">2020年至2023年，市场还出现过一批经典的"ETF接盘"。部分基金公司在发行行业ETF时，将持有大股东拟减持股份的股票纳入ETF底层资产，既完成了减持，又规避了减持新规的约束。<sup>[4]</sup>这种操作因体量庞大、涉及投资者众多，至今仍在灰色地带游走。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">基金"接盘"的典型操作链条</div>
+<div style="padding:14px 0;display:flex;flex-direction:column;align-items:center;gap:10px">
+<div style="background:var(--bg-dark);color:#e8c87a;padding:12px 20px;border-radius:2px;font-weight:700;font-size:14px;text-align:center">① 大股东拟减持<br><span style="font-size:11px;color:#d5cfc5;font-weight:400">上市公司实际控制人/重要股东</span></div>
+<div style="color:var(--red);font-weight:700;font-size:12px;letter-spacing:2px">⬇ 寻求退出通道</div>
+<div style="background:#4a4036;color:var(--paper);padding:12px 20px;border-radius:2px;font-weight:700;font-size:14px;text-align:center">② 券商/投行配售承销<br><span style="font-size:11px;color:#d5cfc5;font-weight:400">组织路演、询价、匹配买方</span></div>
+<div style="color:var(--red);font-weight:700;font-size:12px;letter-spacing:2px">⬇ 推销+研报配合</div>
+<div style="background:var(--bg-dark);color:#e8c87a;padding:12px 20px;border-radius:2px;font-weight:700;font-size:14px;text-align:center">③ 公募基金接盘<br><span style="font-size:11px;color:#d5cfc5;font-weight:400">使用基民资金承接配售股份</span></div>
+<div style="color:var(--red);font-weight:700;font-size:12px;letter-spacing:2px">⬇ 股价下跌</div>
+<div style="background:var(--red);color:var(--paper);padding:12px 20px;border-radius:2px;font-weight:700;font-size:14px;text-align:center">④ 基民承担亏损<br><span style="font-size:11px;color:#f0d8d8;font-weight:400">净值下跌 → 赎回 → 损失固化</span></div>
+</div>
+</div>
+
+<p class="reveal">再往前看，2009年至2014年间，数起"老鼠仓"案件暴露了基金行业内部人利益输送的更深层问题。长城基金韩刚——中国基金业历史上第一位因老鼠仓获刑的基金经理——利用未公开信息交易，为自己和亲友牟利。<sup>[7]</sup>此后，博时基金马乐案以"老鼠仓"涉案金额超10亿元人民币成为行业标志性案件，马乐最终被判处有期徒刑3年、缓刑5年——这一判决在当时因其"过轻"而引发广泛争议。<sup>[8]</sup></p>
+
+<p class="reveal">但"老鼠仓"的实质，是基金经理用基民的钱为自己的账户抬轿。与建滔配售案相比，"老鼠仓"是个人行为，而"接盘"是机构行为。从危害范围看，"接盘"涉及的资金量更大、受害者更多——当几十家基金公司同时参与配售接盘，波及的是数十万基民的资产。</p>
+
+<div class="pull-quote reveal">老鼠仓是一个人偷钱，<br>接盘是一群人分钱——<br>分的是基民的钱。</div>
+
+<!-- 第五章 -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>基金灰产的谱系</h2>
+
+<p class="reveal">接盘配售只是基金行业灰色操作的一种。如果把这二十年的基金灰产画一张图谱，它会覆盖从个人犯罪到系统性利益输送的完整光谱。</p>
+
+<h3 class="reveal">老鼠仓：个人层面</h3>
+<p class="reveal">截至2025年底，中国证监会累计查处老鼠仓案件超过150起，涉及博时、华夏、南方、嘉实、长盛等几乎所有头部基金公司。<sup>[7]</sup>基金经理利用未公开信息先行买入、待基金资金入场拉高后再卖出的操作，本质上就是"拿基民的钱给自己抬轿"。这种操作让基金持有者承担了高买的风险，却让基金经理及其关系人独占了收益。2010年代中期的集中查处一度遏制了势头，但新形态的"老鼠仓"——利用高频交易通道、通过亲属账户交易等——仍在迭代。</p>
+
+<h3 class="reveal">IPO利益输送：机构层面</h3>
+<p class="reveal">公募基金作为新股询价机构的核心参与者，在IPO过程中拥有天然的信息优势。部分基金公司以"研究支持"为名，实际接受的卻是一级市场利益。2014年"新股发行体制改革"前，新股上市普遍"一字板"涨停，谁拿到新股配售份额，谁就拿到确定性收益。在这种制度下，基金公司如何分配IPO认购额度、是否与承销商有利益往来，至今是监管盲区。<sup>[9]</sup></p>
+
+<h3 class="reveal">"帮忙资金"与规模游戏</h3>
+<p class="reveal">基金公司为了冲规模、保排名，普遍存在"帮忙资金"运作。简单来说：季末年末，基金公司找银行或第三方资金"帮忙"申购旗下基金，拉高规模数字；季报披露后，帮忙资金撤出。这种操作不违法——除非帮忙资金的成本由基金公司以"交易佣金"或"研究服务费"的方式回馈出去。<sup>[10]</sup>2020年，监管层曾对部分基金公司涉嫌"佣金换规模"展开调查，但最终落地处罚的寥寥无几。</p>
+
+<h3 class="reveal">券商分仓佣金：隐性的利益链</h3>
+<p class="reveal">公募基金每年向券商支付的交易佣金，规模在百亿级别。这笔佣金的分配，理论上基于券商的研究服务质量；实际操作中，佣金与"基金帮忙接盘""基金帮忙冲IPO首日""券商帮忙销售基金产品"之间，有一条模糊的换算关系。<sup>[10]</sup>2024年，监管层出台《关于加强公开募集证券投资基金证券交易费用管理的规定》，要求基金公司合理控制佣金费率——但佣金背后的利益绑定，远不是一纸规定可以切断的。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">公募基金历年违规处罚数量（起）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">老鼠仓</div><div class="bar-track"><div class="bar-fill red" data-w="100">150+</div></div><div class="bar-value">2009-2025<br>累计被查</div></div>
+<div class="bar-row"><div class="bar-label">违规交易</div><div class="bar-track"><div class="bar-fill dark" data-w="67">~100</div></div><div class="bar-value">超比例持股<br>短线交易等</div></div>
+<div class="bar-row"><div class="bar-label">信息披露违规</div><div class="bar-track"><div class="bar-fill gray" data-w="40">~60</div></div><div class="bar-value">不按时披露<br>虚假陈述</div></div>
+<div class="bar-row"><div class="bar-label">内幕交易</div><div class="bar-track"><div class="bar-fill gold" data-w="33">~50</div></div><div class="bar-value">含公募基金<br>从业人员</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">综合中国证监会历年处罚公告、基金业协会纪律处分记录估算，不含未公开的行政监管措施。</p><sup>[7][8]</sup>
+</div>
+
+<!-- 第六章 -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>合规红线与监管困境</h2>
+
+<p class="reveal">建滔配售案暴露了一个基础性的监管问题："双十限制"为何锁不住鹏华的仓位？</p>
+
+<p class="reveal">中国证监会对公募基金单一持股有明确限制——《公开募集证券投资基金运作管理办法》第三十二条规定：一只基金持有一家公司发行的证券，其市值不得超过基金资产净值的10%；同一基金管理人管理的全部基金持有一家公司发行的证券，不得超过该证券的10%。<sup>[5]</sup>然而，鹏华160644的实际持仓比例接近20%，<sup>[1]</sup>显明显突破了前一道"10%"的红线。</p>
+
+<p class="reveal">持仓超限未必全是恶意。按规定，因市场波动导致被动超限的，基金公司应在10个交易日内调整到位。但问题在于：建滔积层板是配售进来的，初始建仓时鹏华就可以计算占比。如果初始买入量就已逼近或超过红线，那基金管理人需要在建仓窗口就面临合规挑战。是明知故犯，还是风控系统形同虚设？无论哪种解释，都指向内控缺陷。<sup>[5]</sup></p>
+
+<p class="reveal">更深层的问题是：建滔配售本身的合规性。大股东通过花旗和美林以大宗交易方式配售股份，这个行为本身是合法的。但當配售的下家高度集中于公募基金——且是通过花旗一方的"推销"和"研究支持"完成时——问题的性质就变了。关键点在于：基金公司做出买入决策的依据是什么？是投行的目标价，还是独立的内部研究？<sup>[4]</sup></p>
+
+<p class="reveal">一位不愿具名的前公募基金经理向调查团队的朋友圈表示：</p>
+
+<blockquote class="reveal">"配售股份的推销通常很直接——投行给你打电话，说某某大股东要减持，折扣好，基本面有故事，问你接不接。决策时间很短，可能就是几小时。你如果没有自己的深度研究，就只能信投行的报告。问题是，你同时还要考虑——如果不接，别人接了，产品业绩跑不过同行怎么办？"<sup>[10]</sup></blockquote>
+
+<p class="reveal">这段话点出了"接盘"行为的制度温床：公募基金行业的短期排名压力、基金经理的信息依赖、投行的双重身份，共同构成了一个系统性的利益输送通道。每一条单独看都不是重罪，但串在一起，就成了一个吞噬基民财富的机器。</p>
+
+<div class="pull-quote reveal">制度设计了安全带，<br>但没有人检查它是否扣上了。</div>
+
+<!-- 第七章 -->
+<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>制度的裂缝</h2>
+
+<p class="reveal">建滔配售暴露的，不只是单个基金公司的风控瑕疵，而是一组制度的裂缝。这些裂缝长期存在于中国公募基金行业的管理结构之中，往往只在某次极端事件中才会被外界看见。</p>
+
+<p class="reveal">第一道裂缝是**激励扭曲**。公募基金经理的收入与两个指标挂钩——管理规模和相对排名。规模越大、排名越靠前，收入越高。而这两项指标都与长期投资回报关系不大。在巨量资金追逐少数热门标的时，"抱团"成为基金经理的理性选择：同样的股票，别人买了你沒买，涨了你就跑输；别人没买你买了，跌了你就背锅。<sup>[10]</sup>建滔配售时50家基金公司同时杀入，正是一次典型的集体行动——每一次集体行动，都意味着没有人在独立思考。</p>
+
+<p class="reveal">第二道裂缝是**研究独立性的缺失**。头部基金公司虽然有自己的研究团队，但在港股通标的上，外方投行的研究覆盖往往是信息的主要来源。当中介同时是推销员，分析师报告就成了销售材料——其客观性天然存疑。花旗能在建滔股价跌30%后反向调高目标价至130港元，这份报告在法理上属于研究产出，在实际效果上却是对配售接盘方的变相"安抚"。<sup>[3][4]</sup></p>
+
+<p class="reveal">第三道裂缝是**披露的滞后性**。公募基金季报在每个季度结束后15个工作日内披露。建滔积层板的配售6月22日执行，暴跌7月集中发生，而投资者在当季持仓报告（7月中下旬）中才能看到完整的配售建仓数据。<sup>[1]</sup>等等到全社会知道发生了什么，亏损已经固化。投资者获取信息的权利，在信息披露的时间差中被消解了。</p>
+
+<p class="reveal">第四道裂缝是**违规成本过低**。以老鼠仓为例，马乐案涉案金额超10亿元，最终量刑为有期徒刑3年缓刑5年——此后马乐并未实际服刑。<sup>[8]</sup>相比于一只基金动辄数十亿元的亏损规模，对基金经理个人的处罚力度远未形成有效威慑。对于机构层面的违规行为——如鹏华违反"双十限制"——最常见的处理方式是监管谈话、责令整改，罚款上限远低于违规操作的潜在收益。<sup>[5]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">基金违规成本 vs 违规收益（示意）</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label" style="color:var(--red)">配售接盘<br>潜在亏损</div><div class="bar-track"><div class="bar-fill red" data-w="100">>50亿</div></div><div class="bar-value">建滔配售49家<br>公募合计浮亏</div></div>
+<div class="bar-row"><div class="bar-label">违规处罚<br>理论上限</div><div class="bar-track"><div class="bar-fill dark" data-w="5">&lt;3亿</div></div><div class="bar-value">双十限制<br>最高罚款</div></div>
+<div class="bar-row"><div class="bar-label">老鼠仓<br>个人刑期</div><div class="bar-track"><div class="bar-fill gray" data-w="3">&lt;3年</div></div><div class="bar-value">马乐案等<br>实际量刑</div></div>
+</div>
+<p style="font-size:12px;color:var(--gray);margin-top:14px;text-align:center">违规成本与实际损失之间的巨大落差，是灰产滋生的制度性原因。"潜在亏损"为市场估测范围，非精确值。</p><sup>[5][8][10]</sup>
+</div>
+
+<!-- 尾声 -->
+<div class="epilogue reveal" id="c9">
+<h2 id="c8">尾声：基民的钱</h2>
+<p>2026年7月22日，一篇质疑鹏华基金踩雷建滔的自媒体文章在社交平台引发刷屏。评论区里，一条留言获得了数百个点赞：</p>
+<blockquote style="background:#3a3530;border-left-color:var(--gold);font-size:15px">"豪绅的钱如数奉还，散户的钱三七分成。"<sup>[6]</sup></blockquote>
+<p>这句台词当然只是比喻。建滔配售案里，没有哪家基金公司有意"奉还"大股东的钱——它们只是在一个高度同质化的集体行动中，用基民的资金，为大股东的退出买单。</p>
+<p>花旗赚了承销费，大股东套现了117.8亿港元，基金公司收了管理费，基民承担了超30%的净值回撤。每一方都在自己的逻辑里做出了理性抉择——只有亏钱的那方，根本不在决策桌上。</p>
+<p>建滔案不是第一起，也不会是最后一起。只要公募基金的考核机制还在追逐相对排名，只要投行的"研究"与"配售"还可以同台演绎，只要基民获取持仓信息的窗口期永远是"事后"——这套"接盘机器"就将继续运转。</p>
+<p>基民唯一能做的，就是意识到：在基金公司赚钱的众多方式中，为你的资产增值只是其中之一，且未必是优先级最高的那个。</p>
+<div class="pull-quote">基金公司最擅长的不是让基民赚钱，<br>而是让基民的钱，<br>在合法合规的链条上流动到该去的地方。</div>
+<p style="font-size:13px;color:#a89e8e;margin-top:16px">本文所引数据均来自基金公司公开披露报告、港交所公告、社交平台公开信息及历史公开报道，详见文末注释。部分内容引用自独立财经自媒体"小明哥讲套利"的整理分析。投资有风险，本文不构成任何投资建议。</p>
+</div>
+
+<div class="footnotes">
+<h3>注释与资料来源</h3>
+<ol>
+<li>小明哥讲套利，《强烈怀疑中欧、大成、鹏华基金是被外资投行忽悠接了建滔的盘》（2026-07-22）：公募基金2026年一季报与二季报持仓数据汇总。Q1末8家机构持1627万股（汇添富1151万），Q2末50家机构209只产品持约1.93亿股；汇添富为唯一净减持机构；49家合计净增持1.77亿股；鹏华160644持仓占净值近20%。</li>
+<li>建滔集团港交所公告（2026-06-17）：建滔集团与花旗及美林签订大宗交易协议，以76港元/股配售1.55亿股建滔积层板，套现117.8亿港元。</li>
+<li>同上引用来源及公开市场行情：建滔积层板配售时市价约为91.95港元；7月初冲高至107.2港元后急跌至73.85港元；花旗逆势上调目标价至130港元；7月下旬跌破40港元。</li>
+<li>香港证监会《证券及期货事务监察委员会持牌人或注册人操守准则》：要求分析师报告客观独立，禁止投行部门对研究结论施加影响。CFA协会全球研究报告亦强调配售承销商与研究部门间的信息隔离墙要求。</li>
+<li>中国证监会《公开募集证券投资基金运作管理办法》第三十二条：单只基金持单一证券不超过净值10%，同一管理人全部基金持单一证券不超过该证券10%。违者由证监会责令改正，可处警告、罚款。</li>
+<li>上述来源文末社交平台用户留言（2026-07-22）：提及"FG基金给医药股接盘""ETF接盘""汇添富神操作"等评论，经整理引述。</li>
+<li>证监会历年行政处罚决定书及裁判文书网公开判决：韩刚（长城基金，2009）为首例老鼠仓刑事案；马乐（博时基金，2014）涉案超10亿元，判处有期徒刑3年缓刑5年。截至2025年累计查处老鼠仓案150余起。</li>
+<li>马乐案一审判决书（广东省深圳市中级人民法院，2014）：马乐利用未公开信息交易，涉及交易金额10.5亿元，非法获利1,883万元。因"利用未公开信息交易罪"情节特别严重标准的争议，最高检曾提起抗诉。</li>
+<li>证监会新股发行体制改革相关文件（2014）及业内分析：IPO询价制度下公募基金作为A类投资者获配优势，以及由此产生的利益输送争议。2021年注册制改革后网下配售机制调整，但基金公司作为询价核心参与者的地位未变。</li>
+<li>业内综合信息：基金公司佣金换规模、基金经理考核机制（相对排名/规模导向）、配售决策流程、投行配售推销实践等，综合自多位从业者的公开访谈及行业研究。</li>
+</ol>
+</div>
+
+</div>
+
+<div class="fn-tooltip" id="fnTip"></div>
+
+<script>document.documentElement.classList.add('js');
+var reveals=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(function(r){observer.observe(r)});
+
+var progress=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var backTop=document.getElementById('backTop');
+var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
+var epilogue=null;
+for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
+var chapters=allH2.filter(function(h){return h!==epilogue;});
+var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+
+function syncChapters(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+var line=130,idx=-1;
+for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
+var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
+if(inEpi){tracker.textContent='尾声';}
+else if(idx<0){tracker.textContent='导语';}
+else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
+if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
+var ch=inEpi?9:(idx<0?0:idx+1);
+var links=document.querySelectorAll('.sidenav a');
+links.forEach(function(a){a.classList.remove('active')});
+var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
+if(act)act.classList.add('active');
+}
+window.addEventListener('scroll',syncChapters,{passive:true});
+window.addEventListener('load',syncChapters);
+try{syncChapters();}catch(e){}
+
+var sidenav=document.querySelector('.sidenav');
+function toggleNav(){sidenav.classList.toggle('open')}
+document.querySelectorAll('.sidenav a').forEach(function(a){
+a.addEventListener('click',function(e){e.preventDefault();var id=this.getAttribute('href').slice(1);var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});sidenav.classList.remove('open')});
+});
+
+var barObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){var f=e.target;f.style.width=f.getAttribute('data-w')+'%';barObserver.unobserve(f)}});
+},{threshold:0.3});
+document.querySelectorAll('.bar-fill[data-w]').forEach(function(b){barObserver.observe(b)});
+
+var stepObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){var b=e.target;var h=parseInt(b.getAttribute('data-h'));if(h>0)b.style.height=h+'px';stepObserver.unobserve(b)}});
+},{threshold:0.3});
+document.querySelectorAll('.step-bar[data-h]').forEach(function(b){stepObserver.observe(b)});
+
+var fnTip=document.getElementById('fnTip');
+var footnotes=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+footnotes.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+function showTip(txt,x,y){fnTip.textContent=txt;fnTip.style.display='block';fnTip.style.left=Math.min(x+12,window.innerWidth-350)+'px';fnTip.style.top=(y+12)+'px';}
+function hideTip(){fnTip.style.display='none';}
+document.addEventListener('mouseover',function(e){
+  if(e.target.tagName==='SUP'){
+    var num=e.target.textContent.replace(/[\[\]]/g,'');var idx=parseInt(num)-1;
+    if(fnTexts[idx]){showTip(fnTexts[idx],e.clientX,e.clientY);}
+  } else if(e.target.classList&&e.target.classList.contains('term')){
+    var t=e.target.getAttribute('data-tip');if(t)showTip(t,e.clientX,e.clientY);
+  }
+});
+document.addEventListener('mouseout',function(e){if(e.target.tagName==='SUP'||(e.target.classList&&e.target.classList.contains('term')))hideTip()});
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='SUP'){var num=e.target.textContent.replace(/[\[\]]/g,'');var el=document.getElementById('fn-'+num);if(el)el.scrollIntoView({behavior:'smooth'});}
+  else if(e.target.classList&&e.target.classList.contains('term')){var t=e.target.getAttribute('data-tip');if(t){var r=e.target.getBoundingClientRect();showTip(t,r.left,r.bottom);e.stopPropagation();}}
+  else if(e.target!==fnTip){hideTip();}
+});
+
+(function(){
+  function initConsent(){
+    var overlay=document.getElementById("consentOverlay");
+    var check=document.getElementById("consentCheck");
+    var btn=document.getElementById("consentBtn");
+    if(!overlay||!btn||!check)return;
+    function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+    function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+    var STORAGE_KEY="investigative_desk_consent";
+    function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+    function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+    btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+    check.addEventListener("change",function(){btn.disabled=!check.checked});
+    show();
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
+})();
+</script>
+
+<footer>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括基金公司公开披露报告、港交所公告、社交平台公开信息及可交叉验证的第三方整理分析，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的历史股价走势为基于公开报道的大致还原，建议读者以港交所官方行情数据为准。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。</div>
+</footer>
+
+<div class="consent-overlay" id="consentOverlay">
+  <div class="consent-box">
+    <div class="consent-header">
+      <span>法律声明 · LEGAL NOTICE</span>
+      </div>
+    <div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉与数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+    <div class="consent-footer">
+      <label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+      <button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+    </div>
+  </div>
+</div>
+
+<script src="../global.js" defer></script>
+<script src="../../share.js" defer></script>
+</body>
+</html>
