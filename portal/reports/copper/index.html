@@ -5,24 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>铜价冲天，加工费归零：谁在"红色石油"的繁荣中赚钱？ | 调查团队</title>
 <style>
-/* —— 铜报告专属样式 —— */
+/* —— 铜专属图表样式 —— */
 .data-grid{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
 .data-grid .dg-item{flex:1;min-width:130px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
 .data-grid .dg-item .num{font-size:26px;font-weight:700;color:#e8c87a;display:block;line-height:1.2}
 .data-grid .dg-item .num .sub{font-size:14px;color:rgba(232,200,122,.7)}
 .data-grid .dg-item .label{font-size:12px;letter-spacing:.5px;margin-top:6px;opacity:.8;line-height:1.4}
-.bar-chart{margin:24px 0}
-.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.bar-label{width:120px;font-size:13px;font-weight:700;text-align:right;flex-shrink:0}
-.bar-track{flex:1;height:26px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden}
-.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:6px;color:#fff;font-size:11px;font-weight:700}
-.bar-fill.red{background:var(--red)}
-.bar-fill.dark{background:var(--bg-dark)}
-.bar-fill.gold{background:var(--gold)}
-.bar-fill.gray{background:var(--gray)}
-.bar-fill.green{background:#5a9e6f}
-.bar-value{font-size:13px;font-weight:700;min-width:70px;flex-shrink:0}
-.bar-value .note{font-weight:400;color:var(--gray);font-size:12px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:28px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
 .vert-bars{display:flex;align-items:flex-end;gap:6px;height:180px;padding-top:10px;margin:20px 0}
 .vert-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center}
 .vert-bar-wrap .val{font-size:11px;color:#555;margin-bottom:2px;font-weight:700}
@@ -33,36 +25,52 @@
 .source-line{font-size:12px;color:#888;margin-top:6px;font-style:italic}
 .chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:4px;text-align:center}
 .chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:14px}
-.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:12px}
+.bar-label{width:110px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:var(--bg-dark)}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.gray{background:var(--gray)}
+.bar-fill.green{background:#5a9e6f}
+.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:96px}
+.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.4}
 @media(max-width:600px){
   .vert-bars{height:130px;gap:4px}
   .bar-label{width:80px;font-size:12px}
-  .bar-value{min-width:50px;font-size:12px}
+  .bar-value{width:auto;font-size:12px}
   .data-grid .dg-item{flex:1 1 100%}
   .data-grid .dg-item .num{font-size:22px}
+  .data-card{flex:1 1 100%}
+  .bar-row{flex-wrap:wrap;gap:6px 8px}
+  .bar-track{flex:1 1 100%;order:3}
 }
 
-/* —— 文章级共享样式（各报道页内联，global.css 不涵盖） —— */
-.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
-.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+/* —— 文章布局（小红书框架） —— */
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
 .masthead .brand a{color:inherit;text-decoration:none}
 .masthead .brand a:hover{color:var(--red)}
-.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
-.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
-.hero{margin-bottom:46px}
-.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
-.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
-.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
-.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
-.hero .byline .meta{font-style:italic}
-.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
-h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px;scroll-margin-top:80px}
-h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
 h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
-h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
 p{margin-bottom:18px;text-align:justify}
 blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
-.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
 th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
 td{padding:9px 12px;border-bottom:1px solid var(--line)}
@@ -71,29 +79,135 @@ td strong{color:var(--red)}
 ul,ol{margin:18px 0 18px 24px}
 li{margin-bottom:10px}
 .footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
-.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase;margin:0 0 14px}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
 .footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
-.footnotes li{margin-bottom:7px}
+.footnotes li{margin-bottom:6px}
 sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
 .epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
-.epilogue h2{border-top:none;color:#e8c87a;padding-top:0;scroll-margin-top:80px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
 .epilogue p{color:#d5cfc5}
 .epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
-.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
-.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
 .js .reveal.visible{opacity:1;transform:translateY(0)}
-.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
-.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
-.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
-.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
-.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:13px;line-height:1.55;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.25);font-style:normal}
+.fn-tooltip.visible{opacity:1}
+.focus-box{background:var(--quote-bg);border-left:4px solid var(--red);padding:16px 20px;margin:26px 0;font-size:16px;line-height:1.7}
+.focus-box .tag{display:inline-block;background:var(--red);color:#fff;font-size:11px;letter-spacing:1px;padding:2px 8px;border-radius:2px;margin-bottom:8px;font-style:normal}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
+.home-link::before{content:"←";margin-right:5px}
+.home-link:hover{background:var(--red);color:var(--paper)}
+.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 14px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:10000;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.tracker.visible{opacity:.85}
 @media(max-width:600px){
-  .hero h1{font-size:28px}.hero .dek{font-size:15px}body{font-size:16px}.container{padding:24px 16px 60px}
-  .pull-quote{font-size:19px}.epilogue{margin:30px -16px 0}.masthead{padding:10px 16px}
-  .masthead .brand{font-size:10px;letter-spacing:2px}.masthead .date{font-size:10px}
+.hero h1{font-size:30px}.hero .dek{font-size:16px}h2{font-size:22px}.pull-quote{font-size:20px;margin:28px 6px}.container{padding:40px 18px 70px}
+.masthead{padding:10px 16px}.masthead .date{font-size:10px}.back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
 }
+
+/* =========================================================
+   调查团队档案室 · 全局 UI 样式
+   ========================================================= */
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .top-bar .toc:hover{background:rgba(255,255,255,.4)}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){footer{font-size:11px;padding:20px 0 40px}}
 </style>
-<link rel="stylesheet" href="../global.css">
 <script>window.__REPORT_CONFIG__ = {"readingTime": "约 16 分钟阅读", "reportTitle": "铜价冲天，加工费归零"};</script>
 </head>
 <body>
@@ -113,12 +227,14 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
   </div>
 </div>
 <div class="progress-bar" id="progress"></div>
-<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
 
 <div class="masthead">
-<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
-<div class="date">2026年7月 · 大宗商品</div>
+<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="date">2026年7月 · 大宗商品 <a class="home-link" href="../../index.html">档案室</a></div>
 </div>
+
+<div class="tracker" id="tracker">导语</div>
+<button class="back-top" id="backTop" onclick="scrollTop()" title="回到顶部">↑</button>
 
 <div class="sidenav" id="sidenav">
 <button class="close" onclick="toggleNav()">×</button>
@@ -136,16 +252,10 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 </div>
 
 <div class="container">
-
-<div class="hero reveal" id="c0">
-<div class="kicker">大宗商品 · 铜</div>
+<div class="hero reveal"><div class="kicker">大宗商品 · 铜</div>
 <h1>铜价冲天，加工费归零</h1>
 <p class="dek">2026 年初，LME 铜价冲破每吨 14,500 美元刷新纪录，冶炼厂的铜精矿加工费却跌到了零。冲天铜价与归零加工费的悖论背后，是全球铜产业链一场无声的利润大迁移——钱去了哪里，谁在赚，谁在扛，谁在赌一个即将到来的巨大缺口。</p>
-<div class="byline">
-<span class="author">调查团队</span>
-<span class="meta">2026年7月 &nbsp;·&nbsp; 约 16 分钟阅读</span>
-</div>
-</div>
+<div class="byline"><span class="author">调查团队</span><span class="meta">2026年7月 · 约 16 分钟阅读</span></div></div>
 
 <p class="drop-cap reveal">2026 年 1 月，伦敦金属交易所（LME）铜价冲破每吨 14,500 美元，创下历史峰值。<sup>[1]</sup>新能源汽车产线昼夜不停，AI 数据中心在四大洲同时开建，全球电网升级吞噬着创纪录的铜材——一切信号都指向同一个结论：铜，这个人类使用了一万年的红色金属，正在经历一场由电气化革命引爆的需求核爆。</p>
 
@@ -160,9 +270,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 </div>
 <div class="source-line" style="margin:-20px 0 24px;">数据来源：LME、SMM、Antofagasta 长协公告</div>
 
-<!-- ===== 第一章 ===== -->
-<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>铜价冲破一万三：需求和叙事谁更真实？</h2>
-
+<h2 class="reveal"><span class="chap-num">第一章</span>铜价冲破一万三：需求和叙事谁更真实？</h2>
 <p class="reveal">2025 年，LME 铜价全年涨幅超过 40%，从年初的 9,000 美元/吨附近一路攀升至 12 月的 11,952 美元，并在 2026 年 1 月一举突破 14,500 美元。<sup>[1]</sup>这个涨幅放在任何大宗商品上都算得上剧烈，但真正引人深思的是——推动铜价上涨的力量，到底有多少来自真实需求，多少来自资本市场的叙事想象？</p>
 
 <p class="reveal">从需求侧看，基本面确实强劲。ICSG 数据显示，2025 年全球精炼铜消费增速约为 3%，中国消费增速约 3.3%。<sup>[4]</sup>但 3% 的消费增速显然不足以解释 40% 的价格涨幅——真正的驱动力来自供给侧的结构性收紧和资本市场的预期押注。</p>
@@ -190,9 +298,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">铜价的冲天而起，是一个关于"供给焦虑"的资本市场叙事——当每一次矿山停产都被解读为结构性短缺的证据，当每一份报告都在强调"未来十年铜缺口将达 1,000 万吨"，价格早已不只是现在的价格，而是对未来的全部恐惧和贪婪的贴现。</p>
 
-<!-- ===== 第二章 ===== -->
-<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>加工费归零：一场"冰火两重天"的利润大挪移</h2>
-
+<h2 class="reveal"><span class="chap-num">第二章</span>加工费归零：一场"冰火两重天"的利润大挪移</h2>
 <p class="reveal">如果说铜价创新高的故事属于矿山，那么它的反面——加工费归零的故事，则属于冶炼厂。而这两者，其实是同一枚硬币的两面。</p>
 
 <p class="reveal">铜精矿加工费（TC/RC，Treatment Charge / Refining Charge）是理解铜产业链利润分配的核心密码。矿山把铜精矿交给冶炼厂加工成阴极铜，冶炼厂收取"加工费"作为报酬。这个费用的高低，直接反映了铜精矿的供需关系——矿多炼少，加工费涨；矿少炼多，加工费跌。<sup>[10]</sup></p>
@@ -218,9 +324,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">这不是周期性的低谷——它反映的是一个结构性的错配：<strong>冶炼能力严重过剩，而矿产供给刚性不足。</strong></p>
 
-<!-- ===== 第三章 ===== -->
-<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>靠硫酸续命的生意：冶炼厂的真实账本</h2>
-
+<h2 class="reveal"><span class="chap-num">第三章</span>靠硫酸续命的生意：冶炼厂的真实账本</h2>
 <p class="reveal">既然加工费已经归零甚至为负，中国冶炼厂为什么还在开足马力生产？最简单的答案是：停不起。但更准确的答案是——它们找到了续命的"偏方"。</p>
 
 <p class="reveal">大型铜冶炼炉（闪速炉、奥炉）一旦点火投产，需要连续运转数年。中途停产一次再重启，光烘炉成本就达数百万元，炉衬热胀冷缩导致的设备损伤成本比倒贴加工费更高。<sup>[12]</sup>但这只是"为什么不关"的理由，却不是"为什么还能赚"的答案。</p>
@@ -242,9 +346,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">更关键的是，中国人的"囚徒困境"远未结束。尽管 CSPT（中国铜原料联合谈判小组）16 家核心企业在 2025 年 11 月底达成共识，2026 年主动降低矿铜冶炼产能负荷 10% 以上，涉及产能超过 1,000 万吨/年。<sup>[15]</sup>但实际情况是，2026 年 19 家主要冶炼厂的合计计划产量为 1,230 万吨，同比增长 5.2%。<sup>[13]</sup>云南铜业因搬迁后全面复产，增量达 43 万吨；铜陵有色同样因新厂投产，增量 15 万吨。<sup>[13]</sup>喊着减产，产量却还在涨——这个行业的集体行动逻辑，远比表面复杂。</p>
 
-<!-- ===== 第四章 ===== -->
-<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>AI 的"铜胃口"：故事还是现实？</h2>
-
+<h2 class="reveal"><span class="chap-num">第四章</span>AI 的"铜胃口"：故事还是现实？</h2>
 <p class="reveal">在铜需求结构中，出现了一个几年前没人预料到的变量：AI 数据中心。</p>
 
 <p class="reveal">一台 NVIDIA GB200 服务器配置了 72 个 GPU，使用 5,000 根 NVLink 铜缆连接，单台铜缆总长度接近 2 英里。一台 GB200 的铜用量达 15 至 20 公斤，而传统服务器仅 5 至 8 公斤。<sup>[16]</sup>摩根大通估计，2026 年全球 AI 数据中心将贡献约 47.5 万吨铜需求，且未来三年保持 30% 以上增速。<sup>[17]</sup>华创证券的预测更为激进：2025 至 2040 年，AI 及数据中心的铜需求将从 110 万吨增长至 250 万吨。<sup>[18]</sup></p>
@@ -254,15 +356,12 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 <div class="dg-item"><span class="num">~2%</span><span class="label">AI 用铜占全球精炼铜消费比重</span></div>
 <div class="dg-item"><span class="num">250 <span class="sub">万吨</span></span><span class="label">华创预测 2040 年 AI 用铜需求</span></div>
 </div>
-<div class="source-line" style="margin:-20px 0 24px;">数据来源：摩根大通、华创证券、ICSG</div>
 
 <p class="reveal">但 47.5 万吨是什么概念？2025 年全球精炼铜消费量约 2,700 万吨。<sup>[4]</sup>AI 数据中心的铜需求占比不到 2%。它确实是一个快速增长的结构性增量，但远未到"需求革命"的程度。</p>
 
 <p class="reveal">真正值得关注的是 AI 带来的"间接铜需求"——数据中心电力需求激增引发的电网改造。IEA 数据显示，2024 年数据中心约占全球电力消耗的 1.5%，到 2030 年将翻倍至约 945 太瓦时。<sup>[19]</sup>电力增量的背后，是特高压输电线路、配电网智能化升级等大规模铜消耗。国家电网"十五五"期间 4 万亿元投资计划中，特高压和智能配电网是两个核心方向。<sup>[20]</sup>从这个角度看，AI 不仅仅是"吃铜的机器"，更是电网升级的"催化剂"——直接铜需求有限，但引发的系统性能源基础设施投资才是铜价的真正助推器。</p>
 
-<!-- ===== 第五章 ===== -->
-<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>供给的"死局"：矿山真的增产不了吗？</h2>
-
+<h2 class="reveal"><span class="chap-num">第五章</span>供给的"死局"：矿山真的增产不了吗？</h2>
 <p class="reveal">铜市场的核心叙事是供给不足。但仔细审视数据，这个"死局"比表面看起来复杂得多。</p>
 
 <p class="reveal">2025 年全球铜矿产量约 2,850 万吨，同比增长 3.3%。<sup>[5]</sup>2026 年预计达到 2,920 万吨，同比增长 2.5%。新增产能主要来自三大方向：刚果(金) Kamoa-Kakula 三期（年产能 60 万吨）、中国巨龙铜矿二期（年产铜从 19 万吨提升至 30-35 万吨）、蒙古 Oyu Tolgoi 持续爬坡（增量约 12 万吨）。<sup>[21]</sup></p>
@@ -290,9 +389,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">更关键的是，长期资本开支不足已在前一轮周期埋下"种子"。2014 至 2020 年金属价格低迷期间，全球矿业企业大幅削减勘探和开发支出，直接导致 2026 至 2030 年可投产的新项目极度稀缺。<sup>[11]</sup>高盛指出，即使铜价信号再强烈，一座大型铜矿从勘探到投产平均需要 16.5 年——即便今天开始全力投资，也解决不了未来十年的供给问题。<sup>[23]</sup>从这个意义上说，"供给死局"不是自然的资源枯竭，而是十年前的资本决策对今天的"报复"。</p>
 
-<!-- ===== 第六章 ===== -->
-<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>废铜：被低估的"X 因素"</h2>
-
+<h2 class="reveal"><span class="chap-num">第六章</span>废铜：被低估的"X 因素"</h2>
 <p class="reveal">在所有的供给变量中，废铜是最容易被忽视却又最有弹性的因子。</p>
 
 <p class="reveal">ICSG 数据显示，2026 年全球废铜回收量预计增长 6%，远高于矿铜 2.5% 的增速。2025 年全球二次精炼产量（来自废铜）增长 4.5%，2026 年预计增长 6%。<sup>[4]</sup></p>
@@ -301,9 +398,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">然而，废铜替代矿铜有其物理边界。废铜品质低于原生铜，在高端应用（如超薄铜箔、高纯度电工铜线）中无法完全替代。更重要的是，废铜的供应增长依赖于过去 20 年的铜消费积累——它不是一个可以无限扩大的"水龙头"，而是一个受制于社会铜存量的"水库"。<strong>废铜弥补不了结构性缺口，但它可以在边际上决定市场是"紧平衡"还是"实质性短缺"。</strong></p>
 
-<!-- ===== 第七章 ===== -->
-<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>中国铜供应链的"双重命门"</h2>
-
+<h2 class="reveal"><span class="chap-num">第七章</span>中国铜供应链的"双重命门"</h2>
 <p class="reveal">在审视全球铜产业链时，一个最容易被忽视但最根本的问题浮出水面：中国的铜供应链存在着一种结构性的"双扣"——冶炼环节占全球主导地位，而原料端高度依赖进口。</p>
 
 <p class="reveal">2025 年，中国精炼铜产量达到 1,472 万吨，占全球总产量的 48% 以上。<sup>[13]</sup>全球近一半的铜在中国冶炼。但与此同时，中国铜精矿自给率不足 30%，进口依存度持续高于 70%。2025 年中国进口铜精矿 3,036.5 万实物吨，同比增长 7.8%，来源高度集中于智利和秘鲁，两国合计占比 67%。<sup>[5]</sup></p>
@@ -337,9 +432,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">但自有矿山的扩张速度远远赶不上冶炼产能的增长速度。全球前十大铜矿中，中国资本介入的只有两个（Las Bambas 为中国五矿资源运营，Kamoa-Kakula 为紫金矿业参股）。<sup>[22]</sup>地缘政治博弈、资源国民族主义、ESG 合规成本的上升，都在提高中国企业在海外获取资源的门槛。</p>
 
-<!-- ===== 第八章 ===== -->
-<h2 class="reveal" id="c8"><span class="chap-num">第八章</span>"超级周期"还是"结构性牛市"？</h2>
-
+<h2 class="reveal"><span class="chap-num">第八章</span>"超级周期"还是"结构性牛市"？</h2>
 <p class="reveal">铜价还能涨多少？这是所有关注铜市场的人最关心的问题。</p>
 
 <p class="reveal">看多的理由很坚实：供给硬约束不会在短期内解除——十年资本开支不足的"苦果"正在兑现；新能源和 AI 驱动的需求增长具有长期性和结构性特征，不是周期性波动；美元处于降息周期，弱美元环境有利于大宗商品估值。<sup>[6]</sup></p>
@@ -354,8 +447,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p class="reveal">铜的"超级周期"与 2003-2011 年的那一轮有本质不同。上一轮超级周期由中国的城镇化 + 工业化需求驱动，周期见顶后经历了长达四年的熊市。而本轮周期的驱动力更多元——新能源、AI、电网升级、全球再电气化——它们不会在同一年同时见顶，这意味着铜需求增长的基础更分散、也更持久。但"更持久"不等于"不回撤"。2025-2026 年铜价的急涨中，金融资本的推动作用不可忽视。如果全球经济出现超预期下行，如果 AI 资本开支暂时放缓，如果中国房地产的拖累比预期更深——铜价完全可能经历一次大幅回调。<sup>[9]</sup></p>
 
-<!-- ===== 尾声 ===== -->
-<div class="epilogue reveal" id="c9">
+<div class="epilogue reveal">
 <h2><span class="chap-num" style="color:#e8c87a;">尾声</span>同一个金属，两个世界</h2>
 
 <p>1997 年，必和必拓的工程师在南澳大利亚的奥林匹克坝铜矿深处做过一个测算：这座矿至少还能挖 100 年。那时铜价不到 2,500 美元/吨，没有人觉得铜是什么"战略性资源"——它只是工业生产的普通原料，跟铁矿石、煤炭并列在"大宗商品"的标签下，随经济周期上下起伏。</p>
@@ -368,7 +460,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 
 <p>站在 2026 年的中点回望，铜价从 2020 年的 6,000 美元到 2026 年的 13,000 美元，涨了 1.2 倍。但这轮涨势与过去的每一次都不同：它不再是中国"一家独大"的故事，而是一场横跨电动车、AI、电网、地缘政治的全球性重估。<strong>铜的"超级周期"叙事可能是夸张的，但铜的"结构性牛市"逻辑——供给约束 + 需求升级 + 战略价值重估——经得起推敲。</strong></p>
 
-<div class="pull-quote" style="color:#e8c87a;border-color:#5a5045;">2026 年 1 月铜价冲破 14,500 美元的那个下午，LME 交易员们举杯庆祝。而在江西贵溪，冶炼厂的工人们正在检查炉膛温度，计算着硫酸和金银的利润够不够弥补加工费的亏损。同一种金属，两个世界。这大概就是"大宗新王"时代的真实注脚。</div>
+<div class="pull-quote" style="color:#e8c87a;border-color:#5a5045;">2026 年 1 月铜价冲破 14,500 美元的那个下午，LME 交易员们举杯庆祝。而在江西贵溪，冶炼厂的工人们正在检查炉膛温度，计算着硫酸和金银的利润够不够弥补加工费的亏损。同一种金属，两个世界。这大概就是"大宗新王"时代��真实注脚。</div>
 </div>
 
 <div class="footnotes">
@@ -401,7 +493,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 <li>工信部等 11 部门《铜产业高质量发展实施方案（2025-2027 年）》，2025 年 2 月</li>
 <li>"中色协叫停 200 万吨铜冶炼项目"，中国有色金属工业协会，2026 年</li>
 </ol>
-</div>
+</div></div>
 
 <footer>
 <div class="disc">
@@ -412,9 +504,111 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 署名「调查团队」为统一中性称谓。</div>
 </footer>
 
-</div>
+<script>
+document.documentElement.classList.add('js');
+var progress=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var backTop=document.getElementById('backTop');
+var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
+var epilogue=null;
+for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
+var chapters=allH2.filter(function(h){return h!==epilogue;});
+var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+var sidenav=document.getElementById('sidenav');
+var navLinks=document.querySelectorAll('.sidenav a');
 
-<div class="reading-time-fab" id="readingTimeFab">约 16 分钟阅读</div>
+var tip=document.createElement('div');
+tip.className='fn-tooltip';
+document.body.appendChild(tip);
+function showTip(text,e){tip.textContent=text;tip.classList.add('visible');moveTip(e)}
+function moveTip(e){var x=(e.clientX||0)+14,y=(e.clientY||0)+14;if(x>window.innerWidth-300)x=window.innerWidth-300;tip.style.left=x+'px';tip.style.top=y+'px'}
+function hideTip(){tip.classList.remove('visible')}
+
+var fnItems=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+fnItems.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+document.querySelectorAll('sup').forEach(function(sup){
+sup.addEventListener('mouseenter',function(e){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));if(fnTexts[n-1])showTip(fnTexts[n-1].substring(0,180)+(fnTexts[n-1].length>180?'…':''),e)});
+sup.addEventListener('mousemove',moveTip);
+sup.addEventListener('mouseleave',hideTip);
+sup.addEventListener('click',function(){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));var t=document.getElementById('fn-'+n);if(t)t.scrollIntoView({behavior:'smooth'})});
+});
+
+document.querySelectorAll('.term').forEach(function(t){
+var tipText=t.getAttribute('data-tip');
+t.addEventListener('mouseenter',function(e){showTip(tipText,e)});
+t.addEventListener('mousemove',moveTip);
+t.addEventListener('mouseleave',hideTip);
+t.addEventListener('click',function(e){e.stopPropagation();showTip(tipText,e);setTimeout(hideTip,4000)});
+});
+document.addEventListener('click',function(e){if(!e.target.classList.contains('term'))hideTip()});
+
+function syncChapters(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+var line=130,idx=-1;
+for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
+var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
+if(inEpi){tracker.textContent='尾声';}
+else if(idx<0){tracker.textContent='导语';}
+else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
+if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
+var ch=inEpi?9:(idx<0?0:idx+1);
+var links=document.querySelectorAll('.sidenav a');
+links.forEach(function(a){a.classList.remove('active')});
+var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
+if(act)act.classList.add('active');
+}
+window.addEventListener('scroll',syncChapters,{passive:true});
+window.addEventListener('load',syncChapters);
+syncChapters();
+
+function scrollTop(){window.scrollTo({top:0,behavior:'smooth'})}
+function toggleNav(){sidenav.classList.toggle('open')}
+
+navLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();sidenav.classList.remove('open');
+var ch=parseInt(a.getAttribute('data-ch'));
+if(ch===0){window.scrollTo({top:0,behavior:'smooth'})}
+else if(ch===9){if(epilogue)epilogue.scrollIntoView({behavior:'smooth'})}
+else{if(chapters[ch-1])chapters[ch-1].scrollIntoView({behavior:'smooth'})}
+});
+});
+document.addEventListener('click',function(e){if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle'))sidenav.classList.remove('open')});
+
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+
+var barObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
+x.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){var w=b.getAttribute('data-w');setTimeout(function(){b.style.width=w+'%'},100)});
+barObs.unobserve(x.target)}})},{threshold:0.3});
+document.querySelectorAll('.chart-box').forEach(function(c){barObs.observe(c)});
+
+// 紧凑模式
+window.addEventListener('scroll',function(){
+  if(window.scrollY>100)document.body.classList.add('compact');
+  else document.body.classList.remove('compact');
+},{passive:true});
+
+// 合规弹窗
+(function(){
+  function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+  function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+  function initConsent(){
+    var overlay=document.getElementById("consentOverlay");
+    var check=document.getElementById("consentCheck");
+    var btn=document.getElementById("consentBtn");
+    if(!overlay||!btn||!check)return;
+    function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+    function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+    btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+    check.addEventListener("change",function(){btn.disabled=!check.checked});
+    show();
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
+})();
+</script>
 
 <div class="consent-overlay" id="consentOverlay">
   <div class="consent-box">
@@ -436,105 +630,6 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
   </div>
 </div>
 
-<div class="fn-tooltip" id="fnTip"></div>
-
-<script>document.documentElement.classList.add('js');
-var reveals=document.querySelectorAll('.reveal');
-var observer=new IntersectionObserver(function(entries){
-entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
-},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-reveals.forEach(function(r){observer.observe(r)});
-
-var progress=document.getElementById('progress');
-var tracker=document.getElementById('tracker');
-var backTop=document.getElementById('backTop');
-var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
-var epilogue=null;
-for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
-var chapters=allH2.filter(function(h){return h!==epilogue;});
-var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
-
-function syncChapters(){
-var h=document.documentElement.scrollHeight-window.innerHeight;
-progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
-var line=130,idx=-1;
-for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
-var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
-if(inEpi){tracker.textContent='尾声';}
-else if(idx<0){tracker.textContent='导语';}
-else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
-if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
-var ch=inEpi?9:(idx<0?0:idx+1);
-var links=document.querySelectorAll('.sidenav a');
-links.forEach(function(a){a.classList.remove('active')});
-var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
-if(act)act.classList.add('active');
-}
-window.addEventListener('scroll',syncChapters,{passive:true});
-window.addEventListener('load',syncChapters);
-try{syncChapters();}catch(e){}
-
-var sidenav=document.querySelector('.sidenav');
-function toggleNav(){sidenav.classList.toggle('open')}
-document.querySelectorAll('.sidenav a').forEach(function(a){
-a.addEventListener('click',function(e){e.preventDefault();var id=this.getAttribute('href').slice(1);var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});sidenav.classList.remove('open')});
-});
-
-var barObserver=new IntersectionObserver(function(entries){
-entries.forEach(function(e){if(e.isIntersecting){var f=e.target;f.style.width=f.getAttribute('data-w')+'%';barObserver.unobserve(f)}});
-},{threshold:0.3});
-document.querySelectorAll('.bar-fill[data-w]').forEach(function(b){barObserver.observe(b)});
-
-var vertObserver=new IntersectionObserver(function(entries){
-entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.vert-bar-wrap .bar').forEach(function(b){b.style.transition='height 1.2s'});vertObserver.unobserve(e.target)}});
-},{threshold:0.1});
-document.querySelectorAll('.vert-bars').forEach(function(v){vertObserver.observe(v)});
-
-var fnTip=document.getElementById('fnTip');
-var footnotes=document.querySelectorAll('.footnotes ol li');
-var fnTexts=[];
-footnotes.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
-function showTip(txt,x,y){fnTip.textContent=txt;fnTip.style.display='block';fnTip.style.left=Math.min(x+12,window.innerWidth-350)+'px';fnTip.style.top=(y+12)+'px';}
-function hideTip(){fnTip.style.display='none';}
-document.addEventListener('mouseover',function(e){
-  if(e.target.tagName==='SUP'){
-    var num=e.target.textContent.replace(/[\[\]]/g,'');var idx=parseInt(num)-1;
-    if(fnTexts[idx]){showTip(fnTexts[idx],e.clientX,e.clientY);}
-  } else if(e.target.classList&&e.target.classList.contains('term')){
-    var t=e.target.getAttribute('data-tip');if(t)showTip(t,e.clientX,e.clientY);
-  }
-});
-document.addEventListener('mouseout',function(e){if(e.target.tagName==='SUP'||(e.target.classList&&e.target.classList.contains('term')))hideTip()});
-document.addEventListener('click',function(e){
-  if(e.target.tagName==='SUP'){var num=e.target.textContent.replace(/[\[\]]/g,'');var el=document.getElementById('fn-'+num);if(el)el.scrollIntoView({behavior:'smooth'});}
-  else if(e.target.classList&&e.target.classList.contains('term')){var t=e.target.getAttribute('data-tip');if(t){var r=e.target.getBoundingClientRect();showTip(t,r.left,r.bottom);e.stopPropagation();}}
-  else if(e.target!==fnTip){hideTip();}
-});
-
-// 紧凑模式
-window.addEventListener('scroll',function(){
-  if(window.scrollY>100)document.body.classList.add('compact');
-  else document.body.classList.remove('compact');
-},{passive:true});
-
-// 合规弹窗
-(function(){
-  var overlay=document.getElementById("consentOverlay");
-  var check=document.getElementById("consentCheck");
-  var btn=document.getElementById("consentBtn");
-  if(!overlay||!btn||!check)return;
-  function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
-  function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
-  function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
-  function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
-  btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
-  check.addEventListener("change",function(){btn.disabled=!check.checked});
-  show();
-})();
-</script>
-
-<script src="../global.js" defer></script>
 <script src="../../share.js" defer></script>
-
 </body>
 </html>
