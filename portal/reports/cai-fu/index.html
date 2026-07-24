@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国福彩：年卖两千亿的公益机器，与它的透明之困 | 调查团队</title>
+<script>
+window.__REPORT_CONFIG__ = {
+  bannerText: "内部资料 · 仅供研究参考 · 请勿外传",
+  homeUrl: "../../index.html",
+  readingTime: "约 19 分钟阅读",
+  reportTitle: "中国福彩：年卖两千亿的公益机器，与它的透明之困",
+  changelogUrl: "../../changelog.html"
+};
+</script>
+<link rel="stylesheet" href="../../global.css">
+<style>
+/* =========================================================
+   中国福彩调查报告 · 页面专属样式
+   ========================================================= */
+
+/* —— Masthead（双线报头） —— */
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand b{color:var(--red);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+
+/* —— 正文容器 —— */
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+
+/* —— 文章头 —— */
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+
+/* —— 首字下沉 —— */
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+
+/* —— 章节标题 —— */
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+
+/* —— 段落 —— */
+p{margin-bottom:18px;text-align:justify}
+
+/* —— 引用 —— */
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* —— 表格 —— */
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+
+/* —— 列表 —— */
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+
+/* —— 数据卡片 —— */
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+
+/* —— 时间线 —— */
+.timeline{margin:28px 0;padding-left:20px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:20px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:8px;width:10px;height:10px;background:var(--red);border-radius:50%}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px}
+.timeline-content{margin-top:4px}
+
+/* —— 脚注 —— */
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+
+/* —— 尾声 —— */
+.epilogue{background:var(--bg-dark);color:#e8e2d4;padding:40px 34px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0;font-size:24px}
+.epilogue p{color:#ddd8cc;line-height:1.9;margin-bottom:16px}
+.epilogue .drop-cap::first-letter{color:#e8c87a;font-size:48px}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045;font-size:22px}
+.epilogue strong{color:#e8c87a}
+
+/* —— 免责声明 —— */
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+
+/* —— 行内术语 —— */
+.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
+
+/* —— 图表容器 —— */
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:4px;color:var(--bg-dark);text-align:center}
+.chart-sub{font-size:11px;color:var(--gray);text-align:center;margin-bottom:14px}
+
+/* —— 水平柱状图 —— */
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:10px}
+.bar-label{width:96px;font-size:13px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--quote-bg);height:30px;position:relative;overflow:hidden}
+.bar-fill{height:100%;display:flex;align-items:center;padding-left:10px;color:var(--paper);font-size:12px;font-weight:700;white-space:nowrap;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:#4a4036}
+.bar-fill.gray{background:#8a8073}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.green{background:#5a9e6f}
+.bar-value{width:110px;font-size:11px;color:var(--gray);flex-shrink:0;line-height:1.3}
+
+/* —— 阶梯柱状图 —— */
+.step-chart{display:flex;align-items:flex-end;justify-content:space-around;height:200px;gap:8px;padding:0 4px;border-bottom:2px solid var(--bg-dark)}
+.step-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:90px}
+.step-value{font-size:11px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:0}
+.step-bar.red{background:var(--red)}
+.step-bar.green{background:#5a9e6f}
+.step-bar.gold{background:var(--gold)}
+.step-label{font-size:10px;margin-top:6px;text-align:center;color:var(--ink);line-height:1.3}
+
+/* —— 垂直柱状图 —— */
+.vert-bars{display:flex;align-items:flex-end;justify-content:space-around;height:200px;padding:0 8px;border-bottom:2px solid var(--bg-dark);gap:6px}
+.vert-bar-wrap{display:flex;flex-direction:column;align-items:center;flex:1;max-width:80px}
+.vert-bar-wrap .val{font-size:10px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.vert-bar-wrap .bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;color:#e8c87a;font-size:10px;font-weight:700;transition:height 1.2s cubic-bezier(.4,0,.2,1);height:0}
+.vert-bar-wrap .bar.bull{background:var(--red)}
+.vert-bar-wrap .bar.bull-peak{background:var(--gold)}
+.vert-bar-wrap .yr{font-size:10px;margin-top:4px;color:var(--gray)}
+
+/* —— 环形图 —— */
+.di-wrap{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0}
+.di-svg-wrap{position:relative;width:220px;height:220px;flex-shrink:0}
+.di-svg{width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.di-seg{fill:none;stroke-width:28;cx:110;cy:110;r:82;stroke-linecap:butt;cursor:pointer;transition:stroke-dasharray 1.1s,stroke-opacity .3s,stroke-width .2s}
+.di-seg.dim{stroke-opacity:.22}
+.di-seg.on{stroke-width:34}
+.di-center{position:absolute;top:110px;left:110px;transform:translate(-50%,-50%);text-align:center;z-index:2;pointer-events:none}
+.di-center .big{font-size:24px;font-weight:700;color:var(--red);display:block}
+.di-center .sub{font-size:11px;color:var(--gray);display:block;margin-top:2px}
+.di-legend{font-size:13px;line-height:2.2;padding:4px 0}
+.di-legend .di-item{cursor:pointer;transition:opacity .25s;display:flex;align-items:center;gap:8px;padding:2px 6px;border-radius:3px}
+.di-legend .di-item.dim{opacity:.25}
+.di-legend .di-item .dot{width:12px;height:12px;border-radius:3px;flex-shrink:0;display:inline-block}
+.di-legend .di-item .name{flex-shrink:0}
+.di-legend .di-item .val{font-weight:700;color:var(--ink)}
+.di-callout{opacity:0;transition:opacity .4s;transition-delay:0s}
+.di-callout.on{opacity:1;transition-delay:.5s}
+.di-callout line{stroke:var(--gray);stroke-width:1;stroke-dasharray:3 2}
+.di-callout text{font-size:11px;fill:var(--gray);font-family:Georgia,serif}
+.di-callout text.on{fill:var(--red);font-weight:700}
+
+/* —— 分布条 —— */
+.dist-bar{display:flex;height:32px;border-radius:3px;overflow:hidden;margin:14px 0}
+.dist-seg{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--paper);transition:width 1s}
+
+/* —— 双栏布局 —— */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}}
+
+/* —— 脚注悬浮提示 —— */
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+
+/* —— 滚动露出 —— */
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+
+/* —— 折线图 —— */
+.line-chart{margin:20px 0}
+.line-chart-svg{width:100%;height:auto;overflow:visible}
+.line-a{fill:none;stroke:var(--red);stroke-width:2.5;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset 2s ease}
+.line-a.drawn{stroke-dashoffset:0}
+.line-b{fill:none;stroke:var(--bg-dark);stroke-width:2.5;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset 2s ease}
+.line-b.drawn{stroke-dashoffset:0}
+.dot-a,.dot-b{opacity:0;transition:opacity .4s}
+.dot-a.visible,.dot-b.visible{opacity:1}
+.chart-legend{display:flex;gap:20px;justify-content:center;margin:10px 0;font-size:12px}
+.chart-legend-item{display:flex;align-items:center;gap:6px}
+.chart-legend-dot{width:14px;height:4px;border-radius:2px}
+
+/* —— 组织架构图 —— */
+.org-tree{display:flex;flex-direction:column;align-items:center;gap:6px;margin:20px 0}
+.org-top{background:var(--bg-dark);color:var(--paper);padding:12px 24px;border-radius:3px;font-size:14px;font-weight:700;letter-spacing:.5px;text-align:center}
+.org-arrow{font-size:18px;color:var(--red);line-height:1}
+.org-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.org-node{background:var(--red);color:var(--paper);padding:10px 18px;border-radius:3px;font-size:12px;text-align:center;line-height:1.4;min-width:120px}
+.org-node.dark{background:var(--bg-dark)}
+
+/* —— 移动端响应 —— */
+@media(max-width:600px){
+  body{font-size:16px}
+  .container{padding:24px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:15px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .pull-quote{font-size:19px}
+  .data-card{min-width:120px}
+  .epilogue{margin:30px -16px 0}
+  .bar-label{width:70px;font-size:11px}
+  .bar-value{width:80px;font-size:10px}
+  .bar-fill{font-size:10px}
+  .step-label{font-size:9px}
+  .step-value{font-size:10px}
+  .di-wrap{flex-direction:column}
+  .step-chart{height:150px}
+  .vert-bars{height:150px}
+  .two-col{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
+<div class="date">2026年7月24日 · 档案室</div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>第一张彩票</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>两千亿的公益巨兽</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>体彩的逆袭</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>三块蛋糕</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>169亿审计违规</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>发行费的铁比例</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>互联网彩票兴衰</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>双刃剑体制</a>
+<a href="#c8" data-ch="8"><span class="num">第8章</span>市场触顶</a>
+<a href="#epi" data-ch="9"><span class="num">尾声</span>回到初心</a>
+</div>
+
+<div class="container">
+<div class="hero">
+<div class="kicker">深度公司研究</div>
+<h1>中国福彩：年卖两千亿的公益机器，与它的透明之困</h1>
+<div class="dek">1987年，一张面值1元的彩票在石家庄售出，开启了中国福利彩票38年的历史。到2025年，福彩年销售额已突破2,085亿元，累计筹集公益金超过9,724亿元。但在这台高速运转的"公益机器"内部——14%的发行费15年未降，2015年审计署在658亿元中查出169亿元违规问题，体彩从2018年起将其甩开一倍——机器轰鸣的背后，零件正发出磨损的声响。</div>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月24日 · 约19分钟</span>
+</div>
+</div>
+
+<!-- 导语 -->
+<h2 id="c0"><span class="chap-num">导语</span>第一张彩票</h2>
+<p class="drop-cap">1987年7月27日，河北省石家庄市，一张印着"中国社会福利有奖募捐券"字样的小纸片被递过柜台，面值1元。这是新中国民政系统发行的第一张福利彩票。没有人在那一刻意识到，这张一元纸片将在三十八年后催生出一个年销售额超过2,000亿元的庞大产业。<sup>[1]</sup></p>
+
+<p>提出这个构想的人叫崔乃夫，时任民政部部长。1986年，他在一次内部会议上提出通过发行社会福利有奖募捐券来筹集资金——彼时中国民政系统面临严重的资金短缺，社会福利设施严重不足。1987年6月3日，中国社会福利有奖募捐委员会在北京成立，崔乃夫担任名誉主任。<sup>[2]</sup> 这一年全年销售额仅为1,739.5万元——大约相当于2025年福彩11个小时的销售额。</p>
+
+<p>崔乃夫为福彩定下的宗旨是"扶老、助残、救孤、济困"八个字<sup>[3]</sup>。这八个字后来被刻在中国福利彩票发行中心的门口，也成为这套系统对外讲述的核心叙事——每一张彩票的背后，都有一份钱流向养老院、残疾人康复中心和孤儿学校。到2025年底，福彩累计销售额达到32,568.12亿元，累计筹集公益金9,724.22亿元。<sup>[4]</sup></p>
+
+<p>但38年后的今天，这台"公益机器"正面临着一系列追问：当体彩以4,194亿元的年销售额把福彩远远甩在身后，"扶老、助残、救孤、济困"的初心是否还在驱动这套系统？当审计署一次性查出169亿元的各类违规问题，公益金的"玻璃口袋"是否已经出现了裂痕？当发行费比例15年不变、而彩票总销售额翻了15倍，最大的受益者究竟是受助者还是系统本身？</p>
+
+<!-- 第一章 -->
+<h2 id="c1"><span class="chap-num">第一章</span>两千亿的公益巨兽——2025年福彩全景</h2>
+
+<p>2025年全年，中国福利彩票销售额达到2,085.77亿元，同比增长0.3%<sup>[4]</sup>。这是福彩连续第三年维持在2,000亿元上下的规模。加上体育彩票的4,193.92亿元，全国彩票总销售额达到6,279.69亿元，同比增长0.7%<sup>[5]</sup>。</p>
+
+<p>2,085.77亿元是什么概念？它超过了2025年国内绝大多数A股上市公司的营业收入——超过中国国航的年收入（1,714.85亿元），接近中国东航的收入体量。如果把它看作一个企业的营收，它足以排进中国服务业企业前50强。</p>
+
+<p>在这2,085.77亿元的销售额中，福彩计提了609.89亿元的彩票公益金，筹集率超过29.24%<sup>[4]</sup>。按这个比例推算，每购买100元福彩，大约29元进入公益金，58元进入返奖奖金池，约14元用于发行费用。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">中国福利彩票2025年核心数据</div>
+<div class="data-callout" style="margin:0">
+<div class="data-card"><span class="num" data-count="2085.77">2,085.77</span><span class="label">年销售额（亿元）</span></div>
+<div class="data-card"><span class="num" data-count="609.89">609.89</span><span class="label">计提公益金（亿元）</span></div>
+<div class="data-card"><span class="num" data-count="32568.12">32,568.12</span><span class="label">累计销售（亿元）</span></div>
+<div class="data-card"><span class="num" data-count="9724.22">9,724.22</span><span class="label">累计公益金（亿元）</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：财政部、人民日报<sup>[4][5]</sup></div>
+</div>
+
+<p>但0.3%的同比增速是福彩近年来的一个警示信号。在经历了2021~2023年的快速增长期后（2023年福彩销售额同比增长约30%以上），2024年和2025年的增速急剧放缓。<sup>[5]</sup> 这不是福彩独自面对的问题——体彩增速同样降到0.9%。但考虑到同期中国GDP增速在5%左右，彩票市场的增长速度已经显著低于整体经济增速。</p>
+
+<p>从全国角度看，6,279.69亿元的总销售额意味着中国人均购彩金额超过了440元——如果分摊到就业人口，这一数字更高。这背后是庞大的销售网络：福彩在全国拥有超过18万个销售站点，覆盖了几乎每一个县级行政区。<sup>[6]</sup> 每一个站点背后是一个经营者家庭，以及一套从中福彩中心延伸到村镇的逐级管理链条。从这个意义上说，彩票既是一套公益筹资系统，也是一套庞大的社会就业平台。</p>
+
+<div class="pull-quote">2,085亿的年销售额、超过29%的筹集率——这台机器的产出数字足够耀眼，但增速曲线已经趋平。</div>
+
+<!-- 第二章 -->
+<h2 id="c2"><span class="chap-num">第二章</span>体彩的逆袭——从被超越到被甩开</h2>
+
+<p>要理解福彩目前的处境，最好的参照物是体育彩票。</p>
+
+<p>1987年福彩诞生时，体彩尚不存在。1994年，国家体委（现国家体育总局）获批发行体育彩票，中国彩票市场自此进入了双轨制时代。在长达24年的时间里，福彩的销售额一直高于体彩——福彩起步更早、网点更多、双色球等明星产品的群众基础也更深厚。<sup>[7]</sup></p>
+
+<p>转折发生在2018年。那一年，体彩年销售额达到2,869亿元，首次超越福彩的2,245亿元。紧接着在2019年，世界杯预选赛等足球热点赛事推动竞猜型彩票爆发式增长，体彩的领先优势进一步扩大。到2025年，体彩年销售额4,193.92亿元，是福彩2,085.77亿元的整整2倍。<sup>[5][7]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">福利彩票 vs 体育彩票历年销售额走势（2015–2025）</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="line-chart" id="lineChart">
+<svg class="line-chart-svg" viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- 网格线 -->
+  <g class="grid">
+    <line x1="40" y1="30" x2="580" y2="30" stroke="#e0dbd0" stroke-width="1"/>
+    <line x1="40" y1="75" x2="580" y2="75" stroke="#e0dbd0" stroke-width="1"/>
+    <line x1="40" y1="120" x2="580" y2="120" stroke="#e0dbd0" stroke-width="1"/>
+    <line x1="40" y1="165" x2="580" y2="165" stroke="#e0dbd0" stroke-width="1"/>
+    <line x1="40" y1="210" x2="580" y2="210" stroke="#e0dbd0" stroke-width="1"/>
+  </g>
+  <!-- Y轴标注 -->
+  <g class="axis">
+    <text x="36" y="34" text-anchor="end" font-size="10" fill="#888" font-family="Georgia,serif">4,500</text>
+    <text x="36" y="79" text-anchor="end" font-size="10" fill="#888" font-family="Georgia,serif">3,400</text>
+    <text x="36" y="124" text-anchor="end" font-size="10" fill="#888" font-family="Georgia,serif">2,300</text>
+    <text x="36" y="169" text-anchor="end" font-size="10" fill="#888" font-family="Georgia,serif">1,200</text>
+    <text x="36" y="214" text-anchor="end" font-size="10" fill="#888" font-family="Georgia,serif">100</text>
+  </g>
+  <!-- X轴标注 -->
+  <g class="axis">
+    <text x="40" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2015</text>
+    <text x="94" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2016</text>
+    <text x="148" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2017</text>
+    <text x="202" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2018</text>
+    <text x="256" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2019</text>
+    <text x="310" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2020</text>
+    <text x="364" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2021</text>
+    <text x="418" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2022</text>
+    <text x="472" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2023</text>
+    <text x="526" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2024</text>
+    <text x="580" y="232" text-anchor="middle" font-size="9" fill="#888" font-family="Georgia,serif">2025</text>
+  </g>
+  <!-- 福彩线 (红色) - 坐标：2015→1600, 2016→2065, 2017→2160, 2018→2246, 2019→1912, 2020→1445, 2021→1823, 2022→1647, 2023→1867, 2024→2079, 2025→2086 -->
+  <!-- 每100亿约4.3px, 从40,210开始 -->
+  <path class="line-a" id="lineFucai" d="M 40 150 L 94 118 L 148 112 L 202 104 L 256 125 L 310 156 L 364 129 L 418 138 L 472 127 L 526 115 L 580 114" fill="none"/>
+  <!-- 体彩线 (深色) - 坐标：2015→1660, 2016→1882, 2017→2100, 2018→2869, 2019→2308, 2020→1779, 2021→2612, 2022→2643, 2023→3851, 2024→4155, 2025→4194 -->
+  <path class="line-b" id="lineTicai" d="M 40 146 L 94 126 L 148 107 L 202 54 L 256 88 L 310 131 L 364 54 L 418 53 L 472 2 L 526 -20 L 580 -26" fill="none"/>
+  <!-- 数据点 - 福彩 -->
+  <circle class="dot-a visible" cx="40" cy="150" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="94" cy="118" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="148" cy="112" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="202" cy="104" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="256" cy="125" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="310" cy="156" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="364" cy="129" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="418" cy="138" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="472" cy="127" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="526" cy="115" r="3.5" fill="var(--red)" opacity="0"/>
+  <circle class="dot-a visible" cx="580" cy="114" r="3.5" fill="var(--red)" opacity="0"/>
+  <!-- 数据点 - 体彩 -->
+  <circle class="dot-b visible" cx="40" cy="146" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="94" cy="126" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="148" cy="107" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="202" cy="54" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="256" cy="88" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="310" cy="131" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="364" cy="54" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="418" cy="53" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="472" cy="2" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="526" cy="-20" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <circle class="dot-b visible" cx="580" cy="-26" r="3.5" fill="var(--bg-dark)" opacity="0"/>
+  <!-- 2018年标注 -->
+  <rect x="196" y="0" width="12" height="240" fill="rgba(160,32,32,.08)" rx="2"/>
+  <text x="202" y="18" text-anchor="middle" font-size="10" fill="var(--red)" font-weight="700" font-family="Georgia,serif">▼</text>
+</svg>
+</div>
+<div class="chart-legend">
+<div class="chart-legend-item"><span class="chart-legend-dot" style="background:var(--red)"></span>福利彩票</div>
+<div class="chart-legend-item"><span class="chart-legend-dot" style="background:var(--bg-dark)"></span>体育彩票</div>
+</div>
+<div style="font-size:10px;color:var(--gray);text-align:center;">数据来源：财政部历年彩票销售公告<sup>[5][7]</sup> · 2018年体彩反超点以红色标注</div>
+</div>
+
+<p>体彩之所以能完成这次逆袭，核心引擎是竞猜型彩票——以足球、篮球赛事为载体的竞猜游戏。2025年，竞猜型彩票销售额达到2,777.46亿元，占全国彩票总销售额的44.2%。<sup>[5]</sup> 体彩独享竞猜型彩票的发行权，福彩无法染指。这是一个巨大的结构性优势：当一个核心产品品类被锁定给一家发行机构，另一家机构无论怎么努力都难以追赶。</p>
+
+<p>福彩的当家产品——双色球（2003年推出）、3D、七乐彩、快乐8——都属于乐透数字型和基诺型游戏。这些游戏的特点是单注金额低、大奖随机性高，与竞猜型彩票"检验体育知识"的体验完全不同。2025年，乐透数字型彩票销售1,777.03亿元（下降0.7%），基诺型销售413.64亿元（下降0.9%），均呈现停滞甚至微降态势。<sup>[5]</sup></p>
+
+<p>此消彼长之间，福彩唯一的亮点是即开型彩票——刮刮乐。2025年销量1,311.52亿元，同比增长13%。<sup>[5]</sup> 这既是福彩的增长引擎，也折射出它在产品创新上的被动：当体彩可以靠着世界杯、欧洲杯的四年周期反复刺激销量时，福彩能做的只有推出新图案的刮刮乐。即开型的增长模式本质上是一种"劳动密集型"的增长——依赖网点铺货率和票面设计的更新频率，而非游戏机制的创新。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2025年全国彩票各彩种销售构成</div>
+<div class="chart-sub">总销售额：6,279.69亿元</div>
+<div class="di-wrap">
+<div class="di-svg-wrap">
+<svg class="di-svg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <circle class="di-seg" cx="110" cy="110" r="82" stroke="#8a8073" style="stroke-dasharray:0 515;transition:none" data-key="0"/>
+  <circle class="di-seg" cx="110" cy="110" r="82" stroke="var(--red)" style="stroke-dasharray:0 515;transition:none" data-key="1"/>
+  <circle class="di-seg" cx="110" cy="110" r="82" stroke="var(--gold)" style="stroke-dasharray:0 515;transition:none" data-key="2"/>
+  <circle class="di-seg" cx="110" cy="110" r="82" stroke="var(--bg-dark)" style="stroke-dasharray:0 515;transition:none" data-key="3"/>
+</svg>
+<div class="di-center"><span class="big">6,280亿</span><span class="sub">全国彩票</span></div>
+</div>
+<div class="di-legend">
+<div class="di-item" data-key="0"><span class="dot" style="background:#8a8073"></span><span class="name">竞猜型</span><span class="val">2,777亿 (44.2%)</span></div>
+<div class="di-item" data-key="1"><span class="dot" style="background:var(--red)"></span><span class="name">乐透数字型</span><span class="val">1,777亿 (28.3%)</span></div>
+<div class="di-item" data-key="2"><span class="dot" style="background:var(--gold)"></span><span class="name">即开型</span><span class="val">1,312亿 (20.9%)</span></div>
+<div class="di-item" data-key="3"><span class="dot" style="background:var(--bg-dark)"></span><span class="name">基诺型</span><span class="val">414亿 (6.6%)</span></div>
+</div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：财政部2025年彩票销售公告<sup>[5]</sup></div>
+</div>
+
+<div class="pull-quote">体彩靠竞猜型彩票爆发，福彩则受限于游戏品种和监管——双轨制的胜负手，从一开始就是不对等的。</div>
+
+<!-- 第三章 -->
+<h2 id="c3"><span class="chap-num">第三章</span>彩票资金的"三块蛋糕"——返奖、发行费与公益金</h2>
+
+<p>每一张彩票售出之后，资金流向何方？答案是三块：返奖奖金、发行经费和彩票公益金。</p>
+
+<p>以目前通用的分配比例：约58%用于返奖（即开型彩票返奖率可达65%），约14%作为发行经费（覆盖彩票印制、物流、网点佣金、管理成本和系统维护），约28%计提为彩票公益金。<sup>[8]</sup> 公益金部分由中央和地方按50:50的比例分成，中央集中的部分用于补充全国社会保障基金、支持社会福利事业等。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">彩票资金分配结构</div>
+<div class="chart-sub">每100元彩票的去向</div>
+<div class="dist-bar">
+<div class="dist-seg" style="width:58%;background:var(--red)">返奖 58%</div>
+<div class="dist-seg" style="width:28%;background:var(--gold)">公益金 28%</div>
+<div class="dist-seg" style="width:14%;background:var(--bg-dark)">发行费 14%</div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：财政部彩票管理条例<sup>[8]</sup></div>
+</div>
+
+<p>这套分配框架从彩票制度建立之初延续至今，调整不大。但三个数字之间有一个敏感的比例关系：返奖率决定了彩票对购彩者的吸引力（返奖率高，购彩意愿强）；发行费决定了彩票系统的运营成本和销售网络的积极性；公益金决定了这套系统"公益"成色的兑现度。</p>
+
+<p>以2025年为例：全国彩票6,279.69亿元的销售额中，约有879亿元被用作发行经费。这879亿元中，一部分用于支付18万个销售站点的佣金（通常为销售额的7%~8%），一部分用于系统建设、技术维护、市场营销和各级彩票管理机构的日常运转。<sup>[8]</sup> 如果说公益金是这台机器的"输出端"，发行费就是它的"维持成本"——而这笔维持成本近年来一直在"水涨船高"。</p>
+
+<!-- 第四章 -->
+<h2 id="c4"><span class="chap-num">第四章</span>169亿审计违规——公益金的"玻璃口袋"裂了</h2>
+
+<p>2015年6月，审计署发布了一份对彩票资金的专项审计报告<sup>[9]</sup>，这份报告至今仍是中国彩票史上最具冲击力的审计文件。</p>
+
+<p>审计署抽查了18个省（自治区、直辖市）2012年至2014年的彩票发行费和彩票公益金，抽查资金总额658.15亿元。结果触目惊心：发现各类违规问题金额169.32亿元，占抽查金额的25.73%。<sup>[9]</sup> 换句话说，每审计4元彩票资金，就有大约1元存在问题。</p>
+
+<p>违规问题涉及四大类：</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">2015年审计署彩票资金审计违规金额构成</div>
+<div class="chart-sub">抽查658.15亿元，违规169.32亿元</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">虚报套取</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="100">约47亿</div></div><span class="bar-value">通过编造项目套取资金</span></div>
+<div class="bar-row"><span class="bar-label">挤占挪用</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="85">约40亿</div></div><span class="bar-value">公益金被挪作他用</span></div>
+<div class="bar-row"><span class="bar-label">违规购建楼堂</span><div class="bar-track"><div class="bar-fill gray" style="width:0" data-w="68">约32亿</div></div><span class="bar-value">用发行费盖办公楼</span></div>
+<div class="bar-row"><span class="bar-label">违规采购</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="60">约28亿</div></div><span class="bar-value">未按规定招投标</span></div>
+<div class="bar-row"><span class="bar-label">违规发放津补贴</span><div class="bar-track"><div class="bar-fill green" style="width:0" data-w="32">约15亿</div></div><span class="bar-value">违规发放津贴补贴</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：审计署2015年第4号公告<sup>[9]</sup> · 依据违规类别估算</div>
+</div>
+
+<p>审计报告还指出，中央八项规定出台后，仍有部分省份顶风违规，涉及金额4.01亿元<sup>[9]</sup>。在互联网销售方面，17个省份未经批准违规利用互联网销售彩票，涉及金额630.4亿元。<sup>[10]</sup></p>
+
+<p>169.32亿元的违规数字，与2025年福彩全年公益金609.89亿元放在一起看，会产生一个令人不安的比率：一次抽查就查出相当于年度公益金近28%的违规金额。当然，审计署查的是2012~2014年间的三年累积问题，而非单一年度。但这个规模本身——169亿——足以动摇公众对彩票公益金管理的信心。</p>
+
+<p>审计之后，民政部、财政部、体育总局等部门相继出台了整改措施。时任民政部部长李立国表态称"决不让腐败玷污福彩事业"<sup>[11]</sup>。但十一年过去了，当年的违规问题整改到什么程度？公益金的透明化管理是否真正落地？2026年的今天，公众仍然无法在任何一个公开平台上查到每一笔公益金的去向——公益金的管理公开，始终停留在"年度公告公布总额"的粗颗粒度层级。</p>
+
+<div class="pull-quote">抽查658亿，违规169亿——公益金的"玻璃口袋"承诺，与二十六个百分点的违规率之间存在一条裂痕。</div>
+
+<!-- 第五章 -->
+<h2 id="c5"><span class="chap-num">第五章</span>发行费的14%——15年未降的"铁比例"</h2>
+
+<p>在所有关于彩票资金的讨论中，14%的发行费比例是一个被反复提及但从未被改变的数字。</p>
+
+<p>中国彩票的发行费比例长期维持在14%左右——这并非完全法定，但在实际操作中是一个几乎所有彩种都遵循的参考上限。按照现行《彩票管理条例》，发行费的具体比例由财政部根据彩票品种特性核定，但历史上形成了一套稳定的惯例。<sup>[12]</sup></p>
+
+<p>14%意味着什么？2025年全国彩票6,279.69亿元的销售额中，约879亿元用于发行经费。福彩自身2,085.77亿元的销售额中，约292亿元进入了发行费通道。这个数字超过了中国绝大多数省市的年度民政事业费预算。</p>
+
+<p>批评者认为，14%的比例在彩票市场规模不大时或许是合理的，但当市场规模从2004年的不到400亿元膨胀到2025年的6,279亿元时，发行费不再是一个固定的"成本覆盖"数字，而变成了一笔迅速膨胀的"蛋糕"。<sup>[13]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">全国彩票销售额与发行费增长对比（2004–2025）</div>
+<div class="chart-sub">发行费一直维持14%比例</div>
+<div class="vert-bars" id="vertChartFee">
+<div class="vert-bar-wrap"><div class="val">~400亿</div><div class="bar" style="height:0;background:var(--red)" data-h="20"></div><div class="yr">2004销售</div></div>
+<div class="vert-bar-wrap"><div class="val">~56亿</div><div class="bar" style="height:0;background:var(--gold)" data-h="12"></div><div class="yr">2004发行费</div></div>
+<div class="vert-bar-wrap"><div class="val">~1,600亿</div><div class="bar bull" style="height:0;background:var(--red)" data-h="80"></div><div class="yr">2010销售</div></div>
+<div class="vert-bar-wrap"><div class="val">~224亿</div><div class="bar" style="height:0;background:var(--gold)" data-h="45"></div><div class="yr">2010发行费</div></div>
+<div class="vert-bar-wrap"><div class="val">~3,600亿</div><div class="bar bull" style="height:0;background:var(--red)" data-h="180"></div><div class="yr">2015销售</div></div>
+<div class="vert-bar-wrap"><div class="val">~504亿</div><div class="bar" style="height:0;background:var(--gold)" data-h="100"></div><div class="yr">2015发行费</div></div>
+<div class="vert-bar-wrap"><div class="val">~6,280亿</div><div class="bar bull-peak" style="height:0;background:var(--red)" data-h="200"></div><div class="yr">2025销售</div></div>
+<div class="vert-bar-wrap"><div class="val">~879亿</div><div class="bar" style="height:0;background:var(--gold)" data-h="176"></div><div class="yr">2025发行费</div></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">红色柱为总销售额，金色柱为对应发行费（按14%估算）<sup>[8][13]</sup></div>
+</div>
+
+<p>如果14%的比例能够降低1个百分点，2025年就可以多释放62.8亿元进入公益金——相当于多建设数百所养老院或多资助数十万名困难学生。2004年，全国彩票销售额仅400亿元左右，14%的发行费对应56亿元，不算多。但到2025年，879亿元的发行费体量已经超过了彩票公益金本身的三分之一。批评者认为，发行费比例的"刚性"实质上是彩票管理机构利益固化的体现。<sup>[13]</sup></p>
+
+<p>不过，彩票管理机构也有自己的解释：电脑彩票系统的技术维护、18万站点的佣金（一般认为占发行费的50%~60%）、物流配送、营销推广、人员工资——这其中的每一项成本都随着经济发展和通货膨胀而上涨。但质疑者的回应是：彩票站的佣金比例由系统内定，网点没有谈判权；技术系统的开发和维护是否可以通过竞争性招标降低成本，也没有答案。</p>
+
+<!-- 第六章 -->
+<h2 id="c6"><span class="chap-num">第六章</span>互联网彩票的兴衰——从爆发式增长到一刀切</h2>
+
+<p>在中国彩票38年的历史中，互联网彩票是最具戏剧性的一段插曲。</p>
+
+<p>2001年前后，第一批互联网彩票销售网站出现。当时政策处于模糊地带——彩票管理条例并未明确禁止网络销售，但也没有正式授权。一些创业公司看到机会，率先建立了O2O模式的彩票代购平台。2010年左右，500彩票网、澳客网等平台已经积累了数百万用户。<sup>[14]</sup></p>
+
+<p>到2014年，互联网彩票迎来真正的爆发：当年通过互联网渠道销售的彩票金额据估算高达850亿元左右，占全国彩票总销售额的约23%。<sup>[14]</sup> 以500彩票网（NYSE: WBAI）为代表的公司在纽交所上市，市场一片繁荣。对于彩民而言，互联网彩票的便利性是颠覆性的——不用去投注站排队，随时随地手机下单。</p>
+
+<div class="timeline" style="margin:28px 0">
+<div class="timeline-item"><div class="timeline-date">2001年</div><div class="timeline-content">首批互联网彩票销售网站出现，政策处于模糊地带</div></div>
+<div class="timeline-item"><div class="timeline-date">2014年</div><div class="timeline-content">互联网彩票爆发式增长，年销售额约850亿元，占全国彩票23%</div></div>
+<div class="timeline-item"><div class="timeline-date">2015年1月</div><div class="timeline-content">财政部等八部门联合叫停互联网彩票，实施"一刀切"禁令</div></div>
+<div class="timeline-item"><div class="timeline-date">2015年审计</div><div class="timeline-content">审计署查出17省违规网售彩票630.4亿元，成为禁令的最强论据</div></div>
+<div class="timeline-item"><div class="timeline-date">2015年至今</div><div class="timeline-content">互联网彩票禁令持续，偶有"重启"传闻但从未放开</div></div>
+</div>
+
+<p>但好景不长。2015年1月，财政部、民政部、国家体育总局等八部门联合发布了《关于制止擅自利用互联网销售彩票的公告》，对互联网彩票实施全面禁令。<sup>[15]</sup> 这份措辞严厉的文件要求"坚决制止擅自利用互联网销售彩票的行为"，所有网络售彩平台被关停。</p>
+
+<p>禁令的直接导火索，除了对私彩泛滥的担忧外，审计署查出的17省违规利用互联网销售彩票630.4亿元的数据提供了最有力的政策依据。<sup>[10]</sup> 当互联网渠道可以绕过传统的地方彩票销售网络时，地方彩票管理机构的利益受到了双重冲击——既无法控制渠道、也无法追踪资金流向。</p>
+
+<p>一刀切禁令的效果立竿见影：2015年全国彩票销售额从2014年的约3,823亿元骤降至约3,679亿元，同比下降约3.8%。但更深远的影响在于，禁令将大量有互联网购彩习惯的用户推向了地下私彩平台。<sup>[14]</sup> 严格来说，禁令同时堵住了正规渠道和私彩渠道——但由于私彩本身就在黑市中运行、难以追踪，正规渠道被堵死后，私彩市场反而获得了新用户。</p>
+
+<p>十一年过去了，互联网彩票的解禁窗口从未真正打开。尽管每隔一两年就有"互联网彩票即将重启"的市场传闻，但每次都被证实为假消息。博弈的各方——财政部、民政部、国家体育总局、中福彩中心、中体彩中心——各有顾虑，谁也迈不出解禁的第一步。</p>
+
+<!-- 第七章 -->
+<h2 id="c7"><span class="chap-num">第七章</span>福彩的管理体制——"民政主管"的双刃剑</h2>
+
+<p>福彩的管理组织架构被官方表述为"民政主管、财政监管、中福彩中心发行销售、财政审计和社会公众共同监督"<sup>[16]</sup>。在这个链条中，第一环就是民政部。</p>
+
+<p>中国福利彩票发行管理中心（简称中福彩中心）是民政部直属的事业单位，负责福利彩票的统一发行和销售管理。各省的福彩中心则隶属于省民政厅。这套体制从1987年福彩创立延续至今，38年来未发生根本性变化。<sup>[16]</sup></p>
+
+<p>与之对应，体育彩票由中国体育彩票管理中心（国家体育总局直属事业单位）负责发行，各级体彩中心隶属体育系统。两套系统互不隶属、平行运行——构成了中国彩票市场的"双寡头垄断"格局。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">中国彩票双寡头管理体制</div>
+<div class="org-tree">
+<div class="org-top">国务院 · 财政部（监管）</div>
+<div class="org-arrow">╲ ╱</div>
+<div class="org-row">
+<div class="org-node">民政部<br><span style="font-size:10px;opacity:.8">主管福彩</span></div>
+<div class="org-node dark">国家体育总局<br><span style="font-size:10px;opacity:.8">主体彩</span></div>
+</div>
+<div class="org-arrow">↓ ↓</div>
+<div class="org-row">
+<div class="org-node">中福彩中心<br><span style="font-size:10px;opacity:.8">发行销售</span></div>
+<div class="org-node dark">中体彩中心<br><span style="font-size:10px;opacity:.8">发行销售</span></div>
+</div>
+<div class="org-arrow">↓ ↓</div>
+<div class="org-row">
+<div class="org-node">省级福彩中心</div>
+<div class="org-node dark">省级体彩中心</div>
+</div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">来源：《彩票管理条例》及民政部、体育总局组织架构<sup>[16]</sup></div>
+</div>
+
+<p>"民政主管"既是福彩的优势，也是它的束缚。民政部主管意味着福彩的公益定位天然具有说服力——福利彩票的公益金直接流向民政系统的社会福利事业，叙事逻辑清晰。但同时也意味着福彩的运作方式与行政体制高度绑定：其主要管理岗位由行政官员担任，人事任命经由组织程序，机构运行靠财政拨款。</p>
+
+<p>这种体制的弊端在2015年审计风暴中暴露得很清楚。审计查出的违规问题中，相当比例与"乱发津补贴""违规购建楼堂馆所"有关——这些问题本质上是行政事业单位财务管理的通病，而非彩票行业特有的问题。但由于福彩全身嵌入在行政体制中，这些问题反而更难割裂。</p>
+
+<p>更有批评者指出，行政主管的彩票体制存在一套天然的利益循环：公益金划入财政后，部分以转移支付的形式回到民政系统，用以补充民政经费——也就是说，彩票系统的公益金在一定程度上在"养活"其主管系统。<sup>[17]</sup> 这并非福彩一家的问题，而是一种体制性的模糊。</p>
+
+<p>对比国际彩票行业的运营模式，中国彩票的管理体制显得格外独特。英国国家彩票由独立监管机构负责，运营权通过公开招标授予私营运营商（如卡梅洛特集团曾在1994年至2022年间运营英国国家彩票）。美国各州的彩票由州政府成立的专业化彩票委员会管理，运营团队多为职业经理人而非行政官员。<sup>[18]</sup> 中国彩票的双寡头行政主管模式，在国际上虽非绝无仅有，但像中国这样由两个平行的部委系统分别主管、互不竞争的格局，实属少见。</p>
+
+<!-- 第八章 -->
+<h2 id="c8"><span class="chap-num">第八章</span>市场触顶——即开型的逆势增长与彩票业的未来</h2>
+
+<p>2025年彩票市场最重要的信号，是0.7%的全国总增速。</p>
+
+<p>全国彩票销售额从2024年的约6,235亿元微增至6,279.69亿元，增速0.7%<sup>[5]</sup>。福彩增速0.3%，体彩增速0.9%。在连续多年保持两位数甚至三位数增长之后，中国彩票市场似乎正在逼近一个阶段性上限。</p>
+
+<p>人口结构变化是长期压力的来源。彩票的活跃购彩者主要集中在25~55岁年龄段，而中国人口正在加速老龄化。年轻一代（"00后"）对彩票的态度也与前几代人有显著差异——他们更倾向于将"买一张彩票"视为娱乐消费而非投资行为。这种消费心理的变化，对以"中大奖"为卖点的乐透数字型彩票构成了挑战。</p>
+
+<p>但在整体趋缓的背景下，有一枝独秀的品类：即开型彩票。2025年即开型彩票销售额达1,311.52亿元，同比增长13%，是唯一保持两位数增速的彩种。<sup>[5]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">即开型彩票近三年销售额增长趋势</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="step-chart" id="stepChartJikai">
+<div class="step-col"><div class="step-value">~900</div><div class="step-bar gold" style="height:0" data-h="90"></div><div class="step-label">2023年</div></div>
+<div class="step-col"><div class="step-value">~1,160</div><div class="step-bar" style="height:0" data-h="116"></div><div class="step-label">2024年</div></div>
+<div class="step-col"><div class="step-value">1,312</div><div class="step-bar red" style="height:0" data-h="131"></div><div class="step-label">2025年</div></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">2023/2024年数据为市场估算，2025年来自财政部公告<sup>[5]</sup></div>
+</div>
+
+<p>即开型的逆势增长有其内在逻辑。刮刮乐的体验接近于一种"小确幸"消费——几元到几十元一张，即时开奖，不用等待开奖日，不需要研究号码走势。这种"低决策成本+即时反馈"的特性，在消费降级的大环境中正好契合了大众的小额娱乐需求。而且即开型彩票的经营门槛低、铺货灵活——便利店、超市、高铁站都能卖，不需要专营投注站。</p>
+
+<p>2025年，以福彩"刮刮乐"和体彩"顶呱刮"为代表的即开型产品创造了历史新高。但这个市场也有隐忧：即开型彩票的返奖率约为65%，高于乐透型，意味着公益金率更低；而且即开型的印制成本和物流成本也更高，发行费率实际上高于平均水平。即开型的增长，能否转化为公益金的同步增长，需要打一个问号。</p>
+
+<p>展望未来，中国彩票市场面临几条可能的演进路径：一是下沉市场挖潜——三四线城市及农村地区的彩票渗透率仍然较低，移动支付普及后农村地区的购彩便利性正在提升；二是产品创新——如果福彩和体彩能够获得更大的游戏创新自主权（特别是福彩是否可能获准发行竞猜型游戏），市场结构可能发生变化；三是管理体制改革——彩票管理体制是否可能从"民政/体育主管"转向更市场化的运营模式，这一话题在近年来的政策研讨中已多次被提及。<sup>[19]</sup></p>
+
+<!-- 尾声 -->
+<div class="epilogue" id="epi">
+<h2>尾声·回到第一张彩票的初心</h2>
+
+<p class="drop-cap">1987年7月27日，当崔乃夫提议的那张1元面值"有奖募捐券"在石家庄被售出时，全国民政系统的福利资金缺口大约是2亿元。到2025年，福彩一年筹集的公益金已经超过609亿元。<sup>[1][4]</sup> 从1,739万元到2,085亿元——38年间，这台机器在规模和效率上的进化无疑是惊人的。9,724亿元的累计公益金，意味着数万所养老院、残疾人康复中心和儿童福利机构得到了资金支持。</p>
+
+<p>但规模的膨胀也带来了规模特有的问题。2015年审计署查出的169亿元违规，是体制性漏洞的一次集中暴露。14%发行费15年未降的制度惯性，让"公益使命"与"机构利益"之间产生了一道微妙的张力线。体彩从2018年反超到2025年差距拉大到两倍——在双轨制竞争中被甩开，福彩需要回答的根本问题不是"怎么追赶体彩"，而是"游戏设计和管理理念是否跟得上时代"。</p>
+
+<p>崔乃夫在2017年接受媒体采访时曾说："当时就是想到要为社会福利事业筹资，没有想那么多。"<sup>[18]</sup> 这句朴素的回答，反映的是福彩创立之初的简单善意。但当一套系统从年销售1,700万膨胀到2,000亿，当年"没想到"的那些事——发行费分配、资金透明、行政主管、互联网替代——恰恰成了今天无法回避的问题。</p>
+
+<p>福彩的标语现在随处可见：中国福利彩票，中国人的慈善事业。38年前那张面值1元的彩票，放到今天已经买不到任何东西。但每一张新的彩票背后，依然承载着"扶老、助残、救孤、济困"八个字的承诺。维护这个承诺，需要比机器本身更快的修复速度。</p>
+
+<div class="pull-quote">一张彩票的初心，不应被2,000亿的流水稀释。</div>
+</div>
+
+<!-- 脚注 -->
+<div class="footnotes" id="footnotes">
+<h3>脚注与参考资料</h3>
+<ol>
+<li>中国社会福利有奖募捐委员会成立历史资料。1987年6月3日，中国社会福利有奖募捐委员会在北京成立。1987年7月27日，第一张福利彩票在河北省石家庄市售出，面值1元。1987年全年销售额1,739.5万元。创始人崔乃夫（时任民政部部长）。</li>
+<li>崔乃夫回忆录及民政部档案。1986年崔乃夫在民政部内部会议上提出发行社会福利有奖募捐券的设想。1987年6月3日委员会成立，崔乃夫任名誉主任。</li>
+<li>中国福利彩票发行宗旨。"扶老、助残、救孤、济困"八个字是福彩的核心宗旨，公之于中国福利彩票发行管理中心官网及各大销售网点。</li>
+<li>财政部/人民日报报道。2025年福彩销售2,085.77亿元（+0.3%），筹集公益金609.89亿元（计提数），筹集率>29.24%。1987年创立至2025年底，福彩累计销售32,568.12亿元，累计筹集公益金9,724.22亿元。</li>
+<li>财政部2025年全国彩票销售公告。2025年全国彩票销售额6,279.69亿元（+0.7%），其中福彩2,085.77亿元（+0.3%）、体彩4,193.92亿元（+0.9%）。各彩种：竞猜型2,777.46亿元（-3.2%）、乐透数字型1,777.03亿元（-0.7%）、即开型1,311.52亿元（+13%）、基诺型413.64亿元（-0.9%）。</li>
+<li>中国福利彩票发行管理中心官网及公开报道。福彩全国拥有超过18万个销售站点，覆盖全部县级行政区。</li>
+<li>财政部历年彩票销售数据公告、中国经济周刊报道。体彩1994年获批发行。2018年体彩销售额首次超越福彩。2025年体彩销售额达福彩的2倍。</li>
+<li>《彩票管理条例》（国务院令第554号）及财政部相关实施细则。彩票资金按比例分配：返奖奖金约58%、发行经费约14%、彩票公益金约28%。</li>
+<li>审计署2015年第4号公告：《彩票资金审计结果》。抽查18省2012-2014年彩票资金658.15亿元，发现违规问题169.32亿元（占25.73%）。问题包括：虚报套取、挤占挪用、违规采购、违规购建楼堂馆所、发放津贴补贴等。中央八项规定出台后仍有4.01亿元违规问题。</li>
+<li>审计署彩票专项审计报告及中国经济周刊报道。17省违规利用互联网销售彩票630.4亿元。</li>
+<li>民政部2015年通报整改情况。时任民政部部长李立国在2015年7月召开的全国民政工作会议上就审计问题表态。</li>
+<li>财政部历年彩票发行费核定通知及《彩票发行销售管理办法》。发行费比例一般为彩票销售额的14%左右，各彩种略有差异。</li>
+<li>中国经济周刊、财经杂志等媒体关于彩票发行费的专题报道。2004年全国彩票销售额不足400亿元。对于14%发行费是否过高、是否存在调整空间的讨论持续多年。</li>
+<li>互联网彩票发展历史综合资料。2001年首批网站出现。2014年互联网彩票规模达约850亿元，占全国彩票23%左右。500彩票网（NYSE: WBAI）2013年在纽交所上市。</li>
+<li>2015年1月，财政部等八部门联合发布《关于制止擅自利用互联网销售彩票的公告》，实施全面禁售。至今未放开。</li>
+<li>彩票管理条例、民政部及国家体育总局组织架构。福彩由民政部主管、体彩由国家体育总局主管。中福彩中心为民政部直属事业单位，中体彩中心为国家体育总局直属事业单位。</li>
+<li>关于彩票公益金管理体制的学术论文及媒体报道。公益金划入财政后部分以转移支付形式回到民政系统、补充民政经费。</li>
+<li>国际彩票运营模式对比资料。英国国家彩票（National Lottery）由独立监管机构UK Gambling Commission监管，运营权公开招标。美国各州彩票由州政府设立的彩票委员会负责运营。</li>
+<li>多位专家学者在公开研讨会上对彩票管理体制改革的讨论。见诸于《中国经济周刊》《财经》等媒体及中国彩票行业论坛历年纪要。</li>
+</ol>
+</div>
+
+<div class="disclaimer">* 本文基于公开信息与第三方数据撰写，仅供研究参考，不构成任何投资建议。数据来源已标注脚注，如有更新请以最新公告为准。</div>
+</div>
+
+<script>
+document.documentElement.classList.remove('js');
+document.documentElement.classList.add('js');
+
+// ===== 环形图初始化 =====
+(function() {
+  var donuts = document.querySelectorAll('.di-svg');
+  donuts.forEach(function(svg) {
+    var segs = svg.querySelectorAll('.di-seg');
+    var segments = [
+      { key: '0', pct: 44.2, color: '#8a8073' },
+      { key: '1', pct: 28.3, color: '#a02020' },
+      { key: '2', pct: 20.9, color: '#b8860b' },
+      { key: '3', pct: 6.6, color: '#2a2520' }
+    ];
+    var circum = 2 * Math.PI * 82;
+    var offset = 0;
+    segs.forEach(function(seg, i) {
+      var s = segments[i];
+      var len = circum * s.pct / 100;
+      seg.style.strokeDasharray = '0 ' + circum;
+      seg.dataset.key = s.key;
+      seg.style.transition = 'none';
+      seg._len = len;
+      seg._circum = circum;
+      seg._offset = offset;
+      offset += len;
+    });
+    var legend = svg.closest('.chart-box') || svg.closest('.di-wrap');
+    if (legend) legend = legend.querySelector('.di-legend');
+    
+    function activateDonut(svg, activeKey) {
+      var allSegs = svg.querySelectorAll('.di-seg');
+      allSegs.forEach(function(s) {
+        s.classList.toggle('dim', s.dataset.key !== activeKey);
+        s.classList.toggle('on', s.dataset.key === activeKey);
+      });
+      if (legend) {
+        legend.querySelectorAll('.di-item').forEach(function(item) {
+          item.classList.toggle('dim', item.dataset.key !== activeKey);
+        });
+      }
+      var callouts = svg.parentElement.querySelectorAll('.di-callout');
+      callouts.forEach(function(c) {
+        c.classList.toggle('on', c.dataset.key === activeKey);
+      });
+    }
+    
+    function resetDonut(svg) {
+      svg.querySelectorAll('.di-seg').forEach(function(s) {
+        s.classList.remove('dim', 'on');
+      });
+      if (legend) {
+        legend.querySelectorAll('.di-item').forEach(function(item) {
+          item.classList.remove('dim');
+        });
+      }
+      svg.parentElement.querySelectorAll('.di-callout').forEach(function(c) {
+        c.classList.remove('on');
+      });
+    }
+    
+    segs.forEach(function(seg) {
+      seg.addEventListener('mouseenter', function() {
+        if (!seg.dataset.pinned) activateDonut(svg, seg.dataset.key);
+      });
+      seg.addEventListener('mouseleave', function() {
+        if (!svg.querySelector('.di-seg[data-pinned]')) resetDonut(svg);
+      });
+      seg.addEventListener('click', function() {
+        var pinned = seg.dataset.pinned;
+        segs.forEach(function(s) { delete s.dataset.pinned; });
+        if (!pinned) {
+          seg.dataset.pinned = '1';
+          activateDonut(svg, seg.dataset.key);
+        } else {
+          resetDonut(svg);
+        }
+      });
+    });
+    if (legend) {
+      legend.querySelectorAll('.di-item').forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+          activateDonut(svg, item.dataset.key);
+        });
+        item.addEventListener('mouseleave', function() {
+          if (!svg.querySelector('.di-seg[data-pinned]')) resetDonut(svg);
+        });
+        item.addEventListener('click', function() {
+          var pinned = item.dataset.pinned;
+          legend.querySelectorAll('.di-item').forEach(function(i) { delete i.dataset.pinned; });
+          segs.forEach(function(s) { delete s.dataset.pinned; });
+          if (!pinned) {
+            item.dataset.pinned = '1';
+            segs.forEach(function(s) {
+              if (s.dataset.key === item.dataset.key) s.dataset.pinned = '1';
+            });
+            activateDonut(svg, item.dataset.key);
+          } else {
+            resetDonut(svg);
+          }
+        });
+      });
+    }
+  });
+  
+  // 触发环形图入场动效
+  var diObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var svg = entry.target;
+        svg.classList.add('in');
+        var segs = svg.querySelectorAll('.di-seg');
+        segs.forEach(function(seg) {
+          var len = seg._len || 0;
+          seg.style.transition = 'stroke-dasharray 1.1s';
+          seg.style.strokeDasharray = len + ' ' + (seg._circum - len);
+        });
+        diObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  donuts.forEach(function(svg) { diObserver.observe(svg); });
+})();
+
+// ===== 水平柱状图动画 =====
+var barObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var fill = entry.target;
+      var w = fill.getAttribute('data-w');
+      fill.style.width = w + '%';
+      barObserver.unobserve(fill);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.bar-fill[data-w]').forEach(function(el) {
+  barObserver.observe(el);
+});
+
+// ===== 阶梯柱状图动画 =====
+var stepObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var bar = entry.target;
+      var h = bar.getAttribute('data-h');
+      bar.style.height = h + 'px';
+      stepObserver.unobserve(bar);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.step-bar[data-h]').forEach(function(el) {
+  stepObserver.observe(el);
+});
+
+// ===== 垂直柱状图动画 =====
+var vertObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var bars = entry.target.querySelectorAll('.bar[data-h]');
+      bars.forEach(function(bar) {
+        var h = bar.getAttribute('data-h');
+        bar.style.height = h + 'px';
+      });
+      vertObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.vert-bars').forEach(function(el) {
+  vertObserver.observe(el);
+});
+
+// ===== 折线图动画 =====
+var lineObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var paths = entry.target.querySelectorAll('.line-a, .line-b');
+      paths.forEach(function(p) { p.classList.add('drawn'); });
+      var dots = entry.target.querySelectorAll('.dot-a, .dot-b');
+      dots.forEach(function(d) { d.classList.add('visible'); });
+      lineObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.line-chart').forEach(function(el) {
+  lineObserver.observe(el);
+});
+
+// ===== 滚动露出 =====
+function revealCheck() {
+  var items = document.querySelectorAll('.reveal');
+  for (var i = 0; i < items.length; i++) {
+    var r = items[i].getBoundingClientRect();
+    if (r.top < window.innerHeight - 60) items[i].classList.add('visible');
+  }
+}
+window.addEventListener('scroll', revealCheck);
+window.addEventListener('load', revealCheck);
+
+// ===== 位置追踪 + 导航高亮 =====
+var tracker = document.getElementById('tracker');
+var sidenavLinks = document.querySelectorAll('.sidenav a');
+var chapters = document.querySelectorAll('h2[id]');
+
+function updateTracker() {
+  if (!tracker) return;
+  var closest = null, minDist = Infinity;
+  chapters.forEach(function(ch) {
+    var r = ch.getBoundingClientRect();
+    var dist = Math.abs(r.top);
+    if (dist < minDist) { minDist = dist; closest = ch; }
+  });
+  if (closest) {
+    var label = closest.querySelector('.chap-num');
+    var txt = label ? label.textContent.trim() : '';
+    tracker.textContent = txt;
+    var id = closest.getAttribute('id');
+    sidenavLinks.forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+}
+window.addEventListener('scroll', updateTracker);
+window.addEventListener('load', updateTracker);
+
+// ===== 脚注悬浮提示 =====
+(function() {
+  var supTags = document.querySelectorAll('sup');
+  var tooltip = document.createElement('div');
+  tooltip.className = 'fn-tooltip';
+  tooltip.id = 'fnTooltip';
+  document.body.appendChild(tooltip);
+  
+  var fnList = document.querySelectorAll('.footnotes ol li');
+  
+  supTags.forEach(function(sup, idx) {
+    sup.addEventListener('mouseenter', function(e) {
+      var num = parseInt(sup.textContent.replace(/[\[\]]/g, ''), 10);
+      var fnItem = fnList[num - 1];
+      if (fnItem) {
+        tooltip.textContent = '[' + num + '] ' + fnItem.textContent;
+        tooltip.style.display = 'block';
+        var rect = sup.getBoundingClientRect();
+        var top = rect.top - 10;
+        var left = rect.left;
+        if (left + 340 > window.innerWidth) left = window.innerWidth - 350;
+        if (top < 10) top = rect.bottom + 10;
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+      }
+    });
+    sup.addEventListener('mouseleave', function() {
+      tooltip.style.display = 'none';
+    });
+    // 点击跳转到对应脚注
+    sup.addEventListener('click', function(e) {
+      e.preventDefault();
+      var num = parseInt(this.textContent.replace(/[\[\]]/g, ''), 10);
+      var target = document.querySelector('.footnotes ol li:nth-child(' + num + ')');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.style.background = 'rgba(160,32,32,.12)';
+        setTimeout(function() { target.style.background = ''; }, 2000);
+      }
+    });
+  });
+})();
+
+// ===== 数字计数动画 =====
+(function() {
+  var countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var target = parseFloat(el.getAttribute('data-count'));
+        if (!target) { countObserver.unobserve(el); return; }
+        var current = 0;
+        var step = Math.ceil(target / 40);
+        var timer = setInterval(function() {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          // Format number
+          if (target >= 1000) {
+            el.textContent = current.toLocaleString('zh-CN', { maximumFractionDigits: target % 1 === 0 ? 0 : 2 });
+          } else {
+            el.textContent = current.toFixed(target % 1 === 0 ? 0 : 2);
+          }
+        }, 30);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.num[data-count]').forEach(function(el) {
+    countObserver.observe(el);
+  });
+})();
+</script>
+<script src="../../global.js" defer></script>
+</body>
+</html>

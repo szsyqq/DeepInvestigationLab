@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="global.css">
 <title>深度调查档案室 · The Investigative Desk</title>
 <script src="https://beacon.cdn.qq.com/sdk/4.5.9/beacon_web.min.js" async></script>
 <style>
 :root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.8;font-size:17px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
-.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;width:0;transition:width .1s}
-
-/* body 被锁定滚动时（弹窗打开） */
 body.locked{overflow:hidden}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;width:0;transition:width .1s}
 
 /* 内部资料横幅 */
 .internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
@@ -29,8 +28,10 @@ body.locked{overflow:hidden}
 .top-bar .sep{width:1px;height:14px;background:var(--line)}
 .top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;white-space:nowrap}
 .top-bar .toc:hover{background:var(--red)}
+.top-bar .ver{color:var(--red);text-decoration:none;font-size:12px;letter-spacing:.5px;font-weight:700;white-space:nowrap;padding:2px 8px;border:1px solid var(--red);border-radius:2px;transition:background .15s,color .15s}
+.top-bar .ver:hover{background:var(--red);color:#fff}
 
-/* 法律合规弹窗 */
+/* 法律合规声明弹窗 */
 .consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
 .consent-overlay.show{opacity:1;visibility:visible}
 .consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
@@ -38,7 +39,6 @@ body.locked{overflow:hidden}
 .consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
 .consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
 .consent-body h3:first-child{margin-top:0}
-.consent-body p{margin-bottom:10px}
 .consent-body ul{margin:8px 0 0 18px;padding:0}
 .consent-body li{margin-bottom:6px}
 .consent-body b{color:var(--ink)}
@@ -59,7 +59,6 @@ body.locked{overflow:hidden}
 .hero .dek{font-size:18px;color:var(--gray);line-height:1.7;max-width:780px}
 .about{margin:24px 0 6px;font-size:14px;color:var(--gray);background:var(--quote-bg);border-left:4px solid var(--red);padding:16px 20px;line-height:1.7}
 .about b{color:var(--ink)}
-
 
 .index-head{display:flex;align-items:baseline;justify-content:space-between;margin:42px 0 18px;padding-top:18px;border-top:2px solid var(--ink)}
 .index-head h2{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700}
@@ -97,6 +96,10 @@ body.locked{overflow:hidden}
 
 footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
 footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+.foot-meta{margin:14px auto 0;max-width:90vw;text-align:center;font-size:12px;color:var(--gray);letter-spacing:.5px}
+.foot-meta b{color:var(--red);font-weight:700}
+.foot-meta a{color:var(--red);text-decoration:none;border-bottom:1px solid var(--red)}
+.foot-meta a:hover{opacity:.75}
 
 @media(max-width:760px){
 .hero h1{font-size:32px}
@@ -116,18 +119,26 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <!-- 法律合规声明弹窗 -->
 <div class="consent-overlay" id="consentOverlay">
 <div class="consent-box">
-<div class="consent-header"><span>法律声明 · LEGAL NOTICE</span></div>
+<div class="consent-header">
+<span>调查团队 · 阅读须知</span>
+<button class="consent-close" id="consentClose">&times;</button>
+</div>
 <div class="consent-body">
-<h3>一、资料性质</h3>
-<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
-<h3>二、免责声明</h3>
-<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
-<h3>三、用户知情同意</h3>
-<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
-    </div>
+<h3>研究性质声明</h3>
+<p>本文为深度公司研究，基于公开数据和第三方信息撰写，不构成任何投资建议。研究目的仅为提供信息和参考。</p>
+<h3>风险提示</h3>
+<ul>
+<li><b>不构成投资建议</b>：文中涉及的公司和基金产品仅为研究案例，不代表买入或卖出建议。</li>
+<li><b>数据时效性</b>：数据截至报告标注日期，后续变化可能导致分析失效。</li>
+<li><b>立场中立</b>：本档案室不唱多不唱空，仅做基于数据的结构化分析。</li>
+<li><b>版权声明</b>：内部研究资料，未经许可请勿外传。</li>
+</ul>
+</div>
 <div class="consent-footer">
-<label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
-<button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+<label class="consent-agree">
+<input type="checkbox" id="consentCheck"> 我已阅读并理解上述须知，确认查阅目的为研究参考。
+</label>
+<button class="consent-btn" id="consentBtn" disabled>确认进入</button>
 </div>
 </div>
 </div>
@@ -137,7 +148,9 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <div class="top-bar-left">
 <span class="brand">深度调查 · <span class="accent">THE INVESTIGATIVE DESK</span></span>
 <span class="sep"></span>
-<span class="time">更新于 2026-07-23</span>
+<span class="time">更新于 2026-07-24</span>
+<span class="sep"></span>
+<a class="ver" href="changelog.html">v1.0.0</a>
 </div>
 <div class="top-bar-right">
 <span class="pos">当前位置：<b>档案室首页</b></span>
@@ -159,130 +172,121 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <b>关于本档案室</b>：本档案室基于公开信息独立完成深度公司研究。全部内容基于招股书、年报、问询回复、监管文件与可交叉验证的第三方公开数据，立场中立、不预设结论。部分内容借助人工智能工具辅助生成。署名统一为「调查团队」，不使用任何媒体自称。如需引用，请注明来源与日期。
 </div>
 
-
 <div class="index-head reveal">
 <h2>全部报道 · All Reports</h2>
-<span class="count">共 17 篇</span>
+<span class="count">持续更新中</span>
 </div>
 
-<!-- 卡片 · 景顺长城基金 -->
-<a class="card reveal" id="r-invesco" href="reports/invesco-greatwall/index.html">
+<a class="card reveal" id="r-cai-fu" href="reports/cai-fu/index.html">
 <div class="row">
 <span class="date">2026-07-24</span>
 <span class="tag">试读</span>
-<span class="co">景顺长城基金</span>
-<span class="tag">公募基金</span><span class="tag">明星基金经理</span><span class="tag">降费</span>
+<span class="co">中国福彩</span>
+<span class="tag">彩票</span><span class="tag">公益金</span><span class="tag">监管</span>
 </div>
-<h3>景顺长城：告别刘彦春，一个明星基金时代的尾声</h3>
-<p class="desc">曾经的"千亿基金经理"刘彦春管理规模从1163亿缩水至265亿，另一位元老余广在2026年7月悄然离任。主动权益管理费三连降（24.48亿→17.89亿→16.81亿），总规模9264亿创新高但结构质量堪忧——当景顺长城最倚重的两位明星先后"陨落"，这家首家中美合资基金公司的"明星基金经理"模式是否走到了终点？浮动费率、平台化转型、QDII跨境优势——这些是出路还是权宜之计？</p>
-<div class="foot"><span>约 18 分钟阅读</span><span class="more">阅读全文</span></div>
+<h3>中国福彩：年卖两千亿的公益机器，与它的透明之困</h3>
+<p class="desc">2025年销售2085.77亿元，筹集公益金609.89亿元。自1987年创立以来累计销售32568亿元、筹集公益金9724亿元。但2015年审计署审计发现169亿元违规问题，14%的发行费比例15年未变，体彩从2018年反超且差距拉大到2倍——这台年卖两千亿的"公益机器"，内部零件磨损到什么程度了？</p>
+<div class="foot"><span>约 19 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 大宗商品铜（新增） -->
+<a class="card reveal" id="r-shenzhen-air" href="reports/shenzhen-air/index.html">
+<div class="row">
+<span class="date">2026-07-24</span>
+<span class="co">深圳航空</span>
+<span class="tag">航空</span><span class="tag">国航</span><span class="tag">大湾区</span>
+</div>
+<h3>深圳航空：年运四千万人，亏掉十二亿——国航翅膀下的深圳难题</h3>
+<p class="desc">2025年运送旅客4172万人次、起落30.16万架次、机队规模239架——但亏损12.44亿元。在国航"同一品牌、同一标准"框架下，深航的独立生存空间有多窄？深圳机场产能逼近天花板，广深港高铁分流，双品牌运营的成本结构——这家深圳最大的基地航司，在国航南方战略中究竟是棋子还是弃子？</p>
+<div class="foot"><span>约 16 分钟阅读</span><span class="more">阅读全文</span></div>
+</a>
+
 <a class="card reveal" id="r-copper" href="reports/copper/index.html">
 <div class="row">
 <span class="date">2026-07-24</span>
-<span class="tag">试读</span>
 <span class="co">大宗商品铜</span>
 <span class="tag">大宗商品</span><span class="tag">供给缺口</span><span class="tag">新能源</span>
 </div>
 <h3>铜价冲天，加工费归零：谁在"红色石油"的繁荣中赚钱？</h3>
-<p class="desc">2026 年初 LME 铜价冲破每吨 14,500 美元刷新纪录，铜精矿加工费却跌到了零——冲天铜价与归零加工费的悖论背后，是全球铜产业链一场无声的利润大迁移。当新能源与 AI 双轮驱动力推高需求预期，当冶炼厂靠硫酸续命、靠"囚徒困境"硬撑，当中国的"双重命门"暴露了供应链的脆弱——铜的"超级周期"是真实的结构性牛市，还是资本市场的一场叙事狂欢？</p>
+<p class="desc">2026年初LME铜价冲破每吨14500美元刷新纪录，全球铜矿资本开支不足，新能源与AI算力需求加速放量。但产业链上的中国冶炼厂却在为每吨个位数的加工费挣扎——铜矿巨头吃肉，冶炼厂喝汤，下游电缆厂连汤都喝不上。这道"铜的剪刀差"是怎么裂开的？</p>
 <div class="foot"><span>约 16 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 空客 -->
 <a class="card reveal" id="r-airbus" href="reports/airbus/index.html">
 <div class="row">
 <span class="date">2026-07-24</span>
-<span class="tag">试读</span>
 <span class="co">空中客车</span>
 <span class="tag">航空</span><span class="tag">供应链</span><span class="tag">欧洲</span>
 </div>
 <h3>空中客车：八千架飞机的赌注，产能马拉松与发动机之困</h3>
-<p class="desc">8754架积压订单创下历史纪录，2025年净利润52亿欧元同样创纪录——但空客的2026年Q1自由现金流为-25亿欧元，普惠发动机的交付危机让数百架完工机身"趴窝"在停机坪上等"心脏"。当全球最畅销的飞机被一台发动机卡住脖子，这家欧洲航空巨头正面临一场创纪录的产能马拉松：既要应对波音的强势反扑，又要防守中国市场被C919蚕食，还要兼顾氢能研发与太空争霸的多线作战。</p>
+<p class="desc">8754架积压订单创下历史纪录，按当前产能需要11年才能消化——A320neo系列占七成以上。但供应链瓶颈（发动机交付延迟、钛材与铸锻件短缺）让空客2025年仅交付766架，远低于年度目标。波音的溃败给了空客订单窗口，但窗口能开多久？</p>
 <div class="foot"><span>约 16 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 景顺长城基金 -->
 <a class="card reveal" id="r-invesco" href="reports/invesco-greatwall/index.html">
 <div class="row">
 <span class="date">2026-07-24</span>
-<span class="tag">试读</span>
 <span class="co">景顺长城基金</span>
 <span class="tag">公募基金</span><span class="tag">明星基金经理</span><span class="tag">降费</span>
 </div>
 <h3>景顺长城：告别刘彦春，一个明星基金时代的尾声</h3>
-<p class="desc">曾经的"千亿基金经理"刘彦春管理规模从1163亿缩水至265亿，另一位元老余广在2026年7月悄然离任。主动权益管理费三连降（24.48亿→17.89亿→16.81亿），总规模9264亿创新高但结构质量堪忧——当景顺长城最倚重的两位明星先后"陨落"，这家首家中美合资基金公司的"明星基金经理"模式是否走到了终点？浮动费率、平台化转型、QDII跨境优势——这些是出路还是权宜之计？</p>
+<p class="desc">曾经的"千亿基金经理"刘彦春管理规模从1163亿缩水至265亿，2025年4月离任全部产品。景顺长城主动权益规模从2021年高峰缩水超千亿。公募降费改革、外资股东施压、渠道话语权转移——当明星基金经理神话退潮，景顺长城的下一张牌在哪里？</p>
 <div class="foot"><span>约 18 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 基金灰产 -->
 <a class="card reveal" id="r-fund-gray" href="reports/fund-gray/index.html">
 <div class="row">
 <span class="date">2026-07-23</span>
 <span class="co">基金灰产</span>
-<span class="tag">试读</span>
 <span class="tag">公募基金</span><span class="tag">配售接盘</span><span class="tag">建滔</span>
 </div>
 <h3>接盘的逻辑：从建滔配售看公募基金的利益链</h3>
-<p class="desc">2026年二季度，49家公募基金净买入1.77亿股建滔积层板，与大股东配售量高度吻合。花旗的推销、投行的双重角色、"双十限制"的形同虚设——这个故事不只是建滔的故事，它是中国公募基金灰色操作的一个切片。从老鼠仓到配售接盘，从佣金换规模到IPO利益输送，这些灰色操作共同构成了一个系统性的利益输送通道。</p>
 <div class="foot"><span>约 18 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 融通基金 -->
 <a class="card reveal" id="r-rongtong" href="reports/rongtong/index.html">
 <div class="row">
 <span class="date">2026-07-23</span>
-<span class="tag">试读</span>
 <span class="co">融通基金</span>
 <span class="tag">公募基金</span><span class="tag">央企</span><span class="tag">投研</span>
 </div>
 <h3>"老十三"的二次创业：融通基金的央企转型账本</h3>
-<p class="desc">成立于2001年，国内第13家公募基金公司，2022年被央企诚通集团收入麾下。三年过去，管理规模仍未突破历史峰值，14位基金经理相继离职，持有人累计亏损近50亿元——这场"二次创业"走到哪了？22亿管理费与50亿亏损的"剪刀差"、走马灯式的高管更迭、明星基金经理的2026Q2滑铁卢，背后是一家"老牌"基金公司深层的结构性困局。</p>
+<p class="desc">管理规模从2021年末的2794亿元缩至2026年一季度的1200亿元以下，非货规模排名从行业第13滑至第46——日资股东退出、央企诚通集团入主后，这家"老十三"正在经历脱胎换骨的转型。从日式保守到央企激进，融通能借"国家队"身份翻盘吗？</p>
 <div class="foot"><span>约 16 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 平安证券 -->
 <a class="card reveal" id="r-pingansec" href="reports/pingansec/index.html">
 <div class="row">
 <span class="date">2026-07-22</span>
-<span class="tag">试读</span>
 <span class="co">平安证券</span>
 <span class="tag">券商</span><span class="tag">综合金融</span><span class="tag">A股</span>
 </div>
 <h3>平安证券：平安的棋子，与它自己的路</h3>
-<p class="desc">在中国前十大券商中，平安证券是唯一没有独立股票代码的那一家——它被隐藏在中国平安超过 10,000 亿的财报里。2022-2025 年它吞下了破产的方正证券，营收翻倍，挤进行业前十。但为什么有平安集团 2.3 亿客户的"生态加持"，排名仍只有第十？"平安系"到底是养分，还是天花板？</p>
+<p class="desc">背靠平安集团这棵大树，平安证券坐拥1.4亿潜在客户池，但2025年净利润仅42.5亿元，在行业排名中游。平安集团综合金融战略下，它究竟是最大的受益者还是被捆绑的棋子？当方正证券整合悬念落地，平安证券在券商行业洗牌中的位置愈发微妙。</p>
 <div class="foot"><span>约 10 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 希尔顿 -->
 <a class="card reveal" id="r-hilton" href="reports/hilton/index.html">
 <div class="row">
 <span class="date">2026-07-22</span>
-<span class="tag">试读</span>
 <span class="co">希尔顿</span>
 <span class="tag">酒店</span><span class="tag">轻资产</span><span class="tag">美股</span>
 </div>
 <h3>希尔顿：卖钥匙的酒店帝国</h3>
-<p class="desc">全球第二大酒店集团，拥有 8,000 多家酒店、120 万间客房——但它几乎不拥有其中任何一间。它卖的不是住宿，而是一把钥匙：刻着品牌的名字，打开的是别人的酒店。从特许经营的定价学、黑石杠杆收购、到 Hilton Honors 2 亿会员的隐形收入和 50 万间在建客房的风险——希尔顿到底是一台印钞机，还是一把终会生锈的钥匙？</p>
+<p class="desc">自己不拥有一家酒店，却管理着超过8100家、120万间客房，特许经营比例超过97%。2025年管理费收入占营收的78%，净利润16.7亿美元，营业利润率高达36%——希尔顿用"卖钥匙"的轻资产模式跑赢了几乎所有重资产酒店集团。但加盟商关系、品牌老化和中国市场的降级消费是它绕不开的三道坎。</p>
 <div class="foot"><span>约 15 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 五粮液 -->
 <a class="card reveal" id="r-wuliangye" href="reports/wuliangye/index.html">
 <div class="row">
 <span class="date">2026-07-22</span>
-<span class="tag">试读</span>
 <span class="co">五粮液</span>
 <span class="tag">白酒</span><span class="tag">消费</span><span class="tag">A股</span>
 </div>
 <h3>五粮液：半瓶酒的回响</h3>
-<p class="desc">2024 年营收 892 亿，离"千亿俱乐部"只差一步；2025 年营收 405 亿，跌回五年前的水平。一年之内，浓香之王的营收被腰斩，净利润少了七成。当茅台用 -1.2% 的营收下滑证明自己的韧性，当山西汾酒甚至还在增长——五粮液为什么会跌得这么深？2026 年一季度 82% 的净利反弹，到底是复苏的开始，还是只是半瓶酒的回响？</p>
+<p class="desc">从"白酒大王"到行业第二，五粮液与茅台的分化在2025年进一步加剧——营收约为茅台的50%，市值差距超过2.5倍。库存高企、批价倒挂、渠道利润微薄，第八代五粮液的终端价已逼近出厂价。但在千元价格带，五粮液仍是唯一能与茅台掰手腕的品牌。半瓶酒里，还剩多少底气？</p>
 <div class="foot"><span>约 12 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 小红书 -->
 <a class="card reveal" id="r-xiaohongshu" href="reports/xiaohongshu/index.html">
 <div class="row">
 <span class="date">2026-07-21</span>
@@ -290,11 +294,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">内容社区</span><span class="tag">IPO</span><span class="tag">种草</span>
 </div>
 <h3>小红书：种草的帝国，信任的裂缝</h3>
-<p class="desc">一家把"真实分享"做成每天 8 亿次搜索、被资本以 500 亿美元定价的内容社区，正走到港交所门口。可它最赚钱的仍是广告，最想要的交易闭环始终没跑通——用户在这里种草，转身去别处拔草。当估值的想象力跑在上市时间表前面，为这座帝国定价的，究竟是它的信任，还是那道迟迟没能弥合的裂缝？</p>
+<p class="desc">2025年营收突破500亿元，月活3.5亿，但商业化加速带来了"种草变质"的信任危机——虚假测评泛滥、算法推荐黑盒、品牌投放干预内容。在冲击IPO的关口，小红书的社区氛围和商业变现之间，那条裂缝能补上吗？</p>
 <div class="foot"><span>约 14 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 智谱 -->
 <a class="card reveal" id="r-zhipu" href="reports/zhipu/index.html">
 <div class="row">
 <span class="date">2026-07-21</span>
@@ -302,11 +305,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">AI</span><span class="tag">大模型</span><span class="tag">港股</span>
 </div>
 <h3>智谱：学霸下海，与一门它还在学的生意</h3>
-<p class="desc">一家从清华实验室跑出来的AI公司，2025年营收7.24亿元、却亏掉47.18亿元；当它带着"全球大模型第一股"的标签登陆港股，学者与商人两种身份，第一次被放在同一份财报里称量。学霸造出了能对标OpenAI的模型，却还没学会写一份赚钱的财报。</p>
+<p class="desc">清华系出身的AI大模型公司，2025年营收约8亿元，但亏损超过15亿元——B端大模型定制开发利润率极低，C端产品尚未打开市场。在"百模大战"步入淘汰赛的阶段，智谱的技术论文拿得出手，但商业化的作业还没交。上市前的账本摊开看，比靠融资输血更紧迫的是找到自己的收费模式。</p>
 <div class="foot"><span>约 20 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 宝马 -->
 <a class="card reveal" id="r-bmw" href="reports/bmw/index.html">
 <div class="row">
 <span class="date">2026-07-21</span>
@@ -314,11 +316,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">汽车</span><span class="tag">电动化</span><span class="tag">德国</span>
 </div>
 <h3>宝马：百年驾驶乐趣，与它踩不稳的电门</h3>
-<p class="desc">一家造了百年汽车的公司，2025 年营收超过 1,400 亿欧元——却在中国被本土品牌蚕食份额、电动车毛利率为负、新世代平台千亿投入未见回报、一道制动系统召回就让全年利润预警。当"驾驶乐趣"这个百年承诺撞上电动化与软件化的新赛道，它踩电门的那只脚，还不太稳。</p>
+<p class="desc">在燃油车时代定义了"驾驶乐趣"的品牌，电动化转型中却显得左右为难。i系列销量不及预期，在中国市场遭遇新势力围剿，2025年纯电渗透率仅15%——落后于奔驰和奥迪。当"油改电"的标签撕不掉，百年宝马的电动化赌注还能踩下那脚电门吗？</p>
 <div class="foot"><span>约 12 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 赛力斯 -->
 <a class="card reveal" id="r-seres" href="reports/seres/index.html">
 <div class="row">
 <span class="date">2026-07-20</span>
@@ -326,23 +327,21 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">华为</span><span class="tag">新能源</span><span class="tag">智选车</span>
 </div>
 <h3>赛力斯：把灵魂交给华为的车厂，与它算不清的那笔"华为账"</h3>
-<p class="desc">一家靠面包车起家的重庆小厂，四年里改了名字、翻了身——营收从 143 亿涨到 1650 亿，亏损 22 亿变成盈利 59 亿。转折只有一个词：华为。但当华为把同一套"灵魂"分发给五个"界"，当 2026 上半年销量还在涨、利润却预亏 15 到 18 亿，这笔账，赛力斯算得清吗？</p>
+<p class="desc">2025年问界系列销量突破40万辆，赛力斯营收首次突破2000亿元——但净利润率仅2.1%。华为智选车模式下，赛力斯承担了大部分制造和供应链成本，而利润大头流向了哪里？问界商标归华为所有，"灵魂"和"身体"的账本，赛力斯的股东们算得清楚吗？</p>
 <div class="foot"><span>约 13 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 周生生 -->
 <a class="card reveal" id="r-chowsangsang" href="reports/chowsangsang/index.html">
 <div class="row">
 <span class="date">2026-07-20</span>
 <span class="co">周生生</span>
 <span class="tag">黄金</span><span class="tag">珠宝</span><span class="tag">港股</span><span class="tag">家族企业</span>
 </div>
-<h3>周生生：金价跌了 25%，它反而暖了</h3>
-<p class="desc">2026 年上半年，国际金价从 5594 美元/盎司的历史顶峰暴跌超过 25%，品牌足金饰品每克便宜了近 500 元。按常理，卖金子的该慌了。但周生生的 Q2 数据给出了相反的答案：零售销售同比增长 16%，大陆同店增长 17%，港澳更暴涨了 30%——股价较最低点反弹 60%。一家卖了 90 年金子的老铺，为什么在金价暴跌的时候反而更值钱了？答案藏在 2024 年的至暗时刻、2025 年的绝地反转、以及一条用 90 年铺就的"脱钩之路"里。</p>
+<h3>周生生：金价跌了25%，它反而暖了</h3>
+<p class="desc">2025年金价从历史高点回调超过25%，周生生的股价却创下三年新高——"金价涨、珠宝股跌"的反直觉现象背后，是金价上涨压制消费需求的逻辑反转。周生生的黄金对冲策略、内地扩张路径和三代家族传承，藏着比金价走势更值得看的门道。</p>
 <div class="foot"><span>约 24 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 深度求索 -->
 <a class="card reveal" id="r-deepseek" href="reports/deepseek/index.html">
 <div class="row">
 <span class="date">2026-07-20</span>
@@ -350,11 +349,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">AI大模型</span><span class="tag">开源</span><span class="tag">算力</span>
 </div>
 <h3>DeepSeek：把模型开源，把账本捂紧</h3>
-<p class="desc">用 558 万美元，训练出比肩 GPT-4o 的模型，让英伟达一天蒸发近 6000 亿美元。可当市场给它贴上 3500 亿元估值标签时，这家公司却从不公布一分钱营收、一分钱利润——它把模型开源给全世界，却把账本捂紧留给自己。这是同一家公司最锋利的悖论：技术彻底打开，财务彻底关上。</p>
+<p class="desc">以开源大模型V3和R1震惊AI界的中国创业公司，训练成本仅为同行的十分之一，API定价低至GPT-4的2%。但开源策略意味着几乎为零的直接模型收入——DeepSeek靠什么赚钱？算力租赁、企业定制、还是更长远的布局？在一众烧钱的闭源大模型中，开源路线的账本至今未公开。</p>
 <div class="foot"><span>约 14 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 燧原科技 -->
 <a class="card reveal" id="r-suiyuan" href="reports/suiyuan/index.html">
 <div class="row">
 <span class="date">2026-07-20</span>
@@ -362,11 +360,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">AI芯片</span><span class="tag">GPU</span><span class="tag">IPO</span>
 </div>
 <h3>燧原科技：一家AI芯片独角兽，和它越写越大的"腾讯账单"</h3>
-<p class="desc">国产GPU"四小龙"里，燧原成立最早，上市最晚。三年间它的营收从9010万元涨到近10亿元，累计却亏掉51.79亿元。更微妙的，是那位撑起增长的客户——腾讯：它既是燧原持股超两成的第一大股东，又是它的第一大客户，对它的销售占比，从8.53%一路升到83.79%。资本市场即将为一家"国产算力领军者"定价，还是在为一家把命脉系于单一大股东的公司定价？</p>
+<p class="desc">腾讯连续参与燧原全部七轮融资，持股比例超过20%，贡献了燧原预估营收的60%以上——腾讯既是最大股东又是最大客户。在国产AI芯片替代浪潮中，燧原靠腾讯订单撑起估值，但客户集中度风险、与腾讯云的战略绑定关系，让IPO路上的独立性问题愈发敏感。</p>
 <div class="foot"><span>约 18 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 建滔系 -->
 <a class="card reveal" id="r-jiantao" href="reports/jiantao/index.html">
 <div class="row">
 <span class="date">2026-07-18</span>
@@ -374,11 +371,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">覆铜板</span><span class="tag">CCL</span><span class="tag">港股</span>
 </div>
 <h3>建滔系：一纸涨价函背后的铜箔帝国，与AI叙事的边界</h3>
-<p class="desc">建滔系：一家连续20年全球第一的覆铜板龙头，正借着"AI算力"与铜价讲出一个超级周期的故事。可就在创始人喊出"好十年"的同一窗口，张国荣家族两次配售旗下积层板股份，套现145亿港元。散户在叙事顶端接过的，究竟是AI的船票，还是一轮周期的船票？</p>
+<p class="desc">从覆铜板到铜箔、从化工到地产，建滔系以一张涨价函搅动全球电子产业链。AI服务器需求拉动高频高速CCL订单暴增，但建滔的核心利润来源仍是传统消费电子覆铜板——AI叙事能讲多大，涨价的泡沫就有多大。当铜价回落、下游需求疲软，建滔的涨价牌还能打多久？</p>
 <div class="foot"><span>约 13 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 长鑫科技 -->
 <a class="card reveal" id="r-changxin" href="reports/changxin/index.html">
 <div class="row">
 <span class="date">2026-07-18</span>
@@ -386,11 +382,10 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">半导体</span><span class="tag">DRAM</span><span class="tag">IPO</span>
 </div>
 <h3>长鑫科技：在存储涨价周期顶端，一家国产DRAM厂的账本与代差</h3>
-<p class="desc">长鑫科技295亿IPO：十年亏掉366亿元，一个季度净赚330亿元。当一家靠"耐心资本"熬过十年亏损的芯片厂，恰好踩中四十年一遇的存储涨价周期来到资本市场，散户买到的，究竟是"中国版SK海力士"，还是周期顶端的一张船票？</p>
+<p class="desc">DRAM价格在2025-2026年进入新一轮上行周期，长鑫科技营收突破300亿元、首次实现全年盈利。但技术节点仍落后三星、SK海力士两代以上，产能仅为行业龙头的十分之一。在存储涨价周期的顶端递交IPO申请，长鑫的账本里，有多少是周期红利，多少是真正的竞争力？</p>
 <div class="foot"><span>约 21 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
-<!-- 卡片 · 宇树科技 -->
 <a class="card reveal" id="r-yushu" href="reports/yushu/index.html">
 <div class="row">
 <span class="date">2026-07-17</span>
@@ -398,43 +393,46 @@ footer .disc{max-width:90vw;margin:0 auto;border:1px solid var(--line);border-ra
 <span class="tag">机器人</span><span class="tag">人形机器人</span><span class="tag">IPO</span>
 </div>
 <h3>会翻跟头的机器人，和它翻不过去的那道坎</h3>
-<p class="desc">招股书819页、三轮公开回复、美国国会调查、安全后门报告——宇树科技的十大核心问题，来自全球公开信息的最全面交叉验证。当一家公司的运动天赋举世无双，它的智力短板是否被420亿估值的聚光灯遮住了？</p>
+<p class="desc">2025年人形机器人赛道融资超过200亿元，宇树科技以"会翻跟头的机器人"成为网红——但营收仅2亿元，亏损却超过3亿元。四足机器人市场天花板明显，人形机器人仍在"Demo阶段"，批量落地遥遥无期。在资本狂热的背后，宇树的商业化路径、技术护城河和组织能力的硬仗，才刚刚开始。</p>
 <div class="foot"><span>约 54 分钟阅读</span><span class="more">阅读全文</span></div>
 </a>
 
 <footer>
 <div class="disc">
-本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
-
-本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
-
-署名「调查团队」为统一中性称谓。</div>
+<p><b>免责声明</b>：本档案室所有内容均为基于公开信息的独立研究，不构成任何投资建议或投资推荐。文中涉及的公司、证券和基金产品仅为研究案例，不代表买入或卖出建议。数据截至各报告标注日期，后续变化可能导致分析失效。研究过程中部分借助人工智能工具辅助生成，所有结论均需读者自行判断。未经授权，禁止转载、摘编或用于任何商业用途。</p>
+</div>
+<div class="foot-meta">
+<b>深度调查档案室 · The Investigative Desk</b> — 基于公开数据，独立深度研究 | 更新于 2026-07-24<br>
+如发现数据错误或遗漏，欢迎 <a href="mailto:investigate@tdesk.com">联系我们</a>
+</div>
 </footer>
 
 </div>
 
-<!-- 侧边导航（目录） -->
+<!-- 侧边目录 -->
 <div class="sidenav" id="sidenav">
-<button class="close" id="navClose">×</button>
-<h4>报道导航 · Reports</h4>
-<a href="#r-invesco"><span class="num">01</span>景顺长城：告别刘彦春</a>
-<a href="#r-copper"><span class="num">02</span>铜：冲天铜价与零加工费</a>
-<a href="#r-airbus"><span class="num">03</span>空中客车：八千架飞机的赌注，产能马拉松与发动机之困</a>
-<a href="#r-fund-gray"><span class="num">04</span>基金灰产：接盘的逻辑</a>
-<a href="#r-rongtong"><span class="num">05</span>融通基金：央企转型</a>
-<a href="#r-pingansec"><span class="num">06</span>平安证券：平安的棋子</a>
-<a href="#r-hilton"><span class="num">07</span>希尔顿：卖钥匙的帝国</a>
-<a href="#r-wuliangye"><span class="num">08</span>五粮液：半瓶酒的回响</a>
-<a href="#r-xiaohongshu"><span class="num">09</span>小红书：种草的帝国</a>
-<a href="#r-zhipu"><span class="num">10</span>智谱：学霸下海</a>
-<a href="#r-bmw"><span class="num">11</span>宝马：踩不稳的电门</a>
-<a href="#r-seres"><span class="num">12</span>赛力斯：华为账</a>
-<a href="#r-chowsangsang"><span class="num">13</span>周生生：金价跌反而暖</a>
-<a href="#r-deepseek"><span class="num">14</span>DeepSeek：账本捂紧</a>
-<a href="#r-suiyuan"><span class="num">15</span>燧原：腾讯账单</a>
-<a href="#r-jiantao"><span class="num">16</span>建滔系：铜箔帝国</a>
-<a href="#r-changxin"><span class="num">17</span>长鑫：DRAM 账本</a>
-<a href="#r-yushu"><span class="num">18</span>宇树：翻跟头的机器人</a>
+<button class="close" id="navClose">&times;</button>
+<h4>全部报道 · Reports</h4>
+<a href="#r-cai-fu"><span class="num">01</span>中国福彩：年卖两千亿的公益机器</a>
+<a href="#r-shenzhen-air"><span class="num">02</span>深圳航空：年运四千万人，亏掉十二亿</a>
+<a href="#r-copper"><span class="num">03</span>铜价冲天，加工费归零</a>
+<a href="#r-airbus"><span class="num">04</span>空客：八千架飞机的赌注</a>
+<a href="#r-invesco"><span class="num">05</span>景顺长城：告别刘彦春</a>
+<a href="#r-fund-gray"><span class="num">06</span>基金灰产：接盘的逻辑</a>
+<a href="#r-rongtong"><span class="num">07</span>融通基金：央企转型账本</a>
+<a href="#r-pingansec"><span class="num">08</span>平安证券：平安的棋子</a>
+<a href="#r-hilton"><span class="num">09</span>希尔顿：卖钥匙的帝国</a>
+<a href="#r-wuliangye"><span class="num">10</span>五粮液：半瓶酒的回响</a>
+<a href="#r-xiaohongshu"><span class="num">11</span>小红书：种草的帝国</a>
+<a href="#r-zhipu"><span class="num">12</span>智谱：学霸下海</a>
+<a href="#r-bmw"><span class="num">13</span>宝马：踩不稳的电门</a>
+<a href="#r-seres"><span class="num">14</span>赛力斯：华为账</a>
+<a href="#r-chowsangsang"><span class="num">15</span>周生生：金价跌反而暖</a>
+<a href="#r-deepseek"><span class="num">16</span>DeepSeek：账本捂紧</a>
+<a href="#r-suiyuan"><span class="num">17</span>燧原：腾讯账单</a>
+<a href="#r-jiantao"><span class="num">18</span>建滔系：铜箔帝国</a>
+<a href="#r-changxin"><span class="num">19</span>长鑫：DRAM账本</a>
+<a href="#r-yushu"><span class="num">20</span>宇树：翻跟头的机器人</a>
 </div>
 
 <button class="back-top" id="backTop" title="回到顶部">↑</button>
@@ -494,22 +492,36 @@ if(backTop)backTop.addEventListener('click',function(){scrollTo({top:0,behavior:
 
 /* 法律合规弹窗 */
 (function(){
-  var overlay=document.getElementById("consentOverlay");
-  var check=document.getElementById("consentCheck");
-  var btn=document.getElementById("consentBtn");
-  var close=document.getElementById("consentClose");
-  if(!overlay||!btn||!check)return;
-  function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
-  function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
-  var KEY="investigative_desk_consent";
-  function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
-  function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
-  btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
-  check.addEventListener("change",function(){btn.disabled=!check.checked});
-  if(close)close.addEventListener("click",function(){_sc();hide()});
-  show();
-})();</script>
+  var overlay=document.getElementById('consentOverlay');
+  var check=document.getElementById('consentCheck');
+  var btn=document.getElementById('consentBtn');
+  if(overlay && !sessionStorage.getItem('consentDone')){
+    overlay.classList.add('show');
+    document.body.classList.add('locked');
+  }
+  if(check){
+    check.addEventListener('change',function(){btn.disabled=!this.checked});
+  }
+  if(btn){
+    btn.addEventListener('click',function(){
+      sessionStorage.setItem('consentDone','1');
+      overlay.classList.remove('show');
+      document.body.classList.remove('locked');
+    });
+  }
+  var closeBtn=document.getElementById('consentClose');
+  if(closeBtn){
+    closeBtn.addEventListener('click',function(){
+      overlay.classList.remove('show');
+      document.body.classList.remove('locked');
+    });
+  }
+})();
 
-<script>function ct(){document.body.classList.toggle("compact",window.scrollY>80)}window.addEventListener("scroll",ct,{passive:true});ct();var tr=document.getElementById("tracker");if(tr){tr.classList.add("nav-toggle");tr.style.cursor="pointer";tr.onclick=function(e){e.stopPropagation();var n=document.querySelector(".sidenav");if(n)n.classList.toggle("open")}}</script>
+/* 紧凑导航 */
+function ct(){document.body.classList.toggle("compact",window.scrollY>80)}
+window.addEventListener("scroll",ct,{passive:true});ct();
+</script>
+<script src="global.js" defer></script>
 </body>
 </html>
