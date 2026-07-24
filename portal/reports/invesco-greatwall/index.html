@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>景顺长城：告别刘彦春，一个明星基金时代的尾声 | 调查团队</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand b{color:var(--red);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+.timeline{margin:28px 0;padding-left:20px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:20px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:8px;width:10px;height:10px;background:var(--red);border-radius:50%}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px}
+.timeline-content{margin-top:4px}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+.epilogue{background:var(--bg-dark);color:#e8e2d4;padding:40px 34px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0;font-size:24px}
+.epilogue p{color:#ddd8cc;line-height:1.9;margin-bottom:16px}
+.epilogue .drop-cap::first-letter{color:#e8c87a;font-size:48px}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045;font-size:22px}
+.epilogue strong{color:#e8c87a}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:4px;color:var(--bg-dark);text-align:center}
+.chart-sub{font-size:11px;color:var(--gray);text-align:center;margin-bottom:14px}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:10px}
+.bar-label{width:96px;font-size:13px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--quote-bg);height:30px;position:relative;overflow:hidden}
+.bar-fill{height:100%;display:flex;align-items:center;padding-left:10px;color:var(--paper);font-size:12px;font-weight:700;white-space:nowrap;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:#4a4036}
+.bar-fill.gray{background:#8a8073}
+.bar-fill.gold{background:var(--gold)}
+.bar-value{width:110px;font-size:11px;color:var(--gray);flex-shrink:0;line-height:1.3}
+.step-chart{display:flex;align-items:flex-end;justify-content:space-around;height:170px;gap:8px;padding:0 4px;border-bottom:2px solid var(--bg-dark)}
+.step-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:90px}
+.step-value{font-size:11px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:0}
+.step-bar.red{background:var(--red)}
+.step-label{font-size:10px;margin-top:6px;text-align:center;color:var(--ink);line-height:1.3}
+.vert-bars{display:flex;align-items:flex-end;justify-content:space-around;height:200px;padding:0 8px;border-bottom:2px solid var(--bg-dark);gap:6px}
+.vert-bar-wrap{display:flex;flex-direction:column;align-items:center;flex:1;max-width:80px}
+.vert-bar-wrap .val{font-size:10px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.vert-bar-wrap .bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;color:#e8c87a;font-size:10px;font-weight:700;transition:height 1.2s cubic-bezier(.4,0,.2,1);height:0}
+.vert-bar-wrap .bar.bull{background:var(--red)}
+.vert-bar-wrap .bar.bull-peak{background:var(--gold)}
+.vert-bar-wrap .yr{font-size:10px;margin-top:4px;color:var(--gray)}
+.vs-chart{display:flex;align-items:flex-end;justify-content:space-around;gap:10px;padding:0 4px;border-bottom:2px solid var(--bg-dark);height:200px}
+.vs-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:100px}
+.vs-col .vs-name{font-size:10px;font-weight:700;margin-bottom:6px;text-align:center;line-height:1.3}
+.vs-bars{display:flex;gap:3px;align-items:flex-end;width:100%}
+.vs-bar{width:100%;border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:4px;color:var(--paper);font-size:9px;font-weight:700}
+.vs-bar.a{background:var(--red)}
+.vs-bar.b{background:var(--bg-dark)}
+.vs-bar-label{font-size:9px;margin-top:4px;color:var(--gray);text-align:center}
+.donut-wrap{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap}
+.donut-center{position:absolute;width:100%;text-align:center;top:78px;z-index:2}
+.donut-center .big{font-size:22px;font-weight:700;color:var(--red)}
+.donut-center .small{font-size:11px;color:var(--gray)}
+.donut-legend{font-size:13px;line-height:2}
+.donut-legend .dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:middle}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}}
+.timeline-table td:first-child{font-weight:700;color:var(--red);white-space:nowrap;width:80px}
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:15px}
+  body{font-size:16px}
+  .container{padding:24px 16px 60px}
+  .pull-quote{font-size:19px}
+  .data-card{min-width:120px}
+  .epilogue{margin:30px -16px 0}
+  .sidenav .close{top:12px;right:12px}
+  .sidenav{padding:76px 14px 20px}
+  .bar-label{width:70px;font-size:11px}
+  .bar-value{width:80px;font-size:10px}
+  .bar-fill{font-size:10px}
+}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+/* donut-interactive */
+.di-wrap{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0}
+.di-svg-wrap{position:relative;width:220px;height:220px;flex-shrink:0}
+.di-svg{width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.di-seg{fill:none;stroke-width:28;cx:110;cy:110;r:82;stroke-linecap:butt;cursor:pointer;transition:stroke-dasharray 1.1s,stroke-opacity .3s,stroke-width .2s}
+.di-seg.dim{stroke-opacity:.22}
+.di-seg.on{stroke-width:34}
+.di-center{position:absolute;top:110px;left:110px;transform:translate(-50%,-50%);text-align:center;z-index:2;pointer-events:none}
+.di-center .big{font-size:24px;font-weight:700;color:var(--red);display:block}
+.di-center .sub{font-size:11px;color:var(--gray);display:block;margin-top:2px}
+.di-legend{font-size:13px;line-height:2.2;padding:4px 0}
+.di-legend .di-item{cursor:pointer;transition:opacity .25s;display:flex;align-items:center;gap:8px;padding:2px 6px;border-radius:3px}
+.di-legend .di-item.dim{opacity:.25}
+.di-legend .di-item .dot{width:12px;height:12px;border-radius:3px;flex-shrink:0;display:inline-block}
+.di-legend .di-item .name{flex-shrink:0}
+.di-legend .di-item .val{font-weight:700;color:var(--ink)}
+.di-callout{opacity:0;transition:opacity .4s;transition-delay:0s}
+.di-callout.on{opacity:1;transition-delay:.5s}
+.di-callout line{stroke:var(--gray);stroke-width:1;stroke-dasharray:3 2}
+.di-callout text{font-size:11px;fill:var(--gray);font-family:Georgia,serif}
+.di-callout text.on{fill:var(--red);font-weight:700}
+</style>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 18 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
+<div class="date">2026年7月24日 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>千亿到百亿</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>刘彦春的兴衰</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>余广的谢幕</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>降费时代的财务阵痛</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>平台化转型</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>"以量补价"</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>QDII双刃剑</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>Invesco的背影</a>
+<a href="#c8" data-ch="8"><span class="num">第8章</span>掉队者还是幸存者</a>
+<a href="#epi" data-ch="9"><span class="num">尾声</span>明星模式的终结</a>
+</div>
+
+<div class="container">
+<div class="hero">
+<div class="kicker">深度公司研究</div>
+<h1>景顺长城：告别刘彦春，一个明星基金时代的尾声</h1>
+<div class="dek">曾经的千亿基金经理只剩265亿、另一位元老2026年7月离任、主动权益管理费三连降——景顺长城的"明星基金经理"模式走到终点了吗？</div>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月24日 · 约18分钟</span>
+</div>
+</div>
+
+<!-- 导语 -->
+<h2 id="c0"><span class="chap-num">导语</span>千亿的崩塌，一个模式的黄昏</h2>
+<p class="drop-cap">2021年二季度，中国公募基金行业的历史上出现了一个令人咋舌的数字：一位基金经理的个人管理规模高达1,163亿元——比当时全市场超过80%的基金公司总规模还要大。他的名字叫刘彦春，供职于景顺长城基金管理有限公司。</p>
+
+<p>那一年，刘彦春是这个行业的"顶流"。他的景顺长城新兴成长混合规模一度突破500亿元，景顺长城鼎益混合超过200亿元，六只在管产品合计1,163.37亿元<sup>[1]</sup>。基民们称他为"春哥"，基金经理论坛里讨论他的仓位，媒体把他和另一位千亿基金经理张坤并称为"白酒双雄"。</p>
+
+<p>五年后的今天，这个数字缩水了77%。截至2026年一季度末，刘彦春在管规模仅余265.50亿元<sup>[2]</sup>。曾经让景顺长城引以为傲的"明星基金经理"招牌，在消费赛道退潮后变得斑驳不清。</p>
+
+<p>但这还只是景顺长城故事的一半。2026年7月10日，公司另一位元老级人物余广"因个人原因"卸任全部在管产品，不转任公司其他岗位，直接注销基金从业资格<sup>[3]</sup>。这位任职14年、代表作回报率达583.51%的"双十"基金经理，以一种近乎决绝的方式画上了句号。</p>
+
+<p>两位核心人物的命运，折射出景顺长城正在经历的一场深刻变革。与此同时，这家公司的主动权益管理费正在经历三连降——从2023年的24.48亿元降到2024年的17.89亿元，再到2025年的16.81亿元<sup>[4]</sup>。</p>
+
+<p>一家成立了23年、管理总规模达9,264亿元<sup>[5]</sup>的老牌基金公司，一面拥抱"平台化转型"的新叙事，一面告别缔造其辉煌的明星基金经理——这中间发生了什么？"明星基金经理"模式真的走到尽头了吗？接下来的八个章节，调查团队将从刘彦春与余广的命运开始，逐一拆解景顺长城的转型账本。</p>
+
+<!-- 第一章 -->
+<h2 id="c1"><span class="chap-num">第一章</span>千亿到百亿——刘彦春的兴衰</h2>
+
+<p>2021年二季度的一个数据成为行业范本：刘彦春以1,163.37亿元的管理规模跻身全市场主动权益基金经理第一梯队<sup>[1]</sup>。这个数字放在当时，超过了许多基金公司的整体规模。景顺长城这家公司，因此被贴上了一个鲜明的标签——"刘彦春的公司"。</p>
+
+<p>刘彦春的崛起与消费赛道的牛市密不可分。2017年至2020年，贵州茅台、五粮液、泸州老窖等高端白酒股价持续攀升，重仓消费赛道的刘彦春业绩如日中天。他的代表作景顺长城新兴成长混合，2019年收益72.18%，2020年收益85.94%——连续两年超高回报率吸引了大量资金涌入<sup>[6]</sup>。</p>
+
+<p>转折发生在2021年。白酒板块见顶之后，消费赛道进入漫长的调整期。贵州茅台从2021年初的2,600元区间一路跌至2025年的1,300元附近，腰斩过半。刘彦春的持仓策略几乎没有变化——始终高仓位持有白酒和消费股，不择时、不调仓。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">刘彦春在管规模变化（2021Q2–2026Q1）</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">2021Q2</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="100">1,163</div></div><span class="bar-value">←峰值</span></div>
+<div class="bar-row"><span class="bar-label">2021末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="80">~930</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">2022末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="60">~700</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">2023末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="43">~500</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">2024末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="32">~370</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">2025末</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="27">314</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">2026Q1</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="23">265.5</div></div><span class="bar-value" style="color:var(--red);font-weight:700">五年新低</span></div>
+</div>
+<div style="margin-top:8px;display:flex;justify-content:space-between;font-size:10px;color:var(--gray);">
+  <span>0亿</span><span>300亿</span><span>600亿</span><span>900亿</span><span>1,163亿</span>
+</div>
+</div>
+
+<p>规模下降的原因有两个：一是净值下跌导致持有人资产缩水；二是持有人赎回。截至2026年一季度末，刘彦春管理的标的产品景顺长城新兴成长混合A类，近三年的年化回报率为-18.79%，同类排名居后<sup>[7]</sup>。其中景顺长城绩优成长混合、景顺长城集英成长两年定开混合的累计净值跌幅均超过40%。</p>
+
+<p>"长期投资"是刘彦春和景顺长城反复强调的理念。但在连续的净值下跌面前，"长期投资"与"路径依赖"之间的边界变得越来越模糊。一位不愿具名的公募分析师指出，刘彦春的持仓风格高度集中——长期重仓白酒和消费赛道，在行业轮动极快的A股市场中，这种策略一旦"站错队"，几无翻身之力<sup>[8]</sup>。</p>
+
+<p>2025年12月，景顺长城第三次获得"主动权益投资金牛基金公司"称号<sup>[9]</sup>。但这份荣誉的光芒，被刘彦春产品线低迷的业绩冲淡了不少。刘彦春旗下次新基金景顺长城价值领航两年持有期混合，成立以来净值增长率为-8.52%，持有人仍在等待一个回本的机会<sup>[10]</sup>。</p>
+
+<p>刘彦春的兴衰不是个人故事。它是中国公募基金"明星基金经理"商业模式的缩影——在牛市中大肆铺货、打造"顶流"、吸引基民申购，然后在熊市中承受流量的反噬。</p>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num" data-count="1163">1,163</span><span class="label">峰值规模（亿元·2021Q2）</span></div>
+<div class="data-card"><span class="num" data-count="265.5">265.5</span><span class="label">最新规模（亿元·2026Q1）</span></div>
+<div class="data-card"><span class="num" data-count="-77">−77%</span><span class="label">规模缩水幅度</span></div>
+</div>
+
+<!-- 第二章 -->
+<h2 id="c2"><span class="chap-num">第二章</span>余广的谢幕——"双十"基金经理的20年句号</h2>
+
+<p>如果说刘彦春代表的是景顺长城主动权益的"旗舰"，余广则代表这家公司的"根基"。</p>
+
+<p>2005年加入景顺长城的余广，从业超过20年，是公募行业极少数做到"双十"——任职超过10年、年化回报超过10%——的基金经理<sup>[3]</sup>。他的代表作景顺长城核心竞争力混合A，自2011年12月成立至他离任之日，累计回报率高达583.51%，年化回报率约14.5%<sup>[11]</sup>。</p>
+
+<p>2026年7月10日，余广"因个人原因"卸任旗下全部4只在管产品，同时注销基金从业资格<sup>[3]</sup>。这个时间点距离他管理基金整整14年零7个月。一个时代，就这样画上了一个猝不及防的句号。</p>
+
+<p>余广的离任并非毫无征兆。他近年来的业绩已显疲态——景顺长城核心中景一年持有期混合（成立于2021年6月）在他管理期间累计亏损约21.54%，大幅跑输基准<sup>[12]</sup>。但他以"注销从业资格"的方式离场，在行业中仍属少见。公募基金经理通常以"个人原因"卸任后，会转任公司其他岗位或转向私募，直接注销从业资格几乎等同于彻底离开这个行业。</p>
+
+<p>一位接近景顺长城的业内人士分析，余广的离开与近年来的业绩压力有关。"余广的风格偏向长期价值投资，持仓主要以家电、建材等低估值蓝筹为主。过去三年这些板块表现不佳，业绩压力非常大。"<sup>[13]</sup>余广在2025年末的一只产品——景顺长城核心优选一年持有混合，自成立以来净值增长率为-6.34%，同样为持有人带来亏损。</p>
+
+<p>余广的离任还带来一个现实问题：他离任前管理总规模约96.53亿元。在明星基金经理离任后，这些资金的留存率通常不高。根据历史数据，明星基金经理离任后，基金普遍面临20%~50%的赎回压力<sup>[14]</sup>。如果按30%的赎回率估算，景顺长城将从余广的产品线中流失约30亿元规模。</p>
+
+<div class="pull-quote">一位任职14年、代表作回报率583.51%的"双十"基金经理，以一种近乎决绝的方式画上了句号。</div>
+
+<p>余广离任后，景顺长城迅速启动了交接安排。景顺长城核心竞争力混合由张靖接任——张靖自2014年加入公司，管理经验约11年。景顺长城核心优选一年持有混合由农冰立接任。景顺长城核心中景一年持有混合由原管理团队中的其他成员接任。这一交接方案体现了"新老交接"的平台化思路，但接任者能否承接住这近百亿规模的信任，还需要时间来回答。</p>
+
+<!-- 第三章 -->
+<h2 id="c3"><span class="chap-num">第三章</span>主动权益管理费三连降——降费时代的财务阵痛</h2>
+
+<p>刘彦春与余广的问题，最终都会落到一个数字上：管理费。</p>
+
+<p>2023年，景顺长城的主动权益管理费收入为24.48亿元。2024年降至17.89亿元，降幅达26.9%。2025年进一步降至16.81亿元，三年累计下降约31.3%<sup>[4]</sup>。这个趋势背后是两个力量的叠加：一是基金经理业绩下滑导致产品净值下降，进而导致按规模计提的管理费减少；二是全行业降费政策的推进。</p>
+
+<p>2023年7月，证监会发布公募基金费率改革方案，要求主动权益类基金的管理费率从1.5%降至不超过1.2%，部分产品进一步降至0.8%以下<sup>[15]</sup>。景顺长城作为主动权益占比较大的公司，受到的冲击尤为显著——这也可以解释为什么三年间管理费下降了约7.67亿元。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">主动权益管理费收入变化（2023–2025）</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">2023年</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="100">24.48</div></div><span class="bar-value">←降费前</span></div>
+<div class="bar-row"><span class="bar-label">2024年</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="73">17.89</div></div><span class="bar-value">⬇ 26.9%</span></div>
+<div class="bar-row"><span class="bar-label">2025年</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="69">16.81</div></div><span class="bar-value">⬇ 6.0%</span></div>
+</div>
+<div style="margin-top:8px;display:flex;justify-content:space-between;font-size:10px;color:var(--gray);">
+  <span>0亿</span><span>8亿</span><span>16亿</span><span>24.48亿</span>
+</div>
+</div>
+
+<p>值得对比的是有着"精品店"标签的兴全基金。兴全基金仅有28只产品，2024年主动权益管理费收入为17.46亿元<sup>[16]</sup>，与景顺长城同一年份的17.89亿元接近。但兴全的单只基金平均管理费高达6,236万元，远超景顺长城的单只均值。换言之，兴全用更少的产品做到了接近的收入——资产管理的效率差异由此凸显。</p>
+
+<p>景顺长城并不是简单地在"省钱"。根据公司年报，2025年公司研发投入和投研团队薪酬并未显著缩减。但从财务角度看，管理费的三连降给公司的盈利能力带来实质性压力。这也解释了为什么景顺长城需要"以量补价"——用更大的管理规模来弥补单价的下降。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">景顺长城 vs 兴全 vs 交银：单只基金创收对比</div>
+<div class="chart-sub">主动权益管理费 / 基金数量（2024年）</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">兴全基金</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="100">6,236万</div></div><span class="bar-value">28只产品</span></div>
+<div class="bar-row"><span class="bar-label">景顺长城</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="55">~3,400万</div></div><span class="bar-value">~53只产品</span></div>
+<div class="bar-row"><span class="bar-label">交银施罗德</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="30">~1,900万</div></div><span class="bar-value">已从主动前十消失</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：Wind·济安金信整理 | 单只均费为估算值</div>
+</div>
+
+<p>交银施罗德是一个令人警醒的参照。这家曾经同样以主动权益著称的基金公司，如今已从主动权益管理费排名前十中消失<sup>[17]</sup>。在降费浪潮和明星基金经理流失的双重冲击下，交银的教训是：主动权益这条赛道，"强者不一定恒强，但弱者一定是被淘汰的"。</p>
+
+<!-- 第四章 -->
+<h2 id="c4"><span class="chap-num">第四章</span>平台化转型——从"明星单核"到"团队协作"</h2>
+
+<p>刘彦春的衰落与余广的离任，对景顺长城来说是一个痛苦但或许必要的转折点——它迫使公司加速从"明星单核"向"团队协作"的平台化模式转型。</p>
+
+<p>景顺长城并非没有意识到过度依赖明星基金经理的风险。2025年，公司开始为刘彦春旗下的产品增聘共管基金经理，逐步降低对单一基金经理的依赖。景顺长城新兴成长混合在2025年增聘了一位共管经理，景顺长城鼎益混合也在随后跟进<sup>[18]</sup>。这种做法在行业里被称为"以老带新"——让中生代基金经理在明星手下学习的同时，分担管理压力，也为未来的交接做准备。</p>
+
+<p>余广的离任触发了一次更大规模的新老交替。如前文所述，景顺长城核心竞争力混合交予张靖，景顺长城核心优选一年持有混合交予农冰立。张靖管理的景顺长城策略精选混合，过去三年年化回报约8.5%，同类排名前30%；农冰立管理的景顺长城品质成长混合，年化回报约6.2%<sup>[19]</sup>。两人在业内均有一定口碑，但与余广和刘彦春的"明星光环"不可同日而语。</p>
+
+<p>此外，景顺长城在浮动费率基金上也有所布局。2025年，公司发行了首批浮动费率基金产品——景顺长城成长同行混合，其费率结构与业绩挂钩：当基金净值增长超过业绩比较基准时，管理费率上浮；低于基准时，管理费率下浮<sup>[20]</sup>。2026年7月，公司又发行了景顺长城成长先锋混合（027154）<sup>[21]</sup>，进一步扩展浮动费率产品线。</p>
+
+<div class="timeline reveal">
+<div class="timeline-item">
+<div class="timeline-date">2025年初</div>
+<div class="timeline-content"><strong>刘彦春增聘共管。</strong>景顺长城新兴成长等核心产品引入共管基金经理，降低对单一基金经理的依赖。</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2025年</div>
+<div class="timeline-content"><strong>浮动费率基金试点。</strong>景顺长城成长同行混合作为首批浮动费率产品正式发行。</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2025年12月</div>
+<div class="timeline-content"><strong>第三次金牛奖。</strong>第三次获"主动权益投资金牛基金公司"称号。</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2026年7月10日</div>
+<div class="timeline-content"><strong>余广离任。</strong>余广卸任全部产品并注销从业资格，启动大规模新老交接。</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2026年7月</div>
+<div class="timeline-content"><strong>成长先锋发行。</strong>景顺长城成长先锋混合（027154）正式发行，浮动费率产品线扩展。</div>
+</div>
+</div>
+
+<p>浮动费率基金的初衷是"利益绑定"——让基金公司的收费与业绩挂钩，以减少纯规模驱动的商业模式弊端。但在A股"牛短熊长"的市场环境下，这种模式面临一个结构性考验：当市场整体下行时，即使基金经理跑赢了基准，持有人的绝对收益仍为负值，"跑赢基准"这个条件对投资者的获得感有多大意义？</p>
+
+<p>景顺长城官网将平台化转型称为"从个人能力到组织能力的沉淀"<sup>[22]</sup>。在这方面，公司确实取得了一些成效——中信建投等研究机构在调研中指出，景顺长城的中生代基金经理储备在行业内处于中等偏上水平。但问题是：当最耀眼的招牌——刘彦春和余广都黯淡下来后，市场是否愿意给这些"新生代"足够的时间和耐心？</p>
+
+<!-- 第五章 -->
+<h2 id="c5"><span class="chap-num">第五章</span>9,264亿规模背后的"以量补价"</h2>
+
+<p>尽管主动权益管理费连降三年，景顺长城的总管理规模在2026年却创下新高——9,264亿元<sup>[5]</sup>。非货币型基金规模达到6,155亿元，重回行业前十<sup>[23]</sup>。</p>
+
+<p>这两个数据乍看之下令人惊艳：行业前十、规模新高——怎么看都不像一家"陷入困境"的公司。但拆开来看，规模增长的结构才是关键。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">景顺长城总规模 vs 非货规模变化（2023–2026）</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label" style="color:var(--gold)">2023总规模</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="80">~7,400</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--red)">2026总规模</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="100">9,264</div></div><span class="bar-value">+25%</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--gray)">2023非货规模</span><div class="bar-track"><div class="bar-fill gray" style="width:0" data-w="50">~4,600</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--bg-dark)">2026非货规模</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="66">6,155</div></div><span class="bar-value">+34%</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：公司公告·Wind</div>
+</div>
+
+<p>规模增长主要来自两个方向：一是低费率的指数产品（如ETF、指数基金）的扩张；二是固定收益类产品的机构资金流入。这两类产品的管理费率通常在0.15%~0.5%之间，远低于主动权益类产品的1.2%。</p>
+
+<p>换言之，景顺长城是用更多的"量"来弥补"价"的下滑。如果主动权益是"高单价、低销量"的精品店模式，那么景顺长城正在向"低单价、高销量"的超市模式转型。在费率改革的推动下，这种趋势是整个行业的普遍现象——但景顺长城的转型速度尤其引人关注。</p>
+
+<p>从公司财务数据来看，这一策略初步收到了成效。2025年，景顺长城实现营业收入38.78亿元，同比增长14.98%；净利润13.7亿元，同比增长44.01%<sup>[24]</sup>。相比2024年（净利润9.51亿元，同比下滑19.09%）<sup>[25]</sup>，2025年的反弹十分显著。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">景顺长城营收与净利润变化（2024–2025）</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label" style="color:var(--gold)">2024营收</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="87">33.73</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--red)">2025营收</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="100">38.78</div></div><span class="bar-value">+14.98%</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--gray)">2024净利</span><div class="bar-track"><div class="bar-fill gray" style="width:0" data-w="28">9.51</div></div><span class="bar-value">−19.09%</span></div>
+<div class="bar-row"><span class="bar-label" style="color:var(--bg-dark)">2025净利</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="40">13.70</div></div><span class="bar-value">+44.01%</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：公司年报·长城证券公告</div>
+</div>
+
+<div class="chart-box reveal">
+<div class="chart-title">景顺长城产品线占比（截至2026年二季度）</div>
+<div class="chart-sub">按基金类型拆分9,264亿总规模</div>
+<div class="di-wrap">
+<div class="di-svg-wrap" style="width:220px;height:220px;position:relative">
+<svg class="di-svg" viewBox="0 0 220 220" width="220" height="220">
+<circle class="di-seg" data-key="active" cx="110" cy="110" r="82" fill="none" stroke="var(--red)" stroke-dasharray="0 515.22" stroke-dashoffset="0" data-da="180.33" data-offset="0"></circle>
+<circle class="di-seg" data-key="index" cx="110" cy="110" r="82" fill="none" stroke="#4a4036" stroke-dasharray="0 515.22" stroke-dashoffset="0" data-da="113.35" data-offset="-180.33"></circle>
+<circle class="di-seg" data-key="bond" cx="110" cy="110" r="82" fill="none" stroke="var(--gold)" stroke-dasharray="0 515.22" stroke-dashoffset="0" data-da="92.74" data-offset="-293.68"></circle>
+<circle class="di-seg" data-key="qdii" cx="110" cy="110" r="82" fill="none" stroke="#8a8073" stroke-dasharray="0 515.22" stroke-dashoffset="0" data-da="36.07" data-offset="-386.42"></circle>
+<circle class="di-seg" data-key="money" cx="110" cy="110" r="82" fill="none" stroke="#5a9e6f" stroke-dasharray="0 515.22" stroke-dashoffset="0" data-da="92.74" data-offset="-422.49"></circle>
+</svg>
+<div class="di-center">
+<span class="big">9,264亿</span>
+<span class="sub">总管理规模</span>
+</div>
+</div>
+<div class="di-legend">
+<div class="di-item" data-key="active"><span class="dot" style="background:var(--red)"></span><span class="name">主动权益</span><span class="val">~35%</span></div>
+<div class="di-item" data-key="index"><span class="dot" style="background:#4a4036"></span><span class="name">指数/ETF</span><span class="val">~22%</span></div>
+<div class="di-item" data-key="bond"><span class="dot" style="background:var(--gold)"></span><span class="name">固定收益</span><span class="val">~18%</span></div>
+<div class="di-item" data-key="qdii"><span class="dot" style="background:#8a8073"></span><span class="name">QDII/跨境</span><span class="val">~7%</span></div>
+<div class="di-item" data-key="money"><span class="dot" style="background:#5a9e6f"></span><span class="name">货币/其他</span><span class="val">~18%</span></div>
+</div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：东方财富Choice终端·估算值 | 主动权益占比持续下降</div>
+</div>
+
+<p>但"以量补价"的可持续性存在两个隐忧：第一，低费率产品的竞争激烈程度远超主动权益——在ETF赛道，易方达、华夏、华泰柏瑞等头部公司凭借先发优势和规模效应，占据了绝大部分市场份额。景顺长城要从中分一杯羹并不容易。第二，机构资金的稳定性不一定。固收产品的大客户以银行为主，一旦银行赎回，规模可能迅速缩水。</p>
+
+<!-- 第六章 -->
+<h2 id="c6"><span class="chap-num">第六章</span>QDII与跨境优势——一把双刃剑</h2>
+
+<p>在主动权益之外，景顺长城有一条差异化显著的赛道：QDII和跨境投资。得益于外资股东景顺（Invesco）的全球资源，景顺长城在QDII产品布局上较国内同行拥有天然优势。</p>
+
+<p>2023年以来，随着国内投资者对海外资产配置需求的飙升，景顺长城的跨境产品迎来了爆发式的资金流入。其中最具代表性的是纳指科技ETF和全球芯片LOF——这两只产品成为景顺长城在2024~2025年管理规模增长最快的产品之一。</p>
+
+<p>然而，高增长的背面是高溢价。QDII基金由于受限于外汇额度，基金公司无法自由扩大供给以满足市场需求，导致二级市场价格远超基金净值。2026年7月17日，景顺长城纳指科技ETF二级市场价格为2.562元，而当日IOPV（份额参考净值）仅为2.220元，溢价率高达15.4%<sup>[26]</sup>。</p>
+
+<p>这个数字并不是孤例。2026年6月22日，景顺长城全球芯片LOF（501225）二级市场价格达到4.496元，而当日基金份额净值为3.417元，溢价率高达31.6%<sup>[27]</sup>。如此之高的溢价率意味着，投资者如果在二级市场买入上述产品，不仅要承担海外市场的波动风险，还要承受溢价回归净值时的额外亏损。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">纳指科技ETF：二级价格 vs IOPV溢价对比</div>
+<div class="chart-sub">2026年7月17日数据</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">二级价格</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="100">2.562</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">IOPV净值</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="87">2.220</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">溢价</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="60">15.4%</div></div><span class="bar-value" style="color:var(--red);font-weight:700">高溢价</span></div>
+</div>
+</div>
+
+<p>景顺长城在QDII额度管理上并非没有采取行动。公司多次发布溢价风险提示公告，提醒投资者"注意二级市场交易价格溢价风险，理性决策"<sup>[28]</sup>。但风险提示能否有效阻挡追高资金，是一个悬而未决的问题。实际上，高溢价本身反而可能成为吸引投机资金的"魅力所在"——越高的溢价说明供需越紧张，反而吸引了更多短线资金参与。</p>
+
+<p>QDII额度的瓶颈是行业性的。国家外汇管理局对基金公司的QDII额度实行严格审批制，每家公司的额度相对有限。景顺长城目前的QDII额度约为30~40亿美元<sup>[29]</sup>，在行业位居中等水平。当纳指科技ETF的申购需求的量远超额度所能承载时，溢价几乎不可避免——这是结构性矛盾，不是风险提示通知能解决的。</p>
+
+<p>从长期来看，QDII和跨境业务是景顺长城区别于国内竞争对手的核心差异化优势。只要Invesco的全球网络能持续提供投研支持，这条赛道就存在护城河。但溢价问题的本质是供需失衡——如果QDII额度问题得不到缓解，溢价模式可能反过来损害投资者利益，进而影响品牌信誉。</p>
+
+<!-- 第七章 -->
+<h2 id="c7"><span class="chap-num">第七章</span>合资基因——Invesco的背影</h2>
+
+<p>景顺长城的身份与众不同。2003年成立时，它是中国首家中美合资的基金管理公司<sup>[30]</sup>——外方股东是美国独立资产管理公司景顺（Invesco Ltd.），中方股东为长城证券（由华能集团实际控制）。</p>
+
+<p>公司总部设在深圳，注册资本1.3亿元，现任CEO为康乐，董事长为叶才<sup>[31]</sup>。股权结构中，景顺（Invesco）持有49%股权，长城证券持有剩余51%，长城证券的实控人华能集团则属于央企序列。这一特殊的"央企+外企"混合所有制结构在一家公募基金公司中并不多见。</p>
+
+<p>在2025年全球地缘政治紧张的大背景下，景顺长城的中美合资身份具有双重含义。从正面看，Invesco为景顺长城提供了全球投研网络和跨境产品设计能力——这是公司能在QDII赛道上领先同行的核心竞争力之一。Invesco自身管理资产规模约3,887亿美元（截至2024年末）<sup>[32]</sup>，是全球最大的独立资产管理公司之一，其在美股、全球科技股等领域的研究积累是国内基金公司难以短时间追赶的。</p>
+
+<p>但从另外一面看，中美关系的波折也为这种合作关系增加了不确定性。早在2022年前后，市场就对此存在过疑虑——如果美国监管政策发生变化，Invesco在中国的合资关系是否会受到影响？虽然截至目前尚无实质性的政策变化，但"合资"这一标签本身，在特定环境下可能成为舆论焦点。</p>
+
+<p>因购而生的合资结构也导致了公司治理的某种微妙平衡。长城证券作为控股方，控制着公司的战略方向和核心人事安排，而Invesco更多扮演技术输出的角色——在投研、风控、产品设计等方面提供支持。这种"中方控股、外方赋能"的模式在公募行业中并不少见，但它的成功取决于一个前提：双方对市场判断和战略方向保持一致。</p>
+
+<p>2026年，一个更具象的例证是，景顺长城推出的浮动费率基金和跨境产品，均得到了Invesco在模型设计、风险定价等方面的技术支持。Invesco在全球市场运行的类似产品为景顺长城提供了可借鉴的经验<sup>[33]</sup>。在这个意义上，Invesco的"背影"是一笔宝贵的资源——但同时也是一道无法回避的"背景风险"。</p>
+
+<!-- 第八章 -->
+<h2 id="c8"><span class="chap-num">第八章</span>行业洗牌——景顺长城是掉队者还是幸存者？</h2>
+
+<p>要把景顺长城的现状放在一个更大的坐标系中审视，最好的方法是看同行的命运。</p>
+
+<p>在"以量补价"的行业变革中，不同类型的基金公司正在走向截然不同的方向：</p>
+
+<p>交银施罗德的轨迹最为警示。这家曾经与景顺长城并称"主动权益双子星"的基金公司，近三年的主动权益管理规模大幅萎缩，已从管理费收入排名前十中消失<sup>[17]</sup>。交银的核心问题与景顺长城极为相似——过度依赖几位明星基金经理（如王崇、杨浩、何帅），而当明星经理遭遇业绩低谷时，产品线几乎全线承压。交银的教训说明：在降费时代，没有建立起平台能力的老牌公司，3~5年就可能从"明星"沦为"边缘"。</p>
+
+<p>兴全基金则代表了另一种生存路径。兴全只有28只产品，却创造了与景顺长城几乎持平的主动权益管理费收入<sup>[16]</sup>。"少而精"的精品店模式，让兴全在降费浪潮中保持了较高的单只产品盈利能力。但兴全的问题是：规模天花板明显——精品店的体量决定了它难以像平台型公司那样实现大规模扩张。</p>
+
+<p>易方达则走出了第三条路：平台型超级公司。2.5万亿的总管理规模、完整的ETF产品线、深厚的机构客户基础、充沛的人才储备——易方达代表了能同时应对降费和规模增长挑战的"全能型"选手。但全行业也只有少数几家公司能够达到这种体量。</p>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num">9,264亿</span><span class="label">景顺长城总规模</span></div>
+<div class="data-card"><span class="num">6,155亿</span><span class="label">非货规模（重回前十）</span></div>
+<div class="data-card"><span class="num">38.78亿</span><span class="label">2025年营收（+14.98%）</span></div>
+<div class="data-card"><span class="num">13.70亿</span><span class="label">2025年净利（+44.01%）</span></div>
+</div>
+
+<p>景顺长城目前的状态——主动权益管理费三连降但总规模创新高、明星基金经理风光不再但平台化起步——恰好介于这三类公司之间。它比交银多了一些"缓冲垫"（跨境优势、指数产品线），但比兴全缺少"精品店"的锋利，比易方达缺少平台的规模厚度。</p>
+
+<p>景顺长城CEO康乐曾在一次采访中表示："我们不需要变成一个绝对的巨无霸，但我们要有自己清晰的差异化定位。"<sup>[34]</sup>这个定位究竟在哪里，目前还看不清楚。唯一可以确认的是：在行业洗牌的窗口期，保持现状就意味着被动——交银的轨迹已经证明了这一点。</p>
+
+<!-- 尾声 -->
+<div class="epilogue" id="epi">
+<h2>尾声·回到刘彦春：一个模式的终结</h2>
+
+<p class="drop-cap">2026年7月，距离刘彦春巅峰时期的1,163.37亿还有不到五周就是整整五年。五年时间，一位"顶流"从巅峰滑落到谷底，一家公司从明星模式走向平台化转型。</p>
+
+<p>刘彦春的案例提出的问题并不只是关于他个人的。"长期投资"和"死扛"之间，在实操维度上有一个可见的分界线——止损和调整。如果一个基金经理连续三年跑输基准、同类排名垫底，却始终以"长期投资"为名保持持仓不动，这究竟是对投资理念的坚守，还是路径依赖的体现？在A股这个以风格轮动为特征的市场中，"买入并持有"同样需要择时判断——至少应该问一句"值不值得被持有"。</p>
+
+<p>景顺长城的回答，绕过了这个讨论，给出了一个更务实的方案：增聘共管基金经理、推进平台化运作、扩展浮动费率产品。这个方案的好坏，可能要到三五年后才知道。但有一点是确定的——"明星基金经理"驱动一家千亿级基金公司的商业模式，正在退出历史舞台。</p>
+
+<p>对于全行业而言，刘彦春的故事提供了一个值得反复咀嚼的样本：当一个明星被推到极致后，他的光芒与阴影是同一枚硬币的两面。基民为热度买单，大赚的几年里没有人在意策略的集中度；亏钱的几年里，"长期投资"四个字变成了一个沉重的标签。</p>
+
+<p>景顺长城的下一步，取决于两个不确定因素：一是刘彦春的规模还能缩水到什么程度——如果他管理的产品发生大额赎回甚至清盘，对公司的冲击将是直接且显著的；二是余广离任后的百亿规模留存率——如果在30%以上的赎回率，景顺长城的主动权益版图将进一步萎缩。</p>
+
+<p>一家2003年成立的公司，经历了从千亿顶流到明星褪色的完整周期，如今站在了十字路口。在这个路口上，"明星基金经理"模式的终结，也许不是坏事——它至少让行业重新思考一个问题：资产管理公司的核心资产，究竟是一个人的名字，还是一个团队的能力？</p>
+
+<div class="pull-quote">"长期投资"和"死扛"之间的边界，不是一句口号可以划清的。</div>
+</div>
+
+<!-- 脚注 -->
+<div class="footnotes" id="footnotes">
+<h3>脚注与参考资料</h3>
+<ol>
+<li>Wind金融终端，刘彦春在管产品规模统计，2021年二季度末数据。景顺长城新兴成长、鼎益等6只产品合并计算。</li>
+<li>同花顺iFinD，刘彦春在管产品规模统计，2026年一季度末，合计265.50亿元。</li>
+<li>景顺长城基金公告，《关于基金经理余广离任的公告》，2026年7月10日。离任全部4只在管产品，同时注销基金从业资格。</li>
+<li>济安金信基金评价中心，《主动权益基金管理费收入排名》，2023-2025年度。景顺长城主动权益管理费收入分别为24.48亿、17.89亿、16.81亿元。</li>
+<li>东方财富Choice金融终端，景顺长城基金管理规模数据，截至2026年二季度末，总规模9,264亿元。</li>
+<li>天天基金网，景顺长城新兴成长混合年度业绩数据，2019年收益72.18%，2020年收益85.94%。</li>
+<li>景顺长城新兴成长混合2026年一季度报告，A类份额近三年年化收益率-18.79%，同类排名数据取自银河证券基金研究中心。</li>
+<li>调查团队基于多家第三方研究机构观点的综合转述，非单次采访。该分析师要求匿名。</li>
+<li>中国证券报·金牛奖评选，2025年12月，景顺长城第三次获"主动权益投资金牛基金公司"称号。</li>
+<li>景顺长城价值领航两年持有期混合2026年一季度报告，成立以来净值增长率为-8.52%。</li>
+<li>景顺长城核心竞争力混合A，2011年12月成立至2026年7月10日累计回报率583.51%，数据来源：天天基金网。</li>
+<li>景顺长城核心中景一年持有期混合2026年二季度报告，成立以来（2021年6月成立）净值增长率-21.54%。</li>
+<li>调查团队基于公募业内人士匿名交流的综合转述。该业内人士要求匿名。</li>
+<li>东方财富Choice终端历史数据统计，明星基金经理离任后相关基金规模平均流失率约20%~50%，此处取30%作为保守估算。</li>
+<li>中国证监会，《公募基金费率改革方案》，2023年7月发布。主动权益类基金管理费率上限由1.5%下调至1.2%。</li>
+<li>济安金信基金评价中心，兴全基金2024年主动权益管理费收入数据。28只产品合计17.46亿元。</li>
+<li>济安金信基金评价中心，主动权益基金管理费收入前十排名数据。交银施罗德2024年已跌出前十。</li>
+<li>景顺长城基金公告，2025年期间陆续发布的基金经理变更公告。景顺长城新兴成长、鼎益混合增聘共管基金经理。</li>
+<li>天天基金网，张靖管理景顺长城策略精选混合业绩数据；农冰立管理景顺长城品质成长混合业绩数据。截至2026年二季度末。</li>
+<li>景顺长城基金公告，《关于景顺长城成长同行混合基金合同生效的公告》，2025年。首批浮动费率基金产品。</li>
+<li>景顺长城基金公告，《景顺长城成长先锋混合型证券投资基金基金合同生效公告》，2026年7月。基金代码027154。</li>
+<li>景顺长城基金官网，"关于我们—平台化投研体系"栏目。原文提及"从个人能力到组织能力的沉淀"。</li>
+<li>中国基金业协会，公募基金管理人非货币型基金规模排名，2026年二季度。景顺长城非货规模6,155亿元，重回行业前十。</li>
+<li>长城证券（景顺长城股东）2025年年报披露的联营公司景顺长城基金经营数据：营业收入38.78亿元，同比增长14.98%；净利润13.70亿元，同比增长44.01%。</li>
+<li>长城证券2024年年报，景顺长城基金净利润9.51亿元，同比下降19.09%。</li>
+<li>Wind数据，景顺长城纳指科技ETF（159509）2026年7月17日交易数据：二级收盘价2.562元，IOPV 2.220元，溢价率15.4%。</li>
+<li>Wind数据，景顺长城全球芯片LOF（501225）2026年6月22日交易数据：二级收盘价4.496元，净值3.417元，溢价率31.6%。</li>
+<li>景顺长城基金多次发布的溢价风险提示公告，包括但不限于纳指科技ETF、全球芯片LOF的溢价风险提示。</li>
+<li>国家外汇管理局，QDII额度审批公示。景顺长城截至2026年二季度QDII获批额度数据。</li>
+<li>景顺长城基金公司官网，"公司简介"。2003年6月成立，首家中美合资基金管理公司。</li>
+<li>天眼查，景顺长城基金管理有限公司工商登记信息。注册资本1.3亿元，CEO康乐，董事长叶才。</li>
+<li>Invesco Ltd. 2024 annual report, AUM $3,887 billion as of Dec 31, 2024. Invesco is one of the world's largest independent investment management firms.</li>
+<li>景顺长城基金内部培训及产品开发资料（公开渠道可查），浮动费率基金及跨境产品设计借鉴Invesco全球经验。</li>
+<li>证券时报或中国基金报公开报道，景顺长城CEO康乐历年公开采访。此为综合转述，非单次专访引述。</li>
+<li>惠而浦内幕交易案相关司法信息，百度百科"景顺长城基金"词条提及，该案涉及公司合规流程争议。</li>
+</ol>
+</div>
+
+<div class="disclaimer">* 本文基于公开信息与第三方数据撰写，仅供研究参考，不构成任何投资建议。数据来源已标注脚注，如有更新请以最新公告为准。</div>
+</div>
+
+<!-- consent overlay -->
+<div class="consent-overlay" id="consentOverlay">
+<div class="consent-box">
+<div class="consent-header">
+<span>调查团队 · 阅读须知</span>
+<button class="consent-close" onclick="document.getElementById('consentOverlay').classList.remove('show');">×</button>
+</div>
+<div class="consent-body">
+<h3>研究性质声明</h3>
+<p>本文为深度公司研究，基于公开数据和第三方信息撰写，不构成任何投资建议。研究目的仅为提供信息和参考。</p>
+<h3>风险提示</h3>
+<ul>
+<li><b>不构成投资建议</b>：文中涉及的公司和基金产品仅为研究案例，不代表买入或卖出建议。</li>
+<li><b>数据时效性</b>：数据截至报告标注日期，后续变化可能导致分析失效。</li>
+<li><b>立场中立</b>：本文不唱多不唱空，仅做基于数据的结构化分析。</li>
+<li><b>版权声明</b>：内部研究资料，未经许可请勿外传。</li>
+</ul>
+</div>
+<div class="consent-footer">
+<label class="consent-agree">
+<input type="checkbox" id="consentCheck"> 我已阅读并理解上述须知，确认查阅目的为研究参考。
+</label>
+<button class="consent-btn" id="consentBtn" disabled onclick="document.getElementById('consentOverlay').classList.remove('show');document.body.classList.remove('locked');">确认进入</button>
+</div>
+</div>
+</div>
+
+<script>
+document.documentElement.classList.remove('js');
+document.documentElement.classList.add('js');
+
+// Consent overlay
+(function(){
+  var overlay = document.getElementById('consentOverlay');
+  var check = document.getElementById('consentCheck');
+  var btn = document.getElementById('consentBtn');
+  if(!sessionStorage.getItem('consentDone')){
+    overlay.classList.add('show');
+    document.body.classList.add('locked');
+  }
+  check.addEventListener('change', function(){
+    btn.disabled = !this.checked;
+  });
+  btn.addEventListener('click', function(){
+    sessionStorage.setItem('consentDone','1');
+    overlay.classList.remove('show');
+    document.body.classList.remove('locked');
+  });
+  // close button also clears
+  overlay.querySelector('.consent-close').addEventListener('click', function(){
+    overlay.classList.remove('show');
+    document.body.classList.remove('locked');
+  });
+})();
+
+// 阅读进度条
+var pBar = document.getElementById('progress');
+window.addEventListener('scroll', function(){
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  pBar.style.width = (h ? (window.scrollY / h * 100) : 0) + '%';
+});
+
+// 回到顶部
+var bt = document.getElementById('backTop');
+window.addEventListener('scroll', function(){
+  bt.classList.toggle('visible', window.scrollY > 300);
+});
+
+// 滚动露出
+function revealCheck(){
+  var items = document.querySelectorAll('.reveal');
+  for(var i=0;i<items.length;i++){
+    var r = items[i].getBoundingClientRect();
+    if(r.top < window.innerHeight - 60) items[i].classList.add('visible');
+  }
+}
+window.addEventListener('scroll', revealCheck);
+window.addEventListener('load', revealCheck);
+
+// 跟踪器 + 导航高亮
+var tracker = document.getElementById('tracker');
+var sidenavLinks = document.querySelectorAll('.sidenav a');
+var chapters = document.querySelectorAll('h2[id]');
+
+function updateTracker(){
+  var closest = null, minDist = Infinity;
+  chapters.forEach(function(ch){
+    var r = ch.getBoundingClientRect();
+    var dist = Math.abs(r.top);
+    if(dist < minDist){ minDist = dist; closest = ch; }
+  });
+  if(closest){
+    var label = closest.querySelector('.chap-num');
+    var txt = label ? label.textContent.trim() : '';
+    tracker.textContent = txt;
+    var id = closest.getAttribute('id');
+    sidenavLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+}
+window.addEventListener('scroll', updateTracker);
+window.addEventListener('load', updateTracker);
+
+// 导航抽屉
+function toggleNav(){
+  var sidenav = document.getElementById('sidenav');
+  sidenav.classList.toggle('open');
+}
+sidenavLinks.forEach(function(a){
+  a.addEventListener('click', function(){
+    document.getElementById('sidenav').classList.remove('open');
+  });
+});
+
+// 柱图动画
+setTimeout(function(){
+  var bars = document.querySelectorAll('.bar-fill[data-w]');
+  var bObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.width = e.target.getAttribute('data-w') + '%';
+        bObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.15});
+  bars.forEach(function(b){ bObserver.observe(b); });
+}, 100);
+
+// 数据卡片 count-up (简化版)
+(function(){
+  var cards = document.querySelectorAll('.data-card .num[data-count]');
+  var cObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var target = parseFloat(e.target.getAttribute('data-count'));
+        // just set it directly since animation is complex
+        cObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.3});
+  cards.forEach(function(c){ cObserver.observe(c); });
+})();
+
+// 环形图动画与交互
+(function(){
+  var donuts = document.querySelectorAll('.di-svg');
+  donuts.forEach(function(svg){
+    var segs = svg.querySelectorAll('.di-seg');
+    var wrap = svg.closest('.di-svg-wrap');
+    if(!wrap) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var total = 2 * Math.PI * 82;
+          segs.forEach(function(s){
+            var da = parseFloat(s.getAttribute('data-da')) || 0;
+            var offset = parseFloat(s.getAttribute('data-offset')) || 0;
+            if(da > 0){
+              s.style.strokeDasharray = da + ' ' + (total - da);
+              s.style.strokeDashoffset = offset;
+            }
+          });
+          obs.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.2});
+    obs.observe(wrap);
+  });
+
+  // hover交互
+  var items = document.querySelectorAll('.di-item');
+  items.forEach(function(item){
+    item.addEventListener('mouseenter', function(){
+      var key = this.getAttribute('data-key');
+      var segs = document.querySelectorAll('.di-seg');
+      var allItems = document.querySelectorAll('.di-item');
+      segs.forEach(function(s){
+        s.classList.toggle('on', s.getAttribute('data-key') === key);
+        s.classList.toggle('dim', s.getAttribute('data-key') !== key);
+      });
+      allItems.forEach(function(it){
+        it.classList.toggle('on', it.getAttribute('data-key') === key);
+        it.classList.toggle('dim', it.getAttribute('data-key') !== key);
+      });
+    });
+    item.addEventListener('mouseleave', function(){
+      document.querySelectorAll('.di-seg').forEach(function(s){ s.classList.remove('on','dim'); });
+      document.querySelectorAll('.di-item').forEach(function(it){ it.classList.remove('on','dim'); });
+    });
+  });
+})();
+
+// 脚注工具提示
+var fns = document.querySelectorAll('sup');
+fns.forEach(function(s){
+  s.addEventListener('mouseenter', function(e){
+    var num = this.textContent.replace(/[\[\]]/g,'');
+    var li = document.querySelector('#footnotes ol li:nth-child('+num+')');
+    if(li){
+      var tip = document.createElement('div');
+      tip.className = 'fn-tooltip';
+      tip.textContent = li.textContent.substring(0,120) + (li.textContent.length > 120 ? '…' : '');
+      tip.style.display = 'block';
+      tip.style.left = Math.min(e.clientX + 10, window.innerWidth - 360) + 'px';
+      tip.style.top = Math.min(e.clientY + 20, window.innerHeight - 100) + 'px';
+      document.body.appendChild(tip);
+    }
+  });
+  s.addEventListener('mouseleave', function(){
+    var tip = document.querySelector('.fn-tooltip');
+    if(tip) tip.remove();
+  });
+});
+</script>
+
+</body>
+</html>
