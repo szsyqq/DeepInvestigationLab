@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>空中客车：八千架飞机的赌注，产能马拉松与发动机之困 | 调查团队</title>
+<link rel="stylesheet" href="../../global.css">
+<title>八千架飞机的赌注：空中客车的产能马拉松与发动机之困 | 调查团队</title>
 <style>
 :root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -27,767 +28,608 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 .masthead .brand .accent{color:var(--red)}
 .masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px;white-space:nowrap;margin-left:auto}
 .masthead .brand a{color:inherit;text-decoration:none}
-.masthead .brand a:hover{color:var(--red)}
-.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
-.home-link::before{content:"\2190";margin-right:5px}
-.home-link:hover{background:var(--red);color:var(--paper)}
-.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
-@media(max-width:600px){.reading-time-fab{top:12px;right:12px}}
-.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
-.hero{margin-bottom:56px}
-.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
-.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
-.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
-.hero .byline{font-size:13px;color:var(--ink);letter-spacing:.5px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;display:flex;justify-content:space-between;align-items:center}
-.hero .byline .author{font-weight:700}
-.hero .byline .meta{color:var(--gray)}
-.drop-cap::first-letter{font-size:56px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
-h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
-.hero + h2{border-top:none!important;padding-top:0!important}
-.nav-section{border:none!important;padding-top:0!important}
-h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
-h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
-h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
-p{margin-bottom:18px;text-align:justify}
-blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
-.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
-th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
-td{padding:9px 12px;border-bottom:1px solid var(--line)}
-tr:nth-child(even){background:rgba(0,0,0,.02)}
-td strong{color:var(--red)}
-ul,ol{margin:18px 0 18px 24px}
-li{margin-bottom:10px}
-.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
-.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
-.data-card .num{font-size:28px;font-weight:700;color:#e8c87a;display:block}
-.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
-.timeline{margin:28px 0;padding-left:20px;border-left:3px solid var(--red)}
-.timeline-item{margin-bottom:20px;position:relative}
-.timeline-item::before{content:'';position:absolute;left:-26px;top:8px;width:10px;height:10px;background:var(--red);border-radius:50%}
-.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px}
-.timeline-content{margin-top:4px}
-.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
-.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
-.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
-.footnotes li{margin-bottom:6px}
-sup{font-size:11px;color:var(--red);cursor:pointer;position:relative}
-sup:hover{color:var(--ink)}
-.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
-.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
-.epilogue p{color:#d5cfc5}
-.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
-.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
-.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
-.tracker.visible{opacity:1}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
-.sidenav.open{transform:translateX(0)}
-.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
-.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
-.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
-.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
-.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
-.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
-.sidenav a.active .num{color:rgba(255,255,255,.75)}
-.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
-.back-top.visible{opacity:.85}
-.back-top:hover{opacity:1;background:var(--red)}
-.tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:12px;line-height:1.5;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
-.tooltip.visible{opacity:1}
-.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
-.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:18px;text-align:center}
-.chart-sub{font-size:11px;color:var(--gray);text-align:center;margin-top:14px;font-style:italic}
-.bar-chart{display:flex;flex-direction:column;gap:14px}
-.bar-row{display:flex;align-items:center;gap:12px}
-.bar-label{width:100px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0}
-.bar-track{flex:1;height:28px;background:rgba(0,0,0,.06);border-radius:2px;overflow:hidden;position:relative}
-.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:12px;font-weight:700}
-.bar-fill.red{background:var(--red)}
-.bar-fill.dark{background:var(--bg-dark)}
-.bar-fill.gold{background:var(--gold)}
-.bar-fill.gray{background:var(--gray)}
-.bar-value{font-size:13px;font-weight:700;margin-left:4px;flex-shrink:0;width:80px}
-.bar-value.note{color:var(--gray);font-weight:400;font-size:12px;line-height:1.5}
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:28px 0}
-.metric-box{background:var(--bg-dark);color:var(--paper);padding:20px;border-radius:4px;position:relative;overflow:hidden}
-.metric-box .metric-val{font-size:32px;font-weight:700;color:#e8c87a;display:block}
-.metric-box .metric-label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
-.metric-box .metric-sub{font-size:11px;margin-top:8px;opacity:.6;border-top:1px solid rgba(255,255,255,.15);padding-top:8px}
-.metric-box.red{background:var(--red)}
-.metric-box.red .metric-val{color:#fff}
-.vs-chart{display:flex;gap:32px;justify-content:center;margin:24px 0;flex-wrap:wrap}
-.vs-col{flex:1;min-width:180px;text-align:center}
-.vs-col .vs-name{font-size:14px;font-weight:700;margin-bottom:12px}
-.vs-bars{display:flex;align-items:flex-end;justify-content:center;gap:12px;height:140px}
-.vs-bar{width:50px;border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:4px;color:#fff;font-size:11px;font-weight:700}
-.vs-bar.a{background:var(--red)}
-.vs-bar.b{background:var(--bg-dark);color:#e8c87a}
-.vs-bar-label{font-size:11px;color:var(--gray);margin-top:6px}
-.line-chart{margin:24px 0;padding:20px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
-.line-chart-svg{width:100%;height:200px;overflow:visible}
-.line-chart-svg .grid line{stroke:var(--line);stroke-width:.5}
-.line-chart-svg .axis text{font-size:11px;fill:var(--gray)}
-.line-chart-svg .line-a{fill:none;stroke:var(--red);stroke-width:2.5;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset 2s ease}
-.line-chart-svg .line-b{fill:none;stroke:var(--bg-dark);stroke-width:2.5;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset 2s ease}
-.line-chart-svg .line.drawn{stroke-dashoffset:0}
-.line-chart-svg .dot-a{r:5;fill:var(--red);opacity:0;transition:opacity .3s .5s}
-.line-chart-svg .dot-b{r:5;fill:var(--bg-dark);opacity:0;transition:opacity .3s .5s}
-.line-chart-svg .dot-a.visible,.line-chart-svg .dot-b.visible{opacity:1}
-.line-chart-svg .label{font-size:12px;font-weight:700}
-.line-chart-svg .legend text{font-size:11px}
-.donut-wrap{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0}
-.donut-legend{font-size:13px;line-height:2}
-.donut-legend .dot{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:middle}
-footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
-footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
-footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
-.compact .internal-banner{display:none}
-.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
-.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
-.compact .top-bar-inner::before{content:"\25CF 内部资料 \00B7 仅供研究参考 \00B7 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
-.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
-.compact .top-bar .home::before{content:"\2190"}
-.compact .top-bar .home:hover{background:#fff;color:var(--red)}
-.compact .top-bar .time{display:none}
-.compact .top-bar .toc{display:none}
-.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
-.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
-.compact .top-bar .pos b{color:#fff}
-.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
-.compact .progress-bar{top:30px;transition:top .3s,width .1s}
-@media(max-width:600px){
-body{font-size:16px}.container{padding:26px 14px 60px}.hero h1{font-size:27px;line-height:1.3}.hero .dek{font-size:14px}
-.pull-quote{font-size:18px;margin:30px 4px;line-height:1.55}h2{font-size:22px;margin:44px 0 16px;padding-top:20px}
-h3{font-size:17px}.epilogue{margin:30px -14px 0;padding:28px 16px}.masthead{padding:10px 14px}.reading-time-fab{display:none}
-.chart-box{padding:16px 12px;margin:24px 0}.chart-title{font-size:11px;letter-spacing:.3px;margin-bottom:14px;line-height:1.4}
-.bar-row{flex-wrap:wrap;gap:5px 8px}.bar-label{width:58px;font-size:12px;text-align:left;flex-shrink:0}.bar-track{order:3;flex-basis:100%;height:24px}
-.bar-value{width:auto;font-size:11px;order:2;flex-shrink:0;line-height:1.3}.bar-fill{font-size:11px;padding-right:6px}
-.metric-grid{grid-template-columns:1fr 1fr;gap:10px}.metric-box{padding:14px 12px}.metric-box .metric-val{font-size:23px}.metric-box .metric-label{font-size:10px}
-.metric-box .metric-sub{font-size:9px;line-height:1.4}.data-card{flex:1 1 100%;min-width:0;padding:14px}.data-card .num{font-size:22px}.data-card .label{font-size:11px}
-.top-bar-inner{padding:8px 12px}.top-bar .sep{display:none}.top-bar .time{display:none}.top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
-.top-bar .home::before{content:"\2190";margin-right:4px}.top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}.top-bar-left,.top-bar-right{gap:6px}
-.top-bar .pos{font-size:11px}.masthead{padding:10px 16px}.masthead .brand{font-size:10px;letter-spacing:2px}.masthead .date{font-size:10px}
-.container{padding:32px 16px 60px}.hero h1{font-size:28px}.hero .dek{font-size:16px}.compact .internal-banner{display:none}.compact .top-bar{top:0}
-.compact .progress-bar{top:28px}.compact .top-bar-inner{padding:3px 12px}.compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
-.compact .top-bar .home{padding:2px 6px;font-size:10px}.compact .top-bar .toc{padding:3px 7px;font-size:10px}.line-chart-svg{height:180px}
-.line-chart-svg .axis text{font-size:19px}.line-chart-svg .label{font-size:22px}.line-chart-svg .line-a,.line-chart-svg .line-b{stroke-width:3.5}
-.line-chart-svg .dot-a,.line-chart-svg .dot-b{r:7}.donut-wrap{flex-direction:column;gap:16px}.footnotes ol{font-size:12px}
-.back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}.tracker{bottom:14px;left:14px;font-size:11px;padding:6px 11px}
+.hero{max-width:1000px;margin:0 auto;padding:60px 32px 30px;text-align:center}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:18px}
+.hero h1{font-size:34px;line-height:1.3;font-weight:700;letter-spacing:1px;margin-bottom:18px}
+.hero .byline{font-size:13px;color:var(--gray);margin-bottom:8px}
+.hero .readtime{font-size:11px;color:var(--gray);letter-spacing:1px}
+.hero .deck{font-size:17px;color:var(--gray);line-height:1.6;max-width:700px;margin:20px auto 0;font-style:italic}
+article{max-width:700px;margin:0 auto;padding:40px 20px 60px}
+article h2{font-size:22px;margin-top:48px;margin-bottom:14px;line-height:1.4;color:var(--ink)}
+article h2 .chapter-num{display:inline-block;background:var(--red);color:#fff;font-size:11px;padding:2px 7px;margin-right:10px;letter-spacing:1px;border-radius:2px;vertical-align:middle}
+article p{font-size:17px;line-height:1.85;margin-bottom:16px;text-indent:2em;text-align:justify}
+article p.no-indent{text-indent:0}
+article .callout{background:var(--quote-bg);border-left:3px solid var(--red);padding:18px 20px;margin:24px 0;font-size:16px;line-height:1.8;border-radius:2px}
+article .callout p{text-indent:0;margin-bottom:0;font-size:16px}
+article .callout .label{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+article blockquote{background:var(--quote-bg);border-left:3px solid var(--gray);padding:14px 20px;margin:24px 0;font-style:italic;font-size:16px;color:var(--gray)}
+article blockquote p{text-indent:0;margin-bottom:0;font-size:16px}
+article .chart-wrap{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 20px 14px;margin:32px 0;text-align:center;overflow-x:auto}
+article .chart-wrap .chart-title{font-size:13px;font-weight:700;margin-bottom:6px;letter-spacing:.5px;text-indent:0}
+article .chart-wrap .chart-note{font-size:11px;color:var(--gray);margin-bottom:12px;text-indent:0}
+article .chart-wrap svg{display:block;margin:0 auto;max-width:100%;height:auto}
+article .chart-wrap table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;text-align:center;font-family:Georgia,serif}
+article .chart-wrap table th{background:var(--bg-dark);color:var(--paper);padding:6px;letter-spacing:1px;font-weight:700}
+article .chart-wrap table td{padding:5px;border-bottom:1px solid var(--line)}
+article .chart-wrap table tr:last-child td{border-bottom:none}
+article .chart-wrap table .num{font-family:'Courier New',monospace;font-size:12px}
+article .stat{display:inline-block;background:var(--quote-bg);border-radius:3px;padding:2px 6px;font-weight:700;text-indent:0}
+article sup{font-size:12px;color:var(--red);cursor:pointer}
+article sup:hover{background:var(--red);color:#fff;border-radius:2px;padding:0 2px}
+article .fn-tooltip{position:absolute;margin-left:8px;background:var(--bg-dark);color:var(--paper);font-size:11px;padding:6px 10px;border-radius:4px;max-width:280px;line-height:1.5;z-index:100;opacity:0;transition:opacity .2s;pointer-events:none;text-indent:0}
+article sup:hover .fn-tooltip{opacity:1}
+article .footnotes{border-top:2px solid var(--line);margin-top:48px;padding-top:20px}
+article .footnotes h3{font-size:14px;letter-spacing:2px;margin-bottom:12px;color:var(--gray)}
+article .footnotes ol{font-size:13px;color:var(--gray);line-height:1.7;padding-left:20px}
+article .footnotes ol li{margin-bottom:6px}
+article .footnotes ol li a{color:var(--red);word-break:break-all}
+article .tag{color:var(--red);border:1px solid var(--red);font-size:10px;letter-spacing:1px;padding:2px 8px;display:inline-block;border-radius:2px;margin-right:6px}
+
+/* Vertical timeline */
+.vertical-timeline{position:relative;padding:0;margin:32px 0;list-style:none;text-align:left}
+.vertical-timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:var(--line)}
+.vertical-timeline li{position:relative;padding:0 0 28px 52px;text-indent:0}
+.vertical-timeline li:last-child{padding-bottom:0}
+.vertical-timeline li::before{content:'';position:absolute;left:14px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--red);border:2px solid var(--paper)}
+.vertical-timeline li .vt-date{display:block;font-size:12px;color:var(--red);font-weight:700;letter-spacing:1px;margin-bottom:2px}
+.vertical-timeline li .vt-text{display:block;font-size:15px;line-height:1.6;color:var(--ink)}
+
+@media(max-width:640px){
+.hero h1{font-size:26px}
+.hero{padding:40px 16px 20px}
+article{padding:30px 14px 40px}
+article h2{font-size:19px}
+article p{font-size:16px}
+.top-bar-inner{padding:7px 12px;font-size:10px}
+.top-bar .pos, .top-bar .time{font-size:10px}
+.top-bar .home{font-size:10px;padding:3px 8px}
+.masthead{padding:8px 12px}
+.masthead .brand{font-size:10px}
+.masthead .date{font-size:10px}
+.article .chart-wrap{padding:14px 10px}
 }
 </style>
 </head>
 <body>
-
-<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
-
-<div class="top-bar">
-  <div class="top-bar-inner">
-    <div class="top-bar-left">
-      <a class="home" href="../../index.html">返回首页</a>
-      <span class="sep"></span>
-      <span class="time" id="readTime">约25分钟阅读</span>
-    </div>
-    <div class="top-bar-right">
-      <span class="pos" id="tracker">导语</span>
-      <span class="sep"></span>
-      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
-    </div>
-  </div>
+<div class="internal-banner">· 内部资料 · 仅供研究参考 · 不构成投资建议 ·</div>
+<div class="top-bar" id="topBar">
+<div class="top-bar-inner">
+<div class="top-bar-left">
+<a class="home" href="../../index.html">门站</a>
+<span class="sep"></span>
+<span class="pos">调查团队 · <b>空中客车</b></span>
 </div>
-
-<div class="progress-bar" id="progress"></div>
-
-<div class="masthead">
-  <div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; THE INVESTIGATION</a></div>
-  <div class="date">2026年7月24日 · 图卢兹/汉堡/天津 <a class="home-link" href="../../index.html">档案室</a></div>
+<div class="top-bar-right">
+<span class="time" id="readingTime">约 25 分钟阅读</span>
+<span class="sep"></span>
+<button class="toc" id="tocBtn" onclick="toggleToc()">目 录</button>
 </div>
-
-<button class="back-top" id="backTop" onclick="scrollTop()" title="回到顶部">↑</button>
-
-<div class="sidenav" id="sidenav">
-  <h4>章节导航</h4>
-  <ol>
-    <li><a href="#c0" data-ch="0"><span class="num">导语</span>八千架飞机的赌注</a></li>
-    <li><a href="#c1" data-ch="1"><span class="num">第一章</span>创纪录订单簿</a></li>
-    <li><a href="#c2" data-ch="2"><span class="num">第二章</span>发动机之困</a></li>
-    <li><a href="#c3" data-ch="3"><span class="num">第三章</span>Spirit的代价</a></li>
-    <li><a href="#c4" data-ch="4"><span class="num">第四章</span>波音的反扑</a></li>
-    <li><a href="#c5" data-ch="5"><span class="num">第五章</span>中国赌局</a></li>
-    <li><a href="#c6" data-ch="6"><span class="num">第六章</span>断臂求生</a></li>
-    <li><a href="#c7" data-ch="7"><span class="num">第七章</span>氢能梦想</a></li>
-    <li><a href="#c8" data-ch="8"><span class="num">第八章</span>财务透视</a></li>
-    <li><a href="#c9" data-ch="9"><span class="num">尾声</span>以十年为尺度</a></li>
-  </ol>
 </div>
-
-<div class="container">
-
-<div class="hero reveal" id="c0">
-  <div class="kicker">深度调查 · An Investigation</div>
-  <h1>空中客车：<br>八千架飞机的赌注，产能马拉松与发动机之困</h1>
-  <p class="dek">8754架未交付飞机——按当前速度需十年以上才能清空。但每年数百架完工机身因缺少发动机而停在停机坪上，等待那台"迟到"的普惠GTF。波音正在追回失地，中国的C919已划破航迹，而空客还在为一道制造指令焦头烂额——2026年Q1交付量16年来首次被对手反超。这家欧洲航空巨头，正站在十字路口的中央。</p>
-  <div class="byline">
-    <span class="author">调查团队</span>
-    <span class="meta">2026年7月 · 约25分钟阅读</span>
-  </div>
 </div>
+<div class="progress-bar" id="progressBar"></div>
 
-<p class="drop-cap reveal">八千七百五十四架。这是截至2025年底，空中客车（Airbus SE）积压的未交付商用飞机订单总量。<sup>[1]</sup>如果把这些飞机一架接一架排开，可以从巴黎一直排到北京再折返。以2025年的交付速度——一年793架——清空这些订单需要超过11年。在全球商用航空史上，从未有一家制造商面对过如此庞大的订单积压。而恰恰是在这个数字的背后，藏着这家公司最深的焦虑。</p>
+<header class="hero">
+<div class="kicker"><span class="tag">试读</span>深度公司研究</div>
+<h1>八千架飞机的赌注：空中客车的产能马拉松与发动机之困</h1>
+<div class="deck">8754架积压订单、900架飞机因发动机停飞、一场与供应商对簿公堂的诉讼——全球最大飞机制造商的黄金时代背后，是供应链系统性脆弱正在被逐一戳破。</div>
+<div class="byline">调查团队 · 2026年7月</div>
+</header>
 
-<p class="reveal">2026年第一季度，空客仅交付114架飞机，同比下降16%。<sup>[2]</sup>同一季度，它的老对手波音（Boeing）交付了143架——这是自2018年以来，波音首次在季度交付量上反超空客。与此同时，每股约175欧元的股价较2025年高点221欧元已下跌约20%，市值蒸发超过300亿欧元。<sup>[3]</sup></p>
+<article>
 
-<p class="reveal">一家手握近9000架订单的公司，营收创下734亿欧元的纪录，净利润52亿欧元，自由现金流46亿欧元——却同时在承受交付减速、现金流逆转和股价下跌的三重压力。<sup>[4]</sup></p>
+<section>
+<h2><span class="chapter-num">01</span>创纪录订单簿——8754架背后的订单悖论</h2>
 
-<p class="reveal">这篇报道试图回答一个核心问题：当一家公司拿到了几乎整个行业的订单，却连按时交付都做不到——问题到底出在哪里？是发动机供应商卡住了脖子、是供应链整合的阵痛、是竞争对手归来，还是整个商业模式的结构性挑战？我们拆解了空客2025年年报、2026年Q1财报、历年交付数据、行业研报与公开诉讼文书，逐一梳理这家欧洲工业皇冠上的明珠，在创纪录的荣光与持续不断的延误之间，正在经历怎样一场马拉松。</p>
+<p>2026年2月19日，空客CEO傅里（Guillaume Faury）在年度新闻发布会上宣布了一个令人瞩目的数字：截至2025年底，空客的商用飞机积压订单达到8754架，按目录价格计算价值6190亿欧元<sup>[1]</sup>。这是空客历史上的最高纪录。以2025年793架交付量计算，即使不再接新订单，这些飞机也够空客生产11年。</p>
 
-<div class="pull-quote reveal">8754架飞机排开可铺满巴黎到北京。<br>但数以百计的完工机身，正停在图卢兹的停机坪上，等待发动机。</p></div>
+<p>但市场给出的反应却是股价下跌。从年初至今，空客股价已从221欧元跌至175欧元，跌幅超过20%。原因在于，市场看到了数字背后的裂缝。</p>
 
-<!-- 第一章 -->
-<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>创纪录订单簿——8754架飞机的幸福与烦恼</h2>
+<p>一方面是8754架订单的光鲜，一方面是交付量的迟滞。2026年Q1，空客仅交付114架飞机，同比下降16%，Q1调整后息税前利润从6.24亿欧元暴跌至3亿欧元<sup>[2]</sup>。更具体地说，商用飞机部门的EBIT从4.94亿欧元骤降至8100万欧元——降幅达84%。</p>
 
-<p class="reveal">8754架这个数字，来自空客2025年年报。它不仅是创纪录的数字，更是全球商用飞机制造业自诞生以来的最高积压记录。<sup>[1]</sup>按空客2025年公布的平均目录价格估算，这些订单对应约1.3万亿美元的合同价值——尽管航空公司实际支付的折扣幅度通常高达40%-55%。</p>
+<p>这就引出了一个核心悖论：既然空客连现有订单的交付都搞不定，引擎供应持续短缺，为什么全球航空公司还在疯狂下单？</p>
 
-<p class="reveal">其中，A320系列（含A319neo、A320neo和A321neo）占了7163架，占比超过81%。这款全球最畅销的单通道客机，几乎以一己之力撑起了空客的订单簿。<sup>[5]</sup>宽体机方面，A330系列积压297架，A350系列积压755架，A220系列积压539架。</p>
+<p>答案埋藏在航空业的底层逻辑里。</p>
 
-<p class="reveal">然而，积压订单的庞大也带来了三个结构性问题。其一，这些订单中相当一部分是框架协议（Letter of Intent）而非已完成谈判的确定合同。按行业惯例，航司支付的定金通常仅为飞机总价的1%-3%，退出成本相对有限。</p>
+<p><strong>第一，市场增长不可逆。</strong>据IATA预测，全球客运量将以年均3.6%的速度增长至2044年<sup>[3]</sup>。新兴市场（尤其是亚太和中东）的增长更快。航空公司如果不提前锁定订单，几年后将面临无飞机可用的窘境。</p>
 
-<p class="reveal">其二，订单到现金的转化周期在急剧拉长。2025年空客交付了793架，2026年的目标875架已属激进——但按此速度，清空现有积压仍需整整十年。而在此期间，客户可能更改机型配置、推迟交付窗口，甚至因财务状况变化而取消订单。2025年全年空客净订单889架，而同年确认取消的订单为52架。<sup>[6]</sup></p>
+<p><strong>第二，燃油成本倒逼换机。</strong>老一代飞机（如A320ceo）每座燃油成本比A320neo高15%至20%<sup>[4]</sup>。2026年Q2油价较2025年接近翻倍后，航空公司换装新一代节油飞机的紧迫性急剧上升。一台GTF发动机理论上比前代省油16%，LEAP发动机也有类似表现。</p>
 
-<p class="reveal">其三，也是最棘手的——产能爬坡远不如预期。2022年空客宣布的"Rate 75"计划（即月产75架A320系列）原本定在2025年实现，先是推迟到2026年，2026年年初又再次推迟至2027年底。<sup>[7]</sup>当前实际月产量约为50架，距离75架的目标还差整整50%。</p>
+<p><strong>第三，"稀缺预期"驱动抢订。</strong>空客A320neo系列目前的交付周期已经排到2030年以后。越晚下单，等得越久。这种稀缺性反而刺激航司提前下单占位，进一步膨胀了订单簿。</p>
 
-<div class="chart-box reveal">
-<div class="chart-title">空客四大机型年交付量 · 2023–2025</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label">A320系列</span><div class="bar-track"><div class="bar-fill red" data-w="100" style="width:100%">607</div></div><span class="bar-value">607架 (2025)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill red" data-w="88" style="width:88%">534</div></div><span class="bar-value">534架 (2024)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill red" data-w="86" style="width:86%">525</div></div><span class="bar-value">525架 (2023)</span></div>
-<div class="bar-row" style="margin-top:8px"><span class="bar-label">A330系列</span><div class="bar-track"><div class="bar-fill dark" data-w="100" style="width:100%">41</div></div><span class="bar-value">41架 (2025)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill dark" data-w="71" style="width:71%">29</div></div><span class="bar-value">29架 (2024)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill dark" data-w="80" style="width:80%">33</div></div><span class="bar-value">33架 (2023)</span></div>
-<div class="bar-row" style="margin-top:8px"><span class="bar-label">A350系列</span><div class="bar-track"><div class="bar-fill gold" data-w="100" style="width:100%">75</div></div><span class="bar-value">75架 (2025)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill gold" data-w="95" style="width:95%">71</div></div><span class="bar-value">71架 (2024)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill gold" data-w="77" style="width:77%">58</div></div><span class="bar-value">58架 (2023)</span></div>
-<div class="bar-row" style="margin-top:8px"><span class="bar-label">A220系列</span><div class="bar-track"><div class="bar-fill gray" data-w="100" style="width:100%">70</div></div><span class="bar-value">70架 (2025)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill gray" data-w="65" style="width:65%">46</div></div><span class="bar-value">46架 (2024)</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill gray" data-w="60" style="width:60%">42</div></div><span class="bar-value">42架 (2023)</span></div>
-</div>
-<div class="chart-sub">数据来源：空客2023-2025年度交付报告</div>
-</div>
+<p><strong>第四，订单质量需要打折看。</strong>并非所有8754架都是"硬订单"。独立航空咨询机构Residual Research曾指出，空客的积压订单中包含大量框架协议、政府外交礼单和条件不明确的意向书<sup>[5]</sup>。2025年空客报告取消了111架订单（较2024年的52架翻倍）。一个典型案例：2018年法国总统马克龙宣布中国将订购184架A320，但15个月后实际落地的订单变成了不同客户、不同数量、不同条款的290架A320和10架A350。外交礼单和实际订单之间存在系统性的偏差。</p>
 
-<p class="reveal">换言之，空客现在面对的是一个"甜蜜的痛苦"：订单多到够吃十年，但产能跟不上、交付在减速、客户的耐心在消耗。如果一家餐厅有近9000份预定但厨房一次只能出50桌菜——食客终有一天会去隔壁看看。</p>
+<p>更本质的问题在于：订单转化成现金的速度正在急剧放缓。空客Q1 2026的自由现金流为-25亿欧元——大量已完工的机身因为没有发动机而堆积在厂区，无法交付<sup>[6]</sup>。这些"无发动机的滑翔机"占用了巨额营运资金，将订单簿上的数字变成了账面上的痛。</p>
 
-<!-- 第二章 -->
-<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>发动机之困——普惠GTF如何卡住空客的产能</h2>
+<p>截至2026年3月底，空客积压订单已进一步攀升至9037架的历史新高<sup>[2]</sup>。订单越来越多，交付越来越慢。这一矛盾的根源，要从一台发动机说起。</p>
 
-<p class="reveal">2026年6月，空客向巴黎商事法庭对普惠（Pratt & Whitney）提起损害赔偿诉讼。<sup>[8]</sup>起诉的原因，是普惠PW1100G-JM发动机——即普惠齿轮涡扇发动机（Geared Turbofan, 简称GTF）——的"持续性和系统性缺陷"导致A320neo系列飞机的大量交付延迟。</p>
+</section>
 
-<p class="reveal">这场纠纷的根源可以追溯到2010年。当时空客为A320neo项目选定了两种发动机选项：普惠GTF和CFM国际（GE与赛峰的合资企业）的LEAP-1A。这原本是双源供应的风险管理策略。但实际情况是，CFM LEAP-1A大约覆盖了A320neo发动机装机的55%，普惠GTF覆盖约45%——这个比例足以让任何单一供应商的问题酿成系统风险。</p>
+<section>
+<h2><span class="chapter-num">02</span>发动机之困——普惠GTF的粉末冶金"原罪"</h2>
 
-<p class="reveal">普惠GTF发动机的"阿喀琉斯之踵"在于其独特的齿轮系统。GTF采用齿轮箱将风扇与低压涡轮分开运转，使两者各自在最优转速下工作——这带来了16%的燃油效率提升和显著的噪音降低。但正是这个创新的齿轮系统，加上高压涡轮叶片和燃烧室密封件的耐久性问题，导致了频繁的机队停场（Aircraft on Ground, AOG）事件。</p>
+<p>2026年7月，全球依然有约800至900架装配普惠PW1100G发动机的飞机处于封存状态<sup>[7]</sup>。这个数字占到全球GTF机队的三分之一。在中国，至少有9家航空公司的200多架A320neo受到波及——青岛航空在2025年暑运旺季，近40%的运力因发动机问题趴在地面<sup>[8]</sup>。</p>
 
-<p class="reveal">截至2025年底，全球超过800架A320neo因普惠GTF发动机问题而处于停场状态，占总装机机队的约15%。<sup>[9]</sup>每架停场飞机不仅意味着航空公司的运力损失，更意味着制造商的交付链条被卡住——因为空客需要为新建造的飞机预留可用的发动机，而普惠的发动机交付远跟不上需求。</p>
+<p>这并非偶然的经营性故障，而是全球民航业自波音737 MAX危机以来最严重的技术事件。它的根源，要从一种肉眼看不见的金属粉末污染说起。</p>
 
-<p class="reveal">普惠的母公司雷神技术公司（RTX）在2025年业绩报告中披露，已为GTF发动机相关问题支付了约10亿美元的补偿，并预计未来还需投入更多。<sup>[10]</sup>当然对于空客来说，这笔补偿远无法弥补延迟交付带来的信誉损失和客户关系损伤。</p>
+<p class="callout"><span class="label">技术拆解</span><strong>GTF发动机是什么？</strong>齿轮传动涡扇（Geared Turbofan）是普惠在21世纪航空动力领域最具野心的技术突破。传统涡扇发动机的风扇和低压涡轮直接连在同一根轴上，转速必须同步——这意味风扇和涡轮都无法在自己最有效的转速下工作。GTF在两者之间加装了一套行星齿轮箱（减速比约3:1），让风扇以2000至3000转/分钟的低转速运行，产生大流量推力气流；涡轮以10000至15000转/分钟的高转速运转，最大化热效率。这一设计使燃油消耗降低16%至20%，噪音下降75%<sup>[9]</sup>。</p>
 
-<p class="reveal">这场危机的后果是连锁性的。2026年Q1空客交付量同比骤降16%，最核心的原因就是发动机供应不足。Rate 75目标从2025年推迟到2026年末，再推迟到2027年末。有分析师估算，仅2025年一年，因GTF发动机短缺而导致无法交付的A320neo机身就超过100架——这些完工机身停放在图卢兹和汉堡的交付中心，等待发动机的"最后一公里"。</p>
+<p>问题出在发动机制造的核心环节：粉末冶金（Powder Metallurgy）。</p>
 
-<div class="chart-box reveal">
+<p>高压缩涡轮盘（High-Pressure Turbine Disc）是GTF发动机中工况最严苛的部件之一。它在约870°C（1600°F）的高温和数万转/分钟的离心力下运转。为承受这样的极端条件，普惠使用了第四代镍基高温合金粉末冶金技术——将镍基超合金熔化成极细的金属粉末，经过筛选、真空封装，再经等温锻造压制成盘状零件。这个工艺能产生比传统铸造更均匀的微观结构，提升高温抗疲劳性能<sup>[10]</sup>。</p>
+
+<p>但问题也出在这里。在2015年至2021年间的特定生产批次中，微小的非金属杂质（比沙粒还小）混入了金属粉末中。这些杂质在高温高压的持续运转中成为应力集中点——就像一块玻璃上的一粒沙，受热受力的反复作用下会引发微裂纹。裂纹在涡轮盘的旋转应力下逐步扩展，一旦穿透涡轮盘，可能导致灾难性的"非包容性故障"：碎片以超声速击穿发动机外壳，损毁机身、油箱或飞控系统<sup>[11]</sup>。</p>
+
+<p>2023年，一架边疆航空（Frontier Airlines）的A320neo发生GTF发动机空中停车事件，揭开了这场危机的冰山一角。普惠母公司RTX在2023年7月披露问题：约1200台PW1100G发动机需要提前拆检。到2023年9月，这一数字扩大为600至700台需要立即下线<sup>[12]</sup>。</p>
+
+<p>正常发动机大修周期为60至90天。而GTF的拆检周期拉长到了250至300天——几乎一年。原因有三：维修工位被海量返修发动机淹没、替换涡轮盘的锻造产能严重不足、设备拆解后发现裂缝后还需追加更换更多部件。一台发动机被拆下，大约一年后才能重新装回飞机<sup>[13]</sup>。</p>
+
+<p>这场危机有清晰的时间节点。2025年3月，全球停飞的GTF飞机达到峰值648架，占GTF机队的28%。2025年10月，这一数字攀升至835架，占33%<sup>[8]</sup>。美联航CEO斯科特·柯比评价说，这种供应链创伤，全球航空业要消化"很多年"。</p>
+
+<p>那到底什么时候能修好？未来预期如何？</p>
+
+<div class="chart-wrap">
 <div class="chart-title">普惠GTF发动机危机时间线</div>
-<svg width="100%" height="260" viewBox="0 0 640 260" style="display:block;margin:0 auto;">
-<line x1="40" y1="200" x2="600" y2="200" stroke="var(--line)" stroke-width="2"/>
-<line x1="40" y1="200" x2="40" y2="190" stroke="var(--red)" stroke-width="2"/>
-<text x="40" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2010</text>
-<text x="40" y="168" text-anchor="middle" font-size="9" fill="var(--gray)">A320neo\n选型GTF</text>
-
-<line x1="160" y1="200" x2="160" y2="190" stroke="var(--red)" stroke-width="2"/>
-<text x="160" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2016</text>
-<text x="160" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">GTF投入运营\n首例故障报告</text>
-
-<line x1="280" y1="200" x2="280" y2="190" stroke="var(--red)" stroke-width="2"/>
-<text x="280" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2023</text>
-<text x="280" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">FAA要求加速\n检查GTF齿轮箱</text>
-
-<line x1="400" y1="200" x2="400" y2="190" stroke="var(--red)" stroke-width="2"/>
-<text x="400" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2025</text>
-<text x="400" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">800+飞机停场\nRate 75推迟</text>
-
-<line x1="520" y1="200" x2="520" y2="190" stroke="var(--red)" stroke-width="2"/>
-<text x="520" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2026</text>
-<text x="520" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">空客起诉普惠\nRate 75→2027末</text>
-
-<line x1="600" y1="200" x2="600" y2="190" stroke="var(--line)" stroke-width="1"/>
-<text x="600" y="170" text-anchor="middle" font-size="9" fill="var(--red)" font-weight="700">→2027</text>
-</svg>
-<div class="chart-sub">资料来源：FAA适航指令、RTX年报、空客公开声明</div>
-</div>
-
-<p class="reveal">发动机供给不仅影响了整机交付，还对比发动机本身更值钱的租赁市场造成了冲击。据IBA咨询集团数据，2026年一台可用GTF发动机的月租金已达约20万美元，而一架A320neo整机的月租金约30万美元——发动机租金占比超过66%。<sup>[11]</sup>AOG状态下无法运营的飞机，让航空公司在支付高昂发动机维修费用的同时承受营运损失。</p>
-
-<p class="reveal">空客的Plan B是什么？短期看，尽可能将更多A320neo的生产线转向兼容CFM LEAP-1A的配置。但发动机吊架（Pylon）、燃油系统和航电接口的差异意味着这并非简单的"换装"。中长期看，空客与普惠的关系已因诉讼而严重恶化，而CFM那边LEAP-1A本身的供应链也在承压。</p>
-
-<!-- 第三章 -->
-<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>Spirit AeroSystems收购——垂直整合的代价与收益</h2>
-
-<p class="reveal">2025年12月，空客正式完成了对Spirit AeroSystems部分资产的收购——这笔交易是空客近年来最大胆的垂直整合行动。<sup>[12]</sup>Spirit AeroSystems是全球最大的独立飞机结构件供应商之一，原是波音在2005年剥离的威奇托（Wichita）工厂。空客收购的部分主要涉及Spirit为A320和A350生产机身段、机翼前缘等关键结构件的工厂，以及位于北爱尔兰贝尔法斯特（Belfast）的机翼制造设施。</p>
-
-<p class="reveal">收购价为4.39亿美元（含补偿对价），并为空客带来了超过4000名新的员工。<sup>[12]</sup>对空客来说，这笔交易的逻辑十分清晰：2025年12月欧洲航空安全局（EASA）发布了一项适航指令，指出部分A320前机身蒙皮厚度不达标——这正是Spirit供应的部件。<sup>[13]</sup>将关键结构件供应商纳入内部，既能从源头控制质量，也能缩短供应链链条的长度。</p>
-
-<p class="reveal">但垂直整合的代价也同样真实。Spirit的威奇托工厂有着复杂的工会关系——2023年一场长达两个月的罢工曾导致其交付中断。将这些文化不同的制造团队纳入空客的运营体系，本身就是一场管理挑战。此外，收购也意味着空客需要承担原本由Spirit承担的产能扩张投资——据分析师估计，将Spirit的产能与空客Rate 75目标对齐需要额外投入约2亿欧元。</p>
-
-<p class="reveal">垂直整合的另一个维度是机翼制造。空客传统的"A350机翼在英国制造、A320机翼在德国和西班牙制造"格局正在发生变化。贝尔法斯特工厂是A220和A320机翼的重要供应商，将其收归内部后，空客获得了对机翼供应链的完全控制——但也承担了此前由供应商承担的英镑兑欧元汇率风险。</p>
-
-<p class="reveal">分析师对这笔交易的评估分歧明显。正面的观点认为，在供应链危机频发的后疫情时代，垂直整合是"不惜代价也要确保交付"的必然选择。悲观的观点则指出，空客正在重蹈波音的覆辙——波音在2005年剥离Spirit就是出于"轻资产"的考虑，而空客此刻反向操作,本质上是在为行业的结构性问题买单。两种解读之间，答案需要未来两三年的运营数据来检验。</p>
-
-<p class="reveal">更深层的问题是，垂直整合是否会拖累空客的资本效率。Spirit在被剥离前是波音的"成本中心"，被剥离后成为独立供应商反而经历了二十年效率提升。空客将这些资产收回后，能否保持同样的供应链效率？还是在庞大的组织架构中再次陷入官僚主义陷阱？这取决于空客将Spirit作为独立业务单元运营还是完全融入现有体系——而管理层的选择信号目前尚不明朗。</p>
-
-<!-- 第四章 -->
-<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>波音的反扑——双寡头格局在重写</h2>
-
-<p class="reveal">2025年全年，波音交付了600架飞机，较2024年的348架几乎翻倍。<sup>[14]</sup>Q1 2026更是交付143架，自2018年以来首次季度反超空客的114架。这个数字在全球商用航空双寡头格局中意义重大：空客与波音在2000年代基本平分了全球大型客机市场，2019至2022年波音因737 MAX危机陷入深度困境，空客在此期间大幅领先。现在天平正在回摆。</p>
-
-<p class="reveal">波音在2025年的净订单达到1173架，同样超过了空客的889架。<sup>[14]</sup>订单层面的反转意味着市场信心的转变——航空公司在经历了MAX危机后对波音的谨慎态度正在消退，部分航司甚至开始把波音的订单作为与空客谈判的筹码。</p>
-
-<p class="reveal">空客的A321XLR（超长航程窄体机）在2024年获得认证后，一度被认为是空客压过波音737 MAX10的王牌。A321XLR航程达到8700公里，可以执飞从伦敦到开普敦的航线，使单通道飞机首次实现了此前只有宽体机才能做到的跨洋航程。但波音737 MAX10在2025年也加速了认证进程,再加上波音777X宽体机在2026年的试飞进展，波音的产品线正在全面恢复竞争力。</p>
-
-<div class="chart-box reveal">
-<div class="chart-title">空客 vs 波音 年度交付量 · 2018–2025</div>
-<svg class="line-chart-svg" viewBox="0 0 640 240">
-<defs>
-<marker id="dot-red" markerWidth="8" markerHeight="8" refX="4" refY="4"><circle cx="4" cy="4" r="4" fill="var(--red)"/></marker>
-<marker id="dot-dark" markerWidth="8" markerHeight="8" refX="4" refY="4"><circle cx="4" cy="4" r="4" fill="var(--bg-dark)"/></marker>
-</defs>
-<g class="grid">
-<line x1="60" y1="40" x2="600" y2="40" stroke="var(--line)" stroke-width="0.5"/>
-<line x1="60" y1="80" x2="600" y2="80" stroke="var(--line)" stroke-width="0.5"/>
-<line x1="60" y1="120" x2="600" y2="120" stroke="var(--line)" stroke-width="0.5"/>
-<line x1="60" y1="160" x2="600" y2="160" stroke="var(--line)" stroke-width="0.5"/>
-<line x1="60" y1="200" x2="600" y2="200" stroke="var(--line)" stroke-width="0.5"/>
-</g>
-<g class="axis">
-<text x="55" y="44" text-anchor="end">800</text>
-<text x="55" y="84" text-anchor="end">600</text>
-<text x="55" y="124" text-anchor="end">400</text>
-<text x="55" y="164" text-anchor="end">200</text>
-<text x="55" y="204" text-anchor="end">0</text>
-<text x="102" y="224" text-anchor="middle" font-size="10">'18</text>
-<text x="162" y="224" text-anchor="middle" font-size="10">'19</text>
-<text x="222" y="224" text-anchor="middle" font-size="10">'20</text>
-<text x="282" y="224" text-anchor="middle" font-size="10">'21</text>
-<text x="342" y="224" text-anchor="middle" font-size="10">'22</text>
-<text x="402" y="224" text-anchor="middle" font-size="10">'23</text>
-<text x="462" y="224" text-anchor="middle" font-size="10">'24</text>
-<text x="522" y="224" text-anchor="middle" font-size="10">'25</text>
-</g>
-<!-- Airbus line (red) - coordinates: 2018:800→200px, 2019:863→190px, 2020:566→227px, 2021:611→220px, 2022:661→212px, 2023:735→205px, 2024:765→200px, 2025:793→195px -->
-<polyline class="line-a drawn" points="102,160 162,154 222,175 282,171 342,165 402,160 462,156 522,152" stroke-dasharray="1000" stroke-dashoffset="0"/>
-<!-- Airbus dots -->
-<circle cx="102" cy="160" r="5" fill="var(--red)" class="visible"/>
-<circle cx="162" cy="154" r="5" fill="var(--red)" class="visible"/>
-<circle cx="222" cy="175" r="5" fill="var(--red)" class="visible"/>
-<circle cx="282" cy="171" r="5" fill="var(--red)" class="visible"/>
-<circle cx="342" cy="165" r="5" fill="var(--red)" class="visible"/>
-<circle cx="402" cy="160" r="5" fill="var(--red)" class="visible"/>
-<circle cx="462" cy="156" r="5" fill="var(--red)" class="visible"/>
-<circle cx="522" cy="152" r="5" fill="var(--red)" class="visible"/>
-<!-- Boeing line (dark) - 2018:806→198, 2019:380→238, 2020:157→250, 2021:340→233, 2022:480→224, 2023:528→218, 2024:348→232, 2025:600→210 -->
-<polyline class="line drawn" points="102,158 162,222 222,240 282,226 342,200 402,195 462,226 522,185" fill="none" stroke="var(--bg-dark)" stroke-width="2.5" stroke-dasharray="1000" stroke-dashoffset="0"/>
-<circle cx="102" cy="158" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="162" cy="222" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="222" cy="240" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="282" cy="226" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="342" cy="200" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="402" cy="195" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="462" cy="226" r="5" fill="var(--bg-dark)" class="visible"/>
-<circle cx="522" cy="185" r="5" fill="var(--bg-dark)" class="visible"/>
-<text x="420" y="140" fill="var(--red)" font-size="12" font-weight="700">空客 (2025: 793)</text>
-<text x="420" y="178" fill="var(--bg-dark)" font-size="12" font-weight="700">波音 (2025: 600)</text>
-</svg>
-<div class="chart-sub">数据来源：空客与波音各年年报及交付报告</div>
-</div>
-
-<p class="reveal">当然，波音的反扑并非没有隐忧。其737 MAX生产线在2025年多次因质量问题接受FAA审查；787梦想客机的交付节奏也不稳定。2025年1月，一架阿拉斯加航空的737 MAX 9在飞行中发生舱门面板脱落事故（门塞事件），导致FAA对波音生产质量实施了更严格的管控——包括限制737 MAX月产量不得超过38架，并指派独立审计团队进驻波音工厂。这意味着波音在产能爬坡上同样面临自己的天花板。</p>
-
-<p class="reveal">但从趋势上看，双寡头正在重新趋近于平衡。波音在2025年净赢得1173架订单，超过空客的889架，这背后既有空客交付疲软的推波助澜，也有波音产品线——尤其是777X和737 MAX10——在获得认证后对客户的吸引力回升。而空客在2026年的交付落后，很可能是这场格局重写的标志性拐点。双寡头之间的力量平衡一旦发生偏移，航司在谈判中的话语权就会发生变化——这可能导致定价压力、折扣扩大，最终传导到利润率上。</p>
-
-<!-- 第五章 -->
-<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>中国赌局——市场领导者的防御战</h2>
-
-<p class="reveal">中国是空客在海外最大的单一市场。截至2025年底，中国在役的空客飞机超过2200架，市场份额约为55%。<sup>[15]</sup>这意味着中国每两架民航机中至少有一架是空客制造的。2025年，空客向中国交付了约140架飞机，占其全球交付量的约18%。中国航司的空客订单积压约为700架，占全球积压的8%。</p>
-
-<p class="reveal">空客在中国的布局远不止于销售飞机。天津的A320总装线（FAL）于2008年投产，2026年初第二条天津总装线正式投产，使天津成为中国唯一同时组装A320系列和A330系列飞机的海外基地。<sup>[16]</sup>空客在中国还有超过200家供应商，2025年从中国的采购额超过20亿美元。</p>
-
-<p class="reveal">但这座金矿正面临前所未有的挑战。中国商飞（COMAC）的C919窄体客机——直接对标A320neo和波音737 MAX——到2025年底已获得超过1500架订单确认或意向。<sup>[17]</sup>虽然实际交付只有16架，且C919目前仍依赖CFM LEAP-1C发动机（LEAP系列的中国版本），但国产CJ-1000A发动机预计在2026年下半年将首次装机试飞。一旦商用，C919对进口发动机的依赖将大幅降低。</p>
-
-<div class="chart-box reveal">
-<div class="chart-title">空客在华市场份额演变 · 2008–2025</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label">2008年</span><div class="bar-track"><div class="bar-fill dark" data-w="41" style="width:41%">41%</div></div></div>
-<div class="bar-row"><span class="bar-label">2012年</span><div class="bar-track"><div class="bar-fill dark" data-w="45" style="width:45%">45%</div></div></div>
-<div class="bar-row"><span class="bar-label">2016年</span><div class="bar-track"><div class="bar-fill dark" data-w="49" style="width:49%">49%</div></div></div>
-<div class="bar-row"><span class="bar-label">2019年</span><div class="bar-track"><div class="bar-fill dark" data-w="52" style="width:52%">52%</div></div></div>
-<div class="bar-row"><span class="bar-label">2022年</span><div class="bar-track"><div class="bar-fill dark" data-w="54" style="width:54%">54%</div></div></div>
-<div class="bar-row"><span class="bar-label">2025年</span><div class="bar-track"><div class="bar-fill red" data-w="100" style="width:100%">55%</div></div></div>
-</div>
-<div class="chart-sub">数据来源：空客中国、中国民航总局统计</div>
-</div>
-
-<p class="reveal">更令空客不安的是C919的国际化进程。C919已向欧洲航空安全局（EASA）提交型号认证申请，若在2027-2028年左右获得EASA认证，将意味着C919可以进入欧洲和东南亚市场。届时全球窄体机市场的定价体系可能被重塑——这是一个所有现有玩家都无法忽视的长尾威胁。2025年，中国航司一边签署了148架A320neo的采购协议，一边继续增加对C919的支持投入——这种"双向押注"策略让空客在中国的防御战变得更加棘手。</p>
-
-<p class="reveal">地缘政治是另一个变量。2025年第二季度以来，中美之间的贸易摩擦再度升级——美国对部分中国商品加征关税，中国则对波音飞机采购施加了间接限制。这客观上为空客在中国创造了暂时的"政策红利"：中国航司增加对空客订单的确定性显著提升。但这种红利是双刃剑。如果2026年至2027年贸易战进一步向欧洲蔓延，空客可能面临来自美国的关税压力，特别是在其以美元计价的销售收入和以欧元计价的成本结构之间产生新的不平衡。</p>
-
-<p class="reveal">更深层的战略问题是：空客在中国的成功有多少是竞争者缺位的结果？如果C919在5到10年内实现年产100架并在全球市场逐步推开，空客在中国55%的市场份额能守住的底线在哪里？空客的应对方案是加速本地化：天津第二总装线、在中国的研发中心扩容、以及与中国供应商的更深绑定——但这些都是防守动作而非进攻策略。</p>
-
-<!-- 第六章 -->
-<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>防务与航天的断臂求生——Project Bromo与太空野心</h2>
-
-<p class="reveal">空客的防务与航天部门（Airbus Defence and Space）在2024年削减了13亿欧元的太空业务资产减记，导致板块亏损6.56亿欧元——这是空客近年来最大的单次资产减值之一。<sup>[18]</sup>2025年该板块实现EBIT 6.39亿欧元，看似完美反转，但这个数字建立在极其低矮的基数之上。</p>
-
-<p class="reveal">防务与航天在2025年实现营收134亿欧元，EBIT调整后为7.98亿欧元，利润率不到6%。<sup>[18]</sup>相比之下，商用飞机部门的利润率约为8%-9%，而直升机部门则超过12%。作为公司三大业务板块之一，防务与航天的资本回报远未达到合理水平。</p>
-
-<p class="reveal">在这种情况下，空客主导推出了一项名为"Project Bromo"的重组计划。该计划被命名为印度尼西亚的一座火山，寓意着剧烈而潜在喷发式的变革。其核心方案是将空客防务与航天、泰雷兹阿莱尼亚航天（Thales Alenia Space）和莱昂纳多（Leonardo）的部分太空业务合并为一家新的欧洲合资航天巨头。<sup>[19]</sup></p>
-
-<p class="reveal">Project Bromo拟议中的实体将拥有约25,000名员工、约65亿欧元年收入,股权结构为空客35%、泰雷兹32.5%、莱昂纳多32.5%。<sup>[19]</sup>这将是欧洲太空工业史上规模最大的整合行动。但德意志航空航天公司OHB已公开威胁提起法律挑战,称该合并"将扰乱欧洲航天市场格局"。<sup>[20]</sup>西班牙Indra公司也表示反对。反垄断审查可能将该交易推迟到2027年以后。</p>
-
-<p class="reveal">整合的时间表也意味着，Project Bromo短期内对空客的每股收益几乎没有贡献。与此同时，空客在2025年宣布裁减防务与航天部门约3000个岗位，主要来自管理层和行政支持岗位——这被外界视为"断臂求生"的注脚。</p>
-
-<p class="reveal">在太空赛道上，空客面临的竞争格局正在恶化。SpaceX的星链（Starlink）计划在2025年已发射超过6000颗卫星，其发射成本降至每公斤约1500美元——而欧洲阿丽亚娜6号火箭的每公斤发射成本仍在1万美元以上。空客在卫星制造领域的技术优势正在被数量级的成本差距所侵蚀。一网公司（OneWeb）已被英国政府和印度巴蒂集团收购,欧洲在低轨卫星通信领域正面临失去独立能力的风险。</p>
-
-<p class="reveal">防务板块则呈现另一番景象。俄乌冲突持续三年后，欧洲各国防务预算大幅攀升，德国的1000亿欧元特别国防基金、波兰的GDP 4%国防支出目标，都在为空客的军用运输机A400M、欧洲战斗机（Eurofighter）等防务产品创造增量需求。空客2025年防务业务订单增长了约18%，很大程度上受益于欧洲"重新武装"的大趋势。但A400M项目自2010年代以来的成本超支和技术问题仍未完全解决，空客在该项目上累计计提的拨备已超过35亿欧元——这是一个长期未能愈合的伤口。</p>
-
-<div class="chart-box reveal">
-<div class="chart-title">空客三大板块EBIT调整后对比 · 2024 vs 2025</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label">商用飞机</span><div class="bar-track"><div class="bar-fill red" data-w="100" style="width:100%">€46.8亿</div></div><span class="bar-value note">2025: +72%</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill red" data-w="58" style="width:58%">€27.2亿</div></div><span class="bar-value note">2024</span></div>
-<div class="bar-row" style="margin-top:8px"><span class="bar-label">直升机</span><div class="bar-track"><div class="bar-fill gold" data-w="100" style="width:100%">€8.6亿</div></div><span class="bar-value note">2025: +5%</span></div>
-<div class="bar-row"><span class="bar-label"></span><div class="bar-track"><div class="bar-fill gold" data-w="95" style="width:95%">€8.2亿</div></div><span class="bar-value note">2024</span></div>
-<div class="bar-row" style="margin-top:8px"><span class="bar-label">防务/航天</span><div class="bar-track"><div class="bar-fill gray" data-w="100" style="width:100%">€7.98亿</div></div><span class="bar-value note">2025 (vs -€6.56亿)</span></div>
-</div>
-<div class="chart-sub">注：2024年防务与航天板块因太空业务减记13亿欧元录得亏损。数据来源：空客2025年年报</div>
-</div>
-
-<!-- 第七章 -->
-<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>氢能梦想与现实——ZEROe的漫长征程</h2>
-
-<p class="reveal">2020年，空客发布了ZEROe氢能飞机计划，目标是到2035年将零排放商用客机投入市场。<sup>[21]</sup>这款100座级、航程约1000海里（约1850公里）的概念飞机，使用液态氢燃料、通过氢燃料电池或氢燃烧发动机提供动力。它将主要覆盖支线航空和短程航线——像伦敦到巴黎、东京到札幌这样的航段。</p>
-
-<p class="reveal">五年过去了,ZEROe的技术成熟度（Technology Readiness Level, TRL）仍停留在3——即"关键功能已在实验室环境中验证"，距离7级（"系统原型在实际环境中验证"或"试飞"）还有巨大差距。<sup>[21]</sup>2025年，空客确认已将首飞目标推迟到2028年，并承认在氢储存、低温燃料系统和机场氢燃料基础设施方面存在"显著的技术障碍"。</p>
-
-<p class="reveal">最大的难题是氢气的物理性质。液氢需要储存在零下253摄氏度的温度下,其体积能量密度仅为航空煤油的约四分之一。意味着一架氢能飞机需要携带约四倍于传统燃料油箱的燃料储存空间——这对飞机设计、机身结构和乘客舱布局都是根本性的挑战。空客的解决方案之一是将液氢储罐从客舱后移至机翼内——但这个方案对现有机场的地面加油设备提出了一系列新要求。</p>
-
-<p class="reveal">在行业层面，氢能航空的路线图还在剧烈演变。2025年底，赛峰集团（Safran）和液化空气集团（Air Liquide）等欧洲航空供应链巨头联合提交了一份氢能航空可行性报告，指出"在没有大规模的机场基础设施投入和政府政策支持的前提下，2035年氢能商用飞机进入市场的可能性不高于30%"。</p>
-
-<p class="reveal">除了技术难题，经济可行性同样不容忽视。据国际清洁交通委员会（ICCT）的估算，氢燃料的制备和运输成本是目前航空煤油的2到4倍，且短期内看不到成本收敛的趋势——除非绿色电解氢的大规模生产在2030年代取得突破。换言之，即使ZEROe成功飞上天空，它的运营成本也可能比传统燃油飞机高出50%到100%。在这个价格水平上，有多少航空公司愿意为"零排放"的品牌溢价买单，是一个没有答案的问题。</p>
-
-<p class="reveal">空客自身也意识到了时间窗口的紧迫性。2025年管理层公开调整了ZEROe的定位：从"主要技术路线"降级为"战略性探索项目"，同时将更多短期资源转向可持续航空燃料（SAF）的配套。SAF可以直接用于现有发动机，无需改变飞机设计和机场设施——虽然SAF目前的产能仅能满足全球约0.5%的航空燃料需求，但它的实现路径比氢能明确得多。这一调整的潜台词是：空客对氢能飞机的商业化时间表可能已经失去了最初的乐观。</p>
-
-<div class="chart-box reveal">
-<div class="chart-title">ZEROe氢能飞机——技术里程碑时间线</div>
-<svg width="100%" height="260" viewBox="0 0 640 260" style="display:block;margin:0 auto;">
-<line x1="40" y1="200" x2="600" y2="200" stroke="var(--line)" stroke-width="2"/>
-<line x1="40" y1="50" x2="40" y2="200" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-
-<!-- 2020 -->
-<line x1="40" y1="200" x2="40" y2="190" stroke="var(--gold)" stroke-width="2"/>
-<circle cx="40" cy="200" r="6" fill="var(--gold)"/>
-<text x="40" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2020</text>
-<text x="40" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">ZEROe发布</text>
-
-<!-- 2022 -->
-<line x1="145" y1="200" x2="145" y2="190" stroke="var(--gold)" stroke-width="2"/>
-<circle cx="145" cy="200" r="6" fill="var(--gold)"/>
-<text x="145" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2022</text>
-<text x="145" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">四种概念设计展示</text>
-
-<!-- 2025 -->
-<line x1="250" y1="200" x2="250" y2="190" stroke="var(--red)" stroke-width="2"/>
-<circle cx="250" cy="200" r="6" fill="var(--red)"/>
-<text x="250" y="180" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="700">2025</text>
-<text x="250" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">TRL 3 · 首飞推迟至2028</text>
-
-<!-- 2028 -->
-<line x1="390" y1="200" x2="390" y2="190" stroke="var(--line)" stroke-width="2" stroke-dasharray="3,3"/>
-<circle cx="390" cy="200" r="6" fill="var(--line)" stroke="var(--gray)" fill="none" stroke-width="1.5"/>
-<text x="390" y="180" text-anchor="middle" font-size="10" fill="var(--gray)">2028</text>
-<text x="390" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">目标首飞</text>
-
-<!-- 2035+ -->
-<line x1="530" y1="200" x2="530" y2="190" stroke="var(--line)" stroke-width="2" stroke-dasharray="3,3"/>
-<circle cx="530" cy="200" r="6" fill="var(--line)" stroke="var(--gray)" fill="none" stroke-width="1.5"/>
-<text x="530" y="180" text-anchor="middle" font-size="10" fill="var(--gray)">2035+</text>
-<text x="530" y="165" text-anchor="middle" font-size="9" fill="var(--gray)">目标商业运营</text>
-
-<text x="320" y="240" text-anchor="middle" font-size="11" fill="var(--gray)" font-style="italic">▼ 目前处于TRL 3 · 可行性风险极高</text>
-</svg>
-<div class="chart-sub">资料来源：空客ZEROe年度进展报告、欧洲航空安全局公开文件</div>
-</div>
-
-<p class="reveal">尽管如此，空客仍然是全球唯一一家在氢能商用飞机领域投入实质性研发资源的飞机制造商。波音在2022年基本搁置了其氢能研究计划，中国的C919研发路线图上也没有氢能选项——如果氢能航空最终成真，空客将拥有无可争议的先发优势。但如果这个赌注落空,ZEROe累计的数十亿欧元研发投入将面临归零风险。</p>
-
-<!-- 第八章 -->
-<h2 class="reveal" id="c8"><span class="chap-num">第八章</span>财务透视——创纪录利润下的现金失血</h2>
-
-<p class="reveal">2025年全年，空客交出了一份表面光鲜的成绩单：营业收入734亿欧元，同比增长约11%；EBIT调整后71亿欧元，同比大涨约48%；净利润52亿欧元；自由现金流46亿欧元。<sup>[4]</sup>这些数字的核心驱动力来自商用飞机交付量的增长（793架 vs 766架）和有利的对冲汇率环境——空客以美元计价销售、以欧元成本生产，2025年适用的对冲比率大幅改善了利润端。</p>
-
-<p class="reveal">但这份光鲜的财报在2026年Q1被击穿。第一季度营收仅127亿欧元，EBIT调整后骤降至3亿欧元，自由现金流更是录得负25亿欧元。<sup>[2]</sup>从46亿到负25亿——这个反转不完全是经营利润的崩溃，更是营运资金的剧烈变化。大量完工的A320neo机身因缺少发动机无法交付，堆放在图卢兹和汉堡的停机坪上，占用了巨额营运资金。据摩根士丹利估算，仅2026年Q1空客的存货比去年同期增加了约22亿欧元。<sup>[22]</sup></p>
-
-<p class="reveal">空客在2026年Q1财报中重申了全年交付870架的目标，但附带了关键条件："假设全年无额外重大干扰"。考虑到2026年可能升级的中美贸易战、普惠诉讼的不确定性、以及Spirit收购后的整合阵痛，这个假设并不稳固。</p>
-
-<div class="metric-grid reveal">
-<div class="metric-box"><span class="metric-val" data-count="8754" data-suffix="">0</span><span class="metric-label">积压订单（架）</span><span class="metric-sub">截至2025年底</span></div>
-<div class="metric-box red"><span class="metric-val" data-count="793" data-suffix="">0</span><span class="metric-label">2025年交付</span><span class="metric-sub">vs 2024年766架</span></div>
-<div class="metric-box"><span class="metric-val" data-count="734" data-suffix="亿">0</span><span class="metric-label">2025营收（€）</span><span class="metric-sub">EBIT调整后71亿</span></div>
-<div class="metric-box"><span class="metric-val" data-count="46" data-suffix="亿">0</span><span class="metric-label">2025 FCF（€）</span><span class="metric-sub">Q1 2026: -25亿</span></div>
-<div class="metric-box red"><span class="metric-val" data-count="114" data-suffix="">0</span><span class="metric-label">Q1 2026交付</span><span class="metric-sub">同比下降16%</span></div>
-<div class="metric-box"><span class="metric-val" data-count="28" data-suffix="x">0</span><span class="metric-label">当前PE倍数</span><span class="metric-sub">市值约1380亿€</span></div>
-</div>
-
-<p class="reveal">从更长远的结构性视角看，空客的盈利质量值得审视。2025年的EBIT调整后利润率为9.7%、但其中有至少2-3个百分点来自有利的汇率对冲——当这些对冲合约在2026-2027年陆续到期后，利润率将面临自然压缩。同时，研发费用在2025年有所下降，部分原因是某些项目的资本化处理——如果空客需要在ZEROe和新一代单通道飞机（"Next Gen Single Aisle"）上加大投入，研发费用将重回上升通道。</p>
-
-<p class="reveal">空客当前市值约1380亿欧元,PE约28倍。<sup>[3]</sup>对于一个面临多重结构性挑战的周期性制造企业来说，这个估值不便宜——尤其考虑到Q1 FCF的突然恶化。市场已经在定价这些风险：股价从2025年7月的221欧元高点跌至2026年7月的约175欧元，下跌约20%。</p>
-
-<p class="reveal">从股息看，空客2025财年拟派股息每股2.00欧元，较2024年的1.80欧元有所增长，但股息支付率（Payout Ratio）仅为约33%——公司选择将更多现金用于回购和收购（Spirit AeroSystems）。管理层释放的信号是"我们相信长期增长"——但对投资者而言，等待的过程充满了不确定性。</p>
-
-<p class="reveal">资产负债表方面也存在隐忧。空客2025年底的净现金头寸约为75亿欧元，较2024年的95亿欧元有所下降，主要是因为Spirit收购和库存积压占用了现金。公司总债务约190亿欧元，总债务与EBITDA之比约为2.5倍——对于一家周期性制造企业而言尚在可控范围，但方向值得关注。更值得警惕的是客户预付款（Customer Advances）的大幅增长——2025年底达约310亿欧元，较2024年增长约40亿欧元。预付款的增长意味着客户仍在为未来的交付买单，但如果交付持续延迟，这笔巨额预付款中有一部分可能面临退款或重新谈判的压力。</p>
-
-<p class="reveal">关于2026年的业绩指引，空客管理层在上半年财报电话会议中强调，全年870架交付目标的实现取决于三个关键条件：普惠发动机修复计划的推进速度、Spirit整合的节奏、以及全球贸易环境的稳定。三个条件中没有任何一个完全在空客的控制范围之内。一位不愿具名的欧洲航空分析师在电话会议后的报告中写道："2026年更像是空客的'管理期望之年'——把目标设在870架，但所有人都明白最终数字很可能在810到830架之间。"如果最终交付落在810至830架的区间，意味着全年EBIT可能在此前管理层预期的65亿至75亿欧元的底部甚至更低位置。</p>
-
-<div class="chart-box reveal">
-<div class="chart-title">空客营收结构 · 2025年各板块占比</div>
-<div class="donut-wrap">
-<svg width="220" height="220" viewBox="0 0 220 220">
-<circle cx="110" cy="110" r="80" fill="none" stroke="var(--line)" stroke-width="30"/>
-<!-- 商用飞机 ~84% = 302deg -->
-<circle cx="110" cy="110" r="80" fill="none" stroke="var(--red)" stroke-width="30" 
-stroke-dasharray="302 360" stroke-dashoffset="0" transform="rotate(-90 110 110)" 
-style="transition:stroke-dasharray 1.5s ease"/>
-<line x1="172" y1="42" x2="210" y2="15" stroke="var(--red)" stroke-width="1" stroke-dasharray="3,3"/>
-<text x="212" y="13" font-size="9" fill="var(--ink)">商用飞机</text>
-<text x="212" y="24" font-size="9" fill="var(--gray)">~84% · €616亿</text>
-<!-- 直升机 ~8% = 29deg -->
-<circle cx="110" cy="110" r="80" fill="none" stroke="var(--gold)" stroke-width="30" 
-stroke-dasharray="29 360" stroke-dashoffset="-302" transform="rotate(-90 110 110)"
-style="transition:stroke-dasharray 1.5s ease"/>
-<line x1="170" y1="192" x2="205" y2="200" stroke="var(--gold)" stroke-width="1" stroke-dasharray="3,3"/>
-<text x="207" y="198" font-size="9" fill="var(--ink)">直升机</text>
-<text x="207" y="209" font-size="9" fill="var(--gray)">~8% · €60亿</text>
-<!-- 防务与航天 ~8% = 29deg -->
-<circle cx="110" cy="110" r="80" fill="none" stroke="var(--bg-dark)" stroke-width="30" 
-stroke-dasharray="29 360" stroke-dashoffset="-331" transform="rotate(-90 110 110)"
-style="transition:stroke-dasharray 1.5s ease"/>
-<line x1="28" y1="170" x2="10" y2="188" stroke="var(--bg-dark)" stroke-width="1" stroke-dasharray="3,3"/>
-<text x="5" y="203" font-size="9" fill="var(--ink)">防务与航天</text>
-<text x="5" y="214" font-size="9" fill="var(--gray)">~8% · €60亿</text>
-<text x="110" y="115" text-anchor="middle" font-size="20" font-weight="700" fill="var(--red)">€734亿</text>
-<text x="110" y="130" text-anchor="middle" font-size="9" fill="var(--gray)">2025总营收</text>
-</svg>
-</div>
-<div class="chart-sub">数据来源：空客2025年年报。直升机与防务航天板块收入经四舍五入处理</div>
-</div>
-
-<!-- 尾声 -->
-<div class="epilogue reveal" id="c9">
-<h2>尾声：以十年为尺度</h2>
-
-<p>2016年7月，空客在图卢兹举行了首届A320neo交付仪式。马来西亚亚洲航空（AirAsia）接收了全球第一架装配普惠GTF发动机的A320neo，现场掌声雷动。时任空客商用飞机总裁的法布里斯·布雷吉耶（Fabrice Brégier）说了一句后来被广泛引用的话："这不是一次升级，这是一次革命。"</p>
-
-<p>十年后的2026年，同一款发动机正在让这家公司坐在了原告席上。那场革命留下的技术遗产——齿轮箱、高压涡轮、燃烧室密封件——每一项都曾是工程奇迹，每一项也都在成为产能的瓶颈。</p>
-
-<div class="pull-quote" style="color:#e8c87a;border-color:#5a5045">8754架积压订单的本质不是供不应求，<br>而是一台发动机锁住了整条产业链的咽喉。</div>
-
-<p>回到开篇的问题：当一家公司拿到了几乎整个行业的订单，却连按时交付都做不到——问题到底出在哪里？</p>
-
-<p>答案不是单一的。普惠发动机困局暴露了双源供应策略的失效；Spirit AeroSystems收购揭示了供应链垂直整合的艰难；波音的反扑证明双寡头格局远未成型；中国C919的崛起让空客最大的市场面临结构性重新定价；财务数据显示盈利质量存在汇率和营运资金的双重脆弱性。</p>
-
-<p>空客的处境用一句话概括或许最准确：它不是不擅长造飞机，而是太擅长接订单了。当全球航空运输量在2025年首次突破50亿人次、以年均3.5%的速度持续增长时，空客在需求侧拿到了有史以来最好的成绩单。但供给侧——发动机、机身、机翼、工会、合规、认证——每一条都绷到了极限。</p>
-
-<p>这家欧洲工业巨头正在打一场它从未经历过的战争：敌人不是对手，是自己的供应链；战场不是市场份额，是交付坪上的停机数量；裁判不是评级机构，是时间本身。胜负的判官就在未来两三年之内——如果Rate 75在2027年底如期实现、GTF修复计划顺利推进、天津第二总装线满产运转——那今天的阵痛便是成长的代价。如果任何一环继续延误，积压的8754架订单将从"行业纪录"变成"历史包袱"。</p>
-
-<p>空客的大本营位于法国西南部图卢兹的圣马丁机场。在它最著名的A320总装线厂房外墙上，印着一句法语标语："Le ciel n'a pas de limite"——天空没有极限。但对于一家手握近万架订单却无法按时交付的公司来说，最大的极限，恰恰是地面上的发动机。</p>
-</div>
-
-<!-- 脚注 -->
-<div class="footnotes">
-<h3>注释与资料来源</h3>
-<ol>
-<li>Airbus SE 2025 Annual Report (published February 2026). Backlog of 8,754 aircraft at year-end 2025 includes all commercial aircraft families.</li>
-<li>Airbus SE Q1 2026 Earnings Release, April 2026. Deliveries: 114 aircraft (Q1 2025: 136). Revenue €12.7 billion, EBIT Adjusted €300 million, Free Cash Flow -€2.5 billion.</li>
-<li>Airbus stock price data from Euronext Paris (AIR.PA). 52-week high €221 (July 2025), current ~€175 (July 2026). Market cap ~€138 billion, PE ~28x based on 2025 net income of €5.2 billion.</li>
-<li>Airbus SE 2025 Full-Year Results, February 2026. Revenue €73.4 billion, EBIT Adjusted €7.1 billion, Net Income €5.2 billion, Free Cash Flow €4.6 billion.</li>
-<li>Airbus Orders & Deliveries Report, December 2025. A320 family backlog: 7,163 aircraft. A330: 297, A350: 755, A220: 539.</li>
-<li>Airbus Orders & Deliveries Report, December 2025. Gross orders 941, net orders 889 (52 cancellations).</li>
-<li>Airbus Investor Day presentation, March 2026. Rate 75 (monthly A320 production) delayed to end-2027. Current rate ~50/month.</li>
-<li>"Airbus files lawsuit against Pratt & Whitney over GTF engine defects," Reuters, June 2026. Paris Commercial Court filing.</li>
-<li>IBA Consulting Group, "GTF Engine Grounding Impact Analysis," Q4 2025. Estimated 800+ A320neo family aircraft grounded due to GTF engine issues globally.</li>
-<li>RTX Corporation 2025 Annual Report (published February 2026). Segment disclosure on Pratt & Whitney GTF warranty provisions: approximately $1 billion incurred.</li>
-<li>IBA Consulting Group, "Engine leasing market report," Q1 2026. GTF monthly lease rate ~$200,000 vs A320neo airframe ~$300,000.</li>
-<li>Airbus press release, December 2025. "Airbus completes acquisition of Spirit AeroSystems assets." Total consideration $439 million; 4,000+ employees transferred.</li>
-<li>EASA Airworthiness Directive 2025-XXXX, December 2025. "A320 forward fuselage skin thickness non-conformance." Issued for certain A320-family aircraft produced with Spirit-supplied fuselage sections.</li>
-<li>Boeing 2025 Annual Report and Q1 2026 Earnings Release. 2025 deliveries: 600 (vs 348 in 2024). Q1 2026: 143 deliveries. 2025 net orders: 1,173.</li>
-<li>Airbus China market data from Airbus China press release, January 2026. 55% market share, 2,200+ aircraft in service in China. ~140 aircraft delivered to Chinese carriers in 2025.</li>
-<li>Airbus China press release, January 2026. Second Tianjin A320 Final Assembly Line (FAL) commissioned in early 2026. Tianjin is Airbus's only non-European A330 FAL.</li>
-<li>COMAC (Commercial Aircraft Corporation of China) public disclosures, December 2025. C919: 1,500+ orders (firm commitments + letters of intent), 16 deliveries completed. CJ-1000A engine first flight test targeted for H2 2026.</li>
-<li>Airbus Defence and Space segment disclosure, 2025 Annual Report. Revenue €13.4 billion, EBIT €639 million (2024: -€656 million after €1.3 billion space impairment). EBIT Adjusted €798 million.</li>
-<li>Project Bromo proposal documentation as reported by Reuters and Financial Times, Q4 2025. Structure: Airbus 35%, Thales 32.5%, Leonardo 32.5%. ~25,000 employees, ~€6.5 billion revenue.</li>
-<li>OHB SE public statement, January 2026. Threatened legal challenge to Project Bromo merger, citing "market disruption." Indra (Spain) also expressed opposition.</li>
-<li>Airbus ZEROe program update, September 2025. Concept: 100-seat, 1,000 nautical mile range, hydrogen combustion/fuel cell propulsion. TRL 3; first flight target now 2028 (previously 2026-2027); commercial entry post-2035.</li>
-<li>Morgan Stanley equity research, "Airbus SE: Working Capital and FCF Analysis," June 2026. Estimated €2.2 billion inventory increase in Q1 2026.</li>
+<div class="chart-note">危机自2023年爆发，预计影响持续至2028-2030年</div>
+<ol class="vertical-timeline" style="text-align:left;max-width:450px;margin:0 auto">
+<li>
+<span class="vt-date">2015 — 2021</span>
+<span class="vt-text"><strong>问题酝酿期</strong> · 普惠特定批次镍基高温合金粉末被污染，约1800台发动机的涡轮盘存在微观杂质隐患。生产线2021年解决污染问题。</span>
+</li>
+<li>
+<span class="vt-date">2023年7月</span>
+<span class="vt-text"><strong>危机曝光</strong> · RTX披露粉末冶金污染问题，约1200台PW1100G发动机需加速检查。发现2020年一台IAE V2500发动机曾因同类污染发生叶片断裂。</span>
+</li>
+<li>
+<span class="vt-date">2023年9月</span>
+<span class="vt-text"><strong>范围扩大</strong> · 600-700台发动机需立即从翼上拆下检查。FAA和EASA下发适航指令，要求缩短检查周期至2800-3800个飞行循环。</span>
+</li>
+<li>
+<span class="vt-date">2025年2月</span>
+<span class="vt-text"><strong>FAA新适航指令</strong> · AD 2025-03-10发布，要求更换多达586台PW1100G的热管理支架系统——此前已发生多次风扇叶片断裂，其中3次引发发动机起火<sup>[14]</sup>。</span>
+</li>
+<li>
+<span class="vt-date">2025年10月</span>
+<span class="vt-text"><strong>停飞高峰</strong> · 全球835架GTF动力的飞机处于封存状态，占GTF机队33%。中国至少9家航司200余架飞机受影响。二手发动机月租金飙升至20万美元/台。</span>
+</li>
+<li>
+<span class="vt-date">2026年2月</span>
+<span class="vt-text"><strong>空客起诉普惠</strong> · 空客启动法律赔偿程序，指控普惠将发动机资源优先用于维修而非新机交付。Rate 75产能目标推迟至2027年底。</span>
+</li>
+<li>
+<span class="vt-date">2026年7月</span>
+<span class="vt-text"><strong>危机现状</strong> · 全球仍有800-900架飞机停飞。A220的PW1500G发动机预计年底恢复，A320的PW1100G仍需2-3年。</span>
+</li>
+<li>
+<span class="vt-date">2027年底</span>
+<span class="vt-text"><strong>部分修复预期</strong> · Wizz Air等客户预计GTF问题基本解决。普惠"热端升级包"（Hot Section Plus）开始大规模部署<sup>[15]</sup>。</span>
+</li>
+<li>
+<span class="vt-date">2028年起</span>
+<span class="vt-text"><strong>完全切换</strong> · 普惠计划将全部PW1100G生产切换至全新的GTF Advantage型号。该型号在翼时间目标翻倍。新等温锻压机在俄亥俄州哥伦布工厂投产。</span>
+</li>
+<li>
+<span class="vt-date">2030年前后</span>
+<span class="vt-text"><strong>恢复正常</strong> · 普惠商用发动机总裁Rick Deurloo表示，预计在"本年代末"恢复至正常状态<sup>[16]</sup>。</span>
+</li>
 </ol>
 </div>
 
-</div><!-- container end -->
+<p>简而言之，GTF发动机的这场危机没有"一剂解药"，而是一连串渐进的修复措施：立即更换有缺陷的涡轮盘 → 在现有发动机上部署"热端升级包" → 逐步切换至新的GTF Advantage型号。普惠预计，A320neo级别的PW1100G在2027至2028年基本摆脱最坏状况，但要全面恢复还需要更长时间。</p>
 
-<div class="tracker" id="tracker2">导语</div>
+<p>在此期间，全球每年约1000至2000台次的GTF维修需求持续挤压维修产能，留给空客和航空公司的选择不多：等，或者换。但问题在于——备选方案LEAP-1A也并非高枕无忧。</p>
 
-<footer>
-  <div class="disc">
-    <b>免责声明与版权说明</b>
-    此报告为深度调查档案室（Investigation Desk）内部研究资料。所有数据来自公开来源，包括上市公司年报、监管文件、行业研报、公开媒体报道。报告内容不构成任何投资建议。封面图为A320neo概念渲染图。转载须注明出处。
-  </div>
-</footer>
+</section>
 
+<section>
+<h2><span class="chapter-num">03</span>另一台发动机——LEAP-1A能否成为空客的Plan B？</h2>
+
+<p>A320neo系列有两个发动机选项：普惠的PW1100G（GTF）和CFM国际的LEAP-1A——后者是通用电气（GE）和赛峰（Safran）的50/50合资公司。目前全球在役的A320neo机队中，约60%搭载LEAP-1A，40%搭载GTF<sup>[17]</sup>。</p>
+
+<p>按理说，双源供应应该是空客的保险阀。GF全面停转，LEAP顶上不就行了？但现实远比理论复杂。</p>
+
+<p>LEAP-1A自身也有耐久性问题。该发动机在高温多尘环境（中东、北非、印度航司）运行时，高压涡轮第一级叶片磨损速度超预期，导致部分航司的在翼时间（Time-on-Wing）缩短了约30%<sup>[18]</sup>。IndiGo、伊比利亚航空和国泰航空都受到了影响。</p>
+
+<p>GE的应对方式是开发并部署耐久性升级包（HPT kit），重新设计高压涡轮叶片、燃油喷嘴和喷嘴支架。到2026年4月，约30%的在役LEAP-1A已安装该升级包，FAA已在2024年底完成适航认证<sup>[19]</sup>。GE计划在2026年向LEAP-1B（波音737 MAX的发动机）交付首批升级包。</p>
+
+<p>产能方面，CFM在2026年Q1交付了520台LEAP发动机，同比增长63%，全年有望突破2000台（2025年为1802台）<sup>[19]</sup>。但这也无法满足暴增的需求。一架新型2500吨锻压机的建设被推迟到2029年才能投产，暴露出航空发动机供应链的深层瓶颈：它不是想扩就能扩的<sup>[20]</sup>。</p>
+
+<p>赛峰正在墨西哥克雷塔罗（2026年投产，初期年产100台）和摩洛哥卡萨布兰卡（2028年投产，最终年产350台）建设新的LEAP-1A总装线。两座工厂将承担LEAP-1A约35%的产能，构成"韧性支柱"<sup>[21]</sup>。</p>
+
+<p>但最关键的问题是：A320neo能否将GTF订单切换为LEAP？答案是理论上可以，但实际操作极难。两台发动机的吊挂接口、燃油系统、电气接口各不相同，一台预定装GTF的A320neo不能简单换装LEAP。航空公司在订购飞机时就明确了发动机选择，切换涉及到合同、交付时间表、飞行员培训和维修体系的全面调整。</p>
+
+<p>空客CEO傅里在2026年2月直言："2026年几乎没有看到发动机供应量大幅增长的希望。"<sup>[22]</sup>这句话既指向普惠，也指向CFM——后者也在优先保障在役机队的备件需求。两台发动机都紧，空客的Plan B不是一键切换供应商，而是在两条都紧的生产线上排队等货。</p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">04</span>诉讼进行时——空客与普惠的裂缝是如何撕开的</h2>
+
+<p>2026年3月，路透社报道了一则震动航空业的消息：空客已在美国发动机制造商普惠（RTX子公司）启动法律赔偿程序<sup>[23]</sup>。这标志着双方数月的商业争端正式升级为跨境商业诉讼。</p>
+
+<p>争端的核心是一台发动机的分配权。</p>
+
+<p>空客的指控直截了当：普惠将其有限的发动机产能优先用于已服役机队的维修（MRO，Maintenance, Repair and Overhaul），而不是按合同向空客交付新发动机用于新飞机总装。空客商用飞机CEO克里斯蒂安·舍雷尔在2026年1月就已经明确表示，公司"在未来可预见的期限内"仍未获得所需的发动机数量，交货"非常非常晚"且低于预期水平<sup>[24]</sup>。</p>
+
+<p>2026年2月，空客CEO傅里在发布2025年全年业绩时进一步摊牌："普惠未能兑现其对空客承诺的发动机数量，这对今年的产量目标和增产计划已造成负面影响。"他同时表示，空客已准备好"行使合同赋予的权利"<sup>[22]</sup>。</p>
+
+<p>这起争端的特殊性在于，它不是简单的供应商违约问题，而是牵涉三方的角力：空客需要新发动机来交付飞机、实现收入；航空公司需要发动机备件来维持机队运营；普惠则面临着数千台发动机需要大修检查的积压。谁应该优先获得有限的发动机资源？</p>
+
+<p>汉莎航空CEO已公开为普惠辩护，主张航司的维修需求应当优先。RTX CEO克里斯·卡利奥则在2026年1月向分析师表示，普惠必须"找到正确的平衡"<sup>[24]</sup>。</p>
+
+<p>潜在赔偿金额可能高达数亿美元。路透社援引知情人士称，索赔金额尚未确定，但涵盖空客因交付延迟而需向航司客户支付的违约金。争端可能以非公开仲裁方式解决<sup>[23]</sup>。这是自2022年空客与卡塔尔航空就A350机身蒙皮剥落问题对簿公堂以来，空客面临的最大规模商业法律纠纷<sup>[24]</sup>。</p>
+
+<p>诉讼的实际影响不仅停留在法律层面。它已经改变了空客与普惠之间的协作模式——双方从紧密合作转向了合同约束下的紧张博弈。空客被曝已经开始在内部评估如何降低对普惠的依赖度，包括加速推进更多A320neo装配LEAP发动机的可行性。但如前述，这一转型需要数年时间。</p>
+
+<p>这一裂缝也给了波音可乘之机。</p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">05</span>Spirit收购与供应链重整——垂直整合的代价</h2>
+
+<p>发动机不是空客供应链的唯一痛处。2025年12月，空客完成了对Spirit AeroSystems部分资产的收购，这一收购承载着空客重建供应链掌控力的雄心<sup>[25]</sup>。</p>
+
+<p>Spirit曾是波音2005年剥离的核心航空结构件供应商，后来逐渐发展为同时为空客和波音供货的一级供应商。但它近年来陷入财务困境和质量危机。2025年12月，EASA发布针对A320前机身蒙皮的适航指令——蒙皮厚度不达标<sup>[26]</sup>。这正是Spirit生产的部件。</p>
+
+<p>空客以收到4.39亿美元补偿的方式，从Spirit手中接过了其在美国北卡罗来纳（A350机身段）、法国圣纳泽尔（A350机身段）、摩洛哥卡萨布兰卡（A321和A220部件）、英国贝尔法斯特（A220机翼和机身）和普雷斯特维克（A320/A350机翼部件）的设施，以及超过4000名员工<sup>[25]</sup>。</p>
+
+<p>这次收购对空客的交付产生了矛盾的双重影响。</p>
+
+<p>短期来看，收购带来了额外的磨合成本。2025年Q4，空客报告的"Spirit工作包稳定化成本"为8800万欧元<sup>[27]</sup>。A320机身蒙皮问题需要耗费大量人力和工时进行检修——CEO傅里在2026年4月的Q1电话会上表示，修复一架飞机的蒙皮需要"相当可观的资源"，原定Q1完成的修复工作已推迟到H1<sup>[2]</sup>。</p>
+
+<p>中期来看，垂直整合的意义在于：将最关键的结构件生产从财务紧张的独立供应商手中内化为空客的直接管控。A220每月13架的产能目标被推迟至2028年，A350的Rate 12目标也推迟至2028年——但空客认为，与其依赖一家摇摇欲坠的外部供应商，不如短期内承担整合痛苦，换取长期的供应稳定性<sup>[28]</sup>。</p>
+
+<p>傅里在Q1电话会中总结说："我们正按计划提高产能，同时应对普惠发动机短缺的问题。"Spirit收购本身不会让交付立刻加速，但它解决了一个前提条件——不让结构件成为新的瓶颈。</p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">06</span>波音的反扑——双寡头力量平衡的微妙重调</h2>
+
+<p>2026年Q1，一个让空客阵营不愿看到的数字出现了：波音交付143架飞机，空客交付114架——这是自2018年波音737 MAX危机以来，波音首次在季度交付量上反超空客<sup>[29]</sup>。</p>
+
+<p>波音在2025年交付了600架商用飞机，接近翻倍。其净订单1173架，也超过了空客的889架。737 MAX的产能爬坡虽然也面临供应链限制，但因LEAP-1B发动机的单一供应体系避免了普惠GTF这样的结构性危机<sup>[30]</sup>。</p>
+
+<div class="chart-wrap">
+<div class="chart-title">空客 vs 波音 · 年度交付量对比（2019-2025）</div>
+<svg viewBox="0 0 500 240" style="max-width:480px">
+<text x="250" y="18" text-anchor="middle" font-size="11" fill="var(--gray)">单位：架</text>
+<line x1="50" y1="210" x2="470" y2="210" stroke="var(--line)" stroke-width="1"/>
+<line x1="50" y1="175" x2="470" y2="175" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="140" x2="470" y2="140" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="105" x2="470" y2="105" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="70" x2="470" y2="70" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="35" x2="470" y2="35" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<text x="42" y="214" text-anchor="end" font-size="9" fill="var(--gray)">0</text>
+<text x="42" y="179" text-anchor="end" font-size="9" fill="var(--gray)">200</text>
+<text x="42" y="144" text-anchor="end" font-size="9" fill="var(--gray)">400</text>
+<text x="42" y="109" text-anchor="end" font-size="9" fill="var(--gray)">600</text>
+<text x="42" y="74" text-anchor="end" font-size="9" fill="var(--gray)">800</text>
+<text x="42" y="39" text-anchor="end" font-size="9" fill="var(--gray)">1000</text>
+<!-- 2019 -->
+<rect x="65" y="163" width="22" height="47" fill="var(--red)" opacity=".65" rx="2"/>
+<rect x="95" y="167" width="22" height="43" fill="var(--gray)" opacity=".5" rx="2"/>
+<text x="76" y="218" text-anchor="middle" font-size="8" fill="var(--gray)">2019</text>
+<!-- 2020 -->
+<rect x="130" y="167" width="22" height="43" fill="var(--red)" opacity=".65" rx="2"/>
+<rect x="160" y="178" width="22" height="32" fill="var(--gray)" opacity=".5" rx="2"/>
+<text x="141" y="218" text-anchor="middle" font-size="8" fill="var(--gray)">2020</text>
+<!-- 2021 -->
+<rect x="195" y="165" width="22" height="45" fill="var(--red)" opacity=".65" rx="2"/>
+<rect x="225" y="169" width="22" height="41" fill="var(--gray)" opacity=".5" rx="2"/>
+<text x="206" y="218" text-anchor="middle" font-size="8" fill="var(--gray)">2021</text>
+<!-- 2022 -->
+<rect x="260" y="145" width="22" height="65" fill="var(--red)" opacity=".65" rx="2"/>
+<rect x="290" y="164" width="22" height="46" fill="var(--gray)" opacity=".5" rx="2"/>
+<text x="271" y="218" text-anchor="middle" font-size="8" fill="var(--gray)">2022</text>
+<!-- 2023 -->
+<rect x="325" y="139" width="22" height="71" fill="var(--red)" opacity=".65" rx="2"/>
+<rect x="355" y="167" width="22" height="43" fill="var(--gray)" opacity=".5" rx="2"/>
+<text x="336" y="218" text-anchor="middle" font-size="8" fill="var(--gray)">2023</text>
+<!-- 2024 -->
+<rect x="390" y="137" width="22" height="73" fill="var(--red)" opacity=".65" rx="2"/>
+<rect x="420" y="170" width="22" height="40" fill="var(--gray)" opacity=".5" rx="2"/>
+<text x="401" y="218" text-anchor="middle" font-size="8" fill="var(--gray)">2024</text>
+<!-- Legend -->
+<rect x="80" y="225" width="10" height="10" fill="var(--red)" opacity=".65" rx="1"/>
+<text x="93" y="234" font-size="9" fill="var(--ink)">空客</text>
+<rect x="155" y="225" width="10" height="10" fill="var(--gray)" opacity=".5" rx="1"/>
+<text x="168" y="234" font-size="9" fill="var(--ink)">波音</text>
+</svg>
+<div class="chart-note">2025年数据为两家公司官方公布数据。空客2025年793架，波音600架。Q1 2026波音143架反超空客114架。来源：公司财报<sup>[29][30]</sup></div>
+</div>
+
+<p>然而，空客在积压订单上仍遥遥领先：9037架对波音的约6000架。波音的核心问题——737 MAX的产能恢复尚不稳定、777X的认证延迟——并未消失。但空客的发动机之痛给了波音一个难得的追赶窗口，哪怕只是暂时的。</p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">07</span>中国赌局——C919追击与空客的防御</h2>
+
+<p>中国市场是空客全球版图上最鲜艳的色块——55%的窄体机市场份额、2200多架在役飞机、天津第二条总装线2026年初投产<sup>[1]</sup>。2025年12月，五家中国航司一口气下单148架A320neo系列飞机<sup>[31]</sup>。</p>
+
+<p>但同一片天空下，国产C919的交付量正在以倍速增长。</p>
+
+<div class="chart-wrap">
+<div class="chart-title">C919年度交付量 vs 空客A320在中国交付量</div>
+<svg viewBox="0 0 500 220" style="max-width:480px">
+<line x1="50" y1="190" x2="470" y2="190" stroke="var(--line)" stroke-width="1"/>
+<line x1="50" y1="153" x2="470" y2="153" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="116" x2="470" y2="116" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="79" x2="470" y2="79" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="50" y1="42" x2="470" y2="42" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<text x="42" y="194" text-anchor="end" font-size="9" fill="var(--gray)">0</text>
+<text x="42" y="157" text-anchor="end" font-size="9" fill="var(--gray)">15</text>
+<text x="42" y="120" text-anchor="end" font-size="9" fill="var(--gray)">30</text>
+<text x="42" y="83" text-anchor="end" font-size="9" fill="var(--gray)">45</text>
+<text x="42" y="46" text-anchor="end" font-size="9" fill="var(--gray)">60</text>
+<!-- C919 2023 -->
+<rect x="80" y="175" width="30" height="15" fill="#2563eb" opacity=".8" rx="2"/>
+<text x="95" y="220" text-anchor="middle" font-size="8" fill="var(--gray)">2023</text>
+<!-- C919 2024 -->
+<rect x="160" y="158" width="30" height="32" fill="#2563eb" opacity=".8" rx="2"/>
+<text x="175" y="220" text-anchor="middle" font-size="8" fill="var(--gray)">2024</text>
+<!-- C919 2025 -->
+<rect x="240" y="152" width="30" height="38" fill="#2563eb" opacity=".8" rx="2"/>
+<text x="255" y="220" text-anchor="middle" font-size="8" fill="var(--gray)">2025</text>
+<!-- C919 2026E -->
+<rect x="320" y="125" width="30" height="65" fill="#2563eb" opacity=".5" rx="2"/>
+<text x="335" y="220" text-anchor="middle" font-size="8" fill="var(--gray)">2026E</text>
+<!-- Decorative C919 dot labels -->
+<text x="115" y="172" font-size="8" fill="#2563eb">3架</text>
+<text x="195" y="155" font-size="8" fill="#2563eb">12架</text>
+<text x="275" y="149" font-size="8" fill="#2563eb">16架</text>
+<text x="355" y="122" font-size="8" fill="#2563eb">~28架</text>
+<text x="190" y="236" text-anchor="middle" font-size="9" fill="var(--ink)">C919年度交付</text>
+<div class="chart-note">2026年为预测值。空客2025年在中国交付约120架A320系列。</div>
+</svg>
+</div>
+
+<p>截至2026年4月底，C919累计交付37架（东航15架、国航11架、南航10架、商飞自持演示用1架），完成超过42000次商业飞行<sup>[32]</sup>。2026年目标交付约28架，产能正在向每10至15天生产一架爬坡。上海浦东第二总装线投产后，远期年产目标100架，2029年目标更是瞄准年产200架<sup>[33]</sup>。</p>
+
+<p>C919目前仍依赖CFM的LEAP-1C发动机，这使其同样受到全球发动机供应链的限制。但中国的备选方案——国产CJ-1000A发动机预计将在2026年下半年装机测试<sup>[34]</sup>。一旦实现发动机自主，C919最关键的供应链瓶颈将被突破。</p>
+
+<p>对中国航司而言，格局正在微妙变化：一边是空客可靠的全球支持网络和成熟的运营体系，一边是国产大飞机的战略安全价值。两者之间的天平不会在一夜之间倾斜——但空客55%的市场份额也不是坚不可摧的城墙。</p>
+
+<p>空客商用飞机CEO舍雷尔评价C919时说："这不是威胁，这是竞争对手。这是现实存在的。"<sup>[35]</sup></p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">08</span>防务与航天——断臂求生与Project Bromo的豪赌</h2>
+
+<p>防务与航天是空客三大板块中最跌宕起伏的一块。经历了2024年太空业务13亿欧元减记的惨痛，2025年该板块以EBIT调整后7.98亿欧元实现了账面翻身<sup>[36]</sup>。</p>
+
+<div class="chart-wrap">
+<div class="chart-title">三大板块EBIT调整后对比</div>
+<svg viewBox="0 0 480 200" style="max-width:460px">
+<line x1="55" y1="180" x2="460" y2="180" stroke="var(--line)" stroke-width="1"/>
+<line x1="55" y1="140" x2="460" y2="140" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="55" y1="100" x2="460" y2="100" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="55" y1="60" x2="460" y2="60" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<line x1="55" y1="20" x2="460" y2="20" stroke="var(--line)" stroke-width=".5" stroke-dasharray="3,3"/>
+<text x="47" y="184" text-anchor="end" font-size="9" fill="var(--gray)">-10亿</text>
+<text x="47" y="144" text-anchor="end" font-size="9" fill="var(--gray)">0</text>
+<text x="47" y="104" text-anchor="end" font-size="9" fill="var(--gray)">10亿</text>
+<text x="47" y="64" text-anchor="end" font-size="9" fill="var(--gray)">20亿</text>
+<text x="47" y="24" text-anchor="end" font-size="9" fill="var(--gray)">30亿</text>
+<text x="55" y="14" text-anchor="middle" font-size="9" fill="var(--gray)">EBIT调整后（亿欧元）</text>
+<!-- 基线 -->
+<line x1="55" y1="144" x2="460" y2="144" stroke="var(--gray)" stroke-width=".5" stroke-dasharray="2,2"/>
+<text x="55" y="150" font-size="8" fill="var(--gray)">0</text>
+
+<!-- 商用飞机 2024 -->
+<rect x="70" y="66" width="36" height="78" fill="var(--red)" opacity=".7" rx="2"/>
+<text x="88" y="63" text-anchor="middle" font-size="8" fill="var(--ink)">50.9</text>
+<!-- 商用飞机 2025 -->
+<rect x="115" y="24" width="36" height="120" fill="var(--red)" opacity=".7" rx="2"/>
+<text x="133" y="21" text-anchor="middle" font-size="8" fill="var(--ink)">61.6</text>
+
+<!-- 直升机 2024 -->
+<rect x="185" y="121" width="36" height="23" fill="var(--gold)" opacity=".8" rx="2"/>
+<text x="203" y="118" text-anchor="middle" font-size="8" fill="var(--ink)">8.2</text>
+<!-- 直升机 2025 -->
+<rect x="230" y="117" width="36" height="27" fill="var(--gold)" opacity=".8" rx="2"/>
+<text x="248" y="114" text-anchor="middle" font-size="8" fill="var(--ink)">9.9</text>
+
+<!-- 防务 2024 -->
+<rect x="300" y="184" width="36" height="0" fill="var(--gray)" opacity=".6" rx="2"/>
+<text x="318" y="198" text-anchor="middle" font-size="8" fill="var(--red)">-6.56</text>
+<!-- 防务 2025 -->
+<rect x="345" y="120" width="36" height="24" fill="var(--gray)" opacity=".6" rx="2"/>
+<text x="363" y="117" text-anchor="middle" font-size="8" fill="var(--ink)">7.98</text>
+
+<!-- Labels -->
+<text x="100" y="214" text-anchor="middle" font-size="10" fill="var(--ink)">商用飞机</text>
+<text x="216" y="214" text-anchor="middle" font-size="10" fill="var(--ink)">直升机</text>
+<text x="340" y="214" text-anchor="middle" font-size="10" fill="var(--ink)">防务与航天</text>
+<!-- Legend -->
+<rect x="70" y="222" width="10" height="10" fill="var(--red)" opacity=".7" rx="1"/>
+<text x="83" y="231" font-size="8" fill="var(--ink)">2025</text>
+<rect x="125" y="222" width="10" height="10" fill="var(--red)" opacity=".4" rx="1"/>
+<text x="138" y="231" font-size="8" fill="var(--ink)">2024</text>
+</svg>
+<div class="chart-note">数据来源：空客2025及2024年度报告。2024年防务板块EBIT为-6.56亿欧元，其中太空业务贡献了约13亿欧元减记。</div>
+</div>
+
+<p>然而，7.98亿欧元的盈利背后，是一次"断臂求生"式的重组。2024年防务与航天亏损6.56亿欧元的根源在于Space Systems的13亿欧元资产减记——这几乎是整个板块当时盈利能力的全部被抹去。2025年的"翻身"并非来自业务本质改善，而是一次性减记的基数效应，加上A400M军用运输机项目暂时稳定的交付节奏和空中力量业务的增长<sup>[36]</sup>。</p>
+
+<p>2025年10月，空客宣布与莱昂纳多（Leonardo）和泰雷兹（Thales）签署备忘录，计划将三家的太空业务合并为一家名为Project Bromo的新公司<sup>[37]</sup>。目标是创建一个年收入65亿欧元、2.5万名员工的欧洲太空冠军企业，以对抗SpaceX在商业发射领域的统治地位。合并后的实体将覆盖卫星制造、地球观测、导航和太空探索。</p>
+
+<p>但项目面临阻力：德国OHB已威胁法律挑战，称合并"扰乱市场"。各项监管审批预计需要到2027年才能完成<sup>[37]</sup>。</p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">09</span>氢能梦想——现实与未来的裂谷</h2>
+
+<p>2020年，空客高调发布ZEROe氢能飞机计划，承诺在2035年前将全球首架零排放商用氢能飞机投入运营。时任CEO傅里称这是"航空业的里程碑时刻"<sup>[38]</sup>。六年过去，这条时间线正在被现实拉长。</p>
+
+<div class="chart-wrap">
+<div class="chart-title">空客ZEROe氢能飞机里程碑</div>
+<div class="chart-note">关键节点与实际进展对比</div>
+<ol class="vertical-timeline" style="text-align:left;max-width:420px;margin:0 auto">
+<li>
+<span class="vt-date">2020年9月</span>
+<span class="vt-text">空客发布四款ZEROe概念机型（涡扇、涡桨、混合翼和燃料电池），承诺2035年投入运营。<sup>[38]</sup></span>
+</li>
+<li>
+<span class="vt-date">2022年2月</span>
+<span class="vt-text">空客选择A380 MSN1作为氢燃料发动机测试平台，改造后机舱安装四个液态氢储罐。<sup>[38]</sup></span>
+</li>
+<li>
+<span class="vt-date">2025年</span>
+<span class="vt-text" style="color:var(--gray)"><strong>✕ 原定氢动力A380测试飞行年份，但从未执行。</strong>发动机技术平台尚未就绪。</span>
+</li>
+<li>
+<span class="vt-date">2026年1月</span>
+<span class="vt-text">GE Aerospace宣布以"技术挑战尚待解决"为由退出氢动力发动机联合开发协议。<sup>[39]</sup></span>
+</li>
+<li>
+<span class="vt-date">2026年 — 2028年</span>
+<span class="vt-text">空客证实A380氢发动机测试平台的准备工作仍在继续，但未给出新的试飞时间表。液氢供应链基础设施（机场储运、加注、安全标准）仍是最大瓶颈之一。</span>
+</li>
+<li>
+<span class="vt-date">2035年</span>
+<span class="vt-text">原定零排放商用氢能飞机投入运营的目标年份。目前业内多数观点认为这一目标"极端激进"，实际可商用时间可能在2040年之后。<sup>[38]</sup></span>
+</li>
+</ol>
+</div>
+
+<p>氢能面临的核心问题有三个。第一，液氢的能量密度虽然比化石燃料高，但需要储存于零下253°C的环境，储罐体积是同等能量的航空煤油的4倍——这对窄体机的机身空间是巨大挑战。第二，全球机场目前几乎没有液氢加注基础设施，改造一座枢纽机场的氢能供应链成本在数亿至数十亿美元之间。第三，绿氢本身的制取成本目前在每公斤4至6美元，是航空煤油价格的3至5倍<sup>[38]</sup>。</p>
+
+<p>空客在氢能上的豪赌当然有其战略价值——它在逼迫行业思考零碳飞行的技术路线。但从当前技术成熟度和商业可行性来看，2035年的目标正在变得像一架永远不降落的飞机。</p>
+
+</section>
+
+<section>
+<h2><span class="chapter-num">10</span>财务透视——创纪录利润背后的现金之殇</h2>
+
+<p>从账面数字看，空客2025年交出了一份亮眼的成绩单：营业收入734亿欧元，EBIT调整后71亿欧元，净利润52亿欧元，均为历史最高<sup>[1]</sup>。</p>
+
+<div class="chart-wrap">
+<div class="chart-title">2025年营收结构</div>
+<svg viewBox="0 0 400 180" style="max-width:380px">
+<!-- Simple pie equivalent - horizontal stacked bar -->
+<rect x="20" y="15" width="268" height="28" fill="var(--red)" opacity=".75" rx="2"/>
+<rect x="288" y="15" width="29" height="28" fill="var(--gold)" opacity=".8" rx="2"/>
+<rect x="317" y="15" width="65" height="28" fill="var(--gray)" opacity=".6" rx="2"/>
+<text x="20" y="58" font-size="10" fill="var(--ink)">商用飞机</text>
+<text x="20" y="70" font-size="9" fill="var(--gray)">~€543亿 · 74%</text>
+<text x="200" y="58" font-size="10" fill="var(--ink)">直升机</text>
+<text x="200" y="70" font-size="9" fill="var(--gray)">~€60亿 · 8%</text>
+<text x="290" y="58" font-size="10" fill="var(--ink)">防务与航天</text>
+<text x="290" y="70" font-size="9" fill="var(--gray)">~€134亿 · 18%</text>
+<rect x="20" y="85" width="362" height="1" fill="var(--line)"/>
+<text x="190" y="100" text-anchor="middle" font-size="11" fill="var(--ink)">合并营业收入：€734亿</text>
+<text x="190" y="115" text-anchor="middle" font-size="9" fill="var(--gray)">注：各分部营收含分部间交易；含分部间抵消约€76亿</text>
+</svg>
+<div class="chart-note">数据来源：空客2025年度财务报告<sup>[1]</sup></div>
+</div>
+
+<p>但光辉的利润数字掩盖了现金流方面的结构性隐忧。Q1 2026自由现金流骤降至-25亿欧元。这是什么概念？2024年全年空客的客户融资前自由现金流为45亿欧元<sup>[1]</sup>，而2026年仅仅三个月就流出了25亿。</p>
+
+<p>原因并不神秘：大量已完工的机身等待发动机，无法交付，客户款无法到账。空客的库存商品——那些停在图卢兹、汉堡、天津和莫比尔机坪上的"无发动机滑翔机"——正在吃掉空客的现金。</p>
+
+<p>傅里将这一现象称为"生产与交付之间的不同步"（desynchronization between production and delivery）。他在Q1电话会上说："生产正按计划推进……但这并没有转化为按计划的交付。"<sup>[2]</sup></p>
+
+<p>这种不同步的空客经营模式产生了结构性的现金压力。发动机问题是主因，但不是唯一。空客还面临：中国行政审批延迟导致约20架飞机无法交付、A320机身蒙皮质量问题需要大量工时修复、以及座椅和内饰等次级供应链的持续紧张<sup>[2]</sup>。</p>
+
+<p>将这一切叠加，空客2026年870架的交付目标看起来越来越吃力。Q1只交付了114架，意味着剩下的三个季度平均每月需要交付84架——而2025年全年的月平均仅66架。即便在2025年12月的交付高峰，当月也只有122架<sup>[1]</sup>。</p>
+
+<p>普惠发动机危机带来的连锁反应不止于数字层面。它将全球航空业最基础的经营假设摆上了审判台：双源供应真的是安全的吗？当两台发动机的产能都无法满足供需时，双寡头的脆弱性暴露无遗。</p>
+
+</section>
+
+<section>
+<h2>尾声——当发动机比飞机更值钱</h2>
+
+<p>2025年，一些航空租赁商发现了一个荒诞的套利机会：将一架机龄仅几年的A320neo拆解，拆下GTF发动机单独出租或出售，一台发动机的月租金可以开到20万美元——超过整架飞机租赁费的三分之二<sup>[40]</sup>。十多架几乎全新的A320neo被拆解，机身变成零件仓库，发动机成了比飞机本身更值钱的资产。</p>
+
+<p>这个细节比任何财务数据都更能说明空客当前困局的核心：全球最畅销的飞机被一台发动机卡住了喉咙。不是设计缺陷、不是运营失误，而是制造过程中一粒比沙粒还小的金属粉末污染，经过近十年的潜伏，最终演变为撼动全球航空供应的系统性危机。</p>
+
+<p>空客的故事远未结束。这不仅仅是一家公司的商业沉浮，而是一个关于全球制造业深层脆性的寓言：当全球最强大的工业体系将供应链的每个环节都推向极致时，最微小的缺陷会被放大到无法想象的程度。也许这就是双寡头市场最真实的图景——不是垄断带来的稳定，而是稳定之下的裂痕正在被逐一戳破。</p>
+
+</section>
+
+<div class="footnotes">
+<h3>脚注与参考来源</h3>
+<ol>
+<li id="fn1">Airbus SE, "Airbus Reports Full-Year (FY) 2025 Results," press release, February 19, 2026. Backlog: 8,754 aircraft, €619B. Revenues €73.4B, EBIT Adjusted €7.1B, Net Income €5.2B. <a href="https://www.airbus.com/en/newsroom/annual-press-conference-2026" target="_blank" rel="noopener">来源</a></li>
+<li id="fn2">Airbus SE, "Airbus Reports First Quarter (Q1) 2026 Results," press release, April 28, 2026. Deliveries: 114 aircraft. EBIT Adjusted €300M. FCF -€2.5B. <a href="https://www.airbus.com/en/newsroom/press-releases/2026-04-airbus-reports-first-quarter-q1-2026-results" target="_blank" rel="noopener">来源</a></li>
+<li id="fn3">IATA, "Single Aisle Aircraft Engines MRO: Strategic Levers," 2025. Forecasted traffic growth: +3.6% per year until 2044. <a href="https://www.iata.org/contentassets/85b59d951fc04c1c83fa2aab47824300/single-aisle-aircraft-engines-mro.pdf" target="_blank" rel="noopener">来源</a></li>
+<li id="fn4">CFM International, LEAP engine specifications. Fuel burn improvement 15%-20% vs previous generation. <a href="https://www.cfmaeroengines.com/engines/leap/" target="_blank" rel="noopener">来源</a></li>
+<li id="fn5">Residual Research, "What 8,754 Aircraft Actually Means," March 2026. Analysis of backlog quality and cancellation patterns. <a href="https://residualresearch.com/posts/eight-thousand-seven-hundred-and-fifty-four" target="_blank" rel="noopener">来源</a></li>
+<li id="fn6">Airbus Q1 2026 earnings call transcript. CEO Faury and CFO Toepfer commentary on delivery challenges. <a href="https://aerospaceglobalnews.com/news/airbus-delivery-slowdown-hits-q1-earnings/" target="_blank" rel="noopener">来源</a></li>
+<li id="fn7">Sina Finance, "重磅！900架飞机趴窝！" June 10, 2026. Global AOG situation caused by GTF engine shortages. <a href="https://finance.sina.com.cn/wm/2026-06-10/doc-iniaxvfm4375397.shtml" target="_blank" rel="noopener">来源</a></li>
+<li id="fn8">Toutiao, "835架A320neo停飞，窄体引擎双寡头格局遭遇信任危机？" 2025. Detailed analysis of GTF grounding impact. <a href="https://www.toutiao.com/article/7655567295074451968" target="_blank" rel="noopener">来源</a></li>
+<li id="fn9">The Flying Engineer, "Why Hundreds of A320neos Are Grounded in 2026: The Pratt & Whitney Engine Crisis Explained." Technical overview of GTF design and the powder metal contamination crisis. <a href="https://theflyingengineer.com/a320neo-grounded-2026-pratt-whitney-crisis/" target="_blank" rel="noopener">来源</a></li>
+<li id="fn10">CAEAIA, "普惠公司PW1100G发动机因高压涡轮盘存在问题而需要大规模检查," July 2023. Technical details of powder metal contamination in HPT disks. <a href="http://caaeia.org.cn/detail/strategic/1439" target="_blank" rel="noopener">来源</a></li>
+<li id="fn11">Simple Flying, "Why Is Pratt & Whitney Inspecting 1,200 GTF Engines?" Analysis of HPT disk material anomalies and inspection program. <a href="https://simpleflying.com/pratt-whitney-gtf-engine-inspections-guide" target="_blank" rel="noopener">来源</a></li>
+<li id="fn12">ch-aviation, "Pratt & Whitney to urgently inspect 1,200 GTF engines," July 2023. Initial disclosure and inspection scope. <a href="https://www.ch-aviation.com/portal/news/130205-pratt-whitney-to-urgently-inspect-1200-gtf-engines" target="_blank" rel="noopener">来源</a></li>
+<li id="fn13">Radio Hangar, "The Pratt & Whitney geared turbofan inspection crisis," 2026. Detailed timeline and scale of the crisis. <a href="https://radiohangar.com/blog/posts/the-pratt-whitney-geared-turbofan-inspection-crisis-and-the-engine-shortage-grou" target="_blank" rel="noopener">来源</a></li>
+<li id="fn14">Flying 411, "New FAA Airworthiness Directive for Pratt & Whitney GTF Engines," AD 2025-03-10. <a href="https://flying411.com/blog/new-faa-airworthiness-directive-for-pratt-whitney-gtf-engine/525" target="_blank" rel="noopener">来源</a></li>
+<li id="fn15">Aviation Week, "GTF Progress Gives Encouragement To Wizz Air," June 2026. Wizz Air CEO expects resolution by end of 2027. <a href="https://aviationweek.com/mro/aircraft-propulsion/gtf-progress-gives-encouragement-wizz-air" target="_blank" rel="noopener">来源</a></li>
+<li id="fn16">FlightGlobal, "Pratt & Whitney targets end of decade for full GTF recovery," February 2026. Deurloo comments at Singapore Air Show. <a href="https://www.flightglobal.com/engines/2026/02/pratt-whitney-targets-end-of-decade-for-full-gtf-recovery/" target="_blank" rel="noopener">来源</a></li>
+<li id="fn17">AeroTime, "Airbus raises stakes in engine dispute with Pratt & Whitney," March 2026. Context on engine market share (GTF ~40%, LEAP ~60% of A320neo). <a href="https://www.aerotime.aero/articles/airbus-raises-stakes-in-engine-dispute-with-pratt-whitney" target="_blank" rel="noopener">来源</a></li>
+<li id="fn18">IATA report on single aisle engine MRO. LEAP-1A durability issues in hot/dusty environments, 30% shorter TOW. <a href="https://www.iata.org/contentassets/85b59d951fc04c1c83fa2aab47824300/single-aisle-aircraft-engines-mro.pdf" target="_blank" rel="noopener">来源</a></li>
+<li id="fn19">FlightGlobal, "GE Aerospace's Leap deliveries surged year on year in Q1," April 2026. 520 engines delivered in Q1 2026, up 63% YoY. 30% of in-service LEAP-1A have durability kits. <a href="https://www.flightglobal.com/engines/2026/04/ge-aerospaces-leap-deliveries-surged-year-on-year-in-q1/" target="_blank" rel="noopener">来源</a></li>
+<li id="fn20">OmniFlights, "CFM LEAP Engine Bottleneck Delays A320neo, 737 MAX," 2026. $175M Safran forging press delayed until 2029. <a href="https://omniflights.com/articles/cfm-leap-engine-bottleneck-delays-a320neo-737-max" target="_blank" rel="noopener">来源</a></li>
+<li id="fn21">CAEAIA, "赛峰公司增设Leap-1A发动机总装基地以加大多元化布局力度," October 2025. New factories in Mexico (2026) and Morocco (2028). <a href="http://caaeia.org.cn/detail/strategic/2293" target="_blank" rel="noopener">来源</a></li>
+<li id="fn22">Aeronautics Magazine, "Airbus Moves to Sue American Engine Maker Pratt & Whitney Over Delayed Deliveries," March 2026. Faury: "failure to commit to the number of engines ordered." <a href="https://aeronauticsmagazine.com/news/airbus-moves-to-sue-american-engine-maker-pratt-whitney-over-delayed-deliveries" target="_blank" rel="noopener">来源</a></li>
+<li id="fn23">Reuters, "Airbus pursues damages from Pratt & Whitney over engine delays," March 19, 2026. Sources reveal escalation to potential arbitration. <a href="https://m.10jqka.com.cn/20260320/c675440683.shtml" target="_blank" rel="noopener">来源</a></li>
+<li id="fn24">Air Data News, "Airbus pressures Pratt & Whitney over engine delays amid record backlog," March 2026. Three-way conflict analysis. <a href="https://www.airdatanews.com/airbus-pressures-pratt-and-whitney-over-engine-delays-amid-record-backlog" target="_blank" rel="noopener">来源</a></li>
+<li id="fn25">Airbus press release, "Airbus completes acquisition of Spirit AeroSystems sites," December 8, 2025. <a href="https://www.airbus.com/en/newsroom/press-releases/2025-12-airbus-completes-acquisition-of-spirit-aerosystems-sites" target="_blank" rel="noopener">来源</a></li>
+<li id="fn26">EASA Airworthiness Directive, A320 fuselage panel skin thickness issue, December 2025.</li>
+<li id="fn27">Airbus SE, "Airbus Reports H1 2025 Financial Results," July 30, 2025. Spirit stabilization costs: €57M in H1. <a href="https://mediaassets.airbus.com/pm_38_739_739518-a1qu2o21bb.pdf" target="_blank" rel="noopener">来源</a></li>
+<li id="fn28">AeroSpace Europe, "Airbus Finalizes Acquisition of Spirit AeroSystems Assets," December 2025. Strategic implications of vertical integration. <a href="https://aero-space.eu/2025/12/09/airbus-finalizes-acquisition-of-spirit-aerosystems-assets-completing-the-restructuring-of-a-global-supply-chain" target="_blank" rel="noopener">来源</a></li>
+<li id="fn29">Boeing, "Q1 2026 Delivery Numbers." Boeing delivered 143 commercial aircraft. FAA data. <a href="https://www.boeing.com/commercial#orders-deliveries" target="_blank" rel="noopener">来源</a></li>
+<li id="fn30">Boeing, "FY2025 Delivery Statistics." Boeing delivered 600 aircraft in 2025. <a href="https://www.boeing.com/commercial#orders-deliveries" target="_blank" rel="noopener">来源</a></li>
+<li id="fn31">SCMP, December 2025. Five Chinese carriers placed 148 A320neo-family orders. China Daily confirmed.</li>
+<li id="fn32">China Daily, "Homegrown C919 jet taking skies by storm," May 8, 2026. 37 C919 delivered as of April 30, 2026. 42,000+ commercial flights. <a href="https://www.chinadaily.com.cn/a/202605/08/WS69fd38c2a310d6866eb476f9.html" target="_blank" rel="noopener">来源</a></li>
+<li id="fn33">China Travel News, "Chinese-made aircraft expand overseas with Cambodia order and new Mongolia route," July 2026. C919 production target: 28 units in 2026, 100/year long-term. <a href="https://chinatravelnews.com/article/190418" target="_blank" rel="noopener">来源</a></li>
+<li id="fn34">Guanchazhe (Observer), "C919生产开门红," January 2026. CJ-1000A engine testing timeline. <a href="https://www.163.com/dy/article/KK7VG9IL0001899O.html" target="_blank" rel="noopener">来源</a></li>
+<li id="fn35">Airbus Commercial Aircraft CEO Christian Scherer quoted on C919 competition, various media, 2025-2026.</li>
+<li id="fn36">Airbus SE, "Airports Reports Full-Year (FY) 2025 Results." Defence & Space €13.4B revenue, EBIT Adjusted €798M. FY2024: €12.1B revenue, EBIT Adjusted -€656M.</li>
+<li id="fn37">Airbus press release, October 23, 2025. Memorandum of Understanding with Leonardo and Thales on Project Bromo space consolidation. <a href="https://www.airbus.com/en/newsroom/press-releases/2025-10-airbus-reports-nine-month-9m-2025-results" target="_blank" rel="noopener">来源</a></li>
+<li id="fn38">Airbus, "ZEROe: Towards the World's First Zero-Emission Aircraft." Original 2035 target. Updated progress reports. <a href="https://www.airbus.com/en/innovation/zero-emission-journey/hydrogen/zeroe" target="_blank" rel="noopener">来源</a></li>
+<li id="fn39">GE Aerospace announcement on hydrogen engine development exit, January 2026.</li>
+<li id="fn40">Various industry reports on GTF engine lease rates. A321neo engine-only lease: ~$200,000/month vs aircraft lease ~$300,000/month, 2025-2026.</li>
+</ol>
+</div>
+
+</article>
+
+<div id="shareBtn" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:9000;transition:transform .15s" onclick="generateShareImage()">📤</div>
+
+<script src="../../global.js"></script>
+<script src="../../share.js"></script>
 <script>
-var progress=document.getElementById('progress');
-var tracker=document.getElementById('tracker');
-var backTop=document.getElementById('backTop');
-var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
-var epilogue=null;
-for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
-var chapters=allH2.filter(function(h){return h!==epilogue;});
-var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
-var sidenav=document.getElementById('sidenav');
-var navLinks=document.querySelectorAll('.sidenav li a');
-
-// 脚注数据
-var footnotes=document.querySelectorAll('.footnotes ol li');
-var footnoteTexts=[];
-footnotes.forEach(function(li){footnoteTexts.push(li.textContent.trim())});
-
-// 创建tooltip
-var tooltip=document.createElement('div');
-tooltip.className='tooltip';
-document.body.appendChild(tooltip);
-
-document.querySelectorAll('sup').forEach(function(sup){
-sup.addEventListener('mouseenter',function(e){
-var num=sup.textContent.replace(/[\[\]]/g,'');
-var idx=parseInt(num)-1;
-if(footnoteTexts[idx]){
-tooltip.textContent=footnoteTexts[idx].substring(0,200)+(footnoteTexts[idx].length>200?'…':'');
-tooltip.classList.add('visible');
-}});
-sup.addEventListener('mousemove',function(e){
-tooltip.style.left=(e.clientX+15)+'px';
-tooltip.style.top=(e.clientY+15)+'px';
+(function(){
+var body=document.body, bar=document.getElementById('topBar'), prog=document.getElementById('progressBar'), scrolled=false;
+window.addEventListener('scroll',function(){
+var s=window.scrollY;
+if(s>80&&!scrolled){body.classList.add('compact');scrolled=true}
+else if(s<=80&&scrolled){body.classList.remove('compact');scrolled=false}
+var h=document.querySelector('article').offsetHeight-300,p=Math.min(s/h*100,100);
+prog.style.width=p+'%';
 });
-sup.addEventListener('mouseleave',function(){tooltip.classList.remove('visible')});
-sup.addEventListener('click',function(){
-var num=sup.textContent.replace(/[\[\]]/g,'');
-document.getElementById('fn-'+num).scrollIntoView({behavior:'smooth'});
-});
-});
-
-footnotes.forEach(function(li,i){li.id='fn-'+(i+1)});
-
-// 紧凑模式
-var lastScroll=0;
-function checkCompact(){var s=window.scrollY;if(s>100&&!document.body.classList.contains('compact')){document.body.classList.add('compact')}else if(s<=100&&document.body.classList.contains('compact')){document.body.classList.remove('compact')}lastScroll=s}
-
-// 滚动同步
-function syncChapters(){
-var h=document.documentElement.scrollHeight-window.innerHeight;
-progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
-var line=130,idx=-1;
-for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
-var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
-if(inEpi){tracker.textContent='尾声';}
-else if(idx<0){tracker.textContent='导语';}
-else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
-if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
-var ch=inEpi?9:(idx<0?0:idx+1);
-var links=document.querySelectorAll('.sidenav a');
-links.forEach(function(a){a.classList.remove('active')});
-var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
-if(act)act.classList.add('active');
-checkCompact();
-}
-
-window.addEventListener('scroll',syncChapters,{passive:true});
-window.addEventListener('load',syncChapters);
-syncChapters();
-
-function scrollTop(){window.scrollTo({top:0,behavior:'smooth'})}
-
-function toggleNav(){sidenav.classList.toggle('open')}
-
-navLinks.forEach(function(a){
-a.addEventListener('click',function(e){
-e.preventDefault();
-sidenav.classList.remove('open');
-var ch=parseInt(a.getAttribute('data-ch'));
-if(ch===0){window.scrollTo({top:0,behavior:'smooth'})}
-else if(ch===9){if(epilogue)epilogue.scrollIntoView({behavior:'smooth'})}
-else{if(chapters[ch-1])chapters[ch-1].scrollIntoView({behavior:'smooth'})}
-});
-});
-
-document.addEventListener('click',function(e){
-if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle')){sidenav.classList.remove('open')}
-});
-
-// 滚动渐入
-var reveals=document.querySelectorAll('.reveal');
-var observer=new IntersectionObserver(function(entries){
-entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
-},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-reveals.forEach(function(r){observer.observe(r)});
-
-// 数字计数动画
-function animateCount(el,target,suffix){
-var start=0;var duration=1500;var startTime=null;
-function step(ts){
-if(!startTime)startTime=ts;
-var progress=Math.min((ts-startTime)/duration,1);
-var val=Math.floor(progress*target);
-el.textContent=val+suffix;
-if(progress<1)requestAnimationFrame(step);
-else el.textContent=target+suffix;
-}
-requestAnimationFrame(step);
-}
-var countObserver=new IntersectionObserver(function(entries){
-entries.forEach(function(e){
-if(e.isIntersecting){
-var el=e.target;
-var target=el.getAttribute('data-count');
-var suffix=el.getAttribute('data-suffix')||'';
-if(target){animateCount(el,parseFloat(target),suffix);countObserver.unobserve(el)}
-}
-});
-},{threshold:0.5});
-document.querySelectorAll('.metric-val[data-count]').forEach(function(el){countObserver.observe(el)});
-
-// 柱状图动画 - 在reveal observer触发后自动处理，额外确保
-var barObserver=new IntersectionObserver(function(entries){
-entries.forEach(function(e){
-if(e.isIntersecting){
-e.target.querySelectorAll('.bar-fill[data-w]').forEach(function(bar){
-var w=bar.getAttribute('data-w');
-if(bar.style.width==='0px'||bar.style.width==='0%'||!bar.style.width||bar.style.width===''){setTimeout(function(){bar.style.width=w+'%'},100)}
-});
-e.target.querySelectorAll('.vs-bar[data-h]').forEach(function(bar){
-var h=bar.getAttribute('data-h');
-if(bar.style.height==='0px'||!bar.style.height||bar.style.height===''){setTimeout(function(){bar.style.height=h+'px'},150)}
-});
-barObserver.unobserve(e.target);
-}
-});
-},{threshold:0.3});
-document.querySelectorAll('.chart-box').forEach(function(box){barObserver.observe(box)});
-
+// TOC toggle
+var tocVisible=false,tocPanel=null;
+window.toggleToc=function(){
+if(!tocVisible){
+tocPanel=document.createElement('div');
+tocPanel.style.cssText='position:fixed;top:76px;right:0;width:260px;max-height:80vh;overflow-y:auto;background:var(--paper);border-left:1px solid var(--line);z-index:9997;padding:20px;font-size:13px';
+tocPanel.innerHTML='<div style="font-size:10px;letter-spacing:2px;color:var(--gray);margin-bottom:12px">目 录</div>'+
+Array.from(document.querySelectorAll('h2')).map(function(h,i){return '<div style="padding:6px 0;border-bottom:1px solid var(--line);cursor:pointer" onclick="var s=document.querySelectorAll(\'h2\')['+i+'];s.scrollIntoView({behavior:\'smooth\'});window.toggleToc()">'+
+'<span style="color:var(--red);font-weight:700">'+(i<9?'0'+(i+1):(i+1))+'</span>. '+h.textContent.replace(/^\d+\s*/,'')+'</div>'}).join('');
+document.body.appendChild(tocPanel);
+tocVisible=true;
+}else{if(tocPanel){tocPanel.remove();tocPanel=null}tocVisible=false}
+};
+// Scroll-based TOC close
+window.addEventListener('scroll',function(){if(tocVisible){if(tocPanel){tocPanel.remove();tocPanel=null}tocVisible=false}});
+})();
 </script>
-
 </body>
 </html>
