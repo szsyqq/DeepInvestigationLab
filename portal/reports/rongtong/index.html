@@ -131,7 +131,7 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 .epilogue .drop-cap::first-letter{color:#e8c87a;font-size:48px}
 .epilogue .pull-quote{color:#e8c87a;border-color:#5a5045;font-size:22px}
 .epilogue strong{color:#e8c87a}
-.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+/* .disclaimer removed - superseded by footer .disc */
 .term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
 .chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
 .chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:16px;color:var(--bg-dark);text-align:center}
@@ -162,7 +162,9 @@ sup{font-size:11px;color:var(--red);cursor:pointer}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
 @media(max-width:600px){.two-col{grid-template-columns:1fr}}
 .timeline-table td:first-child{font-weight:700;color:var(--red);white-space:nowrap;width:80px}
-.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+/* 旧fn-tooltip已替换为opacity标准实现 */
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:13px;line-height:1.55;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.25);font-style:normal}
+.fn-tooltip.visible{opacity:1}
 .reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
 .js .reveal.visible{opacity:1;transform:translateY(0)}
 .sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
@@ -596,7 +598,9 @@ footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;
 <script>
 document.documentElement.classList.remove('js');
 document.documentElement.classList.add('js');
+</script>
 
+<script>
 // 阅读进度条
 var pBar = document.getElementById('progressBar');
 window.addEventListener('scroll', function(){
@@ -708,6 +712,7 @@ old.textContent = '第' + (i+1) + '章';
 var text = document.body.innerText.replace(/\s+/g,'');
 var minutes = Math.ceil(text.length / 500);
 document.getElementById('readingTime').textContent = '约 ' + minutes + ' 分钟';
+</script>
 </div>
 </div>
 
@@ -1008,8 +1013,8 @@ var fnTip=document.getElementById('fnTip');
 var footnotes=document.querySelectorAll('.footnotes ol li');
 var fnTexts=[];
 footnotes.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
-function showTip(txt,x,y){fnTip.textContent=txt;fnTip.style.display='block';fnTip.style.left=Math.min(x+12,window.innerWidth-350)+'px';fnTip.style.top=(y+12)+'px';}
-function hideTip(){fnTip.style.display='none';}
+function showTip(txt,x,y){fnTip.textContent=txt;fnTip.classList.add('visible');fnTip.style.left=Math.min(x+12,window.innerWidth-350)+'px';fnTip.style.top=(y+12)+'px';}
+function hideTip(){fnTip.classList.remove('visible');}
 document.addEventListener('mouseover',function(e){
   if(e.target.tagName==='SUP'){
     var num=e.target.textContent.replace(/[\[\]]/g,'');var idx=parseInt(num)-1;
@@ -1073,7 +1078,7 @@ document.addEventListener('click',function(e){
   </div>
 </div>
 
-<script src="../global.js" defer></script>
+<script src="../../global.js" defer></script>
 <script src="../../share.js" defer></script>
 </body>
 </html>

@@ -77,7 +77,7 @@ sup:hover{color:var(--ink)}
 .epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
 .epilogue p{color:#d5cfc5}
 .epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
-.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+/* .disclaimer removed - superseded by footer .disc */
 .tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
 .tracker.visible{opacity:1}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
@@ -94,8 +94,8 @@ sup:hover{color:var(--ink)}
 .back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
 .back-top.visible{opacity:.85}
 .back-top:hover{opacity:1;background:var(--red)}
-.tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:12px;line-height:1.5;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
-.tooltip.visible{opacity:1}
+.fn-tooltip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:10px 14px;border-radius:4px;font-size:12px;line-height:1.5;max-width:280px;z-index:500;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.fn-tooltip.visible{opacity:1}
 .chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
 .chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:18px;text-align:center}
 .chart-sub{font-size:11px;color:var(--gray);text-align:center;margin-top:14px;font-style:italic}
@@ -789,5 +789,26 @@ document.querySelectorAll('.chart-box').forEach(function(box){barObserver.observ
 
 </script>
 
+<div class="consent-overlay" id="consentOverlay">
+  <div class="consent-box">
+    <div class="consent-header">
+      <span>法律声明 · LEGAL NOTICE</span>
+      </div>
+    <div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+    <div class="consent-footer">
+      <label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+      <button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+    </div>
+  </div>
+</div>
+
+<script src="../../share.js" defer></script>
 </body>
 </html>
