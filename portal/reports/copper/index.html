@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>铜价冲天，加工费归零：谁在"红色石油"的繁荣中赚钱？ | 调查团队</title>
 <style>
-:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
-
 /* —— 铜报告专属样式 —— */
 .data-grid{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
 .data-grid .dg-item{flex:1;min-width:130px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
@@ -37,12 +33,64 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 .source-line{font-size:12px;color:#888;margin-top:6px;font-style:italic}
 .chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:4px;text-align:center}
 .chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:14px}
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
 @media(max-width:600px){
   .vert-bars{height:130px;gap:4px}
   .bar-label{width:80px;font-size:12px}
   .bar-value{min-width:50px;font-size:12px}
   .data-grid .dg-item{flex:1 1 100%}
   .data-grid .dg-item .num{font-size:22px}
+}
+
+/* —— 文章级共享样式（各报道页内联，global.css 不涵盖） —— */
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px;scroll-margin-top:80px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase;margin:0 0 14px}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0;scroll-margin-top:80px}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+@media(max-width:600px){
+  .hero h1{font-size:28px}.hero .dek{font-size:15px}body{font-size:16px}.container{padding:24px 16px 60px}
+  .pull-quote{font-size:19px}.epilogue{margin:30px -16px 0}.masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}.masthead .date{font-size:10px}
 }
 </style>
 <link rel="stylesheet" href="../global.css">
@@ -68,7 +116,7 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
 
 <div class="masthead">
-<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
 <div class="date">2026年7月 · 大宗商品</div>
 </div>
 
@@ -308,7 +356,7 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 
 <!-- ===== 尾声 ===== -->
 <div class="epilogue reveal" id="c9">
-<h2 style="border-top:none;color:#e8c87a;padding-top:0;"><span class="chap-num" style="color:#e8c87a;">尾声</span>同一个金属，两个世界</h2>
+<h2><span class="chap-num" style="color:#e8c87a;">尾声</span>同一个金属，两个世界</h2>
 
 <p>1997 年，必和必拓的工程师在南澳大利亚的奥林匹克坝铜矿深处做过一个测算：这座矿至少还能挖 100 年。那时铜价不到 2,500 美元/吨，没有人觉得铜是什么"战略性资源"——它只是工业生产的普通原料，跟铁矿石、煤炭并列在"大宗商品"的标签下，随经济周期上下起伏。</p>
 
@@ -356,16 +404,46 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 </div>
 
 <footer>
-<div class="disc"><b>免责声明</b>本文基于公开信息与行业数据撰写，仅供研究参考，不构成任何投资建议。数据来源包括 ICSG、LME、SMM、各机构研究报告及媒体报道。调查团队对所引用信息的准确性不作保证，投资者据此操作风险自担。</div>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
+
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。</div>
 </footer>
 
 </div>
 
 <div class="reading-time-fab" id="readingTimeFab">约 16 分钟阅读</div>
 
+<div class="consent-overlay" id="consentOverlay">
+  <div class="consent-box">
+    <div class="consent-header">
+      <span>法律声明 · LEGAL NOTICE</span>
+      </div>
+    <div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室所载内容为<strong>内部研究资料</strong>，基于公开披露信息，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证数据绝对准确与完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览即表示您已阅读并同意以上声明。如不同意，请立即关闭页面。</p>
+    </div>
+    <div class="consent-footer">
+      <label class="consent-agree"><input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明</label>
+      <button class="consent-btn" id="consentBtn" disabled>确认并进入</button>
+    </div>
+  </div>
+</div>
+
+<div class="fn-tooltip" id="fnTip"></div>
+
 <script>document.documentElement.classList.add('js');
-var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+var reveals=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(function(r){observer.observe(r)});
 
 var progress=document.getElementById('progress');
 var tracker=document.getElementById('tracker');
@@ -375,25 +453,6 @@ var epilogue=null;
 for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
 var chapters=allH2.filter(function(h){return h!==epilogue;});
 var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
-var sidenav=document.querySelector('.sidenav');
-var navLinks=document.querySelectorAll('.sidenav a');
-
-var tip=document.createElement('div');
-tip.className='fn-tooltip';
-document.body.appendChild(tip);
-function showTip(text,e){tip.textContent=text;tip.classList.add('visible');moveTip(e)}
-function moveTip(e){var x=(e.clientX||0)+14,y=(e.clientY||0)+14;if(x>window.innerWidth-300)x=window.innerWidth-300;tip.style.left=x+'px';tip.style.top=y+'px'}
-function hideTip(){tip.classList.remove('visible')}
-
-var fnItems=document.querySelectorAll('.footnotes ol li');
-var fnTexts=[];
-fnItems.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
-document.querySelectorAll('sup').forEach(function(sup){
-sup.addEventListener('mouseenter',function(e){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));if(fnTexts[n-1])showTip(fnTexts[n-1].substring(0,180)+(fnTexts[n-1].length>180?'…':''),e)});
-sup.addEventListener('mousemove',moveTip);
-sup.addEventListener('mouseleave',hideTip);
-sup.addEventListener('click',function(){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));var t=document.getElementById('fn-'+n);if(t)t.scrollIntoView({behavior:'smooth'})});
-});
 
 function syncChapters(){
 var h=document.documentElement.scrollHeight-window.innerHeight;
@@ -415,33 +474,67 @@ window.addEventListener('scroll',syncChapters,{passive:true});
 window.addEventListener('load',syncChapters);
 try{syncChapters();}catch(e){}
 
+var sidenav=document.querySelector('.sidenav');
 function toggleNav(){sidenav.classList.toggle('open')}
-
-navLinks.forEach(function(a){
-a.addEventListener('click',function(e){
-e.preventDefault();sidenav.classList.remove('open');
-var ch=parseInt(a.getAttribute('data-ch'));
-if(ch===0){window.scrollTo({top:0,behavior:'smooth'})}
-else if(ch===9){if(epilogue)epilogue.scrollIntoView({behavior:'smooth'})}
-else{if(chapters[ch-1])chapters[ch-1].scrollIntoView({behavior:'smooth'})}
+document.querySelectorAll('.sidenav a').forEach(function(a){
+a.addEventListener('click',function(e){e.preventDefault();var id=this.getAttribute('href').slice(1);var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});sidenav.classList.remove('open')});
 });
-});
-document.addEventListener('click',function(e){if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle'))sidenav.classList.remove('open')});
 
-var barObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
-  x.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){var w=b.getAttribute('data-w');setTimeout(function(){
-    b.style.width=w+'%';
-  },100)});
-  barObs.unobserve(x.target);
-}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-document.querySelectorAll('.bar-chart').forEach(function(c){barObs.observe(c)});
+var barObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){var f=e.target;f.style.width=f.getAttribute('data-w')+'%';barObserver.unobserve(f)}});
+},{threshold:0.3});
+document.querySelectorAll('.bar-fill[data-w]').forEach(function(b){barObserver.observe(b)});
+
+var vertObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.vert-bar-wrap .bar').forEach(function(b){b.style.transition='height 1.2s'});vertObserver.unobserve(e.target)}});
+},{threshold:0.1});
+document.querySelectorAll('.vert-bars').forEach(function(v){vertObserver.observe(v)});
+
+var fnTip=document.getElementById('fnTip');
+var footnotes=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+footnotes.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+function showTip(txt,x,y){fnTip.textContent=txt;fnTip.style.display='block';fnTip.style.left=Math.min(x+12,window.innerWidth-350)+'px';fnTip.style.top=(y+12)+'px';}
+function hideTip(){fnTip.style.display='none';}
+document.addEventListener('mouseover',function(e){
+  if(e.target.tagName==='SUP'){
+    var num=e.target.textContent.replace(/[\[\]]/g,'');var idx=parseInt(num)-1;
+    if(fnTexts[idx]){showTip(fnTexts[idx],e.clientX,e.clientY);}
+  } else if(e.target.classList&&e.target.classList.contains('term')){
+    var t=e.target.getAttribute('data-tip');if(t)showTip(t,e.clientX,e.clientY);
+  }
+});
+document.addEventListener('mouseout',function(e){if(e.target.tagName==='SUP'||(e.target.classList&&e.target.classList.contains('term')))hideTip()});
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='SUP'){var num=e.target.textContent.replace(/[\[\]]/g,'');var el=document.getElementById('fn-'+num);if(el)el.scrollIntoView({behavior:'smooth'});}
+  else if(e.target.classList&&e.target.classList.contains('term')){var t=e.target.getAttribute('data-tip');if(t){var r=e.target.getBoundingClientRect();showTip(t,r.left,r.bottom);e.stopPropagation();}}
+  else if(e.target!==fnTip){hideTip();}
+});
 
 // 紧凑模式
 window.addEventListener('scroll',function(){
   if(window.scrollY>100)document.body.classList.add('compact');
   else document.body.classList.remove('compact');
 },{passive:true});
+
+// 合规弹窗
+(function(){
+  var overlay=document.getElementById("consentOverlay");
+  var check=document.getElementById("consentCheck");
+  var btn=document.getElementById("consentBtn");
+  if(!overlay||!btn||!check)return;
+  function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+  function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+  function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+  function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+  btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+  check.addEventListener("change",function(){btn.disabled=!check.checked});
+  show();
+})();
 </script>
+
+<script src="../global.js" defer></script>
+<script src="../../share.js" defer></script>
 
 </body>
 </html>
