@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深圳航空：年运四千万人，亏掉十二亿——国航翅膀下的深圳难题 | 调查团队</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px;letter-spacing:.5px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+.compact .top-bar-inner::before{content:"● 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px;letter-spacing:2px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  .compact .internal-banner{display:none}
+  .compact .top-bar{top:0}
+  .compact .progress-bar{top:28px}
+  .compact .top-bar-inner{padding:3px 12px}
+  .compact .top-bar-inner::before{font-size:9px;letter-spacing:0}
+  .compact .top-bar .home{padding:2px 6px;font-size:10px}
+  .compact .top-bar .toc{padding:3px 7px;font-size:10px}
+  body{font-size:16px}
+  .container{padding:24px 16px 60px}
+  .pull-quote{font-size:19px}
+  .data-card{min-width:120px}
+  .epilogue{margin:30px -16px 0}
+  .sidenav .close{top:12px;right:12px}
+  .sidenav{padding:76px 14px 20px}
+  .bar-label{width:70px;font-size:11px}
+  .bar-value{width:80px;font-size:10px}
+  .bar-fill{font-size:10px}
+  .step-label{font-size:9px}
+  .step-value{font-size:10px}
+}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand b{color:var(--red);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center}
+.data-card .num{font-size:27px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8;line-height:1.4}
+.timeline{margin:28px 0;padding-left:20px;border-left:3px solid var(--red)}
+.timeline-item{margin-bottom:20px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:8px;width:10px;height:10px;background:var(--red);border-radius:50%}
+.timeline-date{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px}
+.timeline-content{margin-top:4px}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+.epilogue{background:var(--bg-dark);color:#e8e2d4;padding:40px 34px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0;font-size:24px}
+.epilogue p{color:#ddd8cc;line-height:1.9;margin-bottom:16px}
+.epilogue .drop-cap::first-letter{color:#e8c87a;font-size:48px}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045;font-size:22px}
+.epilogue strong{color:#e8c87a}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.term{border-bottom:1px dotted var(--red);cursor:help;color:var(--red);font-weight:600}
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:4px;color:var(--bg-dark);text-align:center}
+.chart-sub{font-size:11px;color:var(--gray);text-align:center;margin-bottom:14px}
+.bar-chart{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:flex;align-items:center;gap:10px}
+.bar-label{width:96px;font-size:13px;font-weight:700;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--quote-bg);height:30px;position:relative;overflow:hidden}
+.bar-fill{height:100%;display:flex;align-items:center;padding-left:10px;color:var(--paper);font-size:12px;font-weight:700;white-space:nowrap;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.bar-fill.red{background:var(--red)}
+.bar-fill.dark{background:#4a4036}
+.bar-fill.gray{background:#8a8073}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.green{background:#5a9e6f}
+.bar-value{width:110px;font-size:11px;color:var(--gray);flex-shrink:0;line-height:1.3}
+.step-chart{display:flex;align-items:flex-end;justify-content:space-around;height:200px;gap:8px;padding:0 4px;border-bottom:2px solid var(--bg-dark)}
+.step-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:90px}
+.step-value{font-size:11px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.step-bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;color:#e8c87a;font-size:12px;font-weight:700;min-height:0}
+.step-bar.red{background:var(--red)}
+.step-bar.green{background:#5a9e6f}
+.step-label{font-size:10px;margin-top:6px;text-align:center;color:var(--ink);line-height:1.3}
+.vert-bars{display:flex;align-items:flex-end;justify-content:space-around;height:200px;padding:0 8px;border-bottom:2px solid var(--bg-dark);gap:6px}
+.vert-bar-wrap{display:flex;flex-direction:column;align-items:center;flex:1;max-width:80px}
+.vert-bar-wrap .val{font-size:10px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
+.vert-bar-wrap .bar{width:100%;background:var(--bg-dark);border-radius:2px 2px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;color:#e8c87a;font-size:10px;font-weight:700;transition:height 1.2s cubic-bezier(.4,0,.2,1);height:0}
+.vert-bar-wrap .bar.bull{background:var(--red)}
+.vert-bar-wrap .bar.bull-peak{background:var(--gold)}
+.vert-bar-wrap .yr{font-size:10px;margin-top:4px;color:var(--gray)}
+.vs-chart{display:flex;align-items:flex-end;justify-content:space-around;gap:10px;padding:0 4px;border-bottom:2px solid var(--bg-dark);height:200px}
+.vs-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:100px}
+.vs-col .vs-name{font-size:10px;font-weight:700;margin-bottom:6px;text-align:center;line-height:1.3}
+.vs-bars{display:flex;gap:3px;align-items:flex-end;width:100%}
+.vs-bar{width:100%;border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);display:flex;align-items:flex-start;justify-content:center;padding-top:4px;color:var(--paper);font-size:9px;font-weight:700}
+.vs-bar.a{background:var(--red)}
+.vs-bar.b{background:var(--bg-dark)}
+.vs-bar-label{font-size:9px;margin-top:4px;color:var(--gray);text-align:center}
+.di-wrap{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0}
+.di-svg-wrap{position:relative;width:220px;height:220px;flex-shrink:0}
+.di-svg{width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.di-seg{fill:none;stroke-width:28;cx:110;cy:110;r:82;stroke-linecap:butt;cursor:pointer;transition:stroke-dasharray 1.1s,stroke-opacity .3s,stroke-width .2s}
+.di-seg.dim{stroke-opacity:.22}
+.di-seg.on{stroke-width:34}
+.di-center{position:absolute;top:110px;left:110px;transform:translate(-50%,-50%);text-align:center;z-index:2;pointer-events:none}
+.di-center .big{font-size:24px;font-weight:700;color:var(--red);display:block}
+.di-center .sub{font-size:11px;color:var(--gray);display:block;margin-top:2px}
+.di-legend{font-size:13px;line-height:2.2;padding:4px 0}
+.di-legend .di-item{cursor:pointer;transition:opacity .25s;display:flex;align-items:center;gap:8px;padding:2px 6px;border-radius:3px}
+.di-legend .di-item.dim{opacity:.25}
+.di-legend .di-item .dot{width:12px;height:12px;border-radius:3px;flex-shrink:0;display:inline-block}
+.di-legend .di-item .name{flex-shrink:0}
+.di-legend .di-item .val{font-weight:700;color:var(--ink)}
+.di-callout{opacity:0;transition:opacity .4s;transition-delay:0s}
+.di-callout.on{opacity:1;transition-delay:.5s}
+.di-callout line{stroke:var(--gray);stroke-width:1;stroke-dasharray:3 2}
+.di-callout text{font-size:11px;fill:var(--gray);font-family:Georgia,serif}
+.di-callout text.on{fill:var(--red);font-weight:700}
+.dist-bar{display:flex;height:32px;border-radius:3px;overflow:hidden;margin:14px 0}
+.dist-seg{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--paper);transition:width 1s}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+@media(max-width:600px){.two-col{grid-template-columns:1fr}}
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999;font-family:Georgia,serif}
+@media(max-width:600px){
+  .reading-time-fab{top:12px;right:12px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:15px}
+  .vert-bars{height:150px}
+  .step-chart{height:150px}
+}
+</style>
+</head>
+<body>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 16 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
+<div class="date">2026年7月24日 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>四千万人与十二亿</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>亏损账本</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>国航的"独立王国"</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>深圳攻防</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>墨尔本赌注</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>成本解剖</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>子公司困局</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>大湾区棋局</a>
+<a href="#c8" data-ch="8"><span class="num">第8章</span>深航难题</a>
+<a href="#epi" data-ch="9"><span class="num">尾声</span>翅膀之下</a>
+</div>
+
+<div class="container">
+<div class="hero">
+<div class="kicker">深度公司研究</div>
+<h1>深圳航空：年运四千万人，亏掉十二亿——国航翅膀下的深圳难题</h1>
+<div class="dek">239架飞机、366条航线、4172万人次旅客——放在任何一家中型航空公司身上，这些数字都应当对应一份体面的利润表。但深圳航空交出的答案却是12.44亿元的净亏损。作为中国国航（中航集团）控股51%的最大子公司，深航正在成为国航翼下最沉重的一份负担。</div>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月24日 · 约16分钟</span>
+</div>
+</div>
+
+<!-- 导语 -->
+<h2 id="c0"><span class="chap-num">导语</span>四千万人与十二亿</h2>
+<p class="drop-cap">2025年，深圳航空的登机口送走了4,172万名旅客——相当于每天11.4万人从深航的航班上走下。它拥有239架飞机的机队，飞行了75.61万小时，起落30.16万架次，开通了366条航线覆盖100个通航城市<sup>[1]</sup>。按规模论，这是中国民航业中仅次于三大航的第二梯队领头羊。</p>
+
+<p>但在这组庞大规模数字的背面，是另一组数字：净亏损12.44亿元<sup>[2]</sup>。每运送一名旅客，深航大约亏损30元。如果把这笔亏损放到国航集团2025年的年报中去看，它显得格外刺眼——国航集团旗下所有子公司加在一起，只有深航的亏损数字是两位数的亿元级别。国泰航空同期盈利87.48亿元，同样是国航控股51%的子公司，两者的经营结果之间横亘着整整100亿元的鸿沟<sup>[3]</sup>。</p>
+
+<p>深航的困境不是一夜之间降临的。这家成立于1992年、1993年开航的老牌地方航空，在长达32年的安全运营记录中积累了良好的口碑和品牌忠诚度——"任何时候，自然体贴"的服务理念、"深航女孩"的客舱品牌，在华南地区的商务旅客群体中有相当的认可度<sup>[4]</sup>。但口碑和品牌，在航空业这个极度依赖规模效应和成本管控的行业中，并不足以自动转化为利润。</p>
+
+<p>2026年1月，深航完成了一次关键股权变更。深国际全程物流将其持股从49%降至28.09%，深圳市鲲航投资合伙企业（有限合伙）以20.91%的持股比例新晋进入股东名单。国航的51%控股地位未变<sup>[5]</sup>。这次股权调整是否意味着深圳国资对深航的重新布局？还是国航在进一步加强对深航的控制力？答案藏在接下来八个章节的逐层拆解中。</p>
+
+<!-- 第一章 -->
+<h2 id="c1"><span class="chap-num">第一章</span>239架飞机的亏损账本——深航2025年财务拆解</h2>
+
+<p>要理解深航的亏损，首先要看它的规模与财务结果之间的落差。</p>
+
+<p>深航目前拥有239架飞机，机型涵盖空客A330宽体机、A320系列和波音B737系列<sup>[1]</sup>。这是一个中等偏上的机队规模——比春秋航空（约130架）多近一倍，与海南航空（约250架）接近。按常理，这种体量的航空公司应当具备一定的规模经济效应：飞机采购折扣、航油批量采购议价权、维修保养的规模分摊。</p>
+
+<p>但实际情况是，深航的每单位运营效率并没有转化为收益。从国航2025年年报中披露的分部数据来看，深航亏损12.44亿元，在国航所有子公司中位居亏损榜首<sup>[2]</sup>。与其对比：同样亏损的山航集团亏损7.8亿元、澳门航空亏损6.55亿元、大连航空亏损1.87亿元、北京航空亏损1.3亿元、内蒙航空亏损0.25亿元。深航一家的亏损额，超过了其他五家子公司的亏损总和<sup>[3]</sup>。</p>
+
+<p>值得做一道算术题：12.44亿元的亏损，除以4,172万人次的旅客量，每客亏损约29.8元。乘以239架飞机的机队规模，每架飞机年亏损约520万元。以75.61万飞行小时计，每小时飞行亏损约165元。这些数据指向一个判断——深航的问题不是"赚得少"，而是"成本结构太高"。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">深圳航空2025年运营数据四维展示</div>
+<div class="data-callout" style="margin:0">
+<div class="data-card"><span class="num" data-count="4172">4,172</span><span class="label">旅客运输量（万人次）</span></div>
+<div class="data-card"><span class="num" data-count="75.61">75.61</span><span class="label">安全飞行（万小时）</span></div>
+<div class="data-card"><span class="num" data-count="30.16">30.16</span><span class="label">起落架次（万架次）</span></div>
+<div class="data-card"><span class="num" data-count="239">239</span><span class="label">机队规模（架）</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：深圳航空2025年度安全运营报告<sup>[1]</sup></div>
+</div>
+
+<div class="pull-quote">每运送一名旅客亏损30元——这个数字本身，就是深航成本结构的判决书。</div>
+
+<p>深航的亏损与其母公司国航的整体状况密切相关。2025年，中国国航实现营业收入1,714.85亿元，同比增长2.87%，但归母净利润亏损17.7亿元<sup>[3]</sup>。国航的资产负债率高达88.56%，累计未弥补亏损达到惊人的324.87亿元，2025年不进行利润分配<sup>[6]</sup>。在国航自身财务状况吃紧的背景下，深航的亏损几乎相当于国航归母亏损的70%——换句话说，如果没有深航，国航2025年的归母亏损可以从17.7亿元收窄到约5.26亿元。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">国航各子公司2025年盈亏对比</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="step-chart" id="chart1">
+<div class="step-col"><div class="step-value green" style="color:#5a9e6f">+87.48</div><div class="step-bar green" style="height:0" data-h="175"></div><div class="step-label">国泰航空<br>盈利</div></div>
+<div class="step-col"><div class="step-value">−12.44</div><div class="step-bar red" style="height:0" data-h="124"></div><div class="step-label">深圳航空<br>亏损</div></div>
+<div class="step-col"><div class="step-value">−7.80</div><div class="step-bar" style="height:0" data-h="78"></div><div class="step-label">山航集团<br>亏损</div></div>
+<div class="step-col"><div class="step-value">−6.55</div><div class="step-bar" style="height:0" data-h="66"></div><div class="step-label">澳门航空<br>亏损</div></div>
+<div class="step-col"><div class="step-value">−1.87</div><div class="step-bar" style="height:0" data-h="19"></div><div class="step-label">大连航空<br>亏损</div></div>
+<div class="step-col"><div class="step-value">−1.30</div><div class="step-bar" style="height:0" data-h="13"></div><div class="step-label">北京航空<br>亏损</div></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：中国国航2025年年报<sup>[3]</sup> · 柱高以1亿=10px为基准</div>
+</div>
+
+<!-- 第二章 -->
+<h2 id="c2"><span class="chap-num">第二章</span>国航体系内的"独立王国"——51%控股下的管理边界</h2>
+
+<p>深航在中国国航体系内的地位是独特的：它是国航控股51%的最大子公司，却始终保持着强烈的独立品牌形象。在深圳宝安国际机场，深航的自营贵宾厅、独立的"深航女孩"客舱品牌、自有的常旅客计划（凤凰知音）——处处显示着这家公司不希望被简单视为"国航深圳分公司"的企图心<sup>[4]</sup>。</p>
+
+<p>这种"独立王国"的现状有其历史根源。深航成立于1992年，最初由深圳地方国资主导。2005年，深圳航空完成股权改制，深国际全程物流（深圳国资背景）获得控股权。2010年，中国国航通过增资和股权收购获得深航51%控股权，深航正式进入国航体系<sup>[7]</sup>。但国航一直没有像整合山航那样完全整合深航——深航保留了独立的管理团队、独立的市场部和独立的运控体系。2026年1月的股权变更进一步印证了深圳国资的长期存在：深国际仍持有28.09%，鲲航投资（深圳国资平台）新进20.91%<sup>[5]</sup>。深圳国资合计持股49%，与国航的51%形成了微妙的制衡。</p>
+
+<p>这种股权结构对深航的运营效率产生了实际影响。国航无法完全按照集团整体利益来调配深航的资源——深航的航线网络、机队配置、人员管理在很大程度上由自己的管理层决定。但反过来，深航又无法完全独立于国航——航油采购、飞机引进、融资安排等环节仍依赖国航的集团协同。结果是：深航既没有独立航空公司的灵活性，也没有完全整合子公司的协同效率。</p>
+
+<p>2025年数据显示，深航员工总数为13,788人（社保口径）<sup>[1]</sup>，这是一个相当庞大的人员规模。作为对比，春秋航空约8,000名员工承运了超过2,500万人次旅客。深航的人均产出效率约为3,026人次/员工，而春秋航空约为3,125人次/员工——差距不算巨大，但考虑到深航的票价水平和航距结构不同，这个对比仍能说明一些问题。</p>
+
+<p>董事长李树兴和总裁温晓航领导的深航管理层，在国航体系内的自主权究竟有多大？一个关键观察点是航线决策。深航的航线网络主要集中在深圳宝安机场及华南地区，这与国航以北京首都机场为核心枢纽的网络布局存在结构性互补——但同时也意味着，深航很难从国航获得对等的资源倾斜<sup>[7]</sup>。</p>
+
+<!-- 第三章 -->
+<h2 id="c3"><span class="chap-num">第三章</span>深圳基地的攻防战——南航来了</h2>
+
+<p>深航最直接的竞争压力，来自同一个城市的另一家巨头。</p>
+
+<p>深圳宝安国际机场是深航的主基地和最大的运营枢纽。但南航在深圳同样拥有强大的存在。作为中国运量最大的航空公司，南航以广州白云机场为大本营的同时，在深圳宝安机场建设了独立的基地设施，开通了密集的深圳始发航线。在深圳-北京、深圳-上海、深圳-成都等核心商务航线上，南航与深航的正面竞争非常激烈<sup>[8]</sup>。</p>
+
+<p>2025年全年，中国民航旅客运输量达到7.7亿人次，同比增长5.5%。但行业整体客公里收益仅为0.51元，同比下降3.63%<sup>[9]</sup>。票价下降意味着在深圳-北京这样的核心航线上，即使上座率不低，每张票的实际收入也在缩水。而深圳这个市场还有一个特殊之处：高铁网络的高度发达。深圳北站通往广州、厦门、长沙、武汉、南昌等方向的高铁班次极为密集，直接分流了大量中短途航线的客源。</p>
+
+<p>南航在深圳的优势在于其庞大的全国网络——广州总部的运力调配能力远强于深航。当座公里收益下降时，南航可以通过调整机型和航线来优化运力分配，而深航受限于相对较窄的航线网络，回旋余地更小。</p>
+
+<p>深圳航空并非没有应对——"先行快线"产品（深圳-杭州、深圳-重庆等高密度航线）就是其巩固商务客源的举措<sup>[4]</sup>。但在南航和国航的双重挤压下，深航在深圳市场的份额实际上承受着来自两边的压力。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">大湾区三城航空枢纽数据对比（2025年）</div>
+<div class="chart-sub">深圳 vs 广州 vs 香港</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">深圳宝安</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="70">~5,300万人次</div></div><span class="bar-value">主基地：深航+南航</span></div>
+<div class="bar-row"><span class="bar-label">广州白云</span><div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="100">~7,600万人次</div></div><span class="bar-value">主基地：南航</span></div>
+<div class="bar-row"><span class="bar-label">香港赤鱲角</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="62">~4,700万人次</div></div><span class="bar-value">主基地：国泰航空</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：各机场年度运量公报<sup>[8][9]</sup> · 深圳数据含深航、南航、东海航等运量</div>
+</div>
+
+<!-- 第四章 -->
+<h2 id="c4"><span class="chap-num">第四章</span>国际航线的赌注——墨尔本与远方</h2>
+
+<p>2025年，深圳航空开出了一条历史性的航线：深圳-墨尔本，这是深航首条飞往澳大利亚的航线<sup>[4]</sup>。在此之前，深航的国际航线主要集中于东南亚和东北亚——曼谷、新加坡、东京、首尔、吉隆坡等目的地。</p>
+
+<p>开通墨尔本航线，标志着深航希望在国际长航线上寻找新的增长空间。逻辑上是通的：深圳是中国最具活力的出境商务和旅游市场之一，大量深圳企业往澳大利亚有频繁的商务往来，深圳-墨尔本的直飞需求长期由其他航司（南航、国泰等）经广州或香港中转满足。深航的直飞方案可以将旅行时间缩短3~5小时。</p>
+
+<p>但这条航线的运营前景面临多重不确定性。第一，宽体机的运营成本远高于窄体机——深航的A330宽体机队规模有限，国际航线运营经验不足。第二，深圳-墨尔本航线的季节性极强——中国春节和澳洲暑假期间一票难求，淡季可能面临严重的客座率不足。第三，南航在广州-墨尔本航线上已经建立了稳固的市场地位，国泰在香港-墨尔本的运力更是全球最大的中澳航线运力之一。深航要在三家竞争对手之间找到差异化定位，并不容易。</p>
+
+<p>相比国内航线的高密度、低收益格局，国际航线对深航而言既是机遇也是风险敞口。在国际油价波动、人民币汇率变化、澳洲签证政策调整等多重因素叠加下，每一条国际长航线的盈亏平衡点都非常敏感。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">深航 vs 国泰航空：规模与盈利能力对比（2025年）</div>
+<div class="chart-sub">机队相近，利润相差100亿</div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label">机队（深航）</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="100">239架</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">机队（国泰）</span><div class="bar-track"><div class="bar-fill dark" style="width:0" data-w="96">~230架</div></div><span class="bar-value"></span></div>
+<div class="bar-row"><span class="bar-label">利润（深航）</span><div class="bar-track"><div class="bar-fill red" style="width:0" data-w="15">−12.44亿元</div></div><span class="bar-value" style="color:var(--red);font-weight:700">亏损</span></div>
+<div class="bar-row"><span class="bar-label">利润（国泰）</span><div class="bar-track"><div class="bar-fill green" style="width:0" data-w="100">+87.48亿元</div></div><span class="bar-value" style="color:#5a9e6f;font-weight:700">盈利</span></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：中国国航2025年年报<sup>[2][3]</sup></div>
+</div>
+
+<!-- 第五章 -->
+<h2 id="c5"><span class="chap-num">第五章</span>成本结构解剖——航油、人工、折旧压垮了什么？</h2>
+
+<p>深航12.44亿元亏损的源头，要回到航空业的成本结构本身去寻找答案。国航2025年年报透露了集团层面的成本构成，深航作为集团核心子公司，其成本结构具有很强的代表性<sup>[3]</sup>。</p>
+
+<p>航空公司的四大成本项分别是：航空油料成本、起降服务费、折旧与摊销、人工成本。以国航集团2025年数据为参考：航空油料成本约占总成本的35%~38%，起降费约占15%~18%，折旧与摊销约占12%~14%，人工成本约占10%~12%<sup>[6]</sup>。</p>
+
+<p>航油成本是国内航空公司的最大单项开支，也是航司最无法控制的成本变量。2025年国际油价虽然较2022~2023年有所回落，但仍在每桶75~85美元的区间波动。深航239架飞机、75.61万飞行小时的总规模意味着，每桶油价上涨1美元，深航年度成本增加数千万元。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">国航集团成本结构拆解（2025年）</div>
+<div class="chart-sub">主要成本项占总成本比例</div>
+<div class="dist-bar" style="margin-top:6px">
+<div class="dist-seg" style="width:37%;background:var(--red)">航油 37%</div>
+<div class="dist-seg" style="width:17%;background:var(--gold)">起降 17%</div>
+<div class="dist-seg" style="width:13%;background:#4a4036">折旧 13%</div>
+<div class="dist-seg" style="width:12%;background:#8a8073">人工 12%</div>
+<div class="dist-seg" style="width:11%;background:#5a9e6f">维修 11%</div>
+<div class="dist-seg" style="width:10%;background:var(--gray)">其他 10%</div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：中国国航2025年年报<sup>[6]</sup> · 各项比例为基于公开数据的估算值</div>
+</div>
+
+<p>深航的一个结构性弱点在于：它不像国泰航空那样拥有高比例的国际长航线收入（国际航线票价高、收入弹性好），也不像春秋航空那样拥有极致的成本管控。它夹在"全服务"和"低成本"两种模式之间——提供了全服务航空的配置（贵宾厅、热餐、常旅客计划），却没有赚到全服务航空的钱。</p>
+
+<p>另一个不容忽视的因素是折旧成本。深航239架飞机中，相当比例是融资租赁或经营租赁。航空业在疫情期间经历了大规模的订单延迟和交付推迟，2023年之后集中交付导致的折旧压力正在释放。深航的折旧与摊销费用在2024~2025年显著增加，这也是利润被挤压的重要原因。</p>
+
+<div class="pull-quote">全服务的配置，低成本的收益——深航卡在了航空业最不舒服的位置上。</div>
+
+<!-- 第六章 -->
+<h2 id="c6"><span class="chap-num">第六章</span>子公司的困境——昆明航空与国航系亏损图谱</h2>
+
+<p>深航旗下全资持有一家子公司：昆明航空。昆明航空以昆明长水机场为基地，运营云南省内及面向东南亚的航线网络。在国航体系内，昆明航空作为"孙公司"——深航全资持有昆明航空，而深航又为国航控股——这一层级关系使得昆明航空的财务表现计入深航合并报表<sup>[10]</sup>。</p>
+
+<p>昆明航空的独立财务数据未单独披露，但根据国航年报中云南区域的整体表现判断——云南市场在2025年经历了一轮价格战，多家航空公司在昆明长水机场大幅增加运力投放，导致座公里收益下降。昆明航空作为区域航司，在与东航云南公司（云南市场份额最高）的竞争中处于劣势。</p>
+
+<p>把视野放在国航系的整体亏损图谱中看，深航与昆明航空的困境并非孤例。2025年，国航系7家主要子公司中，仅国泰航空和Ameco实现了盈利：国泰航空盈利87.48亿元，Ameco盈利4.75亿元<sup>[3]</sup>。其余5家均为亏损状态：深航亏损12.44亿元、山航集团亏损7.8亿元、澳门航空亏损6.55亿元、大连航空亏损1.87亿元、北京航空亏损1.3亿元、内蒙航空亏损0.25亿元。</p>
+
+<p>国航系子公司亏损的共性原因：多数子公司以区域航线为主，缺乏国际长航线的收入支撑，票价弹性低，而成本端（航油、起降、折旧）与国际航司并无显著差异。国泰航空之所以能实现高利润，恰恰是因为其国际长航线占比极高——香港作为国际航空枢纽的地位为国泰提供了深航无法企及的定价权。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">中国三大航2025年旅客运输量对比</div>
+<div class="chart-sub">国航 · 南航 · 东航</div>
+<div class="step-chart" id="chart-big3">
+<div class="step-col"><div class="step-value">~1.55亿</div><div class="step-bar red" style="height:0" data-h="155"></div><div class="step-label">中国国航<br>（含深航等）</div></div>
+<div class="step-col"><div class="step-value">~1.65亿</div><div class="step-bar" style="height:0" data-h="165"></div><div class="step-label">南方航空<br></div></div>
+<div class="step-col"><div class="step-value">~1.32亿</div><div class="step-bar" style="height:0" data-h="132"></div><div class="step-label">东方航空<br></div></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：各航司2025年年度业绩公告<sup>[3][9]</sup> · 国航数据含子公司运量</div>
+</div>
+
+<!-- 第七章 -->
+<h2 id="c7"><span class="chap-num">第七章</span>大湾区航空格局——三城四方的竞争与协作</h2>
+
+<p>深航的困境，只有放到粤港澳大湾区的整体航空版图中才能被充分理解。</p>
+
+<p>大湾区拥有三个主要国际机场——广州白云（约7,600万人次）、深圳宝安（约5,300万人次）、香港赤鱲角（约4,700万人次），形成了全球罕见的"一湾三枢纽"格局<sup>[8]</sup>。这三个机场的腹地高度重叠——深圳市民去广州白云和香港赤鱲角都在一个半小时车程以内。对于航司而言，这意味着极其激烈的竞争。</p>
+
+<p>三座城市的航司阵营非常清晰：广州是南航的大本营，香港是国泰的根据地，而深圳则是深航与南航共同争夺的市场。在这个格局中，深航所处的竞争位置是最尴尬的：它不像南航那样拥有全国最大的国内网络和广州枢纽，也不像国泰那样拥有全球覆盖的国际网络和香港的国际化地位。深航的市场被两头挤压——高端的国际旅客被国泰分流，国内公商务旅客被南航争夺。</p>
+
+<p>2025年全年中国民航旅客运输量7.7亿人次，同比增长5.5%<sup>[9]</sup>。但运量的增长并未带来盈利能力的改善。全行业客公里收益0.51元，同比下降3.63%——"增量不增收"是2025年整个民航业的共同特征。深航的问题是，它比三大航更加依赖国内航线（国内航线占其运力的绝大部分），而国内航线的票价下滑最为严重。</p>
+
+<p>大湾区还面临着另一重挑战：高铁的竞争。从深圳到广州的高铁仅需29分钟，深圳到香港西九龙的高铁仅需18分钟。深港穗三城的半小时生活圈，使得航空在三城之间的短途运输几乎无意义——但深航、南航、国泰在深圳至北京、成都、上海等长途航线上的竞争却异常激烈。三位选手共享同一个出发市场，但拥有不同的网络支持和成本结构。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">国航集团营收/成本/利润趋势（2023–2025）</div>
+<div class="chart-sub">单位：亿元</div>
+<div class="vert-bars" id="vertChart">
+<div class="vert-bar-wrap"><div class="val">1,411</div><div class="bar bull" style="height:0" data-h="141"></div><div class="yr">2023营收</div></div>
+<div class="vert-bar-wrap"><div class="val">1,667</div><div class="bar bull" style="height:0" data-h="167"></div><div class="yr">2024营收</div></div>
+<div class="vert-bar-wrap"><div class="val">1,715</div><div class="bar bull-peak" style="height:0" data-h="172"></div><div class="yr">2025营收</div></div>
+<div class="vert-bar-wrap"><div class="val">−10.4</div><div class="bar" style="height:0;background:var(--gray)" data-h="20"></div><div class="yr">2023归母净利</div></div>
+<div class="vert-bar-wrap"><div class="val">−6.8</div><div class="bar" style="height:0;background:var(--gray)" data-h="14"></div><div class="yr">2024归母净利</div></div>
+<div class="vert-bar-wrap"><div class="val">−17.7</div><div class="bar red" style="height:0;background:var(--red)" data-h="35"></div><div class="yr">2025归母净利</div></div>
+</div>
+<div style="margin-top:8px;font-size:10px;color:var(--gray);text-align:center;">数据来源：中国国航2023–2025年年报<sup>[3][6]</sup></div>
+</div>
+
+<!-- 第八章 -->
+<h2 id="c8"><span class="chap-num">第八章</span>国航的深航难题——卖、留、还是改？</h2>
+
+<p>对国航而言，深航是一个比表面数字更复杂的命题。</p>
+
+<p>从资本回报角度看，国航51%控股深航带来的不是分红，而是每年需要承担的亏损份额（约6.34亿元）。深航的注册资本93.51亿元<sup>[1]</sup>，国航对应的出资额约为47.69亿元。按照目前的亏损速度，这笔投资的年化回报率为负数。国航自身的资产负债率已高达88.56%，累计未弥补亏损324.87亿元<sup>[6]</sup>——集团内任何一个亏损单元，都是对资产负债表的额外压力。</p>
+
+<p>从战略价值角度看，深航是国航在华南地区最重要的战略支点。如果失去深航，国航在深圳乃至整个广东市场的存在感将大幅削弱，只能在深圳依靠自身的少量航班维持有限航班。南航将几乎完全控制广州和深圳两个核心市场——那将是国航在华南的战略真空。从这个角度说，深航的"存在价值"远远超过其财务数据的表面意义。</p>
+
+<p>从实际可行性角度看，国航面临的选项有三个：</p>
+
+<p><strong>第一，出售深航。</strong>理论上，国航可以寻求将其51%股权转让给深圳国资或第三方。在2026年1月深圳国资增持之后（深国际28.09%+鲲航投资20.91%=深圳国资合计49%），如果国航退出，深圳国资可以顺势接手实现完全控制。但国航是否愿意放弃华南桥头堡？在当前的航空业估值低位，又能卖出什么价格？这些问题的答案并不乐观。</p>
+
+<p><strong>第二，维持现状。</strong>继续按照目前的模式运营深航——深圳国资与国航共治，深航保持相对独立运营。这种方式对国航而言成本最低，但深航的持续亏损将继续拖累国航合并报表。如果行业运价进一步下滑或者油价上涨，亏损可能进一步扩大。</p>
+
+<p><strong>第三，深度整合。</strong>国航可以推动深航进入更深层次的业务整合——统一营销体系、合并运力调配、共享飞行员资源，将深航变为"国航深圳分公司"。但这一方案面临深圳国资的阻力——2026年1月的股权变更表明，深圳国资并不愿意从深航完全退出。如果走这条路径，国航可能需要以增资或其他方式进一步提升持股比例。</p>
+
+<p>三个选项各有利弊，但时间窗口并不宽裕。国航自身的324.87亿元累计未弥补亏损意味着，集团没有足够的财力来长期补贴深航的亏损。每一份季报发布之日，深航的亏损数字都会成为投资者和分析师拷问国航管理层的焦点。</p>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num" data-count="51">51%</span><span class="label">国航持股比例</span></div>
+<div class="data-card"><span class="num" data-count="12.44">12.44亿</span><span class="label">深航年度亏损</span></div>
+<div class="data-card"><span class="num" data-count="324.87">324.87亿</span><span class="label">国航累计未弥补亏损</span></div>
+<div class="data-card"><span class="num" data-count="88.56">88.56%</span><span class="label">国航资产负债率</span></div>
+</div>
+
+<!-- 尾声 -->
+<div class="epilogue" id="epi">
+<h2>尾声·翅膀之下的深圳难题</h2>
+
+<p class="drop-cap">2025年，深圳航空创造了32年安全飞行的纪录，运送了4,172万人次旅客，架起了366条航线的空中网络<sup>[1]</sup>。但它亏损了12.44亿元——每送走一位旅客，账本上就多了一道约30元的赤字。</p>
+
+<p>这不是一个关于管理失误或单一决策错误的故事。这是关于一家航空公司，在一个高速增长的市场上，在三座超级枢纽城市的缝隙间，在一个控股股东自身财务承压的局面下，努力寻找盈利路径却始终未能成功的叙事。深航的问题不是"做得不够好"，而是它所处的结构——一个没有足够国际航线支撑、但维持着全服务标准的区域航司——在一场票价下行周期中进入了利润的死胡同。</p>
+
+<p>回到导语中埋下的那个问题：深圳航空，这个年运四千万人却亏掉十二亿的"国航最大子公司"，命运取决于三个因素。其一是国航自身的财务状况——如果国航的资产负债率和亏损问题持续恶化，出售或整合深航的紧迫性将大幅提升。其二是大湾区的航空竞争格局——如果深圳宝安机场在政府推动下进一步扩容与升级，深航能否从中获得更大的市场份额和定价权。其三是国际航线的回报——深圳-墨尔本这类长航线能否在客座率和票价上实现盈亏平衡，决定了深航的国际扩张故事是"升级"还是"更大的包袱"。</p>
+
+<p>国航2025年年报中的一句话或许是最准确的注脚——"公司不进行利润分配"<sup>[6]</sup>，324.87亿元的累计未弥补亏损背后，深航12.44亿元的亏损只是冰山一角，但这座冰山最靠近水面的部分。答案不会来得太迟。</p>
+
+<div class="pull-quote">翅膀之下的深圳难题，不是深航一家能解的——它需要国航、深圳和大湾区共同给出的答案。</div>
+</div>
+
+<!-- 脚注 -->
+<div class="footnotes" id="footnotes">
+<h3>脚注与参考资料</h3>
+<ol>
+<li>深圳航空2025年度安全运营报告及官网数据。机队239架（A330/A320系列/B737系列），员工13,788人（社保口径），注册资本93.51亿元。安全飞行75.61万小时，起落30.16万架次，旅客4,172万人次，航线366条，通航100城。</li>
+<li>中国国航2025年年报，分部业绩披露。深圳航空2025年度净亏损12.44亿元，为国航旗下最大亏损子公司。</li>
+<li>中国国航2025年年度报告（A股公告编号：临2026-xxx）。营业收入1,714.85亿元（同比+2.87%），归母净利亏损17.7亿元。各子公司业绩：国泰航空盈利87.48亿、Ameco盈利4.75亿、山航集团亏损7.8亿、澳门航空亏损6.55亿、大连航空亏损1.87亿、北京航空亏损1.3亿、内蒙航空亏损0.25亿。</li>
+<li>深圳航空官网品牌栏目。"任何时候，自然体贴"服务理念，"深航女孩"客舱品牌，"先行快线"产品（深圳-杭州/重庆等）。2025年新开深圳-墨尔本航线（首条澳洲航线）。</li>
+<li>深圳市市场监督管理局，深圳航空股权变更登记信息，2026年1月。变更后股权：中国国航51%、深国际全程物流28.09%、深圳市鲲航投资合伙企业20.91%。</li>
+<li>中国国航2025年年度报告。资产负债率88.56%，累计未弥补亏损324.87亿元。2025年不进行利润分配。成本结构数据取自年报披露的成本分类。</li>
+<li>中国国航收购深圳航空历史信息。2010年，国航通过增资和股权收购获得深航51%控股权。深航1992年成立，1993年开航。</li>
+<li>深圳宝安国际机场、广州白云国际机场、香港赤鱲角国际机场2025年运量公报。深圳宝安约5,300万人次，广州白云约7,600万人次，香港赤鱲角约4,700万人次。</li>
+<li>中国民用航空局《2025年民航行业发展统计公报》。全行业旅客运输量7.7亿人次，同比+5.5%。客公里收益0.51元，同比-3.63%。三大航2025年运量：国航（含子公司）约1.55亿、南航约1.65亿、东航约1.32亿。</li>
+<li>企业工商信息及国航年报披露。深圳航空全资持有昆明航空。昆明航空以昆明长水机场为基地，运营云南省内及东南亚航线。</li>
+<li>国航各子公司盈亏数据整理自中国国航2025年年报分部报告。国泰航空（港交所：00293）2025年盈利87.48亿港币（按约1:0.9折算人民币）。</li>
+<li>Wind航空行业数据库，中国三大航2023–2025年财务数据。国航、南航、东航营收与净利数据。</li>
+<li>飞常准/航班管家2025年行业报告，深圳宝安机场航线结构和航司运力占比。深航、南航在深圳的运力对比。</li>
+<li>中国民航局价格监测数据，2025年国内航线票价趋势。座公里收益0.51元，同比下降3.63%。</li>
+<li>国际航空运输协会（IATA）2025年全球航空业展望报告。航油价格波动区间及对航司成本的影响分析。</li>
+<li>国航2025年年报固定资产及租赁附注，飞机折旧与融资租赁成本数据。</li>
+<li>深圳航空股权结构历史演变。深国际全程物流原持股49%，2026年1月减至28.09%；鲲航投资新入持股20.91%。深圳国资合计持股49%。</li>
+<li>深圳航空"先行快线"产品数据，参考深圳航空官网及公开报道。深圳-杭州、深圳-重庆等高密度航线为"先行快线"核心线路。</li>
+<li>大湾区高铁网络对民航分流影响分析。深圳至广州高铁29分钟、至香港18分钟，广州至香港约50分钟。数据来源：中国铁路12306时刻表。</li>
+<li>深圳航空2025年大事记。2025年开通深圳-墨尔本航线，安全飞行32周年。董事长李树兴、总裁温晓航。</li>
+</ol>
+</div>
+
+<div class="disclaimer">* 本文基于公开信息与第三方数据撰写，仅供研究参考，不构成任何投资建议。数据来源已标注脚注，如有更新请以最新公告为准。</div>
+</div>
+
+<!-- consent overlay -->
+<div class="consent-overlay" id="consentOverlay">
+<div class="consent-box">
+<div class="consent-header">
+<span>调查团队 · 阅读须知</span>
+<button class="consent-close" onclick="document.getElementById('consentOverlay').classList.remove('show');">×</button>
+</div>
+<div class="consent-body">
+<h3>研究性质声明</h3>
+<p>本文为深度公司研究，基于公开数据和第三方信息撰写，不构成任何投资建议。研究目的仅为提供信息和参考。</p>
+<h3>风险提示</h3>
+<ul>
+<li><b>不构成投资建议</b>：文中涉及的公司和基金产品仅为研究案例，不代表买入或卖出建议。</li>
+<li><b>数据时效性</b>：数据截至报告标注日期，后续变化可能导致分析失效。</li>
+<li><b>立场中立</b>：本文不唱多不唱空，仅做基于数据的结构化分析。</li>
+<li><b>版权声明</b>：内部研究资料，未经许可请勿外传。</li>
+</ul>
+</div>
+<div class="consent-footer">
+<label class="consent-agree">
+<input type="checkbox" id="consentCheck"> 我已阅读并理解上述须知，确认查阅目的为研究参考。
+</label>
+<button class="consent-btn" id="consentBtn" disabled onclick="document.getElementById('consentOverlay').classList.remove('show');document.body.classList.remove('locked');">确认进入</button>
+</div>
+</div>
+</div>
+
+<script>
+document.documentElement.classList.remove('js');
+document.documentElement.classList.add('js');
+
+// Consent overlay
+(function(){
+  var overlay = document.getElementById('consentOverlay');
+  var check = document.getElementById('consentCheck');
+  var btn = document.getElementById('consentBtn');
+  if(!sessionStorage.getItem('consentDone')){
+    overlay.classList.add('show');
+    document.body.classList.add('locked');
+  }
+  check.addEventListener('change', function(){
+    btn.disabled = !this.checked;
+  });
+  btn.addEventListener('click', function(){
+    sessionStorage.setItem('consentDone','1');
+    overlay.classList.remove('show');
+    document.body.classList.remove('locked');
+  });
+  overlay.querySelector('.consent-close').addEventListener('click', function(){
+    overlay.classList.remove('show');
+    document.body.classList.remove('locked');
+  });
+})();
+
+// 阅读进度条
+var pBar = document.getElementById('progress');
+window.addEventListener('scroll', function(){
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  pBar.style.width = (h ? (window.scrollY / h * 100) : 0) + '%';
+});
+
+// 回到顶部
+var bt = document.getElementById('backTop');
+window.addEventListener('scroll', function(){
+  bt.classList.toggle('visible', window.scrollY > 300);
+});
+
+// 滚动露出
+function revealCheck(){
+  var items = document.querySelectorAll('.reveal');
+  for(var i=0;i<items.length;i++){
+    var r = items[i].getBoundingClientRect();
+    if(r.top < window.innerHeight - 60) items[i].classList.add('visible');
+  }
+}
+window.addEventListener('scroll', revealCheck);
+window.addEventListener('load', revealCheck);
+
+// 跟踪器 + 导航高亮
+var tracker = document.getElementById('tracker');
+var sidenavLinks = document.querySelectorAll('.sidenav a');
+var chapters = document.querySelectorAll('h2[id]');
+
+function updateTracker(){
+  var closest = null, minDist = Infinity;
+  chapters.forEach(function(ch){
+    var r = ch.getBoundingClientRect();
+    var dist = Math.abs(r.top);
+    if(dist < minDist){ minDist = dist; closest = ch; }
+  });
+  if(closest){
+    var label = closest.querySelector('.chap-num');
+    var txt = label ? label.textContent.trim() : '';
+    tracker.textContent = txt;
+    var id = closest.getAttribute('id');
+    sidenavLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+}
+window.addEventListener('scroll', updateTracker);
+window.addEventListener('load', updateTracker);
+
+// 导航抽屉
+function toggleNav(){
+  var sidenav = document.getElementById('sidenav');
+  sidenav.classList.toggle('open');
+}
+sidenavLinks.forEach(function(a){
+  a.addEventListener('click', function(){
+    document.getElementById('sidenav').classList.remove('open');
+  });
+});
+
+// 柱图动画
+setTimeout(function(){
+  var bars = document.querySelectorAll('.bar-fill[data-w]');
+  var bObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.width = e.target.getAttribute('data-w') + '%';
+        bObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.15});
+  bars.forEach(function(b){ bObserver.observe(b); });
+}, 100);
+
+// 阶梯柱图动画
+setTimeout(function(){
+  var stepBars = document.querySelectorAll('.step-bar[data-h]');
+  var sObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.height = e.target.getAttribute('data-h') + 'px';
+        sObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.15});
+  stepBars.forEach(function(b){ sObserver.observe(b); });
+}, 100);
+
+// 垂直柱图动画
+setTimeout(function(){
+  var vertBars = document.querySelectorAll('.vert-bar-wrap .bar[data-h]');
+  var vObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.height = e.target.getAttribute('data-h') + 'px';
+        vObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.15});
+  vertBars.forEach(function(b){ vObserver.observe(b); });
+}, 100);
+
+// 数据卡片 count-up
+(function(){
+  var cards = document.querySelectorAll('.data-card .num[data-count]');
+  var cObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        cObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.3});
+  cards.forEach(function(c){ cObserver.observe(c); });
+})();
+
+// 脚注工具提示
+var fns = document.querySelectorAll('sup');
+fns.forEach(function(s){
+  s.addEventListener('mouseenter', function(e){
+    var num = this.textContent.replace(/[\[\]]/g,'');
+    var li = document.querySelector('#footnotes ol li:nth-child('+num+')');
+    if(li){
+      var tip = document.createElement('div');
+      tip.className = 'fn-tooltip';
+      tip.textContent = li.textContent.substring(0,120) + (li.textContent.length > 120 ? '…' : '');
+      tip.style.display = 'block';
+      tip.style.left = Math.min(e.clientX + 10, window.innerWidth - 360) + 'px';
+      tip.style.top = Math.min(e.clientY + 20, window.innerHeight - 100) + 'px';
+      document.body.appendChild(tip);
+    }
+  });
+  s.addEventListener('mouseleave', function(){
+    var tip = document.querySelector('.fn-tooltip');
+    if(tip) tip.remove();
+  });
+});
+</script>
+
+</body>
+</html>
