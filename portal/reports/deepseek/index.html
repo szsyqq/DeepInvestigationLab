@@ -53,8 +53,8 @@ sup:hover{color:var(--ink)}
 .disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
 .tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
 .tracker.visible{opacity:1}
-.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
-.js .reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
 .sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:70px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
 .sidenav.open{transform:translateX(0)}
 .sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
@@ -64,8 +64,8 @@ sup:hover{color:var(--ink)}
 .sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
 .sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
 .sidenav a.active .num{color:rgba(255,255,255,.75)}
-
-
+.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif}
+.nav-toggle:hover{background:var(--red)}
 .back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
 .back-top.visible{opacity:.85}
 .back-top:hover{opacity:1;background:var(--red)}
@@ -121,7 +121,7 @@ h2{font-size:22px}
 .data-card{flex:1 1 100%}
 .donut-wrap{flex-direction:column;gap:18px}
 .reading-time{top:12px;left:12px}
-
+.nav-toggle{top:12px;right:12px;padding:7px 11px;font-size:11px}
 .back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
 .home-fab{width:38px;height:38px;font-size:11px;bottom:14px;right:60px}
 .tracker{bottom:14px;left:14px;font-size:11px;padding:6px 11px}
@@ -262,9 +262,6 @@ footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;
   .reading-time-fab{top:12px;right:12px}
 }
 </style>
-
-<link rel="stylesheet" href="../global.css">
-<script>window.__REPORT_CONFIG__ = {"readingTime": "约 21 分钟阅读", "reportTitle": "DeepSeek：把模型开源，把账本捂紧"};</script>
 </head>
 <body>
 <div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
@@ -273,7 +270,7 @@ footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;
     <div class="top-bar-left">
       <a class="home" href="../../index.html">返回首页</a>
       <span class="sep"></span>
-      <span class="time" id="readTime">约 14 分钟阅读</span>
+      <span class="time" id="readTime">约 21 分钟阅读</span>
     </div>
     <div class="top-bar-right">
       <span class="pos" id="tracker">导语</span>
@@ -283,30 +280,27 @@ footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;
   </div>
 </div>
 <div class="progress-bar" id="progress"></div>
-<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
-
-
-</div>
-</div>
-
 <div class="masthead">
 <div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
 <div class="date">2026年7月 · 杭州 <a class="home-link" href="../../index.html">档案室</a></div>
 </div>
 
+<button class="back-top" id="backTop" onclick="scrollTop()" title="回到顶部">↑</button>
+
 <div class="sidenav" id="sidenav">
 <button class="close" onclick="toggleNav()">×</button>
 <h4>章节导航</h4>
-<a href="#c0" data-ch="0"><span class="num">导语</span>开篇</a>
-<a href="#c1" data-ch="1"><span class="num">第1章</span>从 558 万到 R3</a>
-<a href="#c2" data-ch="2"><span class="num">第2章</span>算力的真相</a>
-<a href="#c3" data-ch="3"><span class="num">第3章</span>不透明的财务</a>
-<a href="#c4" data-ch="4"><span class="num">第4章</span>开源的账单</a>
-<a href="#c5" data-ch="5"><span class="num">第5章</span>被芯片卡住的下一程</a>
-<a href="#c6" data-ch="6"><span class="num">第6章</span>全球封禁的墙</a>
-<a href="#c7" data-ch="7"><span class="num">第7章</span>私募孵化出的国运符号</a>
+<a href="#c0" data-ch="0"><span class="num">导语</span>558 万与 6000 亿</a>
+<a href="#c1" data-ch="1"><span class="num">第一章</span>从 558 万到 R3</a>
+<a href="#c2" data-ch="2"><span class="num">第二章</span>算力的真相</a>
+<a href="#c3" data-ch="3"><span class="num">第三章</span>不透明的财务</a>
+<a href="#c4" data-ch="4"><span class="num">第四章</span>开源的账单</a>
+<a href="#c5" data-ch="5"><span class="num">第五章</span>被芯片卡住的下一程</a>
+<a href="#c6" data-ch="6"><span class="num">第六章</span>全球封禁的墙</a>
+<a href="#c7" data-ch="7"><span class="num">第七章</span>私募孵化出的"国运符号"</a>
 <a href="#c8" data-ch="8"><span class="num">尾声</span>开源给世界，捂紧给自己</a>
 </div>
+
 <div class="container">
 
 <div class="hero reveal" id="c0">
@@ -668,10 +662,7 @@ DeepSeek 的 MIT 许可把技术彻底推开——谁都可以拿去用、拿去
 
 </div>
 
-<script>document.documentElement.classList.add('js');
-var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
-
+<script>
 var progress=document.getElementById('progress');
 var tracker=document.getElementById('tracker');
 var backTop=document.getElementById('backTop');
@@ -680,7 +671,7 @@ var epilogue=null;
 for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
 var chapters=allH2.filter(function(h){return h!==epilogue;});
 var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
-var sidenav=document.querySelector('.sidenav');
+var sidenav=document.getElementById('sidenav');
 var navLinks=document.querySelectorAll('.sidenav a');
 
 var tip=document.createElement('div');
@@ -737,7 +728,7 @@ if(act)act.classList.add('active');
 }
 window.addEventListener('scroll',syncChapters,{passive:true});
 window.addEventListener('load',syncChapters);
-try{syncChapters();}catch(e){}
+syncChapters();
 
 function scrollTop(){window.scrollTo({top:0,behavior:'smooth'})}
 function toggleNav(){sidenav.classList.toggle('open')}
@@ -760,7 +751,8 @@ else{if(chapters[ch-1])chapters[ch-1].scrollIntoView({behavior:'smooth'})}
 });
 document.addEventListener('click',function(e){if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle'))sidenav.classList.remove('open')});
 
-
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
 
 var barObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
   x.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){var w=b.getAttribute('data-w');setTimeout(function(){
@@ -787,18 +779,6 @@ function initConsent(){
 if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
 
 </script>
-
-<footer>
-<div class="disc">
-本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
-
-本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
-
-署名「调查团队」为统一中性称谓。</div>
-</footer>
-
-
-
 <div class="consent-overlay" id="consentOverlay">
   <div class="consent-box">
     <div class="consent-header">
@@ -818,11 +798,17 @@ if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded"
     </div>
   </div>
 </div>
+<footer>
+<div class="disc">
+本文基于公开信息独立撰写，数据来源包括公司公开披露、监管通报、券商研报及可交叉验证的第三方媒体报道，口径差异已在文中标注。本档案室内容为内部研究资料，分析仅代表研究团队个人观点，不构成任何投资建议、要约或推荐。
 
-<script src="../global.js" defer></script>
+本文部分内容借助人工智能工具辅助生成，可能存在信息幻觉或数据偏差。调查团队已尽合理努力核实，但不保证信息的绝对准确性与完整性。文中涉及的估值、营收、利润预测等未审计数据仅供参考。投资有风险，请读者独立判断。
+
+署名「调查团队」为统一中性称谓。
+</div>
+</footer>
 
 
-
-<script src="../../share.js" defer></script>
+<script src="../../portal/share.js" defer></script>
 </body>
 </html>
