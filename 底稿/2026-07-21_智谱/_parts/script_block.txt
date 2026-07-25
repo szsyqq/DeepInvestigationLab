@@ -1,0 +1,107 @@
+
+var progress=document.getElementById('progress');
+var tracker=document.getElementById('tracker');
+var backTop=document.getElementById('backTop');
+var allH2=Array.prototype.slice.call(document.querySelectorAll('h2'));
+var epilogue=null;
+for(var k=0;k<allH2.length;k++){if(allH2[k].closest('.epilogue')||/尾声/.test(allH2[k].textContent)){epilogue=allH2[k];break;}}
+var chapters=allH2.filter(function(h){return h!==epilogue;});
+var CN=['零','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+var sidenav=document.getElementById('sidenav');
+var navLinks=document.querySelectorAll('.sidenav a');
+
+var tip=document.createElement('div');
+tip.className='fn-tooltip';
+document.body.appendChild(tip);
+function showTip(text,e){tip.textContent=text;tip.classList.add('visible');moveTip(e)}
+function moveTip(e){var x=(e.clientX||0)+14,y=(e.clientY||0)+14;if(x>window.innerWidth-300)x=window.innerWidth-300;tip.style.left=x+'px';tip.style.top=y+'px'}
+function hideTip(){tip.classList.remove('visible')}
+
+var fnItems=document.querySelectorAll('.footnotes ol li');
+var fnTexts=[];
+fnItems.forEach(function(li,i){li.id='fn-'+(i+1);fnTexts.push(li.textContent.trim())});
+document.querySelectorAll('sup').forEach(function(sup){
+sup.addEventListener('mouseenter',function(e){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));if(fnTexts[n-1])showTip(fnTexts[n-1].substring(0,180)+(fnTexts[n-1].length>180?'…':''),e)});
+sup.addEventListener('mousemove',moveTip);
+sup.addEventListener('mouseleave',hideTip);
+sup.addEventListener('click',function(){var n=parseInt(sup.textContent.replace(/[\[\]]/g,''));var t=document.getElementById('fn-'+n);if(t)t.scrollIntoView({behavior:'smooth'})});
+});
+
+var segTip=document.createElement('div');
+segTip.className='seg-tooltip';
+document.body.appendChild(segTip);
+
+function syncChapters(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+progress.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+var line=130,idx=-1;
+for(var i=0;i<chapters.length;i++){if(chapters[i].getBoundingClientRect().top-line<=0)idx=i;else break;}
+var inEpi=epilogue&&epilogue.getBoundingClientRect().top-line<=0;
+if(inEpi){tracker.textContent='尾声';}
+else if(idx<0){tracker.textContent='导语';}
+else{tracker.textContent='第 '+(CN[idx+1]||(idx+1))+' 章 / '+chapters.length;}
+if(window.scrollY>400){tracker.classList.add('visible');backTop.classList.add('visible')}else{tracker.classList.remove('visible');backTop.classList.remove('visible')}
+var navEls=document.querySelectorAll('.sidenav a');var epiCh=navEls.length?parseInt(navEls[navEls.length-1].getAttribute('data-ch')):10;var ch=inEpi?epiCh:(idx<0?0:idx+1);
+var links=document.querySelectorAll('.sidenav a');
+links.forEach(function(a){a.classList.remove('active')});
+var act=document.querySelector('.sidenav a[data-ch="'+ch+'"]');
+if(act)act.classList.add('active');
+}
+window.addEventListener('scroll',syncChapters,{passive:true});
+window.addEventListener('load',syncChapters);
+syncChapters();
+
+function toggleNav(){sidenav.classList.toggle('open')}
+
+navLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();sidenav.classList.remove('open');
+var _id=a.getAttribute('href').replace('#','');var _el=document.getElementById(_id);if(_el)_el.scrollIntoView({behavior:'smooth'});
+});
+});
+document.addEventListener('click',function(e){if(!sidenav.contains(e.target)&&!e.target.closest('.nav-toggle'))sidenav.classList.remove('open')});
+
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+
+var barObs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
+x.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){var w=b.getAttribute('data-w');setTimeout(function(){b.style.width=w+'%'},100)});
+barObs.unobserve(x.target)}})},{threshold:0.3});
+document.querySelectorAll('.chart-box').forEach(function(c){barObs.observe(c)});
+/* 交互环形图（通用）：入场绘制动效 + 悬停/点击联动高亮。适用于全文所有 .donut-interactive */
+(function(){
+  document.querySelectorAll('.donut-interactive').forEach(function(wrap){
+    var svg=wrap.querySelector('.di-svg');
+    if(!svg)return;
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){svg.classList.add('in');io.unobserve(x.target)}})},{threshold:0.3});
+    io.observe(svg);
+    function on(kk){svg.classList.add('dim');wrap.querySelectorAll('[data-key="'+kk+'"]').forEach(function(m){m.classList.add('on')})}
+    function off(){svg.classList.remove('dim');wrap.querySelectorAll('.di-seg,.di-callout').forEach(function(m){m.classList.remove('on')})}
+    wrap.querySelectorAll('[data-key]').forEach(function(el){
+      var k=el.getAttribute('data-key');
+      el.addEventListener('mouseenter',function(){if(svg.dataset.pinned)return;on(k)});
+      el.addEventListener('mouseleave',function(){if(svg.dataset.pinned)return;off()});
+      el.addEventListener('click',function(){
+        if(svg.dataset.pinned===k){off();delete svg.dataset.pinned}
+        else{off();on(k);svg.dataset.pinned=k}
+      });
+    });
+  });
+})();
+(function(){
+  function initConsent(){
+    var overlay=document.getElementById("consentOverlay");
+    var check=document.getElementById("consentCheck");
+    var btn=document.getElementById("consentBtn");
+    if(!overlay||!btn||!check)return;
+    function _gc(){try{return sessionStorage.getItem("investigative_desk_consent")}catch(e){return null}}
+    function _sc(){try{sessionStorage.setItem("investigative_desk_consent","1")}catch(e){}}
+    var STORAGE_KEY="investigative_desk_consent";
+    function show(){if(_gc())return;overlay.classList.add("show");document.body.classList.add("locked")}
+    function hide(){overlay.classList.remove("show");document.body.classList.remove("locked")}
+    btn.addEventListener("click",function(){if(check.checked){_sc();hide()}});
+    check.addEventListener("change",function(){btn.disabled=!check.checked});
+    show();
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initConsent);}else{initConsent();}
+})();

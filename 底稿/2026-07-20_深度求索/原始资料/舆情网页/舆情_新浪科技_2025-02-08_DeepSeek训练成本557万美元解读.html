@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>我们应如何看待DeepSeek的557.6万美元训练成本？</title></head>
+<body>
+<h1>我们应如何看待DeepSeek的557.6万美元训练成本？</h1>
+<p><strong>来源：</strong>新浪科技 / 甲子光年</p>
+<p><strong>日期：</strong>2025-02-08</p>
+<p><strong>URL：</strong>https://finance.sina.com.cn/tech/roll/2025-02-08/doc-ineitvcc9059877.shtml</p>
+<hr>
+
+<p>三个月前，我们和中国科学院院士、清华大学计算机系教授张钹曾经聊过一个话题："为什么在提高算法效率上中国人会做得更好？"</p>
+<p>张钹告诉我们："对中国企业来讲，算法效率是生命攸关的，我们必须全力以赴。也许因为美国人有强大的算力，算法效率对他们来说只是锦上添花而已。"</p>
+
+<p>简单来说，DeepSeek-V3仅使用了2048块英伟达H800 GPU，耗费了557.6万美元就完成了训练，相比同等规模的模型（如GPT-4、GPT-4o、Llama 3.1），训练成本大幅降低。</p>
+
+<p>DeepSeek-V3技术报告显示，该模型的正式训练成本包括三个阶段：预训练（pre-training）、扩展上下文（context extension）、后训练（post-training），共计557.6万美元。</p>
+
+<p><strong>但是这557.6万美元的训练成本并不包括前期研究以及关于架构、算法或数据的消融实验所产生的成本。</strong></p>
+
+<p>DeepSeek-V3这557.6万美元训练成本的计算公式：训练耗费的时长（GPU小时）×H800每GPU小时的租赁价格（美元）=DeepSeek-V3训练成本（美元）。正式训练共耗费278.8万（2788K）GPU小时，假设H800每GPU小时的租赁价格为2美元，总成本=2,788,000×2=5,576,000美元。</p>
+
+<p><strong>成本对比：</strong></p>
+<ul>
+  <li>Llama 3.1 405B预训练成本约5800万美元（1.6万个H100 GPU，54天）</li>
+  <li>GPT-4（估算）训练成本约4800万美元（8000个H100 GPU，90天）</li>
+  <li>Claude 3.5 Sonnet训练成本约3000万-5000万美元</li>
+  <li>DeepSeek-V3总训练成本557.6万美元</li>
+</ul>
+
+<p><strong>DeepSeek如何降本增效？</strong></p>
+<p>1. <strong>负载均衡优化</strong>：创新提出"Auxiliary-loss-free（无辅助损失）"负载均衡方案</p>
+<p>2. <strong>通信优化</strong>：提出DualPipe算法，将计算和通信阶段重叠进行</p>
+<p>3. <strong>内存优化</strong>：重计算、使用CPU内存和参数共享</p>
+<p>4. <strong>计算优化</strong>：引入FP8混合精度训练框架</p>
+
+<p>DeepSeek正是通过这一步步的优化，让整个模型的训练效率得到提升，并降低训练成本。</p>
+</body>
+</html>

@@ -1,0 +1,142 @@
+{
+  "version": "d1d8b8835383b7fd288c38403086b059",
+  "result": {
+    "pages": 11,
+    "data": [
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2026-03-31 00:00:00",
+        "TOTAL_OPERATE_INCOME": 22838024164.27,
+        "PARENT_NETPROFIT": 8062764940.78,
+        "YSTZ": 33.6669636086,
+        "SJLTZ": 82.57,
+        "WEIGHTAVG_ROE": 6.5,
+        "BASIC_EPS": 2.0772,
+        "XSMLL": 81.4343854062,
+        "BPS": 32.975166898552
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2025-12-31 00:00:00",
+        "TOTAL_OPERATE_INCOME": 40528509770.23,
+        "PARENT_NETPROFIT": 8954257202.51,
+        "YSTZ": -54.5518040642,
+        "SJLTZ": -71.89,
+        "WEIGHTAVG_ROE": 6.89,
+        "BASIC_EPS": 2.3068,
+        "XSMLL": 77.5418415205,
+        "BPS": 30.897574170422
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2025-09-30 00:00:00",
+        "TOTAL_OPERATE_INCOME": 30637727654.97,
+        "PARENT_NETPROFIT": 6474551792.18,
+        "YSTZ": -54.8885136454,
+        "SJLTZ": -74.03,
+        "WEIGHTAVG_ROE": 4.89,
+        "BASIC_EPS": 1.668,
+        "XSMLL": 75.7249950858,
+        "BPS": 32.836653746622
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2025-06-30 00:00:00",
+        "TOTAL_OPERATE_INCOME": 23509972048.65,
+        "PARENT_NETPROFIT": 4623850715.13,
+        "YSTZ": -53.5816622349,
+        "SJLTZ": -75.74,
+        "WEIGHTAVG_ROE": 3.41,
+        "BASIC_EPS": 1.1912,
+        "XSMLL": 77.8661751665,
+        "BPS": 32.359866529915
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2025-03-31 00:00:00",
+        "TOTAL_OPERATE_INCOME": 17085765657.95,
+        "PARENT_NETPROFIT": 4416313048.41,
+        "YSTZ": -50.9493543725,
+        "SJLTZ": -68.56,
+        "WEIGHTAVG_ROE": 3.26,
+        "BASIC_EPS": 1.1378,
+        "XSMLL": 79.070497312,
+        "BPS": 35.475399599084
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2024-12-31 00:00:00",
+        "TOTAL_OPERATE_INCOME": 89175178322.7,
+        "PARENT_NETPROFIT": 31853172533.98,
+        "YSTZ": 7.0889449436,
+        "SJLTZ": 5.44,
+        "WEIGHTAVG_ROE": 23.35,
+        "BASIC_EPS": 8.2062,
+        "XSMLL": 77.0547999246,
+        "BPS": 34.337646110654
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2024-09-30 00:00:00",
+        "TOTAL_OPERATE_INCOME": 67915580112.25,
+        "PARENT_NETPROFIT": 24930782556.55,
+        "YSTZ": 8.6017000282,
+        "SJLTZ": 9.19,
+        "WEIGHTAVG_ROE": 18.33,
+        "BASIC_EPS": 6.423,
+        "XSMLL": 77.0591040425,
+        "BPS": 35.13026406532
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2024-06-30 00:00:00",
+        "TOTAL_OPERATE_INCOME": 50648026578.65,
+        "PARENT_NETPROFIT": 19056829528.87,
+        "YSTZ": 11.2987260597,
+        "SJLTZ": 11.86,
+        "WEIGHTAVG_ROE": 13.7,
+        "BASIC_EPS": 4.9095,
+        "XSMLL": 77.3611347139,
+        "BPS": 33.616985800201
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2024-03-31 00:00:00",
+        "TOTAL_OPERATE_INCOME": 34832906762.77,
+        "PARENT_NETPROFIT": 14045140540.62,
+        "YSTZ": 11.8631317207,
+        "SJLTZ": 11.98,
+        "WEIGHTAVG_ROE": 10.28,
+        "BASIC_EPS": 3.618,
+        "XSMLL": 78.4264150719,
+        "BPS": 36.995848472115
+      },
+      {
+        "SECUCODE": "000858.SZ",
+        "SECURITY_NAME_ABBR": "五粮液",
+        "REPORTDATE": "2023-12-31 00:00:00",
+        "TOTAL_OPERATE_INCOME": 83272067317.19,
+        "PARENT_NETPROFIT": 30210585269.3,
+        "YSTZ": 12.5775281579,
+        "SJLTZ": 13.19,
+        "WEIGHTAVG_ROE": 25.06,
+        "BASIC_EPS": 7.783,
+        "XSMLL": 75.7936309238,
+        "BPS": 33.377466471015
+      }
+    ],
+    "count": 110
+  },
+  "success": true,
+  "message": "ok",
+  "code": 0
+}

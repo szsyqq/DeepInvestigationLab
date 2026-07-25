@@ -1,8 +1,22 @@
-# Ignore everything except portal/ and CI config
-/*
-!/portal/
-!/.github/
-!.gitignore
-
 # OS files
 .DS_Store
+
+# IDE / tools
+.workbuddy/
+.trae/
+__pycache__/
+*.pyc
+*.pyo
+
+# Dependencies
+node_modules/
+
+# Temp / generated
+share-test-output/
+
+# DB
+*.db
+*.sqlite
+
+# Backups
+*.bak

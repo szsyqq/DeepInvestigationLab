@@ -1,0 +1,290 @@
+{
+  "贵州茅台": {
+    "version": "d345d4e4676c59e3e51150d83f1358c2",
+    "result": {
+      "pages": 21,
+      "data": [
+        {
+          "SECUCODE": "600519.SH",
+          "SECURITY_NAME_ABBR": "贵州茅台",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 54702912385.23,
+          "PARENT_NETPROFIT": 27242512886.45,
+          "YSTZ": 6.3360092771,
+          "SJLTZ": 1.47,
+          "WEIGHTAVG_ROE": 10.57,
+          "BASIC_EPS": 21.76,
+          "XSMLL": 89.7592176242
+        },
+        {
+          "SECUCODE": "600519.SH",
+          "SECURITY_NAME_ABBR": "贵州茅台",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 172054171890.91,
+          "PARENT_NETPROFIT": 82320067101.68,
+          "YSTZ": -1.2000971769,
+          "SJLTZ": -4.53,
+          "WEIGHTAVG_ROE": 32.53,
+          "BASIC_EPS": 65.66,
+          "XSMLL": 91.1795516835
+        },
+        {
+          "SECUCODE": "600519.SH",
+          "SECURITY_NAME_ABBR": "贵州茅台",
+          "REPORTDATE": "2025-09-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 130903889634.88,
+          "PARENT_NETPROFIT": 64626746712.18,
+          "YSTZ": 6.3200018806,
+          "SJLTZ": 6.25,
+          "WEIGHTAVG_ROE": 24.64,
+          "BASIC_EPS": 51.53,
+          "XSMLL": 91.2933832134
+        },
+        {
+          "SECUCODE": "600519.SH",
+          "SECURITY_NAME_ABBR": "贵州茅台",
+          "REPORTDATE": "2025-06-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 91093762553.97,
+          "PARENT_NETPROFIT": 45402962298.1,
+          "YSTZ": 9.1581680613,
+          "SJLTZ": 8.89,
+          "WEIGHTAVG_ROE": 17.89,
+          "BASIC_EPS": 36.18,
+          "XSMLL": 91.2993094819
+        },
+        {
+          "SECUCODE": "600519.SH",
+          "SECURITY_NAME_ABBR": "贵州茅台",
+          "REPORTDATE": "2025-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 51443450583.77,
+          "PARENT_NETPROFIT": 26847474238.76,
+          "YSTZ": 10.6673989111,
+          "SJLTZ": 11.56,
+          "WEIGHTAVG_ROE": 10.92,
+          "BASIC_EPS": 21.38,
+          "XSMLL": 91.9736093542
+        }
+      ],
+      "count": 102
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "泸州老窖": {
+    "version": "da551bf000c62323513a3e61afc3e644",
+    "result": {
+      "pages": 24,
+      "data": [
+        {
+          "SECUCODE": "000568.SZ",
+          "SECURITY_NAME_ABBR": "泸州老窖",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 8025174114.21,
+          "PARENT_NETPROFIT": 3708450417.95,
+          "YSTZ": -14.189134474,
+          "SJLTZ": -19.25,
+          "WEIGHTAVG_ROE": 7.32,
+          "BASIC_EPS": 2.52,
+          "XSMLL": 85.8177773598
+        },
+        {
+          "SECUCODE": "000568.SZ",
+          "SECURITY_NAME_ABBR": "泸州老窖",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 25731010647.32,
+          "PARENT_NETPROFIT": 10830713936.14,
+          "YSTZ": -17.5188936968,
+          "SJLTZ": -19.61,
+          "WEIGHTAVG_ROE": 22.66,
+          "BASIC_EPS": 7.36,
+          "XSMLL": 86.6241181512
+        },
+        {
+          "SECUCODE": "000568.SZ",
+          "SECURITY_NAME_ABBR": "泸州老窖",
+          "REPORTDATE": "2025-09-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 23127459902.13,
+          "PARENT_NETPROFIT": 10762394649.32,
+          "YSTZ": -4.8391903,
+          "SJLTZ": -7.17,
+          "WEIGHTAVG_ROE": 22,
+          "BASIC_EPS": 7.31,
+          "XSMLL": 87.1134106355
+        },
+        {
+          "SECUCODE": "000568.SZ",
+          "SECURITY_NAME_ABBR": "泸州老窖",
+          "REPORTDATE": "2025-06-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 16453732904.65,
+          "PARENT_NETPROFIT": 7662907812.98,
+          "YSTZ": -2.668768585,
+          "SJLTZ": -4.54,
+          "WEIGHTAVG_ROE": 15.42,
+          "BASIC_EPS": 5.21,
+          "XSMLL": 87.0903429748
+        },
+        {
+          "SECUCODE": "000568.SZ",
+          "SECURITY_NAME_ABBR": "泸州老窖",
+          "REPORTDATE": "2025-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 9352165445.5,
+          "PARENT_NETPROFIT": 4592780509.9,
+          "YSTZ": 1.7822801068,
+          "SJLTZ": 0.41,
+          "WEIGHTAVG_ROE": 9.48,
+          "BASIC_EPS": 3.13,
+          "XSMLL": 86.5095329811
+        }
+      ],
+      "count": 116
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "山西汾酒": {
+    "version": "579b0aa675bac97ceda3d8705c10d462",
+    "result": {
+      "pages": 24,
+      "data": [
+        {
+          "SECUCODE": "600809.SH",
+          "SECURITY_NAME_ABBR": "山西汾酒",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 14923228703.48,
+          "PARENT_NETPROFIT": 5382557651,
+          "YSTZ": -9.6801497592,
+          "SJLTZ": -19.03,
+          "WEIGHTAVG_ROE": 12.57,
+          "BASIC_EPS": 4.41,
+          "XSMLL": 75.0468361157
+        },
+        {
+          "SECUCODE": "600809.SH",
+          "SECURITY_NAME_ABBR": "山西汾酒",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 38718257657.74,
+          "PARENT_NETPROFIT": 12246329337.25,
+          "YSTZ": 7.5178859614,
+          "SJLTZ": 0.03,
+          "WEIGHTAVG_ROE": 33.48,
+          "BASIC_EPS": 10.0383,
+          "XSMLL": 74.8525045655
+        },
+        {
+          "SECUCODE": "600809.SH",
+          "SECURITY_NAME_ABBR": "山西汾酒",
+          "REPORTDATE": "2025-09-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 32924416755.68,
+          "PARENT_NETPROFIT": 11404509070.8,
+          "YSTZ": 4.9966100383,
+          "SJLTZ": 0.48,
+          "WEIGHTAVG_ROE": 31.82,
+          "BASIC_EPS": 9.35,
+          "XSMLL": 76.0997007306
+        },
+        {
+          "SECUCODE": "600809.SH",
+          "SECURITY_NAME_ABBR": "山西汾酒",
+          "REPORTDATE": "2025-06-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 23963969151.59,
+          "PARENT_NETPROFIT": 8505077281.27,
+          "YSTZ": 5.3535650827,
+          "SJLTZ": 1.13,
+          "WEIGHTAVG_ROE": 23.77,
+          "BASIC_EPS": 6.9716,
+          "XSMLL": 76.6500023993
+        },
+        {
+          "SECUCODE": "600809.SH",
+          "SECURITY_NAME_ABBR": "山西汾酒",
+          "REPORTDATE": "2025-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 16522645535.5,
+          "PARENT_NETPROFIT": 6647582867.87,
+          "YSTZ": 7.7228680556,
+          "SJLTZ": 6.15,
+          "WEIGHTAVG_ROE": 17.26,
+          "BASIC_EPS": 5.45,
+          "XSMLL": 78.7981457048
+        }
+      ],
+      "count": 118
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "洋河股份": {
+    "version": "ec14d5cca139e68aa62717a28906631e",
+    "result": {
+      "pages": 16,
+      "data": [
+        {
+          "SECUCODE": "002304.SZ",
+          "SECURITY_NAME_ABBR": "洋河股份",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 8185736912.16,
+          "PARENT_NETPROFIT": 2446551121.2,
+          "YSTZ": -26.0293912906,
+          "SJLTZ": -32.73,
+          "WEIGHTAVG_ROE": 5.09,
+          "BASIC_EPS": 1.6241,
+          "XSMLL": 75.4161942784
+        },
+        {
+          "SECUCODE": "002304.SZ",
+          "SECURITY_NAME_ABBR": "洋河股份",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 19211057613.05,
+          "PARENT_NETPROFIT": 2206058926.68,
+          "YSTZ": -33.4711870524,
+          "SJLTZ": -66.94,
+          "WEIGHTAVG_ROE": 4.62,
+          "BASIC_EPS": 1.4644,
+          "XSMLL": 71.6021728407
+        },
+        {
+          "SECUCODE": "002304.SZ",
+          "SECURITY_NAME_ABBR": "洋河股份",
+          "REPORTDATE": "2025-09-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 18090155654.57,
+          "PARENT_NETPROFIT": 3975002897.08,
+          "YSTZ": -34.2570196147,
+          "SJLTZ": -53.66,
+          "WEIGHTAVG_ROE": 8.06,
+          "BASIC_EPS": 2.6387,
+          "XSMLL": 71.1047269322
+        },
+        {
+          "SECUCODE": "002304.SZ",
+          "SECURITY_NAME_ABBR": "洋河股份",
+          "REPORTDATE": "2025-06-30 00:00:00",
+          "TOTAL_OPERATE_INCOME": 14795651340.14,
+          "PARENT_NETPROFIT": 4343649032.11,
+          "YSTZ": -35.3216744554,
+          "SJLTZ": -45.34,
+          "WEIGHTAVG_ROE": 8.54,
+          "BASIC_EPS": 2.8834,
+          "XSMLL": 75.0205422009
+        },
+        {
+          "SECUCODE": "002304.SZ",
+          "SECURITY_NAME_ABBR": "洋河股份",
+          "REPORTDATE": "2025-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 11066201907.73,
+          "PARENT_NETPROFIT": 3637099588.91,
+          "YSTZ": -31.9207604394,
+          "SJLTZ": -39.93,
+          "WEIGHTAVG_ROE": 6.81,
+          "BASIC_EPS": 2.4144,
+          "XSMLL": 75.5944168128
+        }
+      ],
+      "count": 76
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  }
+}

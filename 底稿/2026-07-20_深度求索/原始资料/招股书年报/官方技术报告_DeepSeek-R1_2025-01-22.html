@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>DeepSeek-R1 Technical Report (arXiv:2501.12948)</title></head>
+<body>
+<h1>DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</h1>
+<p><strong>来源：</strong>DeepSeek官方 / arXiv / Nature</p>
+<p><strong>发布日期：</strong>2025-01-22（v1），2026-01-04（v2）</p>
+<p><strong>论文链接：</strong>https://arxiv.org/abs/2501.12948</p>
+<p><strong>PDF下载：</strong>https://arxiv.org/pdf/2501.12948</p>
+<p><strong>发表期刊：</strong>Nature, volume 645, pages 633-638 (2025)</p>
+<hr>
+
+<h2>摘要</h2>
+<p>通用推理是人工智能中一个长期存在的挑战。最近的突破，以大型语言模型（LLM）和思维链提示为代表，在基础推理任务上取得了显著成功。然而，这种成功在很大程度上依赖于大量人工标注的示范，并且模型的能力对于更复杂的问题仍然不足。</p>
+
+<p><strong>本文证明，通过纯强化学习（RL）可以激励LLM的推理能力，无需人工标注的推理轨迹。</strong>所提出的RL框架促进了高级推理模式（如自我反思、验证和动态策略适应）的涌现发展。因此，训练后的模型在数学、编程竞赛和STEM领域等可验证任务上取得了优越性能，超越了通过传统监督学习在人类示范上训练的模型。</p>
+
+<p>此外，这些大规模模型展现的涌现推理模式可以被系统地利用来指导和增强较小模型的推理能力。</p>
+
+<h2>核心创新</h2>
+<p><strong>1. DeepSeek-R1-Zero：</strong>通过纯RL（强化学习）训练，无SFT（监督微调）数据，展示了推理能力可以纯粹通过RL激励。</p>
+
+<p><strong>2. DeepSeek-R1：</strong>结合冷启动数据和多阶段训练流程，包括RL训练、拒绝采样、SFT和进一步RL，达到与OpenAI o1相当的性能。</p>
+
+<p><strong>3. 蒸馏：</strong>通过蒸馏R1的推理能力，将推理模式转移到更小的模型（1.5B至70B参数），使小模型也具备推理能力。</p>
+
+<p><strong>4. GRPO（Group Relative Policy Optimization）：</strong>一种无需额外Critic模型的强化学习算法，降低训练成本。</p>
+
+<h2>模型规格</h2>
+<ul>
+  <li>基于DeepSeek-V3-Base构建</li>
+  <li>671B总参数，37B激活参数</li>
+  <li>MIT许可协议开源</li>
+  <li>训练总计耗费约3万块H20、1万块H800和1万块H100</li>
+</ul>
+
+<h2>性能亮点</h2>
+<ul>
+  <li>推理性能与OpenAI o1正式版相当</li>
+  <li>在数学、代码、自然语言推理等任务上表现优异</li>
+  <li>在LiveCodeBench上接近o3-high水平</li>
+  <li>蒸馏后的32B模型超越同级密集模型</li>
+</ul>
+
+<h2>开源生态</h2>
+<ul>
+  <li>MIT许可协议，允许自由使用、修改、分发和商业化</li>
+  <li>发布多个蒸馏版本（1.5B至70B）</li>
+  <li>详细的技术报告（约150页）</li>
+  <li>在GitHub平台星标数百倍增长</li>
+</ul>
+</body>
+</html>

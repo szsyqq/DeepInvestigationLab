@@ -1,0 +1,297 @@
+{
+  "中信证券": {
+    "version": "ddf1243c62987f748a07fb2ce05e815e",
+    "result": {
+      "pages": 50,
+      "data": [
+        {
+          "SECUCODE": "600030.SH",
+          "SECURITY_NAME_ABBR": "中信证券",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 23155089056.75,
+          "PARENT_NETPROFIT": 10216128310.91,
+          "YSTZ": 40.9138156047,
+          "SJLTZ": 54.6,
+          "WEIGHTAVG_ROE": 3.46
+        },
+        {
+          "SECUCODE": "600030.SH",
+          "SECURITY_NAME_ABBR": "中信证券",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 74854368352.85,
+          "PARENT_NETPROFIT": 30076100951.5,
+          "YSTZ": 28.7949963164,
+          "SJLTZ": 38.58,
+          "WEIGHTAVG_ROE": 10.59
+        }
+      ],
+      "count": 99
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "国泰君安": {
+    "version": "ada518b5a2e0a6a88972d5c1118fcd12",
+    "result": {
+      "pages": 36,
+      "data": [
+        {
+          "SECUCODE": "601211.SH",
+          "SECURITY_NAME_ABBR": "国泰海通",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 16232110965,
+          "PARENT_NETPROFIT": 6388465090,
+          "YSTZ": 58.9069246145,
+          "SJLTZ": -47.82,
+          "WEIGHTAVG_ROE": 1.95
+        },
+        {
+          "SECUCODE": "601211.SH",
+          "SECURITY_NAME_ABBR": "国泰海通",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 63107440954,
+          "PARENT_NETPROFIT": 27809205680,
+          "YSTZ": 87.3987555921,
+          "SJLTZ": 113.52,
+          "WEIGHTAVG_ROE": 9.78
+        }
+      ],
+      "count": 72
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "华泰证券": {
+    "version": "f3cce75448f59698238643b50283a49e",
+    "result": {
+      "pages": 43,
+      "data": [
+        {
+          "SECUCODE": "601688.SH",
+          "SECURITY_NAME_ABBR": "华泰证券",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 10421730928.21,
+          "PARENT_NETPROFIT": 4800496779.97,
+          "YSTZ": 41.4811446142,
+          "SJLTZ": 31.79,
+          "WEIGHTAVG_ROE": 2.61
+        },
+        {
+          "SECUCODE": "601688.SH",
+          "SECURITY_NAME_ABBR": "华泰证券",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 35809920255.16,
+          "PARENT_NETPROFIT": 16383497118.1,
+          "YSTZ": 6.8341654074,
+          "SJLTZ": 6.72,
+          "WEIGHTAVG_ROE": 9.2
+        }
+      ],
+      "count": 85
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "中金公司": {
+    "version": "ee2da61d6cce47795792d02a2f1ff5a4",
+    "result": {
+      "pages": 33,
+      "data": [
+        {
+          "SECUCODE": "601995.SH",
+          "SECURITY_NAME_ABBR": "中金公司",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 8825240263,
+          "PARENT_NETPROFIT": 3577445645,
+          "YSTZ": 54.261391239,
+          "SJLTZ": 75.19,
+          "WEIGHTAVG_ROE": 3.35
+        },
+        {
+          "SECUCODE": "601995.SH",
+          "SECURITY_NAME_ABBR": "中金公司",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 28481073842,
+          "PARENT_NETPROFIT": 9790532489,
+          "YSTZ": 33.504393679,
+          "SJLTZ": 71.93,
+          "WEIGHTAVG_ROE": 9.39
+        }
+      ],
+      "count": 66
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "海通证券": {
+    "version": null,
+    "result": null,
+    "success": false,
+    "message": "返回数据为空",
+    "code": 9201
+  },
+  "招商证券": {
+    "version": "486f20b63e33bf91bbd18815b78fcfd3",
+    "result": {
+      "pages": 43,
+      "data": [
+        {
+          "SECUCODE": "600999.SH",
+          "SECURITY_NAME_ABBR": "招商证券",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 6973207418.79,
+          "PARENT_NETPROFIT": 3270564508.47,
+          "YSTZ": 47.9584732677,
+          "SJLTZ": 41.73,
+          "WEIGHTAVG_ROE": 2.54
+        },
+        {
+          "SECUCODE": "600999.SH",
+          "SECURITY_NAME_ABBR": "招商证券",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 24971732131.98,
+          "PARENT_NETPROFIT": 12349522678.95,
+          "YSTZ": 19.5311681892,
+          "SJLTZ": 18.91,
+          "WEIGHTAVG_ROE": 9.94
+        }
+      ],
+      "count": 85
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "中国银河": {
+    "version": "ca3663cd2d7163e8b3c1315891f51ec1",
+    "result": {
+      "pages": 29,
+      "data": [
+        {
+          "SECUCODE": "601881.SH",
+          "SECURITY_NAME_ABBR": "中国银河",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 7354563884.74,
+          "PARENT_NETPROFIT": 3320207445.86,
+          "YSTZ": 15.6621946994,
+          "SJLTZ": 10.09,
+          "WEIGHTAVG_ROE": 2.53
+        },
+        {
+          "SECUCODE": "601881.SH",
+          "SECURITY_NAME_ABBR": "中国银河",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 28302251724.47,
+          "PARENT_NETPROFIT": 12519718792.04,
+          "YSTZ": 24.3421116408,
+          "SJLTZ": 24.81,
+          "WEIGHTAVG_ROE": 9.84
+        }
+      ],
+      "count": 57
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "申万宏源": {
+    "version": "4a9c3882278be27368176929121f9b04",
+    "result": {
+      "pages": 37,
+      "data": [
+        {
+          "SECUCODE": "000166.SZ",
+          "SECURITY_NAME_ABBR": "申万宏源",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 5928179947.76,
+          "PARENT_NETPROFIT": 2356063780.03,
+          "YSTZ": 11.7176685637,
+          "SJLTZ": 19.15,
+          "WEIGHTAVG_ROE": 2.08
+        },
+        {
+          "SECUCODE": "000166.SZ",
+          "SECURITY_NAME_ABBR": "申万宏源",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 24256073184.06,
+          "PARENT_NETPROFIT": 9507226300.42,
+          "YSTZ": 30.2927896378,
+          "SJLTZ": 82.46,
+          "WEIGHTAVG_ROE": 8.76
+        }
+      ],
+      "count": 73
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "广发证券": {
+    "version": "3e6e5752824d3847ee13b525d594022f",
+    "result": {
+      "pages": 55,
+      "data": [
+        {
+          "SECUCODE": "000776.SZ",
+          "SECURITY_NAME_ABBR": "广发证券",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 11681980573.19,
+          "PARENT_NETPROFIT": 4707447205.41,
+          "YSTZ": 64.33,
+          "SJLTZ": 70.73,
+          "WEIGHTAVG_ROE": 3.32
+        },
+        {
+          "SECUCODE": "000776.SZ",
+          "SECURITY_NAME_ABBR": "广发证券",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 35492783045.2,
+          "PARENT_NETPROFIT": 13701548267.44,
+          "YSTZ": 34.33,
+          "SJLTZ": 42.18,
+          "WEIGHTAVG_ROE": 10.16
+        }
+      ],
+      "count": 110
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  },
+  "方正证券": {
+    "version": "f1e1a0c5600aba03da373205fc52d54a",
+    "result": {
+      "pages": 35,
+      "data": [
+        {
+          "SECUCODE": "601901.SH",
+          "SECURITY_NAME_ABBR": "方正证券",
+          "REPORTDATE": "2026-03-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 3399890738.6,
+          "PARENT_NETPROFIT": 1486028590.88,
+          "YSTZ": 14.6952388961,
+          "SJLTZ": 24.35,
+          "WEIGHTAVG_ROE": 2.88
+        },
+        {
+          "SECUCODE": "601901.SH",
+          "SECURITY_NAME_ABBR": "方正证券",
+          "REPORTDATE": "2025-12-31 00:00:00",
+          "TOTAL_OPERATE_INCOME": 10503548205.5,
+          "PARENT_NETPROFIT": 3970059037.13,
+          "YSTZ": 36.0844564443,
+          "SJLTZ": 79.85,
+          "WEIGHTAVG_ROE": 8.01
+        }
+      ],
+      "count": 70
+    },
+    "success": true,
+    "message": "ok",
+    "code": 0
+  }
+}

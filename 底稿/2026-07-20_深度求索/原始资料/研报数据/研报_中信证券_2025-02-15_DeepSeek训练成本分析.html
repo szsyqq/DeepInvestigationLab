@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>中信证券：DeepSeek训练成本分析——看好云端推理需求爆发</title></head>
+<body>
+<h1>中信证券：DeepSeek训练成本分析——看好云端推理需求爆发</h1>
+<p><strong>来源：</strong>中信证券研究 / 智通财经</p>
+<p><strong>日期：</strong>2025-02-15</p>
+<p><strong>URL：</strong>https://m.jrj.com.cn/toutiao/2025/2/15/48187219.shtml</p>
+<hr>
+
+<h2>核心观点</h2>
+<p>DeepSeek通过工程化能力创新，实现了大模型训练和推理算力成本的极致优化，也为端侧部署高性能模型提供新的方向。</p>
+
+<h2>DeepSeek如何实现的训练成本降低？</h2>
+<p><strong>1. 架构创新：</strong></p>
+<ul>
+  <li>DeepSeekMoE专家架构：细粒度专家分配、共享专家及无辅助损失负载均衡策略</li>
+  <li>MLA多头潜在注意力机制：低秩联合压缩减少注意力键值缓存占用</li>
+</ul>
+
+<p><strong>2. FP8混合精度训练：</strong>率先采用FP8低精度数据进行大规模训练，核心计算用FP8提升速度、降低内存，关键操作保留高精度确保稳定性。</p>
+
+<p><strong>3. 训练工程优化：</strong></p>
+<ul>
+  <li>率先采用硬盘充当输入端缓存</li>
+  <li>DualPipe算法实现高效流水线并行</li>
+  <li>定制化高效跨节点all-to-all通信内核</li>
+  <li>重计算、EMA、共享向量和输出头减少内存占用</li>
+</ul>
+
+<p><strong>4. 数据策略优化：</strong>多token预测机制MTP，增加训练信号密度，减少20%训练迭代次数。</p>
+
+<h2>DeepSeek如何实现的推理成本降低？</h2>
+<p>预填充阶段MoE用EP32及冗余专家策略提升效率，解码阶段探索动态路由减少通信开销；支持FP8、INT8量化和提供蒸馏版本。</p>
+
+<h2>投资策略</h2>
+<p>看好DeepSeek新一代模型带动云端推理需求爆发，加速AI应用端侧落地。建议核心关注：</p>
+<ol>
+  <li><strong>晶圆代工</strong></li>
+  <li><strong>国产算力芯片</strong></li>
+  <li><strong>定制化存储</strong></li>
+  <li><strong>终端品牌</strong></li>
+  <li><strong>SoC芯片</strong></li>
+</ol>
+</body>
+</html>

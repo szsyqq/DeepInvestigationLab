@@ -1,0 +1,36 @@
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>追问开源：权重公开的模型，定价权还在谁手里？</h2>
+
+<p class="reveal">智谱是中国最早开源大模型的公司之一。从2022年开源千亿模型GLM-130B，到2025年开源旗舰基座GLM-4.5（3550亿参数），它把核心能力摊在开源社区面前。<sup>[7]</sup></p>
+
+<p class="reveal">效果立竿见影：据招股书披露，GLM在OpenRouter上的token消耗量稳居全球前十、中国前三，付费API收入超过所有国产模型之和；GLM-4.5发布48小时即登顶HuggingFace热门榜全球第一。<sup>[7]</sup>开源带来了生态与口碑——但也带来了一个根本性的矛盾。</p>
+
+<h3 class="reveal">权重公开了，客户为什么还要付费？</h3>
+
+<p class="reveal">这是大模型开源最核心的悖论。当智谱把GLM-4.5的3550亿参数权重公开在HuggingFace上，任何人都可以下载、部署、微调——甚至用蒸馏技术提取一个小模型。竞争对手可以免费使用智谱的基石成果，潜在客户可以在本地部署一个智谱模型而不用支付任何API费用。<sup>[6]</sup></p>
+
+<p class="reveal">智谱的逻辑是：开源是"获客漏斗"的顶部——免费用户试用模型后，如果对稳定性、延迟、安全合规有更高要求，就会转化成付费API客户。这个逻辑在开源软件（OSS）领域已经被反复验证过（RedHat、Elasticsearch等）。但在大模型领域，开源模型的性能已经接近甚至在某些任务上追平闭源模型——当开源版本"足够好"时，付费转化漏斗就会堵住。<sup>[7]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">开源基座模型参数规模 · 越做越大（亿参数）</div>
+<div class="chart-sub">来源 [6][7]</div>
+<div class="bar-chart">
+<div class="bar-row"><div class="bar-label">GLM-130B (2022)</div><div class="bar-track"><div class="bar-fill dark" data-w="28"></div></div><div class="bar-value">1,000亿</div></div>
+<div class="bar-row"><div class="bar-label">GLM-4.5 (2025)</div><div class="bar-track"><div class="bar-fill dark" data-w="100"></div></div><div class="bar-value">3,550亿</div></div>
+</div>
+</div>
+
+<h3 class="reveal">智谱 vs DeepSeek：两个开源者的两套账本</h3>
+
+<p class="reveal">与DeepSeek的对比，揭示了开源模型商业化的另一条路。DeepSeek同样大力拥抱开源——其DeepSeek-V3和DeepSeek-R1都开放了权重和论文，且以极低的训练成本著称（据估算V3仅用不到600万美元）。但DeepSeek走的是另一条路：它留在私募市场，不对外披露财务数据，把账本捂得严严实实。<sup>[7]</sup></p>
+
+<p class="reveal">一个用"不透明"换灵活，一个用"透明"换资本通道。智谱选择走向IPO，把财报摊在阳光底下，也把开源商业化的"账"露给了所有人看。</p>
+
+<div class="pull-quote reveal">权重公开了，定价权还在自己手里吗？答案写在每个季度的财报里。</div>
+
+<h3 class="reveal">小模型的"降维打击"</h3>
+
+<p class="reveal">智谱不仅开源了大模型，还部署了从小到大的完整模型矩阵：1.5B、6B、72B、130B、1060B（GLM-4.5-Air）、3550B（GLM-4.5）。<sup>[6]</sup>小模型参数更少、推理成本更低、部署门槛更低——但它们也是开源的。</p>
+
+<p class="reveal">当一家客户的场景只需要一个6B模型就能搞定时，他为什么要为一个3550B的云端API付费？智谱的策略是"小模型引流、大模型变现"——但这条漏斗的通畅程度，取决于客户从"可用"到"必须付费"之间有多少不可替代的需求。</p>
+
+<!-- 第五章 -->

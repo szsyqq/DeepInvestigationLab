@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>希尔顿：卖钥匙的酒店帝国 | 调查团队</title>
+<style>
+.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
+.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .brand .accent{color:var(--red)}
+.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px}
+.container{max-width:680px;margin:0 auto;padding:50px 24px 80px;position:relative}
+.hero{margin-bottom:56px}
+.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:16px;border-bottom:1px solid var(--red);display:inline-block;padding-bottom:4px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.25;margin-bottom:20px;letter-spacing:-.5px;text-align:left}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;font-style:normal;text-align:left}
+.hero .byline{font-size:14px;color:var(--ink);letter-spacing:.5px;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:12px 0;display:flex;justify-content:space-between;align-items:center}
+.hero .byline .author{font-weight:700}
+.hero .byline .meta{color:var(--gray)}
+.drop-cap::first-letter{font-size:60px;float:left;line-height:1;margin:4px 8px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:26px;font-weight:700;margin:56px 0 18px;padding-top:24px;border-top:2px solid var(--ink);letter-spacing:-.3px;scroll-margin-top:20px}
+h2 .chap-num{font-size:12px;color:var(--red);letter-spacing:3px;display:block;margin-bottom:6px;text-transform:uppercase}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+p{margin-bottom:18px;text-align:justify}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.pull-quote{font-size:26px;font-style:italic;color:var(--red);text-align:center;margin:36px 24px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+td strong{color:var(--red)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.data-callout{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.data-card{flex:1;min-width:140px;background:var(--bg-dark);color:var(--paper);padding:18px;border-radius:2px;text-align:center;cursor:pointer;transition:transform .2s}
+.data-card:hover{transform:translateY(-3px)}
+.data-card .num{font-size:26px;font-weight:700;color:#e8c87a;display:block}
+.data-card .label{font-size:12px;letter-spacing:1px;margin-top:6px;opacity:.8}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:6px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+sup:hover{color:var(--ink)}
+.epilogue{background:var(--bg-dark);color:var(--paper);padding:36px 30px;margin:40px -24px 0;border-radius:2px}
+.epilogue h2{border-top:none;color:#e8c87a;padding-top:0}
+.epilogue p{color:#d5cfc5}
+.epilogue .pull-quote{color:#e8c87a;border-color:#5a5045}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.tracker{position:fixed;bottom:20px;left:20px;background:rgba(42,37,32,.92);color:var(--paper);padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;z-index:100;opacity:0;transition:opacity .3s}
+.tracker.visible{opacity:1}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.nav-toggle{position:fixed;top:16px;right:16px;z-index:300;background:var(--bg-dark);color:var(--paper);border:none;padding:8px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer}
+.nav-toggle:hover{background:var(--red)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+.home-link{margin-left:12px;display:inline-flex;align-items:center;font-size:11px;letter-spacing:1px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:3px 10px;border-radius:2px;transition:background .2s,color .2s;vertical-align:middle}
+.home-link::before{content:"\2190";margin-right:5px}
+.home-link:hover{background:var(--red);color:var(--paper)}
+.reading-time{position:fixed;top:16px;left:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:290}
+.term{color:var(--red);border-bottom:1px dashed var(--red);cursor:help}
+.chart-box{margin:32px 0;padding:24px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid var(--line)}
+.chart-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px;text-align:center}
+.chart-sub{font-size:12px;color:var(--gray);text-align:center;margin-bottom:18px}
+:root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db;--green:#2d7a4a;--blue:#3a6ea5;--purple:#6a3d9a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman','Songti SC','SimSun',serif;line-height:1.85;font-size:18px;-webkit-font-smoothing:antialiased;padding-top:76px;overflow-x:hidden}
+.masthead .brand,.top-bar .brand{white-space:nowrap;flex-shrink:0}
+.masthead .date,.top-bar .pos{white-space:nowrap;margin-left:auto}
+.top-bar .toc{white-space:nowrap}
+.internal-banner{position:fixed;top:0;left:0;right:0;background:var(--red);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:3px;z-index:9999;font-weight:700}
+.top-bar{position:fixed;top:33px;left:0;right:0;z-index:9998;background:var(--paper);border-bottom:1px solid var(--ink)}
+.top-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:12px;letter-spacing:.5px;color:var(--ink)}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.top-bar .home{display:inline-flex;align-items:center;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:2px;font-size:12px;letter-spacing:1px;transition:background .2s,color .2s;white-space:nowrap}
+.top-bar .home::before{content:"\2190";margin-right:6px}
+.top-bar .home:hover{background:var(--red);color:var(--paper)}
+.top-bar .time{color:var(--gray);font-size:12px}
+.top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px;cursor:pointer;white-space:nowrap}
+.top-bar .pos b{color:var(--red);font-weight:700}
+.top-bar .sep{width:1px;height:14px;background:var(--line)}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;transition:background .15s;pointer-events:auto;white-space:nowrap}
+.top-bar .toc:hover{background:var(--red)}
+.progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s}
+.hero + h2{border-top:none!important;padding-top:0!important}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+.reading-time-fab{position:fixed;top:78px;right:16px;background:rgba(42,37,32,.88);color:var(--paper);padding:6px 12px;border-radius:16px;font-size:11px;letter-spacing:.5px;z-index:9999}
+.dc-chart{margin:24px 0}
+.dc-row{display:flex;align-items:center;gap:0;margin-bottom:14px;min-height:42px}
+.dc-label{width:110px;font-size:14px;font-weight:700;text-align:right;flex-shrink:0;padding-right:10px;line-height:1.3}
+.dc-bar-wrap{flex:1;position:relative;height:36px;background:var(--line);border-radius:3px;display:flex;align-items:center}
+.dc-bar{height:32px;border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;padding:0 8px;font-size:14px;font-weight:700;color:#fff;white-space:nowrap}
+.dc-note{font-size:12px;color:var(--gray);text-align:center;margin-top:4px}
+.legend-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:10px;font-size:12px}
+.leg-item{display:flex;align-items:center;gap:6px}
+.leg-dot{width:10px;height:10px;border-radius:2px;display:inline-block;flex-shrink:0}
+.donut-wrap{display:flex;align-items:flex-start;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0}
+.donut{width:170px;height:170px;border-radius:50%;position:relative;transition:transform .8s}
+.donut::after{content:'';position:absolute;top:26%;left:26%;width:48%;height:48%;background:var(--paper);border-radius:50%;pointer-events:none}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;font-size:13px;pointer-events:none}
+.donut-center .big{font-size:26px;font-weight:700;color:var(--red);display:block}
+.donut-center .sub{font-size:11px;color:var(--gray);display:block;margin-top:2px}
+.donut-legend{font-size:13px;line-height:2.1}
+.donut-legend .item{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.donut-legend .dot{display:inline-block;width:12px;height:12px;border-radius:2px;flex-shrink:0}
+.donut-legend .name{margin-right:4px}
+.donut-legend .val{color:var(--gray);font-size:12px}
+.donut-seg{cursor:pointer;transition:stroke-opacity .3s,transform .3s}
+.donut-seg:hover{stroke-opacity:.75}
+.donut-tip{position:absolute;background:var(--bg-dark);color:var(--paper);padding:6px 12px;border-radius:3px;font-size:12px;pointer-events:none;z-index:100;opacity:0;transition:opacity .2s;white-space:nowrap}
+.donut-tip.show{opacity:1}
+@media(max-width:600px){
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
+  .masthead{padding:10px 16px}
+  .masthead .brand{font-size:10px}
+  .masthead .date{font-size:10px}
+  .container{padding:32px 16px 60px}
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:16px}
+  h2{font-size:22px}
+  .pull-quote{font-size:20px;margin:28px 6px}
+  .reading-time{top:12px;left:12px}
+  .back-top{width:38px;height:38px;font-size:18px;bottom:14px;right:14px}
+  .reading-time-fab{top:12px;right:12px;padding:5px 10px;font-size:10px}
+  .dc-label{width:82px;font-size:12px}
+  .dc-bar{font-size:12px;padding:0 5px}
+  .vlabel{font-size:10px}
+  .donut-wrap{flex-direction:column;gap:18px;align-items:center}
+  .donut{width:140px;height:140px}
+  .donut-center .big{font-size:20px}
+  .donut-legend{font-size:12px;line-height:1.9}
+}
+</style>
+</head>
+<body>
+
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 13 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
+</div>
+<div class="progress-bar" id="progress"></div>
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 &nbsp;|&nbsp; <span class="accent">THE INVESTIGATION</span></a></div>
+<div class="date">2026年7月 · 弗吉尼亚 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>目录</h4>
+<a href="#c0"><span class="num">导语</span>千年钥匙的生意</a>
+<a href="#c1"><span class="num">壹</span>9,000 把钥匙的分布</a>
+<a href="#c2"><span class="num">贰</span>50 间自有酒店，藏着什么秘密</a>
+<a href="#c3"><span class="num">叁</span>Hampton 卖了 34 万间房，希尔顿分走 8%</a>
+<a href="#c4"><span class="num">肆</span>2.11 亿会员：比酒店本身更值钱</a>
+<a href="#c5"><span class="num">伍</span>黑石：从账面亏 70% 到赚 140 亿</a>
+<a href="#c6"><span class="num">陆</span>万豪 9,200 家 vs 希尔顿 8,447 家</a>
+<a href="#c7"><span class="num">柒</span>中国 600 家，管道里还有 800 家</a>
+<a href="#c8"><span class="num">捌</span>50 万间在建客房，与一座地产的冰山</a>
+<a href="#c9"><span class="num">尾声</span>钥匙生意最妙的地方</a>
+</div>
+
+<div class="container">
+
+<div style="margin:0 0 18px;font-size:14px;color:var(--gray);background:var(--quote-bg);border-left:4px solid var(--red);padding:14px 18px;line-height:1.7;border-radius:2px">
+<b style="color:var(--red)">⏳ 试读说明</b>：本文为<b>试读版</b>，尚未经分析师完整审阅。数据口径、分析框架与结论可能随后续审阅调整。
+</div>
+
+<div class="hero reveal" id="c0">
+<div class="kicker">深度调查 · An Investigation</div>
+<h1>希尔顿：卖钥匙的酒店帝国</h1>
+<p class="dek">8,447 家酒店，1,268,206 间客房，覆盖 140 个国家和地区——全球第二大酒店集团希尔顿，几乎不拥有其中的任何一砖一瓦。50 间自有酒店不足总量的 0.6%；其余 99.4% 的钥匙——Hampton、DoubleTree、Waldorf Astoria 的门牌——被授权给第三方业主，希尔顿每年从中抽取客房收入的 5%-12%。这种"卖钥匙"的轻资产模式让它的 EBITDA 利润率超过 45%，超过大多数科技公司。但钥匙的生意也有背面：2.11 亿会员的忠诚度计划、50 万间在建客房的开发管道、以及一张必须不断扩张的增长曲线。本篇基于希尔顿 2024 年 SEC 10-K 年报数据，拆解这台"钥匙印刷机"的每一个齿轮。</p>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月·弗吉尼亚 · 约 16 分钟阅读</span>
+</div>
+</div>
+
+<p class="drop-cap reveal">1919 年，得克萨斯人 Conrad Hilton 用 5,000 美元定金买下了人生的第一家酒店——Cisco 镇的 Mobley Hotel，一间 40 个房间的小旅馆。<sup>[1]</sup>100 年后，以他命名的公司在纽交所的市值超过 550 亿美元，8,447 块门牌挂在全球 140 个国家和地区。但公司与那个得克萨斯人最初的事业之间，有一个根本性的区别：Conrad 拥有的酒店，今天的希尔顿几乎不再拥有。</p>
+
+<p class="reveal">2024 年，希尔顿的 SEC 10-K 年报披露了一组数据：全系统 8,447 家酒店中，希尔顿自有或租赁的仅 50 家；7,461 家是特许经营，831 家是委托管理。<sup>[2]</sup>99.4% 的物业，希尔顿不占有土地、不持有产权、不承担运营亏损。它做的事情只有一件：让业主上门来买钥匙。</p>
+
+<div class="pull-quote reveal">「卖钥匙」这门生意的毛利率接近 100%——希尔顿不盖楼、不买地、不雇门童，但每开一家店它都赚钱。</div>
+
+<div class="data-callout reveal">
+<div class="data-card"><span class="num" data-count="8447">0</span><span class="label">全球酒店数</span><span class="label" style="color:#e8c87a;margin-top:1px">其中自有仅 50 家</span></div>
+<div class="data-card"><span class="num" data-count="126">0</span><span class="label">覆盖国家/地区</span></div>
+<div class="data-card"><span class="num" data-count="211">0</span><span class="label">Hilton Honors 会员(百万)</span></div>
+<div class="data-card"><span class="num" data-count="498600">0</span><span class="label">管道在建客房数</span></div>
+</div>
+
+<!-- 第一章 -->
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>8,447 把钥匙的分布</h2>
+
+<p class="reveal">希尔顿不是一家酒店公司——它是一个品牌管理商、一个特许经营授权方、一个全球最大的"卖名号"机器之一。24 个品牌覆盖从奢华到经济型的全谱系，但真正的故事藏在每个品牌的门牌数量里。</p>
+
+<p class="reveal">Hampton by Hilton 是希尔顿最大的品牌——342,737 间客房，占全系统 27%。这是希尔顿的核心印钞机：每间 Hampton 的平均房价约 120 美元、入住率 75%、年客房收入约 3.2 万美元/间。<sup>[3]</sup>希尔顿从中抽取约 6% 的特许经营费，再加上预订系统使用费、品牌营销费、忠诚度计划费——合计从一间 Hampton 每年抽取约 7,000-8,000 美元。34 万间客房，就是 25 亿美元的年化"钥匙收入"——几乎是纯利润。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title" style="margin-bottom:6px">希尔顿十大品牌 · 客房分布</div>
+<div class="chart-sub">数据来源 [2] Hilton 2024 10-K 年报</div>
+<div class="donut-wrap" style="position:relative">
+<div style="position:relative;display:inline-block">
+<svg class="donut" viewBox="0 0 200 200" style="width:180px;height:180px">
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a3a3a" stroke-width="32" opacity="0.06"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#a02020" stroke-width="32" stroke-dasharray="122.15 330.24" stroke-dashoffset="0" transform="rotate(-90 100 100)" class="donut-seg" data-name="Hampton" data-val="342,737 间 (27.0%)"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#2a2520" stroke-width="32" stroke-dasharray="80.98 371.41" stroke-dashoffset="-122.15" transform="rotate(-90 100 100)" class="donut-seg" data-name="Hilton" data-val="227,467 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6b6b6b" stroke-width="32" stroke-dasharray="56.10 396.29" stroke-dashoffset="-203.13" transform="rotate(-90 100 100)" class="donut-seg" data-name="DoubleTree" data-val="156,943 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a6ea5" stroke-width="32" stroke-dasharray="55.64 396.75" stroke-dashoffset="-259.23" transform="rotate(-90 100 100)" class="donut-seg" data-name="Hilton Garden Inn" data-val="156,471 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#b8860b" stroke-width="32" stroke-dasharray="29.41 422.98" stroke-dashoffset="-314.87" transform="rotate(-90 100 100)" class="donut-seg" data-name="Home2 Suites" data-val="82,515 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6a3d9a" stroke-width="32" stroke-dasharray="22.62 429.77" stroke-dashoffset="-344.28" transform="rotate(-90 100 100)" class="donut-seg" data-name="Embassy Suites" data-val="63,082 间"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#c9c2b3" stroke-width="32" stroke-dasharray="85.50 366.89" stroke-dashoffset="-366.90" transform="rotate(-90 100 100)" class="donut-seg" data-name="其他" data-val="约 239,000 间"/>
+</svg>
+<div class="donut-center"><span class="big">1,268,206</span><span class="sub">总客房数</span></div>
+</div>
+<div class="donut-legend">
+<div class="item"><span class="dot" style="background:#a02020"></span><span class="name">Hampton</span><span class="val">342,737 · 27.0%</span></div>
+<div class="item"><span class="dot" style="background:#2a2520"></span><span class="name">Hilton</span><span class="val">227,467</span></div>
+<div class="item"><span class="dot" style="background:#6b6b6b"></span><span class="name">DoubleTree</span><span class="val">156,943</span></div>
+<div class="item"><span class="dot" style="background:#3a6ea5"></span><span class="name">Hilton Garden Inn</span><span class="val">156,471</span></div>
+<div class="item"><span class="dot" style="background:#b8860b"></span><span class="name">Home2 Suites</span><span class="val">82,515</span></div>
+<div class="item"><span class="dot" style="background:#6a3d9a"></span><span class="name">Embassy Suites</span><span class="val">63,082</span></div>
+<div class="item"><span class="dot" style="background:#c9c2b3"></span><span class="name">其他 6 品牌</span><span class="val">约 239,000 · 18.9%</span></div>
+</div>
+</div>
+<div class="dc-note">前五大品牌占总客房的 76%——经济型和中端品牌是希尔顿真正的利润来源</div>
+</div>
+
+<p class="reveal">品牌矩阵的真正精妙之处在于"价格带覆盖"——从每晚 80 美元的 Tru by Hilton 到每晚 1,000 美元以上的 Waldorf Astoria，希尔顿在每个价格区间都有一把钥匙。<sup>[2]</sup>对业主来说，这意味着一个投资人可以同时用 Hampton（中端）、DoubleTree（中高端）和 Waldorf（奢华）来覆盖不同的市场，但只用同一条预订系统和同一个会员计划。这是希尔顿向业主销售的关键话术："您买的不只是一个品牌，是整个系统。"</p>
+
+<!-- 第二章 -->
+<h2 class="reveal" id="c2"><span class="chap-num">第二章</span>50 间自有酒店，藏着什么秘密</h2>
+
+<p class="reveal">50——这是希尔顿 8,447 家酒店中自有的数量。占比 0.6%，客房数 17,138 间，约占总间夜容量的 1.4%。<sup>[2]</sup>这些酒店主要是旗舰物业，比如纽约 Midtown 的 Hilton New York（1,900 间房）、芝加哥华尔道夫、华盛顿康莱德。它们承担的不是盈利功能，而是品牌展示功能——让潜在的加盟商看到"希尔顿的五星级挂在我的楼上是怎样的效果"。</p>
+
+<p class="reveal">但年报没有直接说的是：这 50 家自有酒店的利润率远远低于加盟和管理业务。2024 年，自有酒店业务占希尔顿总收入的 8-10%，但占 EBITDA 的比例估计不到 5%。<sup>[4]</sup>它们的存在更多是"战略性亏损"——希尔顿保留少量直营旗舰店以维持品牌标准，同时向加盟市发布信号："最高标准在这，跟上。"</p>
+
+<p class="reveal">这种"自有仅 0.6%"的结构，并不是天然如此。2007 年黑石收购希尔顿时，公司还持有着大量重资产。但随后的转型——向 REIT 出售资产并签回管理合同——彻底改变了风险分布。到 2024 年，98% 的酒店资产已经不在希尔顿的资产负债表上。<sup>[4]</sup>这意味着：即使全球酒店市场在 2026 年遭遇另一场类似 2020 年的危机，希尔顿的损失也不会来自物业跌价，只会来自管理费收入的暂时缩水——而这在疫情中得到过验证。</p>
+
+<!-- 第三章 -->
+<h2 class="reveal" id="c3"><span class="chap-num">第三章</span>Hampton 卖了 34 万间房，希尔顿分走 8%</h2>
+
+<p class="reveal">希尔顿的收费体系是一层叠加一层的"抽水结构"。以一间 150 间客房的 Hampton Inn 为例：</p>
+
+<p class="reveal"><strong>第一层：特许经营费。</strong>按客房收入的 5-8% 收取。假设 ADR 120 美元、入住率 75%，年客房收入约 493 万美元。6% 的特许经营费就是 29.6 万美元——希尔顿的边际成本接近于零。<sup>[3]</sup></p>
+
+<p class="reveal"><strong>第二层：中央预订系统费。</strong>通过 Hilton CRS 生成的每一笔订房，希尔顿收取约 12 美元的预订费。按 150 间房 75% 入住率、40% 通过 CRS 预订估算，年预订费约 8.2 万美元。</p>
+
+<p class="reveal"><strong>第三层：品牌营销费。</strong>客房收入的 2.5%，约 12.3 万美元。</p>
+
+<p class="reveal"><strong>第四层：忠诚度计划积分费。</strong>客房收入的 6%，约 29.6 万美元——相当于第二笔特许经营费。</p>
+
+<p class="reveal"><strong>合计：</strong>一间普通的 Hampton Inn 每年向希尔顿缴纳约 80 万美元的费用。其中很大一部分接近纯利润。而希尔顿为这家酒店投入的成本——品牌管理、系统维护、区域经理的工资——分摊到这间酒店上可能不到 15 万美元。<sup>[3]</sup></p>
+
+<div class="chart-box reveal">
+<div class="chart-title">一间 Hampton Inn 的"希尔顿税费"拆解</div>
+<div class="chart-sub">基于 150 间房、ADR $120、入住率 75%；单位：万美元/年</div>
+<table>
+<tr><th>收费项目</th><th>费率</th><th>年收入</th><th>希尔顿边际成本</th></tr>
+<tr><td>特许经营费</td><td>客房收入 6%</td><td><strong>29.6</strong></td><td>接近于零</td></tr>
+<tr><td>中央预订费</td><td>每笔 $12</td><td><strong>8.2</strong></td><td>接近于零</td></tr>
+<tr><td>品牌营销费</td><td>客房收入 2.5%</td><td><strong>12.3</strong></td><td>已摊销</td></tr>
+<tr><td>忠诚度计划费</td><td>客房收入 6%</td><td><strong>29.6</strong></td><td>积分成本</td></tr>
+<tr><td><strong>合计</strong></td><td></td><td><strong>~79.7</strong></td><td>约 10-15 万</td></tr>
+</table>
+<div class="dc-note">一间中等 Hampton 每年贡献给希尔顿约 80 万美元——其中 80%+ 是利润</div>
+</div>
+
+<!-- 第四章 -->
+<h2 class="reveal" id="c4"><span class="chap-num">第四章</span>2.11 亿会员：比 8,447 家酒店更值钱</h2>
+
+<p class="reveal">2024 年底，Hilton Honors 会员数达到 2.11 亿，同比增长 17%。<sup>[2]</sup>Honors 会员贡献了希尔顿全系统超过 60% 的间夜预订。<sup>[5]</sup>但 Honors 的真正价值不在预订量——而在两件事。</p>
+
+<p class="reveal"><strong>第一是积分销售。</strong>希尔顿向美国运通等合作方出售 Honors 积分，合作方将其作为信用卡权益发放给持卡人。2024 年，这项收入是希尔顿"其他收入"（约 26 亿美元）的最大单一来源。<sup>[4]</sup>希尔顿收到运通的积分采购款后，在会员实际兑换积分时向加盟酒店支付一笔补偿金（通常远低于现金房价）。差值——积分售价减去兑换成本——就是 Honors 的直接利润。行业估算，这套积分经济学的毛利率可以超过 60%。</p>
+
+<p class="reveal"><strong>第二是 breakage（积分过期）。</strong>Honors 积分在账户 24 个月无活动后过期。据行业估算，酒店常旅客计划的 breakage 率通常在 15-25% 之间。<sup>[5]</sup>每卖出 100 美元的积分，最终有 15-25 美元永远不会被兑换——这成了一项近乎"免费"的收入。</p>
+
+<p class="reveal">Honors 还有一个更微妙的作用：品牌切换壁垒。2.11 亿会员意味着每年数百万间夜通过 Honors 渠道预订——如果一家汉普顿的业主想换牌到万豪，这批客源会几乎一夜消失。2016 年以来，当部分业主因加盟费问题威胁退出希尔顿体系时，Honors 的会员密度成了他们留在体系内的最大理由。<sup>[5]</sup></p>
+
+<!-- 第五章 -->
+<h2 class="reveal" id="c5"><span class="chap-num">第五章</span>黑石：从账面亏 70% 到赚 140 亿</h2>
+
+<p class="reveal">今天希尔顿作为一台精密运转的"钥匙印刷机"，并非天然如此。它的形态是被一场剧烈的手术塑造的——那场手术的名字叫黑石。</p>
+
+<p class="reveal">2007 年，黑石以约 260 亿美元（含债务）杠杆收购希尔顿，是全球史上最大的私募股权酒店收购之一。<sup>[6]</sup>2008 年金融危机接踵而至，希尔顿营收从 87 亿暴跌至 2009 年的 58 亿，资产负债率超过 90%，EBITDA 几乎全部被利息吞噬。黑石的股权价值在账面上一度亏掉超过 70%。<sup>[6]</sup></p>
+
+<p class="reveal">黑石的翻身来自两个决定。第一，它没有放弃，而是注入了更多资本并重组了债务——在危机最深处，黑石说服银行团将 40 亿美元的到期债务展期，争取到了 4 年的喘息时间。<sup>[6]</sup>第二，它主导了希尔顿历史上最根本的业务转型：将自持的重资产酒店大量出售给 REITs 和主权基金，同时从买方手中签回长期管理或特许经营协议。希尔顿从一个"持有并运营酒店的公司"变成了"管理酒店品牌的公司"。</p>
+
+<p class="reveal">2013 年，转型后的希尔顿以每股 20 美元重新上市，募资约 23.5 亿美元——当时是酒店业史上最大的 IPO。<sup>[6]</sup>到 2018 年黑石完全退出时，它在希尔顿身上赚了超过 140 亿美元——全球私募股权史上回报最丰厚的投资之一。但黑石留下了一个重要的遗产：一家不再持有酒店、只出售钥匙的希尔顿。</p>
+
+<!-- 第六章 -->
+<h2 class="reveal" id="c6"><span class="chap-num">第六章</span>万豪 9,200 家 vs 希尔顿 8,447 家</h2>
+
+<p class="reveal">全球酒店行业的"轻资产三巨头"——万豪、希尔顿、洲际——在卖同一种钥匙，但每把钥匙的定价和销量各不相同。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">三大轻资产酒店集团 · 2024 年核心指标对比</div>
+<div class="chart-sub">数据来源 [2][7][8] 各公司 10-K 年报</div>
+<table>
+<tr><th>指标</th><th>万豪 (MAR)</th><th>希尔顿 (HLT)</th><th>洲际 (IHG)</th></tr>
+<tr><td>全球酒店数</td><td><strong>~9,200</strong></td><td><strong>8,447</strong></td><td>~6,400</td></tr>
+<tr><td>总客房数</td><td><strong>~1,650,000</strong></td><td>1,268,206</td><td>~950,000</td></tr>
+<tr><td>2024 营收</td><td>~$250 亿</td><td>~$115 亿</td><td>~$46 亿</td></tr>
+<tr><td>归母净利润</td><td>~$25 亿</td><td><strong>~$15 亿</strong></td><td>~$9 亿</td></tr>
+<tr><td>品牌数</td><td><strong>30+</strong></td><td>24</td><td>18</td></tr>
+<tr><td>自有酒店占比</td><td>~1%</td><td><strong>0.6%</strong></td><td>~0.5%</td></tr>
+<tr><td>会员数</td><td><strong>~2.1 亿</strong></td><td>2.11 亿</td><td>~1.3 亿</td></tr>
+<tr><td>市值（约）</td><td>~$700 亿</td><td>~$550 亿</td><td>~$180 亿</td></tr>
+</table>
+</div>
+
+<p class="reveal">万豪客房数比希尔顿多 30%，营收比希尔顿多 117%——但万豪营收高的部分原因是它拥有较重资产结构的遗留（分时度假、自营品牌）。在纯品牌授权业务上，希尔顿的单位经济效益更好：每间客房对 EBITDA 的贡献，希尔顿估计比万豪高 15-20%。<sup>[7]</sup>洲际在三家中规模最小，但有一个关键差异——它在中国市场的渗透最深（约 750 家酒店），IHG 在中端市场对中国本土品牌的了解远超万豪和希尔顿。<sup>[8]</sup></p>
+
+<p class="reveal">三巨头之外的竞争者也在逼近。雅高（Accor）在欧洲和亚太拥有 5,500 家酒店；温德姆（Wyndham）以 9,100 家酒店在数量上全球第一——但它的客房均价和每间贡献的收入远低于三巨头。<sup>[9]</sup>竞争格局中一个正在浮现的变量是 Airbnb：当价格敏感型游客越来越多地从 Hampton 转向短租公寓时，希尔顿的"量价齐升"叙事会面临挑战。</p>
+
+<!-- 第七章 -->
+<h2 class="reveal" id="c7"><span class="chap-num">第七章</span>中国 600 家，管道里还有 800 家</h2>
+
+<p class="reveal">中国是希尔顿最重要的增量市场。截至 2025 年，希尔顿在中国运营超过 600 家酒店，另有近 800 家在筹备中。<sup>[10]</sup>没有哪个单一市场能提供这样的增速。</p>
+
+<p class="reveal">希尔顿在中国的策略分三个梯队：华尔道夫和康莱德（奢华），覆盖一线和强二线；希尔顿和 DoubleTree（高端全服务），覆盖省会城市；以及汉普顿（Hampton by Hilton）和花园（Hilton Garden Inn）\u2014\u2014中端精选服务，以特许经营模式快速铺量。汉普顿在中国已落地约 400 家，目标是在 2030 年前突破 1,000 家。<sup>[10]</sup></p>
+
+<p class="reveal">但竞争同样激烈。华住集团（全季、汉庭等）超过 10,000 家酒店；锦江国际超过 12,000 家。两家本土巨头在中端市场的渗透深度，外资品牌难以企及。更关键的是加盟费：华住旗下全季的加盟费约为收入的 4-5%，低于汉普顿的 6-8%。在利润率高度敏感的三四线市场，几个百分点的差距足以影响业主的选择。<sup>[10]</sup></p>
+
+<p class="reveal">还有一层隐形成本：外资品牌必须通过合资或特许经营的本地化架构进入中国。希尔顿的做法是与本地开发商签订管理合同——业主出地出楼，希尔顿出品牌和运营标准。优势是零资本支出，劣势是品牌控制力远低于欧美。当一家汉普顿的业主为降低成本削减早餐品种时，希尔顿能做的要么妥协，要么撤牌——两种结果都不理想。</p>
+
+<!-- 第八章 -->
+<h2 class="reveal" id="c8"><span class="chap-num">第八章</span>50 万间在建客房，与一座地产的冰山</h2>
+
+<p class="reveal">希尔顿 2024 年末的开发管道中有 3,578 家酒店、498,600 间客房正在筹备——约占现有客房总数的 39%。<sup>[2]</sup>这些酒店将在未来 3-5 年陆续开业——届时希尔顿将成为全球第一个突破 200 万间客房的单一管理公司。</p>
+
+<p class="reveal">但管道的质量比数量更重要。2024 年新增的 1,432 家管道酒店中，约 60% 是中端精选服务品牌（Tru、Spark、Home2 Suites）——建造成本低、开发周期短，但单位收入贡献也最低。<sup>[2]</sup>高端品牌（华尔道夫、康莱德、LXR）在管道中的占比不到 10%。这意味着未来 5 年新增的大部分客房对特许经营费收入的增量贡献有限——需要更多的"量"来维持相同的"价"。</p>
+
+<p class="reveal">另一个变数来自利率环境。2025-2026 年美联储的高利率大幅推高了商业地产融资成本。酒店开发在商业地产中对利率的敏感度最高——当贷款利率超过 7-8%，许多中小开发商的项目 IRR 转负。<sup>[11]</sup>2025 年美国酒店新开工项目同比下降约 15%。管道中的"搁置率"——签约后因无法融资而推迟或取消的比例——在明显上升。希尔顿当前股价包含了年均 5-7% 的"单位增长溢价"——如果实际增速只有 2-3%，市盈率可能面临重估。</p>
+
+<div class="chart-box reveal">
+<div class="chart-title">希尔顿 · 开发管道结构（2024 年末）</div>
+<div class="chart-sub">3,578 家酒店 / 498,600 间客房按品牌层级分布 [2]</div>
+<div class="donut-wrap" style="position:relative">
+<div style="position:relative;display:inline-block">
+<svg class="donut" viewBox="0 0 200 200" style="width:170px;height:170px">
+<circle cx="100" cy="100" r="72" fill="none" stroke="#3a3a3a" stroke-width="32" opacity="0.06"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#a02020" stroke-width="32" stroke-dasharray="271.43 180.96" stroke-dashoffset="0" transform="rotate(-90 100 100)" class="donut-seg" data-name="中端精选" data-val="60%"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#2a2520" stroke-width="32" stroke-dasharray="144.76 307.63" stroke-dashoffset="-271.43" transform="rotate(-90 100 100)" class="donut-seg" data-name="高端全服务" data-val="32%"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#6a3d9a" stroke-width="32" stroke-dasharray="36.19 416.20" stroke-dashoffset="-416.19" transform="rotate(-90 100 100)" class="donut-seg" data-name="奢华/高端" data-val="8%"/>
+</svg>
+<div class="donut-center"><span class="big">498,600</span><span class="sub">管道在建客房</span></div>
+</div>
+<div class="donut-legend">
+<div class="item"><span class="dot" style="background:#a02020"></span><span class="name">中端精选</span><span class="val">60% · ~300,000 间</span></div>
+<div class="item"><span class="dot" style="background:#2a2520"></span><span class="name">高端全服务</span><span class="val">32% · ~160,000 间</span></div>
+<div class="item"><span class="dot" style="background:#6a3d9a"></span><span class="name">奢华/高端</span><span class="val">8% · ~40,000 间</span></div>
+</div>
+</div>
+<div class="dc-note">中端品牌占管道 60%，每间客房收入贡献远低于高端——需要更多"量"来维持增速</div>
+</div>
+
+<p class="reveal">还有一个被称为"影子风险"的因素：独立酒店的软品牌联盟正在崛起。全球范围内，一批精品独立酒店不再选择加入万豪或希尔顿体系，而是通过 Design Hotels、Preferred Hotels & Resorts 等软品牌联盟维持独立身份——这对希尔顿最有利可图的开发区域（美国本土、中端精选服务）威胁最大。<sup>[11]</sup>当越来越多的业主问出"为什么我非要挂希尔顿的牌子"这个问题时，卖钥匙的生意就会面临结构性天花板。</p>
+
+<!-- 尾声 -->
+<div class="epilogue reveal" id="c9">
+<h2>尾声：钥匙生意最妙的地方</h2>
+<div class="pull-quote">钥匙越多，越多人想要钥匙。</div>
+<p>1919 年 Conrad Hilton 买下那间 40 间房的 Mobley Hotel 时，他大概不会想到自己的名字会变成一把钥匙。100 多年后，这把钥匙刻了 24 个品牌，开了 8,447 扇门，每年产生超过百亿美元的收入。</p>
+<p>希尔顿的 2024 年 10-K 在第 3 页上写了一句不起眼的话："我们相信希尔顿拥有行业中最大的开发管道。"<sup>[2]</sup>这句话背后是 3,578 家酒店、50 万间客房、以及一千亿美元的潜在开发价值——但所有这些新钥匙，都依赖于一个前提：利率别太高、业主别放弃、会员别流失、以及 Airbnb 别变得太像酒店。</p>
+<p>钥匙的生意最精妙的地方在于：钥匙越多，越多人想要钥匙。但最危险的地方也在这里——当钥匙不再稀缺时，它的价格就会下降。</p>
+</div>
+
+<div class="footnotes">
+<h3>参考文献</h3>
+<ol>
+<li>Hilton Worldwide 企业历史官网（www.hilton.com/en/corporate/）。Conrad Hilton 于 1919 年以 $5,000 定金收购 Mobilley Hotel。</li>
+<li>Hilton Worldwide Holdings Inc. 2024 年度 Form 10-K（SEC EDGAR 文件编号 0001585689-25-000008）。包含：8,447 家酒店 / 1,268,206 间客房 / 50 家自有 / 7,461 家特许经营 / 831 家委托管理；Hampton 342,737 间占 27%；开发管道 3,578 家 / 498,600 间；Honors 会员 2.11 亿；净增长率 7.3%。</li>
+<li>典型 Hampton Inn 财务模型基于行业公开数据及希尔顿管理层表示。150 间房 / ADR $120 / 入住率 75% 为行业中等水平。特许经营费率 6% 基于希尔顿 10-K 中费率范围估算。</li>
+<li>Hilton Worldwide 2024-2025 财务报告。营业收入约 $115 亿，自有酒店收入占比约 8-10%。其他收入（含积分销售）约 $26 亿。黑石收购及退出回报数据源自黑石集团公开披露及媒体报道。</li>
+<li>Hilton Honors 年度报告及投资者资料。Breakage 率 15-25% 基于酒店常旅客计划行业平均估算。美国运通联名信用卡合作协议年收入超 $10 亿为分析师估算。</li>
+<li>黑石集团对希尔顿杠杆收购及 IPO 相关公开报道。收购价约 $260 亿，2013 年 IPO 价 $20，募资约 $23.5 亿。黑石最终回报约 $140 亿。</li>
+<li>万豪国际（Marriott International, MAR）2024 Form 10-K。万豪酒店数约 9,200 / 165 万间客房 / Bonvoy 会员约 2.1 亿。</li>
+<li>洲际酒店集团（InterContinental Hotels Group, IHG）2024 年度报告。IHG 在中国约 750 家酒店。</li>
+<li>MKG Consulting / HOTELS Magazine 2024 "全球酒店集团 325 强" 排名。温德姆约 9,100 家 / 89 万间客房；雅高约 5,500 家 / 82 万间客房。</li>
+<li>希尔顿中国区官网及行业研报。希尔顿中国约 600+ 家（2025），筹备中约 800 家。华住集团（HTHT）2024 年报显示超 10,000 家；锦江国际约 12,000 家。</li>
+<li>希尔顿 2024 年度投资者大会材料及行业分析。高利率对酒店开发的影响。软品牌联盟（Design Hotels, Preferred Hotels）为新兴竞争模式。</li>
+</ol>
+</div>
+
+<div class="disclaimer">本文基于公开信息独立撰写。数据主要来源于美国 SEC EDGAR 数据库中的 Hilton 2024 Form 10-K（2025 年 2 月提交）、万豪/洲际年度报告、行业研报及可交叉验证的第三方公开数据。本文为内部研究资料，不构成任何投资建议。部分内容借助人工智能工具辅助生成，调查团队已尽合理努力核实数据，但不保证绝对准确与完整。</div>
+
+</div>
+
+<footer><div class="disc"><b>免责声明</b><br>本文基于公开信息独立撰写，数据来源包括公司 SEC 公开披露、公司官网、行业研报。本档案室内容为内部资料，不构成投资建议。<br><br>署名「调查团队」为统一中性称谓。</div></footer>
+
+<script>
+var bar=document.getElementById('progress'),tracker=document.getElementById('tracker');
+var headings=document.querySelectorAll('h2[id], .hero[id], .epilogue[id]');
+var tocLinks=document.querySelectorAll('.sidenav a');
+var sections=[];
+headings.forEach(function(h,i){sections.push({el:h,id:h.getAttribute('id'),top:h.offsetTop,label:h.querySelector('.chap-num')?h.querySelector('.chap-num').textContent+' '+h.querySelector('span:last-child')?.textContent||h.id:'导语'});if(!sections[i].label)sections[i].label='尾声'});
+function onScroll(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+'%';var s=h.scrollTop||pageYOffset,ai=-1;sections.forEach(function(x,i){if(s+120>=x.top)ai=i});if(ai>=0){tracker.textContent=sections[ai].label.slice(0,18);tocLinks.forEach(function(a,i){a.classList.toggle('active',i===ai)})}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+function toggleNav(){document.getElementById('sidenav').classList.toggle('open')}
+document.getElementById('sidenav').querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var el=document.getElementById(a.getAttribute('href').slice(1));if(el){el.scrollIntoView({behavior:'smooth'});setTimeout(toggleNav,300)}})});
+document.addEventListener('click',function(e){var sn=document.getElementById('sidenav');if(sn.classList.contains('open')&&!sn.contains(e.target)&&!e.target.closest('.toc'))sn.classList.remove('open')});
+var obs=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r)});
+var co=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var t=x.target,val=parseFloat(t.getAttribute('data-count'));if(!val)return;var dur=1500,st=16,inc=val/(dur/st),cur=0;(function tick(){cur+=inc;if(cur>=val){t.textContent=Math.floor(val).toLocaleString();return}t.textContent=Math.floor(cur).toLocaleString();setTimeout(tick,st)})();co.unobserve(t)}})},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el)});
+function oc(){if(scrollY>80)document.body.classList.add('compact');else document.body.classList.remove('compact')}
+addEventListener('scroll',oc,{passive:true});oc();
+</script>
+<script src="../../share.js" defer></script>
+</body>
+</html>

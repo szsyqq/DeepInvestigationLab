@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>DeepSeek-V3 Technical Report (arXiv:2412.19437)</title></head>
+<body>
+<h1>DeepSeek-V3 Technical Report</h1>
+<p><strong>来源：</strong>DeepSeek官方 / arXiv</p>
+<p><strong>发布日期：</strong>2024-12-27（v1），2025-02-18（v2）</p>
+<p><strong>论文链接：</strong>https://arxiv.org/abs/2412.19437</p>
+<p><strong>PDF下载：</strong>https://arxiv.org/pdf/2412.19437</p>
+<p><strong>代码：</strong>https://github.com/deepseek-ai/DeepSeek-V3</p>
+<hr>
+
+<h2>摘要</h2>
+<p>我们提出了DeepSeek-V3，一个强大的混合专家（MoE）语言模型，具有671B总参数，每个token激活37B参数。为了实现高效推理和经济高效的训练，DeepSeek-V3采用了多头潜在注意力（MLA）和DeepSeekMoE架构，这些架构在DeepSeek-V2中得到了充分验证。</p>
+
+<p>DeepSeek-V3开创了<strong>无辅助损失（auxiliary-loss-free）负载均衡策略</strong>，并设置了<strong>多token预测（multi-token prediction）训练目标</strong>以获得更强的性能。我们在14.8万亿个多样化和高质量的token上预训练DeepSeek-V3，然后进行监督微调和强化学习阶段。</p>
+
+<p><strong>综合评估表明，DeepSeek-V3优于其他开源模型，并实现了与领先的闭源模型（如GPT-4o和Claude-3.5-Sonnet）相当的性能。</strong>尽管性能出色，DeepSeek-V3仅需要<strong>2.788M H800 GPU小时</strong>即可完成完整训练，假设H800 GPU租赁价格为2美元/小时，总训练成本仅为<strong>557.6万美元</strong>。</p>
+
+<h2>核心贡献</h2>
+<p><strong>1. 架构创新：</strong></p>
+<ul>
+  <li>MLA（多头潜在注意力）：高效推理，减少KV缓存</li>
+  <li>DeepSeekMoE：细粒度专家分配，无辅助损失负载均衡</li>
+  <li>MTP（多token预测）：增加训练信号密度</li>
+</ul>
+
+<p><strong>2. 预训练效率：</strong></p>
+<ul>
+  <li>FP8混合精度训练框架，首次在超大规模模型上验证</li>
+  <li>DualPipe算法实现高效流水线并行，计算-通信重叠</li>
+  <li>高效跨节点all-to-all通信内核</li>
+  <li>预训练仅需266.4万H800 GPU小时，不到2个月完成</li>
+</ul>
+
+<p><strong>3. 后训练：</strong></p>
+<ul>
+  <li>从DeepSeek-R1蒸馏推理能力到标准LLM</li>
+  <li>SFT + RL后训练，仅需0.1M GPU小时</li>
+</ul>
+
+<h2>训练成本明细</h2>
+<table border="1">
+  <tr><th>阶段</th><th>GPU小时</th><th>成本（@$2/小时）</th></tr>
+  <tr><td>预训练</td><td>2,664,000</td><td>$5,328,000</td></tr>
+  <tr><td>上下文扩展</td><td>119,000</td><td>$238,000</td></tr>
+  <tr><td>后训练</td><td>5,000</td><td>$10,000</td></tr>
+  <tr><td><strong>总计</strong></td><td><strong>2,788,000</strong></td><td><strong>$5,576,000</strong></td></tr>
+</table>
+<p>注：上述成本仅包括DeepSeek-V3的官方训练，不包括与先前研究、架构、算法或数据的消融实验相关的成本。</p>
+
+<h2>性能评估</h2>
+<ul>
+  <li>MMLU：88.5分</li>
+  <li>MMLU-Pro：75.9分</li>
+  <li>GPQA：59.1分</li>
+  <li>在代码和数学方面表现尤为突出</li>
+  <li>在MATH-500上甚至优于o1-preview</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<h2 class="reveal" id="c1"><span class="chap-num">第一章</span>清华的书生：从实验室走到资本战场</h2>
+
+<p class="reveal">2019年6月，北京清华园。清华大学计算机系知识工程实验室（KEG）一项技术成果转化，把孵化自内部的科技情报平台<span class="term" data-tip="AMiner：清华大学计算机系KEG实验室打造的科技情报大数据挖掘与服务平台，智谱的前身">AMiner</span>单独拆分——一家名为"智谱"的公司正式成立。<sup>[1]</sup></p>
+
+<p class="reveal">核心团队几乎全是清华人：CEO张鹏毕业于清华计算机系，董事长刘德兵曾任清华数据科学研究院科技大数据研究中心副主任，总裁王绍兰为清华创新领军博士，首席科学家唐杰是清华计算机系教授、AMiner的建立者。<sup>[1]</sup><sup>[4]</sup>这是一家从第一天起就贴着"学院派"标签的公司——学术根基深厚，天花板也写在这张名片上。</p>
+
+<h3 class="reveal">知识工程实验室出走</h3>
+
+<p class="reveal">KEG实验室在清华内部已有近二十年的知识图谱与自然语言处理积累。AMiner作为一个学术情报平台，最早只是服务科研群体的工具；但当2019年国内AI创业潮涌起，清华决定把它从实验室"放出来"独立运营。<sup>[1]</sup></p>
+
+<p class="reveal">这不是一个简单的"教授创业"故事。智谱从一开始就配备了完整的企业化架构：张鹏负责产品与执行，刘德兵主抓战略与融资，唐杰留在学术端做首席科学家——三人分工，像极了硅谷"教授+CEO+投资人"的经典模型。<sup>[4]</sup></p>
+
+<p class="reveal">这种结构的好处是明显的：学术上的顶级声誉，让智谱在早期融资中几乎没费力气——A轮投后估值6.65亿元，资方名单里已经出现红杉、高瓴、君联等头部机构。<sup>[4]</sup></p>
+
+<h3 class="reveal">"对标OpenAI"的GLM路线</h3>
+
+<p class="reveal">从成立第一天起，智谱就喊出了"对标OpenAI"的口号。但在技术路线上，它选了一条与GPT不同的路：不是纯自回归的Next Token Prediction，而是基于"自回归填空"范式的<span class="term" data-tip="Generative Language Model，智谱自研的通用预训练架构，区别于GPT的纯自回归">GLM</span>架构。<sup>[4]</sup></p>
+
+<p class="reveal">这条路的战略意义，在一开始并不明显。GLM架构的优势在于更高效的中文理解和生成能力（填空范式天然适合中文语义），但也意味着不能直接复用GPT的开源生态——智谱必须独立搭建一套模型体系。这套体系后来适配了40余款国产芯片，成了国内通用性最高的模型体系之一。<sup>[2]</sup></p>
+
+<p class="reveal">到今天回头看，GLM路线让智谱站上了一个独特的位置：它是国内唯一从框架到基座模型、从开源到云端MaaS全栈自研的独立创企。但同时，它也付出了"不与生态兼容"的成本——每一次模型升级，都要自己搭底座。</p>
+
+<h3 class="reveal">学院派时间线：从框架到智能体</h3>
+
+<div class="chart-box reveal">
+<div class="chart-title">智谱模型里程碑 · 从框架到智能体</div>
+<div class="chart-sub">来源 [1][2][6]</div>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-date">2021</div><div class="timeline-content">发布中国首个专有预训练大模型框架 GLM，并推出 MaaS 模型即服务平台，启动商业化探索。</div></div>
+<div class="timeline-item"><div class="timeline-date">2022</div><div class="timeline-content">开源首个千亿参数模型 GLM-130B，奠定"国产开源大模型"标签。</div></div>
+<div class="timeline-item"><div class="timeline-date">2023</div><div class="timeline-content">发布对话模型 ChatGLM 与开源 ChatGLM-6B；智谱清言次年通过监管备案。</div></div>
+<div class="timeline-item"><div class="timeline-date">2024</div><div class="timeline-content">推出基座模型 GLM-4、文生图 CogView3、视频生成 CogVideoX；11月发布并开源智能体 AutoGLM，提出 GLM-OS 概念。</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-07</div><div class="timeline-content">开源旗舰基座 GLM-4.5（3550亿参数），在 Artificial Analysis 与 CodeArena 评测中登顶开源与国产模型榜首。</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-09</div><div class="timeline-content">GLM-4.6 在 CodeArena 编码榜位列全球第一。</div></div>
+<div class="timeline-item"><div class="timeline-date">2025-12</div><div class="timeline-content">GLM-4.7 双榜登顶；向港交所递交上市申请。</div></div>
+<div class="timeline-item"><div class="timeline-date">2026</div><div class="timeline-content">唐杰内部信披露新一代 GLM-5 与全新模型架构。</div></div>
+</div>
+</div>
+
+<h3 class="reveal">清华基因的双刃剑</h3>
+
+<p class="reveal">清华背景给智谱带来了三样其他创企难以复制的东西：顶级的学术积累、政府的深度信任、以及"国家队"般的融资便利。它的股东名单里出现了社保中关村基金、北京市人工智能产业投资基金、杭州城投、珠海华发、成都高新区等国资力量——这不是巧合。<sup>[4]</sup></p>
+
+<p class="reveal">但这张名片也绑住了它的手脚。"算法强、产品与工程弱"——媒体曾如此概括智谱的人才结构，U型分布让它在C端产品力上明显落后于对手。<sup>[8]</sup>当MiniMax与月之暗面2024年疯狂投流做C端时，智谱几乎缺席了那场战役。<sup>[9]</sup></p>
+
+<p class="reveal">从清华园走出的书生，身上带着最硬的学术铠甲，和一件还没穿好的商业外套。</p>
+
+<!-- 第二章 -->
