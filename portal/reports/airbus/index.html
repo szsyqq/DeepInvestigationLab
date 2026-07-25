@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../../global.css">
 <title>八千架飞机的赌注：空中客车的产能马拉松与发动机之困 | 调查团队</title>
 <style>
 :root{--paper:#f5f1e8;--ink:#1a1a1a;--red:#a02020;--gold:#b8860b;--gray:#6b6b6b;--line:#c9c2b3;--bg-dark:#2a2520;--quote-bg:#ede8db}
@@ -20,105 +19,196 @@ body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Rom
 .top-bar .pos{color:var(--ink);font-size:12px;letter-spacing:.5px}
 .top-bar .pos b{color:var(--red);font-weight:700}
 .top-bar .sep{width:1px;height:14px;background:var(--line)}
-.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;white-space:nowrap}
+.top-bar .toc{background:var(--bg-dark);color:var(--paper);border:none;padding:5px 14px;border-radius:2px;font-size:12px;letter-spacing:1px;cursor:pointer;font-family:Georgia,serif;transition:background .15s;pointer-events:auto;white-space:nowrap}
 .top-bar .toc:hover{background:var(--red)}
 .progress-bar{position:fixed;top:70px;left:0;height:3px;background:var(--red);z-index:1000;transition:width .1s,top .2s}
-.masthead{display:flex;justify-content:space-between;align-items:center;padding:12px 32px;border-bottom:1px solid var(--ink);max-width:1200px;margin:0 auto}
-.masthead .brand{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--ink);font-weight:700;white-space:nowrap;flex-shrink:0}
-.masthead .brand .accent{color:var(--red)}
-.masthead .date{font-size:11px;color:var(--gray);letter-spacing:1px;white-space:nowrap;margin-left:auto}
-.masthead .brand a{color:inherit;text-decoration:none}
-.hero{max-width:1000px;margin:0 auto;padding:60px 32px 30px;text-align:center}
-.hero .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:18px}
-.hero h1{font-size:34px;line-height:1.3;font-weight:700;letter-spacing:1px;margin-bottom:18px}
-.hero .byline{font-size:13px;color:var(--gray);margin-bottom:8px}
-.hero .readtime{font-size:11px;color:var(--gray);letter-spacing:1px}
-.hero .deck{font-size:17px;color:var(--gray);line-height:1.6;max-width:700px;margin:20px auto 0;font-style:italic}
-article{max-width:700px;margin:0 auto;padding:40px 20px 60px}
-article h2{font-size:22px;margin-top:48px;margin-bottom:14px;line-height:1.4;color:var(--ink)}
-article h2 .chapter-num{display:inline-block;background:var(--red);color:#fff;font-size:11px;padding:2px 7px;margin-right:10px;letter-spacing:1px;border-radius:2px;vertical-align:middle}
-article p{font-size:17px;line-height:1.85;margin-bottom:16px;text-indent:2em;text-align:justify}
-article p.no-indent{text-indent:0}
-article .callout{background:var(--quote-bg);border-left:3px solid var(--red);padding:18px 20px;margin:24px 0;font-size:16px;line-height:1.8;border-radius:2px}
-article .callout p{text-indent:0;margin-bottom:0;font-size:16px}
-article .callout .label{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:700;margin-bottom:8px;text-transform:uppercase}
-article blockquote{background:var(--quote-bg);border-left:3px solid var(--gray);padding:14px 20px;margin:24px 0;font-style:italic;font-size:16px;color:var(--gray)}
-article blockquote p{text-indent:0;margin-bottom:0;font-size:16px}
-article .chart-wrap{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 20px 14px;margin:32px 0;text-align:center;overflow-x:auto}
-article .chart-wrap .chart-title{font-size:13px;font-weight:700;margin-bottom:6px;letter-spacing:.5px;text-indent:0}
-article .chart-wrap .chart-note{font-size:11px;color:var(--gray);margin-bottom:12px;text-indent:0}
-article .chart-wrap svg{display:block;margin:0 auto;max-width:100%;height:auto}
-article .chart-wrap table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;text-align:center;font-family:Georgia,serif}
-article .chart-wrap table th{background:var(--bg-dark);color:var(--paper);padding:6px;letter-spacing:1px;font-weight:700}
-article .chart-wrap table td{padding:5px;border-bottom:1px solid var(--line)}
-article .chart-wrap table tr:last-child td{border-bottom:none}
-article .chart-wrap table .num{font-family:'Courier New',monospace;font-size:12px}
-article .stat{display:inline-block;background:var(--quote-bg);border-radius:3px;padding:2px 6px;font-weight:700;text-indent:0}
-article sup{font-size:12px;color:var(--red);cursor:pointer}
-article sup:hover{background:var(--red);color:#fff;border-radius:2px;padding:0 2px}
-article .fn-tooltip{position:absolute;margin-left:8px;background:var(--bg-dark);color:var(--paper);font-size:11px;padding:6px 10px;border-radius:4px;max-width:280px;line-height:1.5;z-index:100;opacity:0;transition:opacity .2s;pointer-events:none;text-indent:0}
-article sup:hover .fn-tooltip{opacity:1}
-article .footnotes{border-top:2px solid var(--line);margin-top:48px;padding-top:20px}
-article .footnotes h3{font-size:14px;letter-spacing:2px;margin-bottom:12px;color:var(--gray)}
-article .footnotes ol{font-size:13px;color:var(--gray);line-height:1.7;padding-left:20px}
-article .footnotes ol li{margin-bottom:6px}
-article .footnotes ol li a{color:var(--red);word-break:break-all}
-article .tag{color:var(--red);border:1px solid var(--red);font-size:10px;letter-spacing:1px;padding:2px 8px;display:inline-block;border-radius:2px;margin-right:6px}
-
-/* Vertical timeline */
-.vertical-timeline{position:relative;padding:0;margin:32px 0;list-style:none;text-align:left}
-.vertical-timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:var(--line)}
-.vertical-timeline li{position:relative;padding:0 0 28px 52px;text-indent:0}
-.vertical-timeline li:last-child{padding-bottom:0}
-.vertical-timeline li::before{content:'';position:absolute;left:14px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--red);border:2px solid var(--paper)}
-.vertical-timeline li .vt-date{display:block;font-size:12px;color:var(--red);font-weight:700;letter-spacing:1px;margin-bottom:2px}
-.vertical-timeline li .vt-text{display:block;font-size:15px;line-height:1.6;color:var(--ink)}
-
-@media(max-width:640px){
-.hero h1{font-size:26px}
-.hero{padding:40px 16px 20px}
-article{padding:30px 14px 40px}
-article h2{font-size:19px}
-article p{font-size:16px}
-.top-bar-inner{padding:7px 12px;font-size:10px}
-.top-bar .pos, .top-bar .time{font-size:10px}
-.top-bar .home{font-size:10px;padding:3px 8px}
-.masthead{padding:8px 12px}
-.masthead .brand{font-size:10px}
-.masthead .date{font-size:10px}
-.article .chart-wrap{padding:14px 10px}
+.compact .internal-banner{display:none}
+.compact .top-bar{top:0;left:0;right:0;background:var(--red);border-bottom:none;z-index:9999;transition:top .3s,background .3s}
+.compact .top-bar-inner{padding:4px 24px;position:relative;transition:padding .3s}
+.compact .top-bar-inner::before{content:"\25CF 内部资料 · 仅供研究参考 · 请勿外传";position:absolute;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;white-space:nowrap;pointer-events:none;opacity:.7}
+.compact .top-bar .home{color:#fff;border-color:rgba(255,255,255,.6);padding:3px 10px;font-size:11px}
+.compact .top-bar .home::before{content:"\2190"}
+.compact .top-bar .home:hover{background:#fff;color:var(--red)}
+.compact .top-bar .time{display:none}
+.compact .top-bar .toc{display:none}
+.compact .top-bar .pos{color:#fff;font-size:11px;cursor:pointer;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;transition:background .15s}
+.compact .top-bar .pos:hover{background:rgba(255,255,255,.3)}
+.compact .top-bar .pos b{color:#fff}
+.compact .top-bar .sep{background:rgba(255,255,255,.35);height:12px}
+.compact .top-bar .toc{background:rgba(255,255,255,.25);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;position:relative;z-index:10;pointer-events:auto;white-space:nowrap}
+.compact .progress-bar{top:30px;transition:top .3s,width .1s}
+.hero + h2{border-top:none !important;padding-top:0 !important}
+body.locked{overflow:hidden}
+.consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
+.consent-overlay.show{opacity:1;visibility:visible}
+.consent-box{background:#fbf8f0;max-width:580px;width:100%;border-radius:6px;box-shadow:0 16px 48px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.consent-header{background:var(--red);color:#fff;padding:18px 24px;font-size:18px;font-weight:700;letter-spacing:1px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.consent-body{padding:22px 24px 16px;font-size:14px;line-height:1.85;color:#333}
+.consent-body h3{font-size:14px;color:var(--red);margin:18px 0 8px;letter-spacing:1px}
+.consent-body h3:first-child{margin-top:0}
+.consent-body ul{margin:8px 0 0 18px;padding:0}
+.consent-body li{margin-bottom:6px}
+.consent-body b{color:var(--ink)}
+.consent-footer{padding:16px 24px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.consent-agree{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:border-color .15s}
+.consent-agree:hover{border-color:var(--red)}
+.consent-agree input{width:18px;height:18px;flex-shrink:0;accent-color:var(--red);cursor:pointer;margin:0}
+.consent-btn{width:100%;background:var(--red);color:#fff;border:none;padding:13px 20px;font-size:15px;font-weight:700;letter-spacing:2px;border-radius:6px;cursor:pointer;transition:background .15s}
+.consent-btn:hover{background:#8a1818}
+.consent-btn:disabled{background:#cfc7b8;cursor:not-allowed}
+.consent-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.consent-close:hover{opacity:.8}
+@media(max-width:600px){
+  .consent-body{padding:16px 18px}
+  .consent-header{font-size:16px;padding:14px 18px}
+  .top-bar-inner{padding:8px 12px}
+  .top-bar .sep{display:none}
+  .top-bar .time{display:none}
+  .top-bar .home{border:none;padding:3px 8px;font-size:11px;letter-spacing:.5px}
+  .top-bar .home::before{content:"\2190";margin-right:4px}
+  .top-bar .toc{padding:4px 10px;font-size:11px;letter-spacing:.5px}
+  .top-bar-left,.top-bar-right{gap:6px}
+  .top-bar .pos{font-size:11px}
 }
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:18px 24px 10px;border-bottom:3px double var(--ink);max-width:940px;margin:0 auto}
+.masthead .brand{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+.masthead .brand b{color:var(--red);font-weight:700}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+.masthead .date{font-size:12px;color:var(--gray);letter-spacing:1px}
+.container{max-width:720px;margin:0 auto;padding:36px 24px 80px}
+.hero{margin-bottom:46px}
+.hero .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);display:inline-block;padding-bottom:3px;margin-bottom:18px}
+.hero .kicker .tag{color:var(--red);border:1px solid var(--red);font-size:10px;letter-spacing:1px;padding:2px 8px;display:inline-block;margin-right:8px}
+.hero h1{font-size:42px;font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:16px}
+.hero .dek{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:18px;font-style:normal}
+.hero .byline{display:flex;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-size:12px;letter-spacing:1px;color:var(--gray)}
+.hero .byline .meta{font-style:italic}
+.drop-cap::first-letter{font-size:58px;float:left;line-height:1;margin:4px 10px 0 0;font-weight:700;color:var(--ink)}
+h2{font-size:25px;font-weight:700;margin:50px 0 18px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.3px}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
+h3{font-size:19px;font-weight:700;margin:32px 0 14px;color:var(--ink)}
+h4{font-size:16px;font-weight:700;margin:24px 0 10px;color:var(--red)}
+p{margin-bottom:18px;text-align:justify}
+p.no-indent{text-indent:0}
+blockquote{background:var(--quote-bg);border-left:4px solid var(--red);padding:18px 24px;margin:24px 0;font-style:italic;font-size:17px;color:#3a3a3a}
+.callout{background:var(--quote-bg);border-left:3px solid var(--red);padding:18px 20px;margin:24px 0;font-size:16px;line-height:1.8;border-radius:2px}
+.callout p{text-indent:0;margin-bottom:0;font-size:16px}
+.callout .label{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.pull-quote{font-size:25px;font-style:italic;color:var(--red);text-align:center;margin:36px 20px;line-height:1.5;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px}
+th{background:var(--bg-dark);color:var(--paper);padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.5px}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+tr:nth-child(even){background:rgba(0,0,0,.02)}
+ul,ol{margin:18px 0 18px 24px}
+li{margin-bottom:10px}
+.chart-box{margin:28px 0;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.chart-title{font-size:14px;font-weight:700;letter-spacing:.5px;margin-bottom:4px;color:var(--bg-dark);text-align:center}
+.chart-sub{font-size:11px;color:var(--gray);text-align:center;margin-bottom:14px}
+.chart-box svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.footnotes{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}
+.footnotes h3{font-size:16px;letter-spacing:1px;text-transform:uppercase}
+.footnotes ol{font-size:13px;color:var(--gray);line-height:1.7}
+.footnotes li{margin-bottom:7px}
+sup{font-size:11px;color:var(--red);cursor:pointer}
+.disclaimer{font-size:12px;color:var(--gray);margin-top:30px;line-height:1.6;text-align:center}
+.fn-tooltip{position:fixed;max-width:340px;background:var(--bg-dark);color:#e8e2d4;padding:12px 16px;font-size:12.5px;line-height:1.6;border-radius:3px;z-index:500;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;pointer-events:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+.sidenav{position:fixed;top:0;right:0;width:250px;height:100vh;background:rgba(245,241,232,.98);border-left:1px solid var(--line);padding:86px 18px 20px;overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 20px rgba(0,0,0,.06)}
+.sidenav.open{transform:translateX(0)}
+.sidenav h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sidenav .close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--gray);cursor:pointer;font-family:Georgia,serif}
+.sidenav a{display:block;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;padding:8px;border-radius:2px;transition:all .2s;margin-bottom:2px}
+.sidenav a:hover{background:rgba(160,32,32,.08);color:var(--red)}
+.sidenav a.active{background:var(--red);color:var(--paper);font-weight:700}
+.sidenav a .num{font-size:11px;color:var(--gray);display:block;margin-bottom:2px}
+.sidenav a.active .num{color:rgba(255,255,255,.75)}
+.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:100;opacity:0;transition:opacity .3s;font-family:Georgia,serif}
+.back-top.visible{opacity:.85}
+.back-top:hover{opacity:1;background:var(--red)}
+/* vertical-timeline */
+ol.vertical-timeline{list-style:none;padding:0;margin:16px 0}
+ol.vertical-timeline li{padding:4px 0 4px 14px;border-left:2px solid var(--red);margin-bottom:12px;position:relative}
+ol.vertical-timeline li::before{content:'';position:absolute;left:-7px;top:12px;width:12px;height:12px;background:var(--red);border-radius:50%;border:2px solid var(--paper)}
+.vt-date{display:block;font-size:12px;font-weight:700;color:var(--red);margin-bottom:2px}
+.vt-text{display:block;font-size:14px;line-height:1.6;color:var(--ink)}
+@media(max-width:600px){
+  .hero h1{font-size:28px}
+  .hero .dek{font-size:15px}
+  body{font-size:16px}
+  .container{padding:24px 16px 60px}
+  .pull-quote{font-size:19px}
+  .sidenav .close{top:12px;right:12px}
+  .sidenav{padding:76px 14px 20px}
+}
+.masthead .brand a{color:inherit;text-decoration:none}
+.masthead .brand a:hover{color:var(--red)}
+footer{border-top:3px double var(--ink);margin-top:40px;padding:26px 0 50px;font-size:12px;color:var(--gray);line-height:1.7}
+footer .disc{margin:0 auto;max-width:680px;border:1px solid var(--line);border-radius:4px;padding:14px 24px;background:#fbf8f0}
+footer .disc b{color:var(--ink);font-weight:700;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+@media(max-width:600px){
+  footer{font-size:11px;padding:20px 0 40px}
+}
+
 </style>
 </head>
 <body>
-<div class="internal-banner">· 内部资料 · 仅供研究参考 · 不构成投资建议 ·</div>
-<div class="top-bar" id="topBar">
-<div class="top-bar-inner">
-<div class="top-bar-left">
-<a class="home" href="../../index.html">门站</a>
-<span class="sep"></span>
-<span class="pos">调查团队 · <b>空中客车</b></span>
+<div class="internal-banner"><span>●</span>内部资料 · 仅供研究参考 · 请勿外传</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a class="home" href="../../index.html">返回首页</a>
+      <span class="sep"></span>
+      <span class="time" id="readTime">约 25 分钟阅读</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="pos" id="tracker">导语</span>
+      <span class="sep"></span>
+      <button class="toc nav-toggle" onclick="toggleNav()">≡ 目录</button>
+    </div>
+  </div>
 </div>
-<div class="top-bar-right">
-<span class="time" id="readingTime">约 25 分钟阅读</span>
-<span class="sep"></span>
-<button class="toc" id="tocBtn" onclick="toggleToc()">目 录</button>
-</div>
-</div>
-</div>
-<div class="progress-bar" id="progressBar"></div>
+<div class="progress-bar" id="progress"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
 
-<header class="hero">
+<div class="masthead">
+<div class="brand"><a href="../../index.html">调查团队 · THE INVESTIGATION</a></div>
+<div class="date">2026年7月25日 <a class="home-link" href="../../index.html">档案室</a></div>
+</div>
+
+
+<div class="sidenav" id="sidenav">
+<button class="close" onclick="toggleNav()">×</button>
+<h4>章节导航</h4>
+<a href="#c0" data-ch="0"><span class="num">导语</span>创纪录订单簿</a>
+<a href="#c1" data-ch="1"><span class="num">第1章</span>发动机之困</a>
+<a href="#c2" data-ch="2"><span class="num">第2章</span>另一台发动机</a>
+<a href="#c3" data-ch="3"><span class="num">第3章</span>诉讼进行时</a>
+<a href="#c4" data-ch="4"><span class="num">第4章</span>Spirit收购</a>
+<a href="#c5" data-ch="5"><span class="num">第5章</span>波音的反扑</a>
+<a href="#c6" data-ch="6"><span class="num">第6章</span>中国赌局</a>
+<a href="#c7" data-ch="7"><span class="num">第7章</span>防务与航天</a>
+<a href="#c8" data-ch="8"><span class="num">第8章</span>氢能梦想</a>
+<a href="#c9" data-ch="9"><span class="num">第9章</span>财务透视</a>
+<a href="#epilogue" data-ch="10"><span class="num">尾声</span>当发动机更值钱</a>
+</div>
+
+<div class="container">
+<div class="hero">
 <div class="kicker"><span class="tag">试读</span>深度公司研究</div>
 <h1>八千架飞机的赌注：空中客车的产能马拉松与发动机之困</h1>
-<div class="deck">8754架积压订单、900架飞机因发动机停飞、一场与供应商对簿公堂的诉讼——全球最大飞机制造商的黄金时代背后，是供应链系统性脆弱正在被逐一戳破。</div>
-<div class="byline">调查团队 · 2026年7月</div>
-</header>
+<div class="dek">8754架积压订单、900架飞机因发动机停飞、一场与供应商对簿公堂的诉讼——全球最大飞机制造商的黄金时代背后，是供应链系统性脆弱正在被逐一戳破。</div>
+<div class="byline">
+<span class="author">调查团队</span>
+<span class="meta">2026年7月25日 · 约25分钟</span>
+</div>
+</div>
 
-<article>
 
-<section>
-<h2><span class="chapter-num">01</span>创纪录订单簿——8754架背后的订单悖论</h2>
+
+
+<h2 id="c0"><span class="chap-num">导语</span>创纪录订单簿——8754架背后的订单悖论</h2>
 
 <p>2026年2月19日，空客CEO傅里（Guillaume Faury）在年度新闻发布会上宣布了一个令人瞩目的数字：截至2025年底，空客的商用飞机积压订单达到8754架，按目录价格计算价值6190亿欧元<sup>[1]</sup>。这是空客历史上的最高纪录。以2025年793架交付量计算，即使不再接新订单，这些飞机也够空客生产11年。</p>
 
@@ -142,10 +232,10 @@ article p{font-size:16px}
 
 <p>截至2026年3月底，空客积压订单已进一步攀升至9037架的历史新高<sup>[2]</sup>。订单越来越多，交付越来越慢。这一矛盾的根源，要从一台发动机说起。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">02</span>发动机之困——普惠GTF的粉末冶金"原罪"</h2>
+
+
+<h2 id="c2"><span class="chap-num">第二章</span>发动机之困——普惠GTF的粉末冶金"原罪"</h2>
 
 <p>2026年7月，全球依然有约800至900架装配普惠PW1100G发动机的飞机处于封存状态<sup>[7]</sup>。这个数字占到全球GTF机队的三分之一。在中国，至少有9家航空公司的200多架A320neo受到波及——青岛航空在2025年暑运旺季，近40%的运力因发动机问题趴在地面<sup>[8]</sup>。</p>
 
@@ -167,9 +257,9 @@ article p{font-size:16px}
 
 <p>那到底什么时候能修好？未来预期如何？</p>
 
-<div class="chart-wrap">
+<div class="chart-box">
 <div class="chart-title">普惠GTF发动机危机时间线</div>
-<div class="chart-note">危机自2023年爆发，预计影响持续至2028-2030年</div>
+<div class="chart-sub">危机自2023年爆发，预计影响持续至2028-2030年</div>
 <ol class="vertical-timeline" style="text-align:left;max-width:450px;margin:0 auto">
 <li>
 <span class="vt-date">2015 — 2021</span>
@@ -218,10 +308,10 @@ article p{font-size:16px}
 
 <p>在此期间，全球每年约1000至2000台次的GTF维修需求持续挤压维修产能，留给空客和航空公司的选择不多：等，或者换。但问题在于——备选方案LEAP-1A也并非高枕无忧。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">03</span>另一台发动机——LEAP-1A能否成为空客的Plan B？</h2>
+
+
+<h2 id="c3"><span class="chap-num">第三章</span>另一台发动机——LEAP-1A能否成为空客的Plan B？</h2>
 
 <p>A320neo系列有两个发动机选项：普惠的PW1100G（GTF）和CFM国际的LEAP-1A——后者是通用电气（GE）和赛峰（Safran）的50/50合资公司。目前全球在役的A320neo机队中，约60%搭载LEAP-1A，40%搭载GTF<sup>[17]</sup>。</p>
 
@@ -239,10 +329,10 @@ article p{font-size:16px}
 
 <p>空客CEO傅里在2026年2月直言："2026年几乎没有看到发动机供应量大幅增长的希望。"<sup>[22]</sup>这句话既指向普惠，也指向CFM——后者也在优先保障在役机队的备件需求。两台发动机都紧，空客的Plan B不是一键切换供应商，而是在两条都紧的生产线上排队等货。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">04</span>诉讼进行时——空客与普惠的裂缝是如何撕开的</h2>
+
+
+<h2 id="c4"><span class="chap-num">第四章</span>诉讼进行时——空客与普惠的裂缝是如何撕开的</h2>
 
 <p>2026年3月，路透社报道了一则震动航空业的消息：空客已在美国发动机制造商普惠（RTX子公司）启动法律赔偿程序<sup>[23]</sup>。这标志着双方数月的商业争端正式升级为跨境商业诉讼。</p>
 
@@ -262,10 +352,10 @@ article p{font-size:16px}
 
 <p>这一裂缝也给了波音可乘之机。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">05</span>Spirit收购与供应链重整——垂直整合的代价</h2>
+
+
+<h2 id="c5"><span class="chap-num">第五章</span>Spirit收购与供应链重整——垂直整合的代价</h2>
 
 <p>发动机不是空客供应链的唯一痛处。2025年12月，空客完成了对Spirit AeroSystems部分资产的收购，这一收购承载着空客重建供应链掌控力的雄心<sup>[25]</sup>。</p>
 
@@ -281,16 +371,16 @@ article p{font-size:16px}
 
 <p>傅里在Q1电话会中总结说："我们正按计划提高产能，同时应对普惠发动机短缺的问题。"Spirit收购本身不会让交付立刻加速，但它解决了一个前提条件——不让结构件成为新的瓶颈。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">06</span>波音的反扑——双寡头力量平衡的微妙重调</h2>
+
+
+<h2 id="c6"><span class="chap-num">第六章</span>波音的反扑——双寡头力量平衡的微妙重调</h2>
 
 <p>2026年Q1，一个让空客阵营不愿看到的数字出现了：波音交付143架飞机，空客交付114架——这是自2018年波音737 MAX危机以来，波音首次在季度交付量上反超空客<sup>[29]</sup>。</p>
 
 <p>波音在2025年交付了600架商用飞机，接近翻倍。其净订单1173架，也超过了空客的889架。737 MAX的产能爬坡虽然也面临供应链限制，但因LEAP-1B发动机的单一供应体系避免了普惠GTF这样的结构性危机<sup>[30]</sup>。</p>
 
-<div class="chart-wrap">
+<div class="chart-box">
 <div class="chart-title">空客 vs 波音 · 年度交付量对比（2019-2025）</div>
 <svg viewBox="0 0 500 240" style="max-width:480px">
 <text x="250" y="18" text-anchor="middle" font-size="11" fill="var(--gray)">单位：架</text>
@@ -336,21 +426,21 @@ article p{font-size:16px}
 <rect x="155" y="225" width="10" height="10" fill="var(--gray)" opacity=".5" rx="1"/>
 <text x="168" y="234" font-size="9" fill="var(--ink)">波音</text>
 </svg>
-<div class="chart-note">2025年数据为两家公司官方公布数据。空客2025年793架，波音600架。Q1 2026波音143架反超空客114架。来源：公司财报<sup>[29]</sup><sup>[30]</sup></div>
+<div class="chart-sub">2025年数据为两家公司官方公布数据。空客2025年793架，波音600架。Q1 2026波音143架反超空客114架。来源：公司财报<sup>[29]</sup><sup>[30]</sup></div>
 </div>
 
 <p>然而，空客在积压订单上仍遥遥领先：9037架对波音的约6000架。波音的核心问题——737 MAX的产能恢复尚不稳定、777X的认证延迟——并未消失。但空客的发动机之痛给了波音一个难得的追赶窗口，哪怕只是暂时的。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">07</span>中国赌局——C919追击与空客的防御</h2>
+
+
+<h2 id="c7"><span class="chap-num">第七章</span>中国赌局——C919追击与空客的防御</h2>
 
 <p>中国市场是空客全球版图上最鲜艳的色块——55%的窄体机市场份额、2200多架在役飞机、天津第二条总装线2026年初投产<sup>[1]</sup>。2025年12月，五家中国航司一口气下单148架A320neo系列飞机<sup>[31]</sup>。</p>
 
 <p>但同一片天空下，国产C919的交付量正在以倍速增长。</p>
 
-<div class="chart-wrap">
+<div class="chart-box">
 <div class="chart-title">C919年度交付量 vs 空客A320在中国交付量</div>
 <svg viewBox="0 0 500 220" style="max-width:480px">
 <line x1="50" y1="190" x2="470" y2="190" stroke="var(--line)" stroke-width="1"/>
@@ -381,7 +471,7 @@ article p{font-size:16px}
 <text x="275" y="149" font-size="8" fill="#2563eb">16架</text>
 <text x="355" y="122" font-size="8" fill="#2563eb">~28架</text>
 <text x="190" y="236" text-anchor="middle" font-size="9" fill="var(--ink)">C919年度交付</text>
-<div class="chart-note">2026年为预测值。空客2025年在中国交付约120架A320系列。</div>
+<div class="chart-sub">2026年为预测值。空客2025年在中国交付约120架A320系列。</div>
 </svg>
 </div>
 
@@ -393,14 +483,14 @@ article p{font-size:16px}
 
 <p>空客商用飞机CEO舍雷尔评价C919时说："这不是威胁，这是竞争对手。这是现实存在的。"<sup>[35]</sup></p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">08</span>防务与航天——断臂求生与Project Bromo的豪赌</h2>
+
+
+<h2 id="c8"><span class="chap-num">第八章</span>防务与航天——断臂求生与Project Bromo的豪赌</h2>
 
 <p>防务与航天是空客三大板块中最跌宕起伏的一块。经历了2024年太空业务13亿欧元减记的惨痛，2025年该板块以EBIT调整后7.98亿欧元实现了账面翻身<sup>[36]</sup>。</p>
 
-<div class="chart-wrap">
+<div class="chart-box">
 <div class="chart-title">三大板块EBIT调整后对比</div>
 <svg viewBox="0 0 480 200" style="max-width:460px">
 <line x1="55" y1="180" x2="460" y2="180" stroke="var(--line)" stroke-width="1"/>
@@ -449,7 +539,7 @@ article p{font-size:16px}
 <rect x="125" y="222" width="10" height="10" fill="var(--red)" opacity=".4" rx="1"/>
 <text x="138" y="231" font-size="8" fill="var(--ink)">2024</text>
 </svg>
-<div class="chart-note">数据来源：空客2025及2024年度报告。2024年防务板块EBIT为-6.56亿欧元，其中太空业务贡献了约13亿欧元减记。</div>
+<div class="chart-sub">数据来源：空客2025及2024年度报告。2024年防务板块EBIT为-6.56亿欧元，其中太空业务贡献了约13亿欧元减记。</div>
 </div>
 
 <p>然而，7.98亿欧元的盈利背后，是一次"断臂求生"式的重组。2024年防务与航天亏损6.56亿欧元的根源在于Space Systems的13亿欧元资产减记——这几乎是整个板块当时盈利能力的全部被抹去。2025年的"翻身"并非来自业务本质改善，而是一次性减记的基数效应，加上A400M军用运输机项目暂时稳定的交付节奏和空中力量业务的增长<sup>[36]</sup>。</p>
@@ -458,16 +548,16 @@ article p{font-size:16px}
 
 <p>但项目面临阻力：德国OHB已威胁法律挑战，称合并"扰乱市场"。各项监管审批预计需要到2027年才能完成<sup>[37]</sup>。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">09</span>氢能梦想——现实与未来的裂谷</h2>
+
+
+<h2 id="c9"><span class="chap-num">第九章</span>氢能梦想——现实与未来的裂谷</h2>
 
 <p>2020年，空客高调发布ZEROe氢能飞机计划，承诺在2035年前将全球首架零排放商用氢能飞机投入运营。时任CEO傅里称这是"航空业的里程碑时刻"<sup>[38]</sup>。六年过去，这条时间线正在被现实拉长。</p>
 
-<div class="chart-wrap">
+<div class="chart-box">
 <div class="chart-title">空客ZEROe氢能飞机里程碑</div>
-<div class="chart-note">关键节点与实际进展对比</div>
+<div class="chart-sub">关键节点与实际进展对比</div>
 <ol class="vertical-timeline" style="text-align:left;max-width:420px;margin:0 auto">
 <li>
 <span class="vt-date">2020年9月</span>
@@ -500,14 +590,14 @@ article p{font-size:16px}
 
 <p>空客在氢能上的豪赌当然有其战略价值——它在逼迫行业思考零碳飞行的技术路线。但从当前技术成熟度和商业可行性来看，2035年的目标正在变得像一架永远不降落的飞机。</p>
 
-</section>
 
-<section>
-<h2><span class="chapter-num">10</span>财务透视——创纪录利润背后的现金之殇</h2>
+
+
+<h2 id="c10"><span class="chap-num">第十章</span>财务透视——创纪录利润背后的现金之殇</h2>
 
 <p>从账面数字看，空客2025年交出了一份亮眼的成绩单：营业收入734亿欧元，EBIT调整后71亿欧元，净利润52亿欧元，均为历史最高<sup>[1]</sup>。</p>
 
-<div class="chart-wrap">
+<div class="chart-box">
 <div class="chart-title">2025年营收结构</div>
 <svg viewBox="0 0 400 180" style="max-width:380px">
 <!-- Simple pie equivalent - horizontal stacked bar -->
@@ -524,7 +614,7 @@ article p{font-size:16px}
 <text x="190" y="100" text-anchor="middle" font-size="11" fill="var(--ink)">合并营业收入：€734亿</text>
 <text x="190" y="115" text-anchor="middle" font-size="9" fill="var(--gray)">注：各分部营收含分部间交易；含分部间抵消约€76亿</text>
 </svg>
-<div class="chart-note">数据来源：空客2025年度财务报告<sup>[1]</sup></div>
+<div class="chart-sub">数据来源：空客2025年度财务报告<sup>[1]</sup></div>
 </div>
 
 <p>但光辉的利润数字掩盖了现金流方面的结构性隐忧。Q1 2026自由现金流骤降至-25亿欧元。这是什么概念？2024年全年空客的客户融资前自由现金流为45亿欧元<sup>[1]</sup>，而2026年仅仅三个月就流出了25亿。</p>
@@ -539,10 +629,10 @@ article p{font-size:16px}
 
 <p>普惠发动机危机带来的连锁反应不止于数字层面。它将全球航空业最基础的经营假设摆上了审判台：双源供应真的是安全的吗？当两台发动机的产能都无法满足供需时，双寡头的脆弱性暴露无遗。</p>
 
-</section>
 
-<section>
-<h2>尾声——当发动机比飞机更值钱</h2>
+
+
+<h2 id="epilogue"><span class="chap-num">尾声</span>当发动机比飞机更值钱</h2>
 
 <p>2025年，一些航空租赁商发现了一个荒诞的套利机会：将一架机龄仅几年的A320neo拆解，拆下GTF发动机单独出租或出售，一台发动机的月租金可以开到20万美元——超过整架飞机租赁费的三分之二<sup>[40]</sup>。十多架几乎全新的A320neo被拆解，机身变成零件仓库，发动机成了比飞机本身更值钱的资产。</p>
 
@@ -550,7 +640,7 @@ article p{font-size:16px}
 
 <p>空客的故事远未结束。这不仅仅是一家公司的商业沉浮，而是一个关于全球制造业深层脆性的寓言：当全球最强大的工业体系将供应链的每个环节都推向极致时，最微小的缺陷会被放大到无法想象的程度。也许这就是双寡头市场最真实的图景——不是垄断带来的稳定，而是稳定之下的裂痕正在被逐一戳破。</p>
 
-</section>
+
 
 <div class="footnotes">
 <h3>脚注与参考来源</h3>
@@ -598,38 +688,133 @@ article p{font-size:16px}
 </ol>
 </div>
 
-</article>
 
-<div id="shareBtn" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:9000;transition:transform .15s" onclick="generateShareImage()">📤</div>
 
-<script src="../../global.js"></script>
-<script src="../../share.js"></script>
+<div class="disclaimer">* 本文基于公开信息与第三方数据撰写，仅供研究参考，不构成任何投资建议。数据来源已标注脚注，如有更新请以最新公告为准。</div>
+</div>
+
+<!-- consent overlay -->
+<div class="consent-overlay" id="consentOverlay">
+<div class="consent-box">
+<div class="consent-header">
+<span>法律声明 · LEGAL NOTICE</span>
+<button class="consent-close" onclick="document.getElementById('consentOverlay').classList.remove('show');">×</button>
+</div>
+<div class="consent-body">
+<h3>一、资料性质</h3>
+<p>本档案室内容为<strong>内部研究资料</strong>，包含对各上市／拟上市公司的独立调研与分析，不构成任何投资建议、要约或推荐。</p>
+<h3>二、免责声明</h3>
+<p>所有数据基于公开披露信息（招股书、年报、审计报告、新闻），分析仅代表调查团队个人观点，所涉判断不保证准确或完整。投资有风险，请读者独立判断。</p>
+<h3>三、用户知情同意</h3>
+<p>继续浏览本档案室，即表示您已阅读并同意以上声明。</p>
+</div>
+<div class="consent-footer">
+<label class="consent-agree">
+<input type="checkbox" id="consentCheck"> 我已阅读并同意上述声明
+</label>
+<button class="consent-btn" id="consentBtn" disabled onclick="document.getElementById('consentOverlay').classList.remove('show');document.body.classList.remove('locked');">确认并进入</button>
+</div>
+</div>
+</div>
+
 <script>
+document.documentElement.classList.remove('js');
+document.documentElement.classList.add('js');
+
+// Consent overlay
 (function(){
-var body=document.body, bar=document.getElementById('topBar'), prog=document.getElementById('progressBar'), scrolled=false;
-window.addEventListener('scroll',function(){
-var s=window.scrollY;
-if(s>80&&!scrolled){body.classList.add('compact');scrolled=true}
-else if(s<=80&&scrolled){body.classList.remove('compact');scrolled=false}
-var h=document.querySelector('article').offsetHeight-300,p=Math.min(s/h*100,100);
-prog.style.width=p+'%';
-});
-// TOC toggle
-var tocVisible=false,tocPanel=null;
-window.toggleToc=function(){
-if(!tocVisible){
-tocPanel=document.createElement('div');
-tocPanel.style.cssText='position:fixed;top:76px;right:0;width:260px;max-height:80vh;overflow-y:auto;background:var(--paper);border-left:1px solid var(--line);z-index:9997;padding:20px;font-size:13px';
-tocPanel.innerHTML='<div style="font-size:10px;letter-spacing:2px;color:var(--gray);margin-bottom:12px">目 录</div>'+
-Array.from(document.querySelectorAll('h2')).map(function(h,i){return '<div style="padding:6px 0;border-bottom:1px solid var(--line);cursor:pointer" onclick="var s=document.querySelectorAll(\'h2\')['+i+'];s.scrollIntoView({behavior:\'smooth\'});window.toggleToc()">'+
-'<span style="color:var(--red);font-weight:700">'+(i<9?'0'+(i+1):(i+1))+'</span>. '+h.textContent.replace(/^\d+\s*/,'')+'</div>'}).join('');
-document.body.appendChild(tocPanel);
-tocVisible=true;
-}else{if(tocPanel){tocPanel.remove();tocPanel=null}tocVisible=false}
-};
-// Scroll-based TOC close
-window.addEventListener('scroll',function(){if(tocVisible){if(tocPanel){tocPanel.remove();tocPanel=null}tocVisible=false}});
+  var overlay = document.getElementById('consentOverlay');
+  var check = document.getElementById('consentCheck');
+  var btn = document.getElementById('consentBtn');
+  if(!sessionStorage.getItem('consentDone')){
+    overlay.classList.add('show');
+    document.body.classList.add('locked');
+  }
+  check.addEventListener('change', function(){
+    btn.disabled = !this.checked;
+  });
+  btn.addEventListener('click', function(){
+    sessionStorage.setItem('consentDone','1');
+    overlay.classList.remove('show');
+    document.body.classList.remove('locked');
+  });
+  overlay.querySelector('.consent-close').addEventListener('click', function(){
+    overlay.classList.remove('show');
+    document.body.classList.remove('locked');
+  });
 })();
+
+// 阅读进度条
+var pBar = document.getElementById('progress');
+window.addEventListener('scroll', function(){
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  pBar.style.width = (h ? (window.scrollY / h * 100) : 0) + '%';
+});
+
+// 回到顶部
+var bt = document.getElementById('backTop');
+window.addEventListener('scroll', function(){
+  bt.classList.toggle('visible', window.scrollY > 300);
+});
+
+// 导航抽屉
+function toggleNav(){
+  var sidenav = document.getElementById('sidenav');
+  sidenav.classList.toggle('open');
+}
+
+// 跟踪器 + 导航高亮
+var tracker = document.getElementById('tracker');
+var sidenavLinks = document.querySelectorAll('.sidenav a');
+var chapters = document.querySelectorAll('h2[id]');
+sidenavLinks.forEach(function(a){
+  a.addEventListener('click', function(){
+    document.getElementById('sidenav').classList.remove('open');
+  });
+});
+
+function updateTracker(){
+  var closest = null, minDist = Infinity;
+  chapters.forEach(function(ch){
+    var r = ch.getBoundingClientRect();
+    var dist = Math.abs(r.top);
+    if(dist < minDist){ minDist = dist; closest = ch; }
+  });
+  if(closest){
+    var label = closest.querySelector('.chap-num');
+    var txt = label ? label.textContent.trim() : '';
+    tracker.textContent = txt;
+    var id = closest.getAttribute('id');
+    sidenavLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+}
+window.addEventListener('scroll', updateTracker);
+window.addEventListener('load', updateTracker);
+
+// 脚注工具提示
+var fns = document.querySelectorAll('sup');
+fns.forEach(function(s){
+  s.addEventListener('mouseenter', function(e){
+    var num = this.textContent.replace(/[\[\]]/g,'');
+    var li = document.querySelector('#footnotes ol li:nth-child('+num+')');
+    if(li){
+      var tip = document.createElement('div');
+      tip.className = 'fn-tooltip';
+      tip.textContent = li.textContent.substring(0,120) + (li.textContent.length > 120 ? '…' : '');
+      tip.style.display = 'block';
+      tip.style.left = Math.min(e.clientX + 10, window.innerWidth - 360) + 'px';
+      tip.style.top = Math.min(e.clientY + 20, window.innerHeight - 100) + 'px';
+      document.body.appendChild(tip);
+    }
+  });
+  s.addEventListener('mouseleave', function(){
+    var tip = document.querySelector('.fn-tooltip');
+    if(tip) tip.remove();
+  });
+});
 </script>
+
 </body>
 </html>
