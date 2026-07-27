@@ -29,7 +29,6 @@ p{margin-bottom:18px;text-indent:2em}
 .bar-track{flex:1;background:#e8e4da;border-radius:4px;height:28px;position:relative;overflow:visible}
 .bar-fill{height:100%;border-radius:4px;min-width:4px}
 .bar-fill.red{background:var(--red)}.bar-fill.dark{background:var(--bg-dark)}
-.tag{display:inline-block;color:var(--red);border:1px solid var(--red);font-size:10px;letter-spacing:1px;padding:2px 8px;margin-right:8px}
 .bar-value{position:absolute;right:-76px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap}
 .vs-chart{display:flex;justify-content:space-around;align-items:flex-end;height:260px;margin:20px 0;padding:10px 0;background:rgba(0,0,0,.015);border-radius:6px}
 .vs-col{display:flex;flex-direction:column;align-items:center;width:90px;height:100%}
@@ -46,6 +45,7 @@ p{margin-bottom:18px;text-indent:2em}
 .top-bar .time{font-size:11px;color:var(--gray)}
 .top-bar .toc{font-size:11px;background:none;border:1px solid var(--line);padding:3px 10px;border-radius:3px;cursor:pointer}
 .progress-bar{position:fixed;top:0;left:0;height:2px;background:var(--red);z-index:200;width:0}
+p.drop-cap:first-letter{font-size:52px;font-weight:700;float:left;line-height:.85;margin-right:8px;color:var(--red)}
 .back-top{position:fixed;bottom:30px;right:30px;width:40px;height:40px;background:var(--bg-dark);color:var(--paper);border:none;border-radius:50%;font-size:20px;cursor:pointer;opacity:0;z-index:98}
 .back-top:hover{background:var(--red)}
 .sidenav{position:fixed;top:0;right:-320px;width:300px;height:100%;background:var(--paper);z-index:300;box-shadow:-4px 0 20px rgba(0,0,0,.1);transition:right .35s;overflow-y:auto;padding:60px 20px 30px}
@@ -55,6 +55,7 @@ p{margin-bottom:18px;text-indent:2em}
 .sidenav a:hover,.sidenav a.active{border-left-color:var(--red);color:var(--red)}
 .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:250;opacity:0;visibility:hidden;transition:opacity .25s}
 .nav-overlay.open{opacity:1;visibility:visible}
+h2 .chap-num{font-size:13px;color:var(--red);letter-spacing:2px;display:block;margin-bottom:4px}
 .footnotes{margin-top:50px;padding-top:24px;border-top:2px solid var(--ink);font-size:14px;color:#555}
 .footnotes ol{padding-left:22px}.footnotes li{margin-bottom:8px;line-height:1.6}
 .consent-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s}
@@ -71,7 +72,7 @@ p{margin-bottom:18px;text-indent:2em}
 @media(max-width:600px){
   .hero h1{font-size:26px}.container{padding:32px 16px 60px}
   .metric-grid{grid-template-columns:repeat(2,1fr)}
-  .bar-label{width:70px;font-size:11px}.bar-value{right:-62px;font-size:11px}.tag{font-size:9px;padding:1px 6px}
+  .bar-label{width:70px;font-size:11px}.bar-value{right:-62px;font-size:11px}
   h2{font-size:19px;margin:36px 0 14px}
   .vs-chart{height:200px}.vs-bar{width:28px}.vs-col{width:65px}.vs-bar-label{font-size:10px}
 }
@@ -81,31 +82,35 @@ p{margin-bottom:18px;text-indent:2em}
 <div class="top-bar"><div class="top-bar-inner"><a class="home" href="../../index.html">返回首页</a><span class="time">约20分钟阅读</span><button class="toc" onclick="toggleNav()">≡ 目录</button></div></div>
 <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
 <div class="sidenav" id="sidenav"><button class="close" onclick="toggleNav()">×</button><h4>章节导航</h4>
-<a href="#intro">导语</a><a href="#ch1">稀缺去哪儿了</a>
-<a href="#ch2">两个泡泡玛特</a><a href="#ch3">段永平的选择</a>
-<a href="#ch4">全球化的代价</a><a href="#ch5">商品先行，故事随后</a>
-<a href="#ch6">三种IP生意</a><a href="#epi">尾声</a></div>
-<div class="masthead"><div class="kicker"><span class="tag">试读</span>深度公司研究 · DEEP DIVE</div>
+<a href="#intro">导语</a><a href="#c0">一只Labubu的全球征途</a><a href="#c1">稀缺去哪儿了</a>
+<a href="#c2">两个泡泡玛特</a><a href="#c3">段永平的选择</a>
+<a href="#c4">全球化的代价</a><a href="#c5">商品先行，故事随后</a>
+<a href="#c6">三种IP生意</a><a href="#c7">尾声</a></div>
+<div class="masthead"><div class="brand">深度公司研究 · DEEP DIVE</div>
 <div class="date">2026年7月26日 · 调查团队</div></div>
 <div class="container">
 <div class="hero"><h1>泡泡玛特：塑料玩具里的千亿帝国</h1>
 <p class="dek">2025年6月，一只薄荷色Labubu雕塑以108万元成交。同一天，这个系列的隐藏款“本我”在二手市场报价4522元——而它的官方售价是99元。六个月后，同一款“本我”跌到540元，跌了88%。稀缺溢价在消退，但141亿的年营收、35%的净利率、段永平的百亿持仓，又让市场无法简单地说“泡泡破了”。如果LABUBU不再稀缺，泡泡玛特的2143亿港元市值还剩下什么？</p>
 <div class="byline">调查团队 · 2026年7月26日</div></div>
 <div class="metric-grid">
-<div class="metric-box red"><span class="val">371.2亿</span><span class="label">营收(2025)</span></div>
+<div class="red" class="metric-box class="red""><span class="val">371.2亿</span><span class="label">营收(2025)</span></div>
 <div class="metric-box"><span class="val">+184.7%</span><span class="label">营收增速</span></div>
-<div class="metric-box gold"><span class="val">130.1亿</span><span class="label">净利润</span></div>
+<div class="gold" class="metric-box class="gold""><span class="val">130.1亿</span><span class="label">净利润</span></div>
 <div class="metric-box"><span class="val">35.2%</span><span class="label">净利率</span></div>
-<div class="metric-box red"><span class="val">141.6亿</span><span class="label">Labubu营收</span></div>
+<div class="red" class="metric-box class="red""><span class="val">141.6亿</span><span class="label">Labubu营收</span></div>
 <div class="metric-box"><span class="val">38.2%</span><span class="label">Labubu占比</span></div>
-<div class="metric-box gold"><span class="val">162.7亿</span><span class="label">海外营收</span></div>
+<div class="gold" class="metric-box class="gold""><span class="val">162.7亿</span><span class="label">海外营收</span></div>
 <div class="metric-box"><span class="val">2143亿</span><span class="label">市值(港元)</span></div>
 </div>
-<h2 id="ch1"><span class="num">第一章</span>稀缺去哪儿了</h2>
-<p>2025年6月14日，LABUBU 3.0前方高能系列发售。隐藏款“本我”在二手市场的成交价，从99元的官方售价一路飙至4522元。溢价44.7倍。它被称为“盲盒界的爱马仕”<sup>[1]</sup>。</p>
-<p>但“本我”的高光时刻只维持了四天。6月18日，泡泡玛特官方宣布大规模补货并开启线上预售——“本我”的成交价在当天跌至2433元，腰斩。到2025年底，540元；部分常规款跌破发行价，99元的盲盒在二手平台卖到82元<sup>[2]</sup>。曾经溢价19倍的怪味便利店系列，从4048元跌到308元。泡泡玛特官方信息显示，其毛绒玩具月产能已从2024年的800万件左右的水平提升至约3000万件，提高了近四倍<sup>[3]</sup>。</p>
-<p>这不是需求崩塌。这是一家在全球爆红的公司在主动给自己的核心IP“降温”。王宁在公开场合直言：“9月之后，LABUBU每月销售可能接近1000万只。我们在用各种方式，争取不要让它被恶意炒作。”供应链总裁袁俊杰更直接：“一个月的产能是去年同期的十倍以上。”<sup>[4]</sup></p>
-<p>王宁的算盘很清楚：人为制造的稀缺能给短期财报创造奇迹，但也养活了黄牛，透支了品牌。2025年的财报已经证明了LABUBU的能量——THE MONSTERS系列营收141.61亿元，同比增长365.7%，占总营收的38.15%<sup>[5]</sup>。但这个数字本身就是一个警示：当一个IP撑起近四成收入时，它的任何一个波动都会被放大成公司级的风险。泡泡玛特必须证明，在主动撤去稀缺这张底牌之后，消费者仍然愿意为LABUBU买单。2019年，Molly曾是泡泡玛特的“一姐”，贡献27.1%的营收。如今Molly的营收增长到了28.97亿元，占比却降到了7.8%——不是因为Molly卖得少了，而是LABUBU涨得太快了<sup>[6]</sup>。泡泡玛特的IP矩阵中，能否接住下一个LABUBU，不是一道选择题，而是一道生存题。</p>
+<h2 id="c0"><span class="chap-num">导语</span>一只Labubu的全球征途</h2>
+<p class="drop-cap">2025年4月，LABUBU 3.0前方高能系列在国内发售当天，泡泡玛特小程序被瞬间涌进的流量挤崩。线下门店从凌晨开始排队，二手市场上的隐藏款“本我”从99元的官方售价一路被炒到4522元。三个月后，这只尖耳朵、歪牙齿的毛绒怪物登上了梅西百货感恩节大游行的花车——这是百年来第一家在梅西百货花车上亮相的中国潮玩品牌<sup>[1]</sup>。</p>
+<p>LABUBU的全球爆红，把它的母公司推到了一个惊人的高度。2025年，泡泡玛特全年营收371.2亿元，同比增长184.7%；净利润130.1亿元，同比增长293.3%。毛利率72.1%，净资产收益率77.5%。中国消费行业过去十年里，几乎没有第二家公司交出过这样的成绩单<sup>[2]</sup>。</p>
+<p>但这份成绩单发布的当天，泡泡玛特股价暴跌22.51%。市场在担心同一个问题：当LABUBU不再稀缺，泡泡玛特还剩下什么？二手市场上，“本我”的价格已经跌到540元，跌幅88%。段永平从“看不懂”变成了第二大股东。全球门店在半年内增加了109家。泡泡玛特正在做的事情——主动扩产打压二手溢价、全球铺店、与索尼合作拍电影、开甜品店——每一件都在把它推向一个更大的赌局：把一场全球流行，转化为跨周期的IP生意。</p>
+<h2 id="c1"><span class="chap-num">第一章</span>稀缺去哪儿了</h2>
+<p>2025年6月14日，LABUBU 3.0前方高能系列发售。隐藏款“本我”在二手市场的成交价，从99元的官方售价一路飙至4522元。溢价44.7倍。它被称为“盲盒界的爱马仕”<sup>[3]</sup>。</p>
+<p>但“本我”的高光时刻只维持了四天。6月18日，泡泡玛特官方宣布大规模补货并开启线上预售——“本我”的成交价在当天跌至2433元，腰斩。到2025年底，540元；部分常规款跌破发行价，99元的盲盒在二手平台卖到82元<sup>[4]</sup>。曾经溢价19倍的怪味便利店系列，从4048元跌到308元。泡泡玛特官方信息显示，其毛绒玩具月产能已从2024年的800万件左右的水平提升至约3000万件，提高了近四倍<sup>[5]</sup>。</p>
+<p>这不是需求崩塌。这是一家在全球爆红的公司在主动给自己的核心IP“降温”。王宁在公开场合直言：“9月之后，LABUBU每月销售可能接近1000万只。我们在用各种方式，争取不要让它被恶意炒作。”供应链总裁袁俊杰更直接：“一个月的产能是去年同期的十倍以上。”<sup>[6]</sup></p>
+<p>王宁的算盘很清楚：人为制造的稀缺能给短期财报创造奇迹，但也养活了黄牛，透支了品牌。2025年的财报已经证明了LABUBU的能量——THE MONSTERS系列营收141.61亿元，同比增长365.7%，占总营收的38.15%<sup>[7]</sup>。但这个数字本身就是一个警示：当一个IP撑起近四成收入时，它的任何一个波动都会被放大成公司级的风险。泡泡玛特必须证明，在主动撤去稀缺这张底牌之后，消费者仍然愿意为LABUBU买单。2019年，Molly曾是泡泡玛特的“一姐”，贡献27.1%的营收。如今Molly的营收增长到了28.97亿元，占比却降到了7.8%——不是因为Molly卖得少了，而是LABUBU涨得太快了<sup>[8]</sup>。泡泡玛特的IP矩阵中，能否接住下一个LABUBU，不是一道选择题，而是一道生存题。</p>
 <div class="chart-box"><div class="title">TOP 7 IP 营收（2025年，亿元）</div><div class="bar-chart">
 <div class="bar-row"><span class="bar-label">THE MONSTERS</span><div class="bar-track"><div class="bar-fill red" style="width:100%"><span class="bar-value">141.6亿</span></div></div></div>
 <div class="bar-row"><span class="bar-label">SKULLPANDA</span><div class="bar-track"><div class="bar-fill dark" style="width:25%"><span class="bar-value">35.4亿</span></div></div></div>
@@ -115,73 +120,75 @@ p{margin-bottom:18px;text-indent:2em}
 <div class="bar-row"><span class="bar-label">星星人</span><div class="bar-track"><div class="bar-fill dark" style="width:15%"><span class="bar-value">20.6亿</span></div></div></div>
 <div class="bar-row"><span class="bar-label">HIRONO</span><div class="bar-track"><div class="bar-fill dark" style="width:12%"><span class="bar-value">17.4亿</span></div></div></div>
 </div></div>
-<p>泡泡玛特不是没有认识到这个问题。2025年，星星人IP营收20.56亿元，同比增长1599%。在财报电话会上，王宁略带骄傲地说：“哪怕去年没有LABUBU，我们也获得了超级快速的成长。”但星星人的20.56亿，与LABUBU的141.61亿之间，还差着一百多亿的距离<sup>[7]</sup>。问题不在于泡泡玛特有没有第二个LABUBU，而在于当第二个LABUBU出现之前，现有业务的消费基础是否足够坚实。</p>
-<h2 id="ch2"><span class="num">第二章</span>两个泡泡玛特</h2>
+<p>泡泡玛特不是没有认识到这个问题。2025年，星星人IP营收20.56亿元，同比增长1599%。在财报电话会上，王宁略带骄傲地说：“哪怕去年没有LABUBU，我们也获得了超级快速的成长。”但星星人的20.56亿，与LABUBU的141.61亿之间，还差着一百多亿的距离<sup>[9]</sup>。问题不在于泡泡玛特有没有第二个LABUBU，而在于当第二个LABUBU出现之前，现有业务的消费基础是否足够坚实。</p>
+<h2 id="c2"><span class="num">第二章</span>两个泡泡玛特</h2>
 <p>2025年的年报事实上呈现了两家截然不同的公司。</p>
-<p>一家是“会员经济”的胜利者：截至2025年底，累计注册会员7258万人，当年新增约2650万人，同比增长57.5%。年度复购率55.7%——这意味着超过一半的会员在一年内买了两次以上。会员销售贡献率达到93.7%<sup>[8]</sup>。55.7%的复购率意味着消费不是一次性冲动，而是一种有粘性的习惯。泡泡玛特经营现金流108.65亿元，自由现金流98.8亿元，这是2025年赚到的真金白银，不是纸面利润。<sup>[9]</sup></p>
-<p>另一家公司则隐藏在这些数字背后：THE MONSTERS一个IP贡献了141.61亿元，是第二名SKULLPANDA（35.40亿元）的四倍。17个营收过亿的IP中，第2名到第17名的营收之和，才刚刚超过THE MONSTERS。2025年H1，THE MONSTERS占总营收比例从2024年的23.3%攀升至34.7%，全年进一步升至38.15%——集中度不降反升<sup>[10]</sup>。</p>
+<p>一家是“会员经济”的胜利者：截至2025年底，累计注册会员7258万人，当年新增约2650万人，同比增长57.5%。年度复购率55.7%——这意味着超过一半的会员在一年内买了两次以上。会员销售贡献率达到93.7%<sup>[10]</sup>。55.7%的复购率意味着消费不是一次性冲动，而是一种有粘性的习惯。泡泡玛特经营现金流108.65亿元，自由现金流98.8亿元，这是2025年赚到的真金白银，不是纸面利润。<sup>[11]</sup></p>
+<p>另一家公司则隐藏在这些数字背后：THE MONSTERS一个IP贡献了141.61亿元，是第二名SKULLPANDA（35.40亿元）的四倍。17个营收过亿的IP中，第2名到第17名的营收之和，才刚刚超过THE MONSTERS。2025年H1，THE MONSTERS占总营收比例从2024年的23.3%攀升至34.7%，全年进一步升至38.15%——集中度不降反升<sup>[12]</sup>。</p>
 <div class="chart-box"><div class="title">产品结构变化</div><div class="bar-chart">
 <div class="bar-row"><span class="bar-label">毛绒玩具</span><div class="bar-track"><div class="bar-fill red" style="width:100%"><span class="bar-value">187.1亿</span></div></div></div>
 <div class="bar-row"><span class="bar-label">盲盒手办</span><div class="bar-track"><div class="bar-fill dark" style="width:64%"><span class="bar-value">120.3亿</span></div></div></div>
 <div class="bar-row"><span class="bar-label">其他</span><div class="bar-track"><div class="bar-fill dark" style="width:34%"><span class="bar-value">63.8亿</span></div></div></div>
 </div></div>
-<p>存货数据显示了扩张的另一面：存货周转天数从2024年的102天上升至2025年的123天，半年报时的82.56天到年末已拉长至120.98天<sup>[11]</sup>。对于一家“快消式”潮玩公司，存货加速恶化通常是运营效率下降的早期信号。再加上毛绒玩具收入的占比从37.5%升至50.4%，“前方高能”等最畅销的毛绒系列仍然采用盲盒销售——就像内部人士说的：“毛绒是形式，盲盒是灵魂。”<sup>[12]</sup>产品形态在变，但底层销售逻辑不变。</p>
+<p>存货数据显示了扩张的另一面：存货周转天数从2024年的102天上升至2025年的123天，半年报时的82.56天到年末已拉长至120.98天<sup>[13]</sup>。对于一家“快消式”潮玩公司，存货加速恶化通常是运营效率下降的早期信号。再加上毛绒玩具收入的占比从37.5%升至50.4%，“前方高能”等最畅销的毛绒系列仍然采用盲盒销售——就像内部人士说的：“毛绒是形式，盲盒是灵魂。”<sup>[14]</sup>产品形态在变，但底层销售逻辑不变。</p>
 <p>这两幅面孔同时存在——既有会员复购和现金产生能力的真实消费系统，也有IP集中度和库存承压的结构性风险。任何单一的判断都可能是片面的。而一位以“买股票就是买公司”著称的投资人，正是以这个矛盾为起点，在2026年初做出了他的选择。</p>
-<h2 id="ch3"><span class="num">第三章</span>段永平的选择</h2>
-<p>2025年8月，当LABUBU在全球爆红、泡泡玛特股价冲上339.8港元的历史高点时，段永平在社交平台上给出了他的判断：“我看不懂10年后公司会怎样，不会碰。”他甚至将潮玩比作“电子宠物、呼啦圈”，担忧需求只是昙花一现<sup>[13]</sup>。2026年1月，他仍然表示“无法理解人们为什么会需要这个东西”。</p>
-<p>然后3月25日来了。泡泡玛特发了2025年年报：营收371.2亿元，净利润130.1亿元。这份成绩单本身不令人意外——超高速增长已有预期——但市场关注的是“之后怎么办”。年报发布当天，股价暴跌22.51%，市值蒸发超650亿港元，股价从高点三百多跌到了一百多元<sup>[14]</sup>。段永平在五天后发帖：“这两天花时间再看了看泡泡玛特，决定收回之前不投资的说法。”<sup>[15]</sup></p>
-<p>他在4月初实地探访了伦敦Westfield的泡泡玛特门店：“门店只有大概60平米，生意确实很好，绝大部分是大人，老中比例很小，大概10%的样子。”他看了王宁的访谈录《因为独特》。4月9日，他宣布“泡泡玛特保险公司正式开张”——通过卖出看跌期权的方式建仓。5月7日，他抛出了那颗重磅炸弹：“我把我的神华都换了泡泡玛特了。”<sup>[16]</sup></p>
-<p>截至2026年7月，段永平持有泡泡玛特7.65%的股份，位列第二大股东。他在解释这笔投资时说的是：“泡泡玛特目前是个2000亿港币市值左右的公司，去年已经赚到130亿元人民币的利润，商业模式已经跑通，企业文化很好。未来10年20年的平均年利润大概率不会低于现在。”<sup>[17]</sup>130亿的已实现利润，加上股价从高点回落超过55%后的安全边际，这才是他改变主意的真正原因。不是他忽然理解了潮玩的审美，而是数据让他重新计算了概率。但段永平自己也在最后加了一句话：“这里假设了人们确实会持续有这种情绪价值的需求。”这个假设能不能成立，取决于泡泡玛特在全球化中的下一步棋。</p>
-<h2 id="ch4"><span class="num">第四章</span>全球化的代价</h2>
-<p>2025年，泡泡玛特海外收入162.7亿元，同比增长291.9%，占总营收的43.8%。美洲市场从约8亿元飙升至68.06亿元，涨幅748.4%<sup>[18]</sup>。</p>
+<h2 id="c3"><span class="num">第三章</span>段永平的选择</h2>
+<p>2025年8月，当LABUBU在全球爆红、泡泡玛特股价冲上339.8港元的历史高点时，段永平在社交平台上给出了他的判断：“我看不懂10年后公司会怎样，不会碰。”他甚至将潮玩比作“电子宠物、呼啦圈”，担忧需求只是昙花一现<sup>[15]</sup>。2026年1月，他仍然表示“无法理解人们为什么会需要这个东西”。</p>
+<p>然后3月25日来了。泡泡玛特发了2025年年报：营收371.2亿元，净利润130.1亿元。这份成绩单本身不令人意外——超高速增长已有预期——但市场关注的是“之后怎么办”。年报发布当天，股价暴跌22.51%，市值蒸发超650亿港元，股价从高点三百多跌到了一百多元<sup>[16]</sup>。段永平在五天后发帖：“这两天花时间再看了看泡泡玛特，决定收回之前不投资的说法。”<sup>[17]</sup></p>
+<p>他在4月初实地探访了伦敦Westfield的泡泡玛特门店：“门店只有大概60平米，生意确实很好，绝大部分是大人，老中比例很小，大概10%的样子。”他看了王宁的访谈录《因为独特》。4月9日，他宣布“泡泡玛特保险公司正式开张”——通过卖出看跌期权的方式建仓。5月7日，他抛出了那颗重磅炸弹：“我把我的神华都换了泡泡玛特了。”<sup>[18]</sup></p>
+<p>截至2026年7月，段永平持有泡泡玛特7.65%的股份，位列第二大股东。他在解释这笔投资时说的是：“泡泡玛特目前是个2000亿港币市值左右的公司，去年已经赚到130亿元人民币的利润，商业模式已经跑通，企业文化很好。未来10年20年的平均年利润大概率不会低于现在。”<sup>[19]</sup>130亿的已实现利润，加上股价从高点回落超过55%后的安全边际，这才是他改变主意的真正原因。不是他忽然理解了潮玩的审美，而是数据让他重新计算了概率。但段永平自己也在最后加了一句话：“这里假设了人们确实会持续有这种情绪价值的需求。”这个假设能不能成立，取决于泡泡玛特在全球化中的下一步棋。</p>
+<h2 id="c4"><span class="num">第四章</span>全球化的代价</h2>
+<p>2025年，泡泡玛特海外收入162.7亿元，同比增长291.9%，占总营收的43.8%。美洲市场从约8亿元飙升至68.06亿元，涨幅748.4%<sup>[20]</sup>。</p>
 <div class="chart-box"><div class="title">各区域营收对比（2025年，亿元）</div><div class="vs-chart">
 <div class="vs-col"><div class="vs-name">中国内地</div><div class="vs-bars"><div class="vs-bar b" style="height:170px"></div></div><div class="vs-bar-label">208.5亿</div></div>
 <div class="vs-col"><div class="vs-name">亚太(除中国)</div><div class="vs-bars"><div class="vs-bar b" style="height:65px"></div></div><div class="vs-bar-label">80.1亿</div></div>
 <div class="vs-col"><div class="vs-name">美洲</div><div class="vs-bars"><div class="vs-bar a" style="height:55px"></div></div><div class="vs-bar-label">68.1亿</div></div>
 <div class="vs-col"><div class="vs-name">欧洲及其他</div><div class="vs-bars"><div class="vs-bar b" style="height:12px"></div></div><div class="vs-bar-label">14.5亿</div></div>
 </div></div>
-<p>但全球化不只是增长的发动机，也是一台成本消耗机。2025年下半年起，受国际能源市场波动影响，PVC、布料、包装等原材料价格出现不同程度上涨。泡泡玛特管理层在2026年Q1业绩会上表示，原材料成本较去年同期预计上升3至5个百分点，头程物流费用同步上涨，叠加部分市场的进口关税增加，预计整体毛利率下滑约0.5至2个百分点<sup>[19]</sup>。存货规模的变化同样显著——在港元口径下，期末存货从约24.93亿港元（2025年6月底）翻倍至约60.59亿港元（2025年12月底），库存周转天数从约82天拉长至约121天<sup>[20]</sup>。全球门店从年初的521家扩张至630家，净增109家，其中海外净增78家。COO司德在内部坦言：“海外运营需要更多时间来沉淀。”</p>
+<p>但全球化不只是增长的发动机，也是一台成本消耗机。2025年下半年起，受国际能源市场波动影响，PVC、布料、包装等原材料价格出现不同程度上涨。泡泡玛特管理层在2026年Q1业绩会上表示，原材料成本较去年同期预计上升3至5个百分点，头程物流费用同步上涨，叠加部分市场的进口关税增加，预计整体毛利率下滑约0.5至2个百分点<sup>[21]</sup>。存货规模的变化同样显著——在港元口径下，期末存货从约24.93亿港元（2025年6月底）翻倍至约60.59亿港元（2025年12月底），库存周转天数从约82天拉长至约121天<sup>[22]</sup>。全球门店从年初的521家扩张至630家，净增109家，其中海外净增78家。COO司德在内部坦言：“海外运营需要更多时间来沉淀。”</p>
 <p>这些数字指向一个事实：泡泡玛特正在从一台高毛利率的商品机器，变成一张更重、更复杂的全球零售和供应链网络。在曼谷或巴黎开一家店，赚到的是营收增量，付出的则是越来越复杂的成本项。当商品网络变重，公司需要另一种增长方式来对冲扩张的固定成本——而这个方式，正是内容。</p>
-<h2 id="ch5"><span class="num">第五章</span>商品先行，故事随后</h2>
-<p>2025年，泡泡玛特宣布与索尼影业合作，为LABUBU开发一部真人动画电影。导演保罗·金，拍的是《帕丁顿熊》。艺术家龙家升担任监制。项目目前仍处于早期开发阶段<sup>[21]</sup>。这条消息的战略含义超过了它本身的娱乐新闻价值。LABUBU是一个没有故事的角色——她就是一个尖耳朵、歪牙齿、笑容神秘的小怪物，没有背景设定、没有性格弧光、没有成长经历。在商品端，没有故事的IP可以卖得很好：LABUBU 2025年卖了1亿只以上，THE MONSTERS系列全球销售额超过141亿元<sup>[22]</sup>。但要把这个角色从商品变成文化资产，泡泡玛特必须给它故事。</p>
-<p>三丽鸥给Hello Kitty在Netflix做了12集原创动画，乐高拍了全球票房4.7亿美元的《乐高大电影》。泡泡玛特的电影能不能成功，没有人知道——项目仍在早期。但方向是确定的：泡泡玛特不愿意只做一家“卖塑料玩具”的公司。它已经在主题乐园、甜品店、小家电、饰品等领域铺设了IP衍生生态。POP BAKERY甜品品牌、POPOP饰品店和与荣耀联名的手机，都在尝试把IP的触角从玩具货架延伸至更多消费场景<sup>[23]</sup>。王宁说：“我们不会追求特别激进的增收不增利式成长。”但至少在内容投入上，泡泡玛特不得不激进——因为竞争对手不只是TOP TOY，更是三丽鸥和迪士尼。</p>
-<h2 id="ch6"><span class="num">第六章</span>三种IP生意</h2>
-<p>2025年，TOP TOY营收35.87亿元，同比增长87.9%，毛利率32.1%。泡泡玛特同期毛利率72.1%——整整高出40个百分点<sup>[24]</sup>。这个差距的核心不在零售效率，而在于商业模式。泡泡玛特走的是“IP驱动”：自己孵化IP、自己生产、自己零售，吃掉整个价值链上最丰厚的一段。TOP TOY走的是“渠道驱动”：开集合店，卖三丽鸥、迪士尼的授权产品和少量自有IP，赚零售的薄利。截至2025年末，TOP TOY自有IP收入占比仅为5.7%——它本质上是一个潮玩零售商，不是IP公司<sup>[25]</sup>。</p>
-<p>第三条路是三丽鸥。Hello Kitty诞生于1974年，已经50岁了。2025年，三丽鸥把旗下角色搬上Netflix，用内容延长IP的生命周期。它的IP运营方法在今天的泡泡玛特身上依稀可见：多角色矩阵、全球授权网络、主题零售体验。区别在于，三丽鸥花了50年建立的角色情感连接，泡泡玛特正在用10年追赶<sup>[26]</sup>。</p>
-<p>泡泡玛特不必复制任何一个模型。但它必须证明三件事：第一，除了THE MONSTERS之外，其他IP也能成长为独立的经济体（星星人、SKULLPANDA、HIRONO提供了希望，但规模上还有巨大差距）；第二，多角色、多层变现不是概念，而是已经产生收入的业务结构（IP授权收入33.82亿元，占比9.11%，是一个有意义的开始）；第三，当LABUBU的全球热度正常化之后，公司仍然能维持可观的利润率和增长速度。2026年Q1，泡泡玛特整体收益同比增长75%-80%，但海外增速已经从2025年的比三四百下降到25%-65%的区间——降温的不仅是LABUBU的二手价格，还有整个增长曲线的斜率<sup>[27]</sup>。问题的核心，也从“泡泡玛特还能涨多快”，变成了“泡泡玛特能在20%-30%的增速区间里站稳多久”。</p>
-<h2 id="epi"><span class="num">尾声</span></h2>
-<p>2025年，王宁在接受《人民日报》专访时说：“以前我们总说想成为中国的迪士尼，但现在我们不再说那样的话了。我们希望有一天，能成为世界的泡泡玛特。”<sup>[28]</sup>这句话被反复引用，但它在2026年有了新的重量。泡泡玛特正在做的事情——主动撤去稀缺、用产能拉平供需、全球开店、做电影、做乐园、做甜品——每一件都是把“潮玩公司”四个字擦掉，重新写上一个更大的标题。630家全球门店、7258万会员、130亿的净利润，这是一家已经开始兑现承诺的公司。但迪士尼的模式建立在几十年积累的数百个IP和内容之上，而泡泡玛特今天依然靠LABUBU扛着近四成收入。</p>
-<p>回到那只拍出108万元的薄荷色LABUBU。她值钱的不是塑料的材质，而是背后的稀缺性。泡泡玛特正在进行一场实验：当稀缺退去，靠会员、复购、全球网络和内容投入，能否把一场全球流行转换为跨周期的IP生意？段永平的赌注是他对财报数字的理解。而王宁的赌注更朴素——他尊重时间：“任何该10年做成的事情，就不要总想着两三年就做成。”<sup>[29]</sup>泡泡玛特的下一个十年，从这个爆款之后才算真正开始。</p>
+<h2 id="c5"><span class="num">第五章</span>商品先行，故事随后</h2>
+<p>2025年，泡泡玛特宣布与索尼影业合作，为LABUBU开发一部真人动画电影。导演保罗·金，拍的是《帕丁顿熊》。艺术家龙家升担任监制。项目目前仍处于早期开发阶段<sup>[23]</sup>。这条消息的战略含义超过了它本身的娱乐新闻价值。LABUBU是一个没有故事的角色——她就是一个尖耳朵、歪牙齿、笑容神秘的小怪物，没有背景设定、没有性格弧光、没有成长经历。在商品端，没有故事的IP可以卖得很好：LABUBU 2025年卖了1亿只以上，THE MONSTERS系列全球销售额超过141亿元<sup>[24]</sup>。但要把这个角色从商品变成文化资产，泡泡玛特必须给它故事。</p>
+<p>三丽鸥给Hello Kitty在Netflix做了12集原创动画，乐高拍了全球票房4.7亿美元的《乐高大电影》。泡泡玛特的电影能不能成功，没有人知道——项目仍在早期。但方向是确定的：泡泡玛特不愿意只做一家“卖塑料玩具”的公司。它已经在主题乐园、甜品店、小家电、饰品等领域铺设了IP衍生生态。POP BAKERY甜品品牌、POPOP饰品店和与荣耀联名的手机，都在尝试把IP的触角从玩具货架延伸至更多消费场景<sup>[25]</sup>。王宁说：“我们不会追求特别激进的增收不增利式成长。”但至少在内容投入上，泡泡玛特不得不激进——因为竞争对手不只是TOP TOY，更是三丽鸥和迪士尼。</p>
+<h2 id="c6"><span class="num">第六章</span>三种IP生意</h2>
+<p>2025年，TOP TOY营收35.87亿元，同比增长87.9%，毛利率32.1%。泡泡玛特同期毛利率72.1%——整整高出40个百分点<sup>[26]</sup>。这个差距的核心不在零售效率，而在于商业模式。泡泡玛特走的是“IP驱动”：自己孵化IP、自己生产、自己零售，吃掉整个价值链上最丰厚的一段。TOP TOY走的是“渠道驱动”：开集合店，卖三丽鸥、迪士尼的授权产品和少量自有IP，赚零售的薄利。截至2025年末，TOP TOY自有IP收入占比仅为5.7%——它本质上是一个潮玩零售商，不是IP公司<sup>[27]</sup>。</p>
+<p>第三条路是三丽鸥。Hello Kitty诞生于1974年，已经50岁了。2025年，三丽鸥把旗下角色搬上Netflix，用内容延长IP的生命周期。它的IP运营方法在今天的泡泡玛特身上依稀可见：多角色矩阵、全球授权网络、主题零售体验。区别在于，三丽鸥花了50年建立的角色情感连接，泡泡玛特正在用10年追赶<sup>[28]</sup>。</p>
+<p>泡泡玛特不必复制任何一个模型。但它必须证明三件事：第一，除了THE MONSTERS之外，其他IP也能成长为独立的经济体（星星人、SKULLPANDA、HIRONO提供了希望，但规模上还有巨大差距）；第二，多角色、多层变现不是概念，而是已经产生收入的业务结构（IP授权收入33.82亿元，占比9.11%，是一个有意义的开始）；第三，当LABUBU的全球热度正常化之后，公司仍然能维持可观的利润率和增长速度。2026年Q1，泡泡玛特整体收益同比增长75%-80%，但海外增速已经从2025年的比三四百下降到25%-65%的区间——降温的不仅是LABUBU的二手价格，还有整个增长曲线的斜率<sup>[29]</sup>。问题的核心，也从“泡泡玛特还能涨多快”，变成了“泡泡玛特能在20%-30%的增速区间里站稳多久”。</p>
+<h2 id="c7"><span class="num">尾声</span></h2>
+<p>2025年，王宁在接受《人民日报》专访时说：“以前我们总说想成为中国的迪士尼，但现在我们不再说那样的话了。我们希望有一天，能成为世界的泡泡玛特。”<sup>[30]</sup>这句话被反复引用，但它在2026年有了新的重量。泡泡玛特正在做的事情——主动撤去稀缺、用产能拉平供需、全球开店、做电影、做乐园、做甜品——每一件都是把“潮玩公司”四个字擦掉，重新写上一个更大的标题。630家全球门店、7258万会员、130亿的净利润，这是一家已经开始兑现承诺的公司。但迪士尼的模式建立在几十年积累的数百个IP和内容之上，而泡泡玛特今天依然靠LABUBU扛着近四成收入。</p>
+<p>回到那只拍出108万元的薄荷色LABUBU。她值钱的不是塑料的材质，而是背后的稀缺性。泡泡玛特正在进行一场实验：当稀缺退去，靠会员、复购、全球网络和内容投入，能否把一场全球流行转换为跨周期的IP生意？段永平的赌注是他对财报数字的理解。而王宁的赌注更朴素——他尊重时间：“任何该10年做成的事情，就不要总想着两三年就做成。”<sup>[31]</sup>泡泡玛特的下一个十年，从这个爆款之后才算真正开始。</p>
 <div class="footnotes"><h3>脚注</h3><ol>
-<li id="fn1">LABUBU 3.0前方高能系列隐藏款"本我"，二手价99元→4522元（峰值）→540元（2025年12月），跌88%。央广网《LABUBU部分二手价"跳水"》，2026年1月</li>
-<li id="fn2">同上。怪味便利店系列4048→308元，跌92%</li>
-<li id="fn3">毛绒产能800万→3000万件/月，引自泡泡玛特2025年业绩发布会及《证券时报》报道</li>
-<li id="fn4">王宁在业绩发布会及公开采访中的表述，2025年8月至9月</li>
-<li id="fn5">泡泡玛特2025年年报，THE MONSTERS营收141.61亿元，同比增长365.7%，占总营收38.15%</li>
-<li id="fn6">Molly历史数据引自泡泡玛特招股书（2019年占比27.1%）及2025年年报（28.97亿元，占比7.8%）</li>
-<li id="fn7">星星人2025年营收20.56亿元（+1599%），LABUBU 141.61亿元。同上</li>
-<li id="fn8">截至2025年末累计注册会员7258万人，新增约2650万人（+57.5%），复购率55.7%，会员销售贡献率93.7%。引自泡泡玛特2025年年报</li>
-<li id="fn9">经营现金流108.65亿元，自由现金流98.8亿元。引自Wind金融终端</li>
-<li id="fn10">THE MONSTERS占比：2024年23.3%→2025年H1 34.7%→全年38.15%。引自公司年报及半年报</li>
-<li id="fn11">存货周转天数：82.56天（2025H1）→120.98天（2025全年）。港元口径存货约60.59亿。引自Wind</li>
-<li id="fn12">泡泡玛特内部人士在分析师电话会上的表述</li>
-<li id="fn13">段永平2025年8月雪球公开发言，引自界面新闻2026年7月报道及多篇媒体报道整合</li>
-<li id="fn14">泡泡玛特2025年年报（2026年3月25日发布）后股价暴跌22.51%，市值蒸发超650亿港元</li>
-<li id="fn15">段永平2026年3月30日雪球平台公开发言</li>
-<li id="fn16">段永平"保险公司开张"（4月9日）、"神华全换泡泡"（5月7日）。引自凤凰网《段永平与泡泡玛特二三事》及界面新闻</li>
-<li id="fn17">段永平7月10日雪球发言，引自新浪财经2026年7月23日报道</li>
-<li id="fn18">泡泡玛特2025年年报：海外营收162.7亿元（+291.9%），占总营收43.8%；美洲68.06亿元（+748.4%）</li>
-<li id="fn19">2026年Q1业绩更新电话会，2026年5月13日。管理层表示原材料成本上升3-5pp，毛利率预计下滑约0.5-2pp</li>
-<li id="fn20">存货数据：港元口径下，H1约24.93亿→年末约60.59亿；周转天数从约82天增至约121天。引自Wind</li>
-<li id="fn21">泡泡玛特与索尼影业合作开发LABUBU真人动画电影，导演保罗·金（帕丁顿熊），2026年3月官宣</li>
-<li id="fn22">LABUBU 2025年销量超1亿只，THE MONSTERS系列全球销售额141.61亿元。引自公司年报及旅界报道</li>
-<li id="fn23">新业务：POP BAKERY甜品、POPOP饰品、荣耀联名手机、FIFA世界杯联名、城市乐园升级。引自公司官网及新闻稿</li>
-<li id="fn24">TOP TOY 2025年营收35.87亿元（+87.9%），毛利率32.1%。泡泡玛特同期毛利率72.1%。引自公司财报及36氪报道</li>
-<li id="fn25">TOP TOY自有IP收入占比5.7%。引自2025年招股书及亿邦动力报道</li>
-<li id="fn26">三丽鸥Netflix动画及IP运营模式参考。引自澎湃新闻《泡泡玛特为何围绕LABUBU做加法》及36氪</li>
-<li id="fn27">2026年Q1业绩：整体+75%-80%，中国+100%-105%，亚太+25%-30%，美洲+55%-60%，欧洲+60%-65%。引自公司公告</li>
-<li id="fn28">《人民日报》专访王宁，2025年7月</li>
-<li id="fn29">王宁内部提出的8字核心理念“尊重时间，尊重经营”，引自李翔《因为独特》</li>
+<li id="fn1">小程序崩溃，Macy’s花车首秀。引自央广网、新华网报道</li>
+<li id="fn2">2025年报：营收371.2亿(+184.7%)，净利润130.1亿(+293.3%)，毛利率72.1%，ROE 77.52%</li>
+<li id="fn3">LABUBU 3.0前方高能系列隐藏款"本我"，二手价99元→4522元（峰值）→540元（2025年12月），跌88%。央广网《LABUBU部分二手价"跳水"》，2026年1月</li>
+<li id="fn4">同上。怪味便利店系列4048→308元，跌92%</li>
+<li id="fn5">毛绒产能800万→3000万件/月，引自泡泡玛特2025年业绩发布会及《证券时报》报道</li>
+<li id="fn6">王宁在业绩发布会及公开采访中的表述，2025年8月至9月</li>
+<li id="fn7">泡泡玛特2025年年报，THE MONSTERS营收141.61亿元，同比增长365.7%，占总营收38.15%</li>
+<li id="fn8">Molly历史数据引自泡泡玛特招股书（2019年占比27.1%）及2025年年报（28.97亿元，占比7.8%）</li>
+<li id="fn9">星星人2025年营收20.56亿元（+1599%），LABUBU 141.61亿元。同上</li>
+<li id="fn10">截至2025年末累计注册会员7258万人，新增约2650万人（+57.5%），复购率55.7%，会员销售贡献率93.7%。引自泡泡玛特2025年年报</li>
+<li id="fn11">经营现金流108.65亿元，自由现金流98.8亿元。引自Wind金融终端</li>
+<li id="fn12">THE MONSTERS占比：2024年23.3%→2025年H1 34.7%→全年38.15%。引自公司年报及半年报</li>
+<li id="fn13">存货周转天数：82.56天（2025H1）→120.98天（2025全年）。港元口径存货约60.59亿。引自Wind</li>
+<li id="fn14">泡泡玛特内部人士在分析师电话会上的表述</li>
+<li id="fn15">段永平2025年8月雪球公开发言，引自界面新闻2026年7月报道及多篇媒体报道整合</li>
+<li id="fn16">泡泡玛特2025年年报（2026年3月25日发布）后股价暴跌22.51%，市值蒸发超650亿港元</li>
+<li id="fn17">段永平2026年3月30日雪球平台公开发言</li>
+<li id="fn18">段永平"保险公司开张"（4月9日）、"神华全换泡泡"（5月7日）。引自凤凰网《段永平与泡泡玛特二三事》及界面新闻</li>
+<li id="fn19">段永平7月10日雪球发言，引自新浪财经2026年7月23日报道</li>
+<li id="fn20">泡泡玛特2025年年报：海外营收162.7亿元（+291.9%），占总营收43.8%；美洲68.06亿元（+748.4%）</li>
+<li id="fn21">2026年Q1业绩更新电话会，2026年5月13日。管理层表示原材料成本上升3-5pp，毛利率预计下滑约0.5-2pp</li>
+<li id="fn22">存货数据：港元口径下，H1约24.93亿→年末约60.59亿；周转天数从约82天增至约121天。引自Wind</li>
+<li id="fn23">泡泡玛特与索尼影业合作开发LABUBU真人动画电影，导演保罗·金（帕丁顿熊），2026年3月官宣</li>
+<li id="fn24">LABUBU 2025年销量超1亿只，THE MONSTERS系列全球销售额141.61亿元。引自公司年报及旅界报道</li>
+<li id="fn25">新业务：POP BAKERY甜品、POPOP饰品、荣耀联名手机、FIFA世界杯联名、城市乐园升级。引自公司官网及新闻稿</li>
+<li id="fn26">TOP TOY 2025年营收35.87亿元（+87.9%），毛利率32.1%。泡泡玛特同期毛利率72.1%。引自公司财报及36氪报道</li>
+<li id="fn27">TOP TOY自有IP收入占比5.7%。引自2025年招股书及亿邦动力报道</li>
+<li id="fn28">三丽鸥Netflix动画及IP运营模式参考。引自澎湃新闻《泡泡玛特为何围绕LABUBU做加法》及36氪</li>
+<li id="fn29">2026年Q1业绩：整体+75%-80%，中国+100%-105%，亚太+25%-30%，美洲+55%-60%，欧洲+60%-65%。引自公司公告</li>
+<li id="fn30">《人民日报》专访王宁，2025年7月</li>
+<li id="fn31">王宁内部提出的8字核心理念“尊重时间，尊重经营”，引自李翔《因为独特》</li>
 </ol></div>
 </div>
 <div class="consent-overlay" id="consentOverlay">
